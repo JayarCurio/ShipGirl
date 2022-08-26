@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+</Defs>
+<!--
+<RecipeDef ParentName="SurgeryFlesh">
+
+    <defName>InstallFlashLight</defName>
+
+    <label>ChangeddescriptionHere</label>
+
+    <description>changedescriptionhere</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+
+    <jobString>Installing ear.</jobString>
+
+    <workAmount>2000</workAmount>
+
+    <deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+
+	<surgerySuccessChanceFactor>0.90</surgerySuccessChanceFactor>
+
+	<recipeUsers>
+
+		<li>Human</li>
+
+	</recipeUsers>
+
+    <skillRequirements>
+
+      <Medicine>8</Medicine>
+
+    </skillRequirements>
+
+    <ingredients>
+
+      <li>
+
+        <filter>
+
+          <categories>
+
+            <li>Medicine</li>
+
+          </categories>
+
+        </filter>
+
+        <count>2</count>
+
+      </li>
+
+      <li>
+
+        <filter>
+
+          <thingDefs>
+
+            <li>FlashLight</li>
+
+          </thingDefs>
+
+        </filter>
+
+        <count>1</count>
+
+      </li>
+
+    </ingredients>
+
+    <fixedIngredientFilter>
+
+      <categories>
+
+        <li>Medicine</li>
+
+      </categories>
+
+      <thingDefs>
+
+        <li>FlashLight</li>
+
+      </thingDefs>
+
+    </fixedIngredientFilter>
+
+    <appliedOnFixedBodyParts>
+
+      <li>Ear</li>
+
+    </appliedOnFixedBodyParts>
+
+    <addsHediff>Hediff_Flashlight</addsHediff>
+
+  </RecipeDef>
+  
+  -->

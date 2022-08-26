@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  
+	<CultureDef MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>FSG_RoyaltyNavy</defName>
+    <label>Stellar Navy</label>
+    <description>Various groups of Ships whose persona consider themselves the "true" navy of the Shattered Empire.</description>
+	
+	<!--<pawnNameMaker>NamerPersonCorunan</pawnNameMaker>-->
+	
+    <ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoAstropolitan</ideoNameMaker>
+    <deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeityAstropolitan</deityNameMaker>
+    <deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerAstropolitan</deityTypeMaker>
+    <leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">LeaderTitleMaker_Astropolitan</leaderTitleMaker>
+    <festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerFestivalAstropolitan</festivalNameMaker>
+    <allowedPlaceTags>
+      <li>OriginSpacer</li>
+    </allowedPlaceTags>
+    <iconPath>UI/Cultures/Astropolitan</iconPath>
+    <iconColor>(0.6, 0.9, 0.6)</iconColor>
+    <styleItemTags>
+      <li>
+        <tag>Urban</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>NoBeard</tag>
+        <baseWeight>10</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>NoTattoo</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+    </styleItemTags>
+  </CultureDef>
+
+	<!--<CultureDef MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>FSG_AnimaSpirits</defName>
+		<label>Anima Spirit Fleet</label>
+		<description>A class of emergent movements, where Ship Girls take on the roles of Tribal Dieties, and attempt to unite local tribes in an empire.</description>
+		
+	<pawnNameMaker>NamerPersonCorunan</pawnNameMaker>
+		
+		<ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoCorunan</ideoNameMaker>
+		<deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeityCorunan</deityNameMaker>
+		<deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerCorunan</deityTypeMaker>
+		<festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerFestivalCorunan</festivalNameMaker>
+		<leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">LeaderTitleMaker_Corunan</leaderTitleMaker>
+		<allowedPlaceTags>
+		  <li>OriginTribal</li>
+		</allowedPlaceTags>
+		<iconPath>Spirits/Base</iconPath>
+		<iconColor>(0.8, 0.8, 0.8)</iconColor>
+		<preferredWeaponClasses>
+		  <noble>Melee</noble>
+		  <despised>Ultratech</despised>
+		</preferredWeaponClasses>
+		<thingStyleCategories>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">
+			<category>Totemic</category>
+			<priority>2</priority>
+		  </li>
+		</thingStyleCategories>
+		<styleItemTags>
+		  <li>
+			<tag>Tribal</tag>
+			<baseWeight>1</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+		  <li>
+			<tag>Urban</tag>
+			<baseWeight>1</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+		  <li>
+			<tag>NoBeard</tag>
+			<baseWeight>10</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+		  <li>
+			<tag>BeardTribal</tag>
+			<baseWeight>0.3</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+		  <li>
+			<tag>TattooFaceTribal</tag>
+			<baseWeight>0.2</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+		  <li>
+			<tag>TattooBodyTribal</tag>
+			<baseWeight>0.2</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+		  <li>
+			<tag>NoTattoo</tag>
+			<baseWeight>1</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+		</styleItemTags>
+	</CultureDef>-->
+  
+	<CultureDef>
+		<defName>FSG_FreeBirds</defName>
+		<label>Free Birds</label>
+		<description>Assorted bands of hardy ship girls, who have struck out on their own.</description>
+		
+		<!--<pawnNameMaker>NamerPersonCorunan</pawnNameMaker>-->
+		
+		<ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoRustican</ideoNameMaker>
+		<deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeityRustican</deityNameMaker>
+		<deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerRustican</deityTypeMaker>
+		<leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">LeaderTitleMaker_Rustican</leaderTitleMaker>
+		<festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerFestivalRustican</festivalNameMaker>
+		<allowedPlaceTags>
+		  <li>OriginSpacer</li>
+		</allowedPlaceTags>
+		<iconPath>World/WorldObjects/Expanding/Town</iconPath>
+		<iconColor>(0.8, 0.8, 0.8)</iconColor>
+		<thingStyleCategories>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">
+			<category>Rustic</category>
+			<priority>2</priority>
+		  </li>
+		</thingStyleCategories>
+		<styleItemTags>
+		  <li>
+			<tag>Rural</tag>
+			<baseWeight>1</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+		  <li>
+			<tag>NoBeard</tag>
+			<baseWeight>10</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+		  <li>
+			<tag>BeardRural</tag>
+			<baseWeight>0.25</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+		  <li>
+			<tag>NoTattoo</tag>
+			<baseWeight>1</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+		</styleItemTags>
+	  </CultureDef>
+
+	  <CultureDef>
+		<defName>FSG_SharkFleet</defName>
+		<label>Blood Shark Fleet</label>
+		<description>A cell of a violent supremecist ideology. They take pride in their sharp teeth and long memories.</description>
+		
+		<!--<pawnNameMaker>NamerPersonCorunan</pawnNameMaker>-->
+		
+		<ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoRustican</ideoNameMaker>
+		<deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeityAstropolitan</deityNameMaker>
+		<deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerAstropolitan</deityTypeMaker>
+		<leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">LeaderTitleMaker_Kriminul</leaderTitleMaker>
+		<festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerFestivalKriminul</festivalNameMaker>
+		<allowedPlaceTags>
+		  <li>OriginSpacer</li>
+		</allowedPlaceTags>
+		<iconPath>Sharks/base</iconPath>
+		<iconColor>(0.8, 0.8, 0.8)</iconColor>
+		<thingStyleCategories>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">
+			<category>Spikecore</category>
+			<priority>2</priority>
+		  </li>
+		</thingStyleCategories>
+		<styleItemTags>
+		  <li>
+			<tag>Punk</tag>
+			<baseWeight>1</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+		  <li>
+			<tag>Urban</tag>
+			<baseWeight>1</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+		  <li>
+			<tag>NoBeard</tag>
+			<baseWeight>10</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+		  <li>
+			<tag>NoTattoo</tag>
+			<baseWeight>1</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+		  <li>
+			<tag>TattooFacePunk</tag>
+			<baseWeight>0.4</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+		  <li>
+			<tag>TattooBodyPunk</tag>
+			<baseWeight>0.4</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+
+		</styleItemTags>
+	</CultureDef>
+  
+    <CultureDef>
+		<defName>FSG_SinCultureAlpha</defName>
+		<label>Hostile Sinsiter Fleet</label>
+		<description>They seem to come from alternate realities or possibly the future. The acheotechts that sent them must surely be inimicable to life.</description>
+		
+		<!--<pawnNameMaker>NamerPersonCorunan</pawnNameMaker>-->
+		
+		<ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoAstropolitan</ideoNameMaker>
+		<deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeityAstropolitan</deityNameMaker>
+		<deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerAstropolitan</deityTypeMaker>
+		<leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">LeaderTitleMaker_Astropolitan</leaderTitleMaker>
+		<festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerFestivalAstropolitan</festivalNameMaker>
+		<allowedPlaceTags>
+		  <li>OriginSpacer</li>
+		</allowedPlaceTags>
+		<iconPath>Sharks/base</iconPath>
+		<iconColor>(0.8, 0.8, 0.8)</iconColor>
+		<thingStyleCategories>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">
+			<category>Spikecore</category>
+			<priority>2</priority>
+		  </li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">
+			<category>Techist</category>
+			<priority>1</priority>
+		  </li>
+		</thingStyleCategories>
+		<styleItemTags>
+		  <li>
+			<tag>Punk</tag>
+			<baseWeight>1</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+		  
+		  <li>
+			<tag>NoBeard</tag>
+			<baseWeight>10</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+		  <li>
+			<tag>NoTattoo</tag>
+			<baseWeight>1</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+		  <li>
+			<tag>TattooFacePunk</tag>
+			<baseWeight>0.1</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+		  <li>
+			<tag>TattooBodyPunk</tag>
+			<baseWeight>0.1</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+
+		</styleItemTags>
+	</CultureDef>
+	<CultureDef>
+		<defName>FSG_SinCultureBeta</defName>
+		<label>Hostile Sinsiter Fleet</label>
+		<description>They seem to come from alternate realities or possibly the future. They might be more agreeable than their rivals. Maybe.</description>
+		
+		<!--<pawnNameMaker>NamerPersonCorunan</pawnNameMaker>-->
+		
+		<ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoAstropolitan</ideoNameMaker>
+		<deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeityAstropolitan</deityNameMaker>
+		<deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerAstropolitan</deityTypeMaker>
+		<leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">LeaderTitleMaker_Astropolitan</leaderTitleMaker>
+		<festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerFestivalAstropolitan</festivalNameMaker>
+		<allowedPlaceTags>
+		  <li>OriginSpacer</li>
+		</allowedPlaceTags>
+		<iconPath>Sharks/base</iconPath>
+		<iconColor>(0.8, 0.8, 0.8)</iconColor>
+		<thingStyleCategories>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+			<category>Techist</category>
+			<priority>2</priority>
+		  </li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">
+			<category>Spikecore</category>
+			<priority>3</priority>
+		  </li>
+		</thingStyleCategories>
+		<styleItemTags>
+		  <li>
+			<tag>Punk</tag>
+			<baseWeight>1</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+		  
+		  <li>
+			<tag>NoBeard</tag>
+			<baseWeight>10</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+		  <li>
+			<tag>NoTattoo</tag>
+			<baseWeight>1</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+		  <li>
+			<tag>TattooFacePunk</tag>
+			<baseWeight>0.1</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+		  <li>
+			<tag>TattooBodyPunk</tag>
+			<baseWeight>0.1</baseWeight>
+			<weightFactor>1</weightFactor>
+		  </li>
+
+		</styleItemTags>
+	</CultureDef>
+</Defs>

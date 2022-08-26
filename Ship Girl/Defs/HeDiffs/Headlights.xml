@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+<!--Headlights-->
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_InstalledHeadlightA</defName>
+		<label>Basic headlight</label>
+		<labelNoun>a headlight.</labelNoun>
+		<description>A glowing eye for ship girls, which provides light.</description>
+		<hediffClass>mama.lightcode</hediffClass>
+		<spawnThingOnRemoved>FSG_HeadlightA</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>false</solid>
+			
+			
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>			
+		</addedPartProps>
+		
+		<stages>
+			<li>
+				<hungerRateFactor>1.01</hungerRateFactor>
+				<statOffsets>
+					<AimingDelayFactor>-0.01</AimingDelayFactor>
+					<ConstructionSpeedFactor>0.03</ConstructionSpeedFactor>
+					<MiningSpeed>0.05</MiningSpeed>
+					<MiningYield>0.07</MiningYield>
+					
+				</statOffsets>
+				
+			</li>
+		</stages>
+		
+	</HediffDef>
+
+	<ThingDef ParentName="FSG_MachinableBodypartBase">
+		<defName>FSG_HeadlightA</defName>
+		<label>Basic Headlight</label>
+		<description>A headlight eye for ship girls.</description>
+    
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+			<Steel>15</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>Electricity</researchPrerequisite>
+		</recipeMaker>
+		<statBases>
+			<MarketValue>300</MarketValue>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallFSG_HeadlightA</defName>
+		<label>install headlight</label>
+		<description>Install a headlight.</description>
+
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing headlight.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSG_HeadlightA</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>FSG_HeadlightA</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Eye</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>FSG_InstalledHeadlightA</addsHediff>
+		
+	</RecipeDef>
+	
+	<!--Colored Lights-->
+	<!--A is framework dependent-->
+	
+	<ThingDef ParentName="FSG_MachinableBodypartBase">
+		<defName>FSG_HeadlightBA</defName>
+		<label>Red headlight</label>
+		<description>A red colored headlight that provides a laser attack.</description>
+    
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+			<Steel>15</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>ColoredLights</researchPrerequisite>
+		</recipeMaker>
+		<statBases>
+			<MarketValue>550</MarketValue>
+		</statBases>
+	</ThingDef>
+	
+	<!--B-->
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_InstalledHeadlightBB</defName>
+		<label>amber headlight</label>
+		<labelNoun>an amber headlight.</labelNoun>
+		<description>A glowing amber eye for ship girls, which provides light and improved vision.</description>
+		<hediffClass>mama.lightcode</hediffClass>
+		<spawnThingOnRemoved>FSG_HeadlightBA</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>false</solid>
+			
+			
+			<partEfficiency>1.1</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>			
+		</addedPartProps>
+		
+		<stages>
+			<li>
+				<hungerRateFactor>1.02</hungerRateFactor>
+				<statOffsets>
+					<AimingDelayFactor>-0.02</AimingDelayFactor>
+					<ConstructionSpeedFactor>0.05</ConstructionSpeedFactor>
+					<MiningSpeed>0.10</MiningSpeed>
+					<MiningYield>0.15</MiningYield>
+					
+				</statOffsets>
+				
+			</li>
+		</stages>
+		
+	</HediffDef>
+
+	<ThingDef ParentName="FSG_MachinableBodypartBase">
+		<defName>FSG_HeadlightBB</defName>
+		<label>amber headlight</label>
+		<description>A colored headlight that provides better contrast vision.</description>
+    
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+			<Steel>15</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>ColoredLights</researchPrerequisite>
+		</recipeMaker>
+		<statBases>
+			<MarketValue>350</MarketValue>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallFSG_HeadlightBB</defName>
+		<label>install amber headlight</label>
+		<description>Install a amber headlight.</description>
+
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing amber headlight.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSG_HeadlightBB</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>FSG_HeadlightBB</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Eye</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>FSG_InstalledHeadlightBB</addsHediff>
+		
+	</RecipeDef>
+	
+	<!--C-->
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_InstalledHeadlightBC</defName>
+		<label>nightvision headlight</label>
+		<labelNoun>a nightvision headlight.</labelNoun>
+		<description>A bright green eye that provides improved night vision without shedding light.</description>
+    
+		<spawnThingOnRemoved>FSG_HeadlightBC</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>false</solid>
+			
+			
+			<partEfficiency>1.25</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>			
+		</addedPartProps>
+		
+		<stages>
+			<li>
+				<hungerRateFactor>1.02</hungerRateFactor>
+				<statOffsets>
+					<AimingDelayFactor>-0.02</AimingDelayFactor>
+					<ConstructionSpeedFactor>0.05</ConstructionSpeedFactor>
+					<MiningSpeed>0.10</MiningSpeed>
+					<MiningYield>0.15</MiningYield>
+					
+				</statOffsets>
+				
+			</li>
+		</stages>
+		
+	</HediffDef>
+
+	<ThingDef ParentName="FSG_MachinableBodypartBase">
+		<defName>FSG_HeadlightBC</defName>
+		<label>nightvision headlight</label>
+		<description>A green headlight that provides better dark vision.</description>
+    
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+			<Steel>15</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>ColoredLights</researchPrerequisite>
+		</recipeMaker>
+		<statBases>
+			<MarketValue>350</MarketValue>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallFSG_HeadlightBC</defName>
+		<label>install nightvision headlight</label>
+		<description>Install a nightvision headlight.</description>
+
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing nightvision headlight.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSG_HeadlightBC</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>FSG_HeadlightBC</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Eye</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>FSG_InstalledHeadlightBC</addsHediff>
+		
+	</RecipeDef>
+	
+	<!--D-->
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_InstalledHeadlightBD</defName>
+		<label>cyan headlight</label>
+		<labelNoun>a cyan headlight.</labelNoun>
+		<description>A glowing cyan eye for ship girls, which provides light and improved vision. This model is favored by shootists.</description>
+		<hediffClass>mama.lightcode</hediffClass>
+		<spawnThingOnRemoved>FSG_HeadlightBD</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>false</solid>
+			
+			
+			<partEfficiency>1.1</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>			
+		</addedPartProps>
+		
+		<stages>
+			<li>
+				<hungerRateFactor>1.03</hungerRateFactor>
+				<statOffsets>
+					<AimingDelayFactor>-0.03</AimingDelayFactor>
+					<ConstructionSpeedFactor>0.05</ConstructionSpeedFactor>
+					<MiningSpeed>0.10</MiningSpeed>
+					<MiningYield>0.15</MiningYield>
+					
+				
+					<MeleeDodgeChance>1</MeleeDodgeChance>
+					<ShootingAccuracyPawn>1</ShootingAccuracyPawn>
+				</statOffsets>
+				
+				
+			</li>
+		</stages>
+		
+	</HediffDef>
+
+	<ThingDef ParentName="FSG_MachinableBodypartBase">
+		<defName>FSG_HeadlightBD</defName>
+		<label>cyan headlight</label>
+		<description>A colored headlight that provides better contrast vision.</description>
+    
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+			<Steel>15</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>ColoredLights</researchPrerequisite>
+		</recipeMaker>
+		<statBases>
+			<MarketValue>350</MarketValue>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallFSG_HeadlightBD</defName>
+		<label>install cyan headlight</label>
+		<description>Install a cyan headlight.</description>
+
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing cyan headlight.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSG_HeadlightBD</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>FSG_HeadlightBD</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Eye</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>FSG_InstalledHeadlightBD</addsHediff>
+		
+	</RecipeDef>
+
+<!--E-->
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_InstalledHeadlightBE</defName>
+		<label>Blue headlight</label>
+		<labelNoun>a blue headlight.</labelNoun>
+		<description>A glowing blue eye for ship girls, which provides light and improved vision.</description>
+		<hediffClass>mama.lightcode</hediffClass>
+		<spawnThingOnRemoved>FSG_HeadlightBE</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>false</solid>
+			
+			
+			<partEfficiency>1.1</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>			
+		</addedPartProps>
+		
+		<stages>
+			<li>
+				<hungerRateFactor>1.02</hungerRateFactor>
+				<statOffsets>
+					<AimingDelayFactor>-0.02</AimingDelayFactor>
+					<ConstructionSpeedFactor>0.05</ConstructionSpeedFactor>
+					<MiningSpeed>0.10</MiningSpeed>
+					<MiningYield>0.15</MiningYield>
+					
+				</statOffsets>
+				
+			</li>
+		</stages>
+		
+	</HediffDef>
+
+	<ThingDef ParentName="FSG_MachinableBodypartBase">
+		<defName>FSG_HeadlightBE</defName>
+		<label>blue headlight</label>
+		<description>A colored headlight that provides better contrast vision.</description>
+    
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+			<Steel>15</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>ColoredLights</researchPrerequisite>
+		</recipeMaker>
+		<statBases>
+			<MarketValue>350</MarketValue>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallFSG_HeadlightBE</defName>
+		<label>install blue headlight</label>
+		<description>Install a blue headlight.</description>
+
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing blue headlight.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSG_HeadlightBE</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>FSG_HeadlightBE</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Eye</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>FSG_InstalledHeadlightBE</addsHediff>
+		
+	</RecipeDef>
+	
+	<!--F-->
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_InstalledHeadlightBF</defName>
+		<label>purple headlight</label>
+		<labelNoun>a purple headlight.</labelNoun>
+		<description>A glowing purple eye for ship girls, which provides light and improved vision.</description>
+		<hediffClass>mama.lightcode</hediffClass>
+		<spawnThingOnRemoved>FSG_HeadlightBF</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>false</solid>
+			
+			
+			<partEfficiency>1.1</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>			
+		</addedPartProps>
+		
+		<stages>
+			<li>
+				<hungerRateFactor>1.02</hungerRateFactor>
+				<statOffsets>
+					<AimingDelayFactor>-0.02</AimingDelayFactor>
+					<ConstructionSpeedFactor>0.05</ConstructionSpeedFactor>
+					<MiningSpeed>0.10</MiningSpeed>
+					<MiningYield>0.15</MiningYield>
+					
+				</statOffsets>
+				
+			</li>
+		</stages>
+		
+	</HediffDef>
+
+	<ThingDef ParentName="FSG_MachinableBodypartBase">
+		<defName>FSG_HeadlightBF</defName>
+		<label>purple headlight</label>
+		<description>A colored headlight that provides better contrast vision.</description>
+    
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+			<Steel>15</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>ColoredLights</researchPrerequisite>
+		</recipeMaker>
+		<statBases>
+			<MarketValue>350</MarketValue>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallFSG_HeadlightBF</defName>
+		<label>install purple headlight</label>
+		<description>Install a purple headlight.</description>
+
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing purple headlight.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSG_HeadlightBF</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>FSG_HeadlightBF</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Eye</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>FSG_InstalledHeadlightBF</addsHediff>
+		
+	</RecipeDef>
+	<!--G hediff is framework dependant-->
+	
+
+	<ThingDef ParentName="BodyPartArchotechBase">
+		<defName>FSG_HeadlightBG</defName>
+		<label>demon eye headlight</label>
+		<description>A powerful laser eye for shipgirls, that occasionally sprays a stream of flaming hell bats. Probably archeotech. Hopefully.</description>
+    
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		
+		<statBases>
+			<MarketValue>4350</MarketValue>
+		</statBases>
+	</ThingDef>
+
+	
+	
+	<!--H
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_InstalledHeadlightBH</defName>
+		<label>pale yellow headlight</label>
+		<labelNoun>a yellow headlight.</labelNoun>
+		<description>A glowing yellow eye for ship girls, which provides improved vision and evasion.</description>
+    
+		<spawnThingOnRemoved>FSG_HeadlightBH</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>false</solid>
+			
+			
+			<partEfficiency>1.1</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>			
+		</addedPartProps>
+		
+		<stages>
+			<li>
+				<hungerRateFactor>1.07</hungerRateFactor>
+				<statOffsets>
+					<MeleeDodgeChance>3</MeleeDodgeChance>
+					<ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+				</statOffsets>
+			</li>
+		</stages>
+		
+	</HediffDef>
+
+	<ThingDef ParentName="FSG_MachinableBodypartBase">
+		<defName>FSG_HeadlightBH</defName>
+		<label>pale yellow headlight</label>
+		<description>A colored headlight that provides better contrast vision.</description>
+    
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+			<Steel>15</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>ColoredLights</researchPrerequisite>
+		</recipeMaker>
+		<statBases>
+			<MarketValue>350</MarketValue>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallFSG_HeadlightBH</defName>
+		<label>install yellow headlight</label>
+		<description>Install a yellow headlight.</description>
+
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing yellow headlight.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSG_HeadlightBH</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>FSG_HeadlightBH</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Eye</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>FSG_InstalledHeadlightBH</addsHediff>
+		
+	</RecipeDef>-->
+	
+	<!--Sinister Colored Lights-->
+	<!--A is combat framework specific-->
+	
+
+	<ThingDef ParentName="BodyPartArchotechBase">
+		<defName>FSG_HeadlightCA</defName>
+		<label>sinister laser eye</label>
+		<description>A laser headlight that provides a sumplemental laser attack.</description>
+    
+		<thingSetMakerTags></thingSetMakerTags>
+		<costList>
+			<Steel>15</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		
+		<statBases>
+			<MarketValue>1650</MarketValue>
+		</statBases>
+	</ThingDef>
+
+	
+		<!--D-->
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_InstalledHeadlightCD</defName>
+		<label>sinsiter cyan headlight</label>
+		<labelNoun>a sinister cyan headlight.</labelNoun>
+		<description>A colored headlight from a member of the Sinister Sisterhood, which enhances shooting accuracy and evasion.</description>
+		<hediffClass>mama.lightcode</hediffClass>
+		<spawnThingOnRemoved>FSG_HeadlightBD</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>false</solid>
+			
+			
+			<partEfficiency>1.1</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>			
+		</addedPartProps>
+		
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_SinisterVisions</hediff>
+						<bodyPart>Brain</bodyPart>
+					</li>
+				</hediffAndBodypart>
+				
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<hungerRateFactor>1.07</hungerRateFactor>
+				
+		
+				<label>Lights On</label>
+				<statOffsets>
+					<AimingDelayFactor>-0.03</AimingDelayFactor>
+					<ConstructionSpeedFactor>0.05</ConstructionSpeedFactor>
+					<MiningSpeed>0.10</MiningSpeed>
+					<MiningYield>0.15</MiningYield>
+					<MeleeDodgeChance>3</MeleeDodgeChance>
+					
+					<ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.05</offset>
+					</li>
+				</capMods>
+		
+						
+			
+				
+				
+				
+			</li>
+		</stages>
+		
+	</HediffDef>
+
+	<ThingDef ParentName="BodyPartArchotechBase">
+		<defName>FSG_HeadlightCD</defName>
+		<label>Sinister cyan headlight</label>
+		<description>A colored headlight from a member of the Sinister Sisterhood, which enhances accuracy and evasion. Anyone who wears it will be changed forever by the things that they see.</description>
+    
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		
+		<statBases>
+			<MarketValue>350</MarketValue>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallFSG_HeadlightCD</defName>
+		<label>install sinister cyan headlight</label>
+		<description>Install a sinister cyan headlight.</description>
+
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing cyan headlight.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSG_HeadlightCD</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>FSG_HeadlightCD</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Eye</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>FSG_Crazy_HeadlightCD</addsHediff>
+		
+	</RecipeDef>
+		<HediffDef>
+		<defName>FSG_Crazy_HeadlightCD</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>implant in eye, visions in brain</description>
+		<label>MultipleHediffs</label>
+		
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>Human</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_SinisterVisions</hediff>
+						<bodyPart>Brain</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledHeadlightCD</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+				</hediffAndBodypart>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<!--H-->
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_InstalledHeadlightCH</defName>
+		<label>Sinister yellow headlight</label>
+		<labelNoun>a sinister yellow headlight.</labelNoun>
+		<description>A glowing yellow eye from a member of the Sinister Sisterhood, which enhances close combat accuracy and evasion.</description>
+		<hediffClass>mama.lightcode</hediffClass>
+		<spawnThingOnRemoved>FSG_HeadlightCH</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>false</solid>
+			
+			
+			<partEfficiency>1.1</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>			
+		</addedPartProps>
+		
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_SinisterVisions</hediff>
+						<bodyPart>Brain</bodyPart>
+					</li>
+				</hediffAndBodypart>
+			</li>
+		</comps>
+		
+		
+		<stages>
+			<li>
+				<hungerRateFactor>1.07</hungerRateFactor>
+				
+		
+				<label>Lights On</label>
+				<statOffsets>
+					<AimingDelayFactor>-0.02</AimingDelayFactor>
+					<ConstructionSpeedFactor>0.05</ConstructionSpeedFactor>
+					<MiningSpeed>0.10</MiningSpeed>
+					<MiningYield>0.15</MiningYield>
+					<MeleeDodgeChance>3</MeleeDodgeChance>
+					<MeleeHitChance>3</MeleeHitChance>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.05</offset>
+					</li>
+				</capMods>
+		
+				
+				
+			</li>
+		</stages>
+		
+	</HediffDef>
+
+	<ThingDef ParentName="BodyPartArchotechBase">
+		<defName>FSG_HeadlightCH</defName>
+		<label>Sinister yellow headlight</label>
+		<description>A colored headlight from a member of the Sinsiter Sisterhood, which enhances close combat accuracy and evasion.  Anyone who wears it will be changed forever by the things that they see.</description>
+    
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		
+		<statBases>
+			<MarketValue>350</MarketValue>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallFSG_HeadlightCH</defName>
+		<label>install sinister yellow headlight</label>
+		<description>Install a yellow headlight. The psychiatric consequences will be permanent.</description>
+
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing yellow headlight.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSG_HeadlightCH</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>FSG_HeadlightCH</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Eye</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>FSG_InstalledHeadlightCH</addsHediff>
+		
+	</RecipeDef>
+	
+	
+	
+	<!--Future Sight Debuff-->
+	
+	<HediffDef>
+		<defName>FSG_SinisterVisions</defName>
+		<hediffClass>Hediff_Implant</hediffClass>
+		
+		<label>Sinister Nightmare Visions</label>
+		<description>This pawn has been exposed to visions of things that once would have been but now never will, and things that may yet be. Some of the memories are quite unpleasant, and it keeps them up at night.</description>
+		
+		<isBad>true</isBad>
+		<priceImpact>true</priceImpact>
+		
+		<defaultLabelColor>(1, 0.6, .6)</defaultLabelColor>
+		
+    
+		<stages>
+		<li>
+			<statOffsets>
+				<MentalBreakThreshold>-.06</MentalBreakThreshold>
+				<RestRateMultiplier>1.05</RestRateMultiplier>
+			</statOffsets>
+		</li>
+		</stages>
+	
+	</HediffDef>
+
+</Defs>

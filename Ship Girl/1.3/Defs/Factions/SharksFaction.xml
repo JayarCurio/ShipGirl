@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--The Sharks have long memories-->
+	<FactionDef ParentName="FactionBase" Name="SharkFactionBase" Abstract="True">
+		<defName>SharkFactionBase</defName>
+		<label>shark faction base</label>
+		<!--<pawnNameMaker>NamerPersonShip</pawnNameMaker>-->
+		<factionNameMaker>FSG_NamerFactionShark</factionNameMaker>
+		<maxConfigurableAtWorldCreation>11</maxConfigurableAtWorldCreation>
+	</FactionDef>
+
+	<FactionDef ParentName="SharkFactionBase">
+		<defName>BloodSharks</defName>
+		<label>Blood Sharks</label>
+		<description>A cell of the violent, AI-supremecist Ship Girls, known as the Blood Sharks. They pride themselves on their long memories and sharp teeth.</description>
+		<pawnsPlural>Blood Shark warships</pawnsPlural>
+		<pawnSingular>Blood Shark</pawnSingular>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<settlementGenerationWeight>1</settlementGenerationWeight>
+		
+		<canMakeRandomly>true</canMakeRandomly>
+		<listOrderPriority>35</listOrderPriority>
+		<canSiege>true</canSiege>
+		<canStageAttacks>true</canStageAttacks>
+		<geneticVariance>0.2</geneticVariance>
+		<leaderTitle>Supreme Admiral</leaderTitle>
+		<!--<factionNameMaker>FSG_NamerFactionShark</factionNameMaker>
+		<settlementNameMaker>FSG_NamerSettlementShark</settlementNameMaker>-->
+		<settlementNameMaker>FSG_NamerSettlementShark</settlementNameMaker>
+		<!--New stuff in 1.3-->
+		<allowedCultures>
+			<li>FSG_SharkFleet</li>
+		</allowedCultures>
+		<disallowedMemes>
+
+			
+
+			
+
+			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+
+		</disallowedMemes>
+		<requiredMemes>
+
+			<li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
+
+		</requiredMemes>
+		<structureMemeWeights>
+			<Structure_Animist MayRequire="Ludeon.RimWorld.Ideology">2</Structure_Animist>
+
+			<Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">2</Structure_TheistEmbodied>
+
+			<Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistAbstract>
+
+			<Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">2</Structure_Ideological>
+
+			<Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>
+
+			<Structure_OriginChristian MayRequire="Ludeon.RimWorld.Ideology">3</Structure_OriginChristian>
+
+			<Structure_OriginIslamic MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginIslamic>
+
+			<Structure_OriginHindu MayRequire="Ludeon.RimWorld.Ideology">3</Structure_OriginHindu>
+
+			<Structure_OriginBuddhist MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginBuddhist>
+
+		</structureMemeWeights>
+		<!--<permanentEnemy>true</permanentEnemy>-->
+		
+		<!--
+		Not used in 1.3
+		
+		<startingGoodwill>
+			<min>-90</min>
+			<max>-76</max>
+		</startingGoodwill>
+		<naturalColonyGoodwill>
+			<min>-90</min>
+			<max>10</max>
+		</naturalColonyGoodwill>
+		<goodwillDailyGain>0.05</goodwillDailyGain>
+		<goodwillDailyFall>0.05</goodwillDailyFall>
+		-->
+		<techLevel>Spacer</techLevel>
+		<raidLootMaker>PirateRaidLootMaker</raidLootMaker>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Pirate</li>
+					
+				</categories>
+				<commonality>10</commonality>
+			</li>
+			<li>
+				<categories>
+					<li>Offworld</li>
+					
+				</categories>
+				<commonality>10</commonality>
+			</li>
+		</backstoryFilters>
+		<!--<StyleTags>
+			<li>Punk</li>
+			<li>Rural</li>
+			<li>Urban</li>
+		</hairTags>-->
+		<visitorTraderKinds>
+			<li>SharkTrader</li>
+		</visitorTraderKinds>
+		<caravanTraderKinds>
+			<li>Caravan_Outlander_BulkGoods</li>
+			<li>Caravan_Outlander_CombatSupplier</li>
+			<li>Caravan_Outlander_Exotic</li>
+			<li>Caravan_Outlander_PirateMerchant</li>
+		</caravanTraderKinds>
+		<baseTraderKinds>
+			<li>Base_Outlander_Standard</li>
+			<li>SharkTrader</li>
+		</baseTraderKinds>
+		<allowedArrivalTemperatureRange>
+			<min>-65</min>
+			<max>35</max>
+		</allowedArrivalTemperatureRange>
+		<maxPawnCostPerTotalPointsCurve>
+			<points>
+				<li>(0,35)</li>
+				<li>(150, 50)</li>
+				<li>(800, 100)</li>
+				<li>(1300, 150)</li>
+				<li>(100000, 10000)</li>
+			</points>
+		</maxPawnCostPerTotalPointsCurve>
+		
+		<pawnGroupMakers>
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+					<SharkColonist>20</SharkColonist>
+					<SharkSecurityGuard>10</SharkSecurityGuard>
+					<SharkAdmiral>5</SharkAdmiral>
+				</options>
+			</li>
+		
+			<li>
+				<kindDef>Combat</kindDef>
+				<commonality>50</commonality>
+				<options>
+					
+					<SharkSecurityGuard>90</SharkSecurityGuard>
+					<SharkAdmiral>10</SharkAdmiral>
+					<SharkRecruit>100</SharkRecruit>
+					<SharkHunter>130</SharkHunter>
+					<SharkCommando>130</SharkCommando>
+					<SharkCommandoElite>170</SharkCommandoElite>
+					
+					<SharkHunterB>130</SharkHunterB>
+					<SharkCommandoB>130</SharkCommandoB>
+					<SharkCommandoEliteB>170</SharkCommandoEliteB>
+					
+				</options>
+			</li>
+			<li>
+				<kindDef>Combat</kindDef>
+				<commonality>5</commonality>
+				<options>
+					
+					<SharkSecurityGuard>90</SharkSecurityGuard>
+					<SharkAdmiral>200</SharkAdmiral>
+					<SharkHunter>130</SharkHunter>
+					<SharkCommando>130</SharkCommando>
+					<SharkCommandoElite>250</SharkCommandoElite>
+					<SharkColonist>200</SharkColonist>
+					<SharkHunterB>130</SharkHunterB>
+					<SharkCommandoB>130</SharkCommandoB>
+					<SharkCommandoEliteB>170</SharkCommandoEliteB>
+				</options>
+			</li>
+			<li>
+				<kindDef>Settlement</kindDef>
+				<options>
+					<SharkColonist>250</SharkColonist>
+					<SharkSecurityGuard>90</SharkSecurityGuard>
+					<SharkAdmiral>90</SharkAdmiral>
+					<SharkRecruit>100</SharkRecruit>
+					<SharkHunter>130</SharkHunter>
+					<SharkCommando>130</SharkCommando>
+					<SharkCommandoElite>170</SharkCommandoElite>
+				</options>
+			</li>
+			<li>
+				<kindDef>Trader</kindDef>
+				<traders>
+					<SharkTrader>1</SharkTrader>
+				</traders>
+				<carriers>
+					<Muffalo>2</Muffalo>
+					<Dromedary>2</Dromedary>
+				</carriers>
+				<guards>
+					<SharkSecurityGuard>90</SharkSecurityGuard>
+					<SharkColonist>250</SharkColonist>
+					<SharkRecruit>100</SharkRecruit>
+					<SharkHunter>130</SharkHunter>
+					<SharkCommando>130</SharkCommando>
+				</guards>
+			</li>
+		
+		</pawnGroupMakers>
+		<factionIconPath>Sharks/base</factionIconPath>
+		<!--<homeIconPath>Sharks/Capital</homeIconPath>-->
+		<settlementTexturePath>Sharks/base</settlementTexturePath>
+		<colorSpectrum>
+			<li>(1, 1, 1)</li>
+		</colorSpectrum>
+	
+	</FactionDef>
+  
+  <TraderKindDef>
+    <defName>SharkTrader</defName>
+    <label>trader</label>
+    <stockGenerators>
+      
+      <!-- Resources -->
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Silver</thingDef>
+        <countRange>50~250</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>ComponentIndustrial</thingDef>
+        <countRange>-2~5</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>MealSurvivalPack</thingDef>
+        <countRange>3~6</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>MedicineIndustrial</thingDef>
+        <countRange>1~6</countRange>
+      </li>
+      <li Class="StockGenerator_MultiDef">
+        <thingDefs>
+          <li>Cloth</li>
+          <li>Chocolate</li>
+        </thingDefs>
+      </li>
+      
+      <!-- Drugs -->
+      <li Class="StockGenerator_Category">
+        <categoryDef>Drugs</categoryDef>
+        <thingDefCountRange>-1~1</thingDefCountRange>
+        <totalPriceRange>100~300</totalPriceRange>
+      </li>
+
+      <!-- Techprints -->
+      <li Class="StockGenerator_Techprints">
+        <countChances>
+          <li>
+            <count>1</count>
+            <chance>0.5</chance>
+          </li>
+        </countChances>
+      </li>
+      
+      <!-- Weapons -->
+      
+      <li Class="StockGenerator_WeaponsRanged">
+        <countRange>5~5</countRange>
+      </li>
+      <li Class="StockGenerator_Category">
+        <categoryDef>WeaponsMelee</categoryDef>
+        <thingDefCountRange>6~6</thingDefCountRange>
+        <countRange>1~1</countRange>
+      </li>
+      <li Class="StockGenerator_Tag">
+        <tradeTag>MortarShell</tradeTag>
+        <thingDefCountRange>1~2</thingDefCountRange>
+        <countRange>3~15</countRange>
+      </li>
+
+      <!-- Apparel -->
+      <li Class="StockGenerator_Clothes">
+        <countRange>0~1</countRange>
+      </li>
+	  
+	  <li Class="StockGenerator_Category">
+        <categoryDef>Drugs</categoryDef>
+      </li>
+	  
+	   <!-- Techprints -->
+      <li Class="StockGenerator_Techprints">
+        <countChances>
+          <li>
+            <count>1</count>
+            <chance>1</chance>
+          </li>
+        </countChances>
+      </li>
+
+      <!-- Implants -->
+      <!-- none -->
+
+      <!-- Buildings -->
+      <!-- none -->
+      
+		<!-- Exotic -->
+		    <li Class="StockGenerator_Tag">
+        <tradeTag>ExoticMisc</tradeTag>
+        <thingDefCountRange>3~3</thingDefCountRange>
+        <countRange>1~1</countRange>
+        <excludedThingDefs>
+          <li>MedicineUltratech</li> <!-- already handled by single def -->
+          <li>ComponentSpacer</li> <!-- already handled by single def -->
+        </excludedThingDefs>
+        <customCountRanges>
+          <Luciferium>7~25</Luciferium>
+          <Hyperweave>40~120</Hyperweave>
+        </customCountRanges>
+      </li>
+      <li Class="StockGenerator_Tag">
+        <tradeTag>Artifact</tradeTag>
+        <thingDefCountRange>2~2</thingDefCountRange>
+        <countRange>1~1</countRange>
+      </li>
+		<!-- Implants -->
+		<li Class="StockGenerator_Tag">
+			<tradeTag>TechHediff</tradeTag>
+			<thingDefCountRange>3</thingDefCountRange>
+			<countRange>1</countRange>
+		</li>
+      
+     <!-- Slaves -->
+      <li Class="StockGenerator_Slaves">
+        <countRange>2~6</countRange>
+      </li>
+      
+      <!-- Animals -->
+      <li Class="StockGenerator_Animals">
+        <tradeTagsSell>
+          <li>AnimalUncommon</li>
+          <li>AnimalFighter</li>
+        </tradeTagsSell>
+        <tradeTagsBuy>
+          <li>AnimalExotic</li>
+        </tradeTagsBuy>
+        <kindCountRange>2~3</kindCountRange>
+        <countRange>1~6</countRange>
+      </li>
+      
+      <!-- Buying -->
+		<li Class="StockGenerator_BuyExpensiveSimple" />
+		<li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
+		<li Class="StockGenerator_BuyTradeTag"><tag>MusicalInstrument</tag></li>
+        <li Class="StockGenerator_BuyTradeTag"><tag>HiTechArmor</tag></li>
+        <li Class="StockGenerator_BuyTradeTag"><tag>Drugs</tag></li>
+		<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireCommon</tag></li>
+		<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireRoyal</tag></li>
+		<li Class="StockGenerator_BuyTradeTag"><tag>PsylinkNeuroformer</tag></li>
+		<li Class="StockGenerator_BuyTradeTag"><tag>ExoticBuilding</tag></li>
+      
+    </stockGenerators>
+  </TraderKindDef>
+
+</Defs>

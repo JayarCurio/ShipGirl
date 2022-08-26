@@ -1,0 +1,1291 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<HediffDef>
+		<defName>FSG_Timer_DestroyerA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of very basic destroyer equipment, which unfurls when exposed to the concept of time.</description>
+		<label>timed Destroyer Kit</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_DestroyerA</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+
+    <HediffDef>
+		<defName>FSG_Hediff_DestroyerA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of very basic destroyer equipment.</description>
+		<label>Destroyer Kit</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledDestroyerHull</hediff>
+						<bodyPart>Hull</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledTorpedoSingle</hediff>
+						<bodyPart>Keel</bodyPart>
+					</li>				
+					<li>
+						<hediff>FSG_InstalledDefensiveScatter</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveTurret</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+				<!-- old format<hediffToApply>
+					<li>FSG_InstalledDestroyerHull</li>    
+					<li>FSG_InstalledTorpedoSingle</li>
+					<li>FSG_InstalledDefensiveScatter</li>
+					<li>FSG_InstalledDefensiveTurret</li>
+				</hediffToApply>
+				<bodyPartDef>
+					<li>Hull</li>
+					<li>Keel</li>
+					<li>AATurret</li>
+					<li>AATurret</li>
+				</bodyPartDef> -->
+			</li>
+		</comps>
+		
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Timer_DestroyerB</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of basic Shark destroyer equipment, which unfurls when exposed to the concept of time.</description>
+		<label>timed shark Destroyer Kit</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_DestroyerB</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+
+    <HediffDef>
+		<defName>FSG_Hediff_DestroyerB</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of very basic destroyer equipment.</description>
+		<label>Destroyer Kit</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledDestroyerHull</hediff>
+						<bodyPart>Hull</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledTorpedoSingle</hediff>
+						<bodyPart>Keel</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledSharkMouth</hediff>
+						<bodyPart>Keel</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveScatter</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveTurret</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+				<!--<hediffToApply>
+					<li>FSG_InstalledDestroyerHull</li>    
+					<li>FSG_InstalledTorpedoSingle</li>
+					<li>FSG_InstalledSharkMouth</li>
+					<li>FSG_InstalledDefensiveScatter</li>
+					<li>FSG_InstalledDefensiveTurret</li>
+				</hediffToApply>
+				<bodyPartDef>
+					<li>Hull</li>
+					<li>Keel</li>
+					<li>Keel</li>
+					<li>AATurret</li>
+					<li>AATurret</li>
+				</bodyPartDef>-->
+			</li>
+		</comps>
+		
+	</HediffDef> 
+	<HediffDef>
+		<defName>FSG_Timer_DestroyerC</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of basic destroyer equipment, styled after those used by Anima aligned ships.</description>
+		<label>timed Destroyer Kit</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_DestroyerC</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+
+    <HediffDef>
+		<defName>FSG_Hediff_DestroyerC</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of basic Anima destroyer equipment.</description>
+		<label>Destroyer Kit</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledDestroyerHull</hediff>
+						<bodyPart>Hull</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledTorpedoSingle</hediff>
+						<bodyPart>Keel</bodyPart>
+					</li>				
+					<li>
+						<hediff>FSG_InstalledDefensiveScatter</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveTurret</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledCatEars</hediff>
+						<bodyPart>Brain</bodyPart>
+					</li>
+				</hediffAndBodypart>
+				
+			</li>
+		</comps>
+		
+	</HediffDef> 
+	
+	
+	
+	<HediffDef>
+		<defName>FSG_Timer_PirateA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of very basic equipment, which unfurls when exposed to the concept of time.</description>
+		<label>timed pirate Kit</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_PirateA</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Hediff_PirateA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of pirate equipment.</description>
+		<label>Destroyer Kit</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledPirateHull</hediff>
+						<bodyPart>Hull</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledTorpedoSpread</hediff>
+						<bodyPart>Keel</bodyPart>
+					</li>				
+					
+					<li>
+						<hediff>FSG_InstalledDefensiveFlak</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+				
+				<!--<hediffToApply>
+					<li>FSG_InstalledPirateHull</li>    
+					<li>FSG_InstalledTorpedoSpread</li>									
+					<li>FSG_InstalledDefensiveFlak</li>
+				</hediffToApply>
+				<bodyPartDef>
+					<li>Hull</li>
+					<li>Keel</li>
+					<li>AATurret</li>
+				</bodyPartDef>-->
+			</li>
+		</comps>
+		
+	</HediffDef> 
+	
+	<HediffDef>
+		<defName>FSG_Timer_PirateB</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of basic shark equipment, which unfurls when exposed to the concept of time.</description>
+		<label>timed pirate shark Kit</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_PirateB</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Hediff_PirateB</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of sharky pirate equipment.</description>
+		<label>Destroyer Kit</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledPirateHull</hediff>
+						<bodyPart>Hull</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledSharkMouth</hediff>
+						<bodyPart>Keel</bodyPart>
+					</li>				
+					<li>
+						<hediff>FSG_InstalledTorpedoSpread</hediff>
+						<bodyPart>Keel</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveFlak</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+				<!--<hediffToApply>
+					<li>FSG_InstalledPirateHull</li>    
+					<li>FSG_InstalledTorpedoSpread</li>
+					<li>FSG_InstalledSharkMouth</li>					
+					<li>FSG_InstalledDefensiveFlak</li>
+				</hediffToApply>
+				<bodyPartDef>
+					<li>Hull</li>
+					<li>Keel</li>
+					<li>Keel</li>
+					<li>AATurret</li>
+				</bodyPartDef>-->
+			</li>
+		</comps>
+		
+	</HediffDef> 
+	
+	<HediffDef>
+		<defName>FSG_Timer_CruiserA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of very basic equipment, which unfurls when exposed to the concept of time.</description>
+		<label>timed cruiser Kit</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_CruiserA</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+    <HediffDef>
+		<defName>FSG_Hediff_CruiserA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of very basic cruiser equipment.</description>
+		<label>Cruiser Kit</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledCruiserHull</hediff>
+						<bodyPart>Hull</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledTorpedoSingle</hediff>
+						<bodyPart>Keel</bodyPart>
+					</li>				
+					<li>
+						<hediff>FSG_InstalledDefensiveFlak</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveAutoTurret</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+				<!--
+				<hediffToApply>
+					<li>FSG_InstalledCruiserHull</li>    
+					<li>FSG_InstalledTorpedoSingle</li>
+					<li>FSG_InstalledDefensiveFlak</li>
+					<li>FSG_InstalledDefensiveAutoTurret</li>
+				</hediffToApply>
+				<bodyPartDef>
+					<li>Hull</li>
+					<li>Keel</li>
+					<li>AATurret</li>
+					<li>AATurret</li>
+				</bodyPartDef>-->
+			</li>
+		</comps>
+	
+	</HediffDef> 
+	<HediffDef>
+		<defName>FSG_Timer_CruiserB</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of shark cruiser equipment, which unfurls when exposed to the concept of time.</description>
+		<label>timed cruiser Kit</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_CruiserB</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+    <HediffDef>
+		<defName>FSG_Hediff_CruiserB</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of very basic cruiser equipment.</description>
+		<label>Cruiser Kit</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledCruiserHull</hediff>
+						<bodyPart>Hull</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledTorpedoSingle</hediff>
+						<bodyPart>Keel</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledSharkMouth</hediff>
+						<bodyPart>Keel</bodyPart>
+					</li>					
+					<li>
+						<hediff>FSG_InstalledDefensiveFlak</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveAutoTurret</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+				<!--
+				<hediffToApply>
+					<li>FSG_InstalledCruiserHull</li>    
+					<li>FSG_InstalledTorpedoSingle</li>
+					<li>FSG_InstalledSharkMouth</li>
+					<li>FSG_InstalledDefensiveTurret</li>
+					<li>FSG_InstalledDefensiveAutoTurret</li>
+				</hediffToApply>
+				<bodyPartDef>
+					<li>Hull</li>
+					<li>Keel</li>
+					<li>Keel</li>
+					<li>AATurret</li>
+					<li>AATurret</li>
+				</bodyPartDef>-->
+			</li>
+		</comps>
+	
+	</HediffDef> 
+
+	<HediffDef>
+		<defName>FSG_Timer_CruiserC</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of gun cruiser equipment, which unfurls when exposed to the concept of time.</description>
+		<label>timed gun cruiser Kit</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_CruiserC</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+    <HediffDef>
+		<defName>FSG_Hediff_CruiserC</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of very basic cruiser equipment.</description>
+		<label>Cruiser Kit</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledCruiserHull</hediff>
+						<bodyPart>Hull</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledTorpedoSingle</hediff>
+						<bodyPart>Keel</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledSharkMouth</hediff>
+						<bodyPart>Keel</bodyPart>
+					</li>					
+					<li>
+						<hediff>FSG_InstalledTurretDualSP</hediff>
+						<bodyPart>Turret</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveAutoTurret</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+				<!--
+				<hediffToApply>
+					<li>FSG_InstalledCruiserHull</li>    
+					<li>FSG_InstalledTorpedoSingle</li>					
+					<li>FSG_InstalledTurretDualSP</li>
+					<li>FSG_InstalledDefensiveAutoTurret</li>
+				</hediffToApply>
+				<bodyPartDef>
+					<li>Hull</li>
+					<li>Keel</li>
+					<li>Turret</li>
+					<li>AATurret</li>
+				</bodyPartDef>-->
+			</li>
+		</comps>
+	
+	</HediffDef> 
+	
+	<HediffDef>
+		<defName>FSG_Timer_CruiserD</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of artillery cruiser equipment, which unfurls when exposed to the concept of time.</description>
+		<label>timed artillery cruiser Kit</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_CruiserD</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	<HediffDef>
+		<defName>FSG_Hediff_CruiserD</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of artillery cruiser equipment.</description>
+		<label>Cruiser Kit</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledCruiserHull</hediff>
+						<bodyPart>Hull</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledTorpedoSingle</hediff>
+						<bodyPart>Keel</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledTurretDualFrag</hediff>
+						<bodyPart>Turret</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveAutoTurret</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+				<!--<hediffToApply>
+					<li>FSG_InstalledCruiserHull</li>    
+					<li>FSG_InstalledTorpedoSpread</li>					
+					<li>FSG_InstalledTurretDualFrag</li>
+					<li>FSG_InstalledDefensiveTurret</li>
+				</hediffToApply>
+				<bodyPartDef>
+					<li>Hull</li>
+					<li>Keel</li>
+					<li>Turret</li>
+					<li>AATurret</li>
+				</bodyPartDef>-->
+			</li>
+		</comps>
+	
+	</HediffDef> 
+	
+	<HediffDef>
+		<defName>FSG_Timer_BattleshipA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of battleship equipment, which unfurls when exposed to the concept of time.</description>
+		<label>timed battleship Kit</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_BattleshipA</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Hediff_BattleshipA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of very basic battleship equipment.</description>
+		<label>Battleship Kit</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledBattleshipHull</hediff>
+						<bodyPart>Hull</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledProtectiveKeel</hediff>
+						<bodyPart>Keel</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledTurretDualFrag</hediff>
+						<bodyPart>Turret</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveAutoTurret</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveScatter</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+				<!--
+				<hediffToApply>
+					<li>FSG_InstalledBattleshipHull</li>    
+					<li>FSG_InstalledProtectiveKeel</li>
+					<li>FSG_InstalledDefensiveScatter</li>
+					<li>FSG_InstalledDefensiveTurret</li>
+					<li>FSG_InstalledTurretDualFrag</li>
+				</hediffToApply>
+				<bodyPartDef>
+					<li>Hull</li>
+					<li>Keel</li>
+					<li>AATurret</li>
+					<li>AATurret</li>
+					<li>Turret</li>
+				</bodyPartDef>-->
+			</li>
+		</comps>
+		
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Timer_BattleshipB</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of Hunter Battleship equipment, which unfurls when exposed to the concept of time.</description>
+		<label>timed battleship Kit</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_BattleshipB</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Hediff_BattleshipB</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of basic sniper battleship equipment.</description>
+		<label>sniper battleship Kit</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledBattleshipHull</hediff>
+						<bodyPart>Hull</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledProtectiveKeel</hediff>
+						<bodyPart>Keel</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledTurretDualSP</hediff>
+						<bodyPart>Turret</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledTurretDualSP</hediff>
+						<bodyPart>Turret</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveTurret</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveTurret</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+				
+				
+			</li>
+		</comps>
+		
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Timer_BattleshipC</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of siege battleship equipment, which unfurls when exposed to the concept of time.</description>
+		<label>timed battleship Kit</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_BattleshipC</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Hediff_BattleshipC</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of siege battleship battleship equipment.</description>
+		<label>burner battleship Kit</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledBattleshipHull</hediff>
+						<bodyPart>Hull</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledProtectiveKeel</hediff>
+						<bodyPart>Keel</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledTurretDualFlame</hediff>
+						<bodyPart>Turret</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveTurret</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveFlak</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+				<!--
+				<hediffToApply>
+					<li>FSG_InstalledBattleshipHull</li>    
+					<li>FSG_InstalledProtectiveKeel</li>
+					<li>FSG_InstalledDefensiveFlak</li>
+					<li>FSG_InstalledDefensiveTurret</li>
+					<li>FSG_InstalledTurretDualFlame</li>
+					
+				</hediffToApply>
+				<bodyPartDef>
+					<li>Hull</li>
+					<li>Keel</li>
+					<li>AATurret</li>
+					<li>AATurret</li>
+					<li>Turret</li>
+					
+				</bodyPartDef>-->
+			</li>
+		</comps>
+		
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Timer_BattleshipD</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of artillery battleship equipment, which unfurls when exposed to the concept of time.</description>
+		<label>timed battleship Kit</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_BattleshipD</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Hediff_BattleshipD</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of basic burner battleship equipment.</description>
+		<label>burner battleship Kit</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledBattleshipHull</hediff>
+						<bodyPart>Hull</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledSpaceTorpedoSingle</hediff>
+						<bodyPart>Keel</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveChargeTurret</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveLaserScatter</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+				
+				<!--<hediffToApply>
+					<li>FSG_InstalledBattleshipHull</li>					
+					<li>FSG_InstalledDefensiveFlak</li>
+					<li>FSG_InstalledDefensiveTurret</li>
+					<li>FSG_InstalledTurretMultiFrag</li>
+					
+				</hediffToApply>
+				<bodyPartDef>
+					<li>Hull</li>
+					<li>AATurret</li>
+					<li>AATurret</li>
+					<li>Turret</li>
+					
+				</bodyPartDef>-->
+			</li>
+		</comps>
+		
+	</HediffDef>
+	
+	<!--SPACERS-->
+	
+	<HediffDef>
+		<defName>FSG_Timer_SpaceDestroyerA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of very basic equipment, which unfurls when exposed to the concept of time.</description>
+		<label>timed space destroyer Kit</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_SpaceDestroyerA</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Hediff_SpaceDestroyerA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of very basic space destroyer equipment.</description>
+		<label>Destroyer Kit</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>    
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledSpaceDestroyerHull</hediff>
+						<bodyPart>Hull</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledSpaceTorpedoSingle</hediff>
+						<bodyPart>Keel</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveChargeTurret</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveLaserScatter</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+				<!--<hediffToApply>
+					<li>FSG_InstalledSpaceDestroyerHull</li>    
+					<li>FSG_InstalledSpaceTorpedoSingle</li>
+					<li>FSG_InstalledDefensiveLaserScatter</li>
+					<li>FSG_InstalledDefensiveChargeTurret</li>
+				</hediffToApply>
+				<bodyPartDef>
+					<li>Hull</li>
+					<li>Keel</li>
+					<li>AATurret</li>
+					<li>AATurret</li>
+				</bodyPartDef>-->
+			</li>
+		</comps>
+		
+	</HediffDef> 
+	
+	<!--Spacer Tier. Add more.-->
+	
+	<HediffDef>
+		<defName>FSG_Timer_SpacePirateA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of very basic equipment, which unfurls when exposed to the concept of time.</description>
+		<label>timed space pirate Kit</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_SpacePirateA</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Hediff_SpacePirateA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of space pirate equipment.</description>
+		<label>Destroyer Kit</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledSpaceDestroyerHull</hediff>
+						<bodyPart>Hull</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledSpaceTorpedoSingle</hediff>
+						<bodyPart>Keel</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveChargeTurret</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveLaserScatter</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+				<!--
+				<hediffToApply>
+					<li>FSG_InstalledSpacePirateHull</li>    
+					<li>FSG_InstalledSpaceTorpedoSpread</li>
+					<li>FSG_InstalledDefensiveLaserScatter</li>
+					<li>FSG_InstalledChargeFlak</li>
+				</hediffToApply>
+				<bodyPartDef>
+					<li>Hull</li>
+					<li>Keel</li>
+					<li>AATurret</li>
+					<li>AATurret</li>
+				</bodyPartDef>-->
+			</li>
+		</comps>
+	
+	</HediffDef> 
+	
+	<HediffDef>
+		<defName>FSG_Timer_SpaceCruiserA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of very basic equipment, which unfurls when exposed to the concept of time.</description>
+		<label>timed star cruiser Kit</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_SpaceCruiserA</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+    <HediffDef>
+		<defName>FSG_Hediff_SpaceCruiserA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of very basic space cruiser equipment.</description>
+		<label>Cruiser Kit</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledSpaceDestroyerHull</hediff>
+						<bodyPart>Hull</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledSpaceTorpedoSingle</hediff>
+						<bodyPart>Keel</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveChargeTurret</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveLaserScatter</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+				<!--
+				<hediffToApply>
+					<li>FSG_InstalledSpaceCruiserHull</li>    
+					<li>FSG_InstalledSpaceTorpedoSingle</li>
+					<li>FSG_InstalledChargeFlak</li>
+					<li>FSG_InstalledDefensiveRailTurret</li>
+				</hediffToApply>
+				<bodyPartDef>
+					<li>Hull</li>
+					<li>Keel</li>
+					<li>AATurret</li>
+					<li>AATurret</li>
+				</bodyPartDef>-->
+			</li>
+		</comps>
+		
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Timer_SpaceBattleshipA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of space battleship, which unfurls when exposed to the concept of time.</description>
+		<label>timed space battleship Kit</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_SpaceBattleshipA</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	
+	<HediffDef>
+		<defName>FSG_Hediff_SpaceBattleshipA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of very basic battleship equipment.</description>
+		<label>Cruiser Kit</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledSpaceDestroyerHull</hediff>
+						<bodyPart>Hull</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledSpaceTorpedoSingle</hediff>
+						<bodyPart>Keel</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveChargeTurret</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveLaserScatter</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+				<!--
+				<hediffToApply>
+					<li>FSG_InstalledSpaceBattleshipHull</li>    
+					<li>FSG_InstalledProtectiveDish</li>
+					<li>FSG_InstalledDefensiveLaserScatter</li>
+					<li>FSG_InstalledDefensiveRailTurret</li>
+					<li>FSG_InstalledTurretSpaceBomb</li>
+				</hediffToApply>
+				<bodyPartDef>
+					<li>Hull</li>
+					<li>Keel</li>
+					<li>AATurret</li>
+					<li>AATurret</li>
+					<li>Turret</li>
+				</bodyPartDef>-->
+			</li>
+		</comps>
+		
+	</HediffDef>
+	
+	
+	
+	<HediffDef>
+		<defName>FSG_Timer_SpaceSuperA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of super heavy space dreadnought equipment, which unfurls when exposed to the concept of time.</description>
+		<label>timed space dreadnought Kit</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_SpaceSuperA</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Hediff_SpaceSuperA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of super heavy space dreadnought equipment.</description>
+		<label>Dreadnought loadout</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledSpaceDestroyerHull</hediff>
+						<bodyPart>Hull</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledSpaceTorpedoSingle</hediff>
+						<bodyPart>Keel</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveChargeTurret</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveLaserScatter</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+				<!--
+				<hediffToApply>
+					<li>FSG_InstalledSpaceSuperHull</li>    
+					<li>FSG_InstalledProtectiveDish</li>
+					<li>FSG_InstalledChargeFlak</li>
+					<li>FSG_InstalledDefensiveRailTurret</li>
+					<li>FSG_InstalledTurretSpaceBomb</li>
+				</hediffToApply>
+				<bodyPartDef>
+					<li>Hull</li>
+					<li>Keel</li>
+					<li>AATurret</li>
+					<li>AATurret</li>
+					<li>Turret</li>
+				</bodyPartDef>-->
+			</li>
+		</comps>
+		
+	</HediffDef>
+	
+		<HediffDef>
+		<defName>FSG_Timer_SpaceSuperB</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of nigh unstoppable rigging, which unfurls when exposed to the concept of time.</description>
+		<label>timed space super dreadnought Kit</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_SpaceSuperB</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Hediff_SpaceSuperB</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of super heavy space dreadnought equipment.</description>
+		<label>Dreadnought loadout</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledSpaceDestroyerHull</hediff>
+						<bodyPart>Hull</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledSpaceTorpedoSingle</hediff>
+						<bodyPart>Keel</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveChargeTurret</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledDefensiveLaserScatter</hediff>
+						<bodyPart>AATurret</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+				<!--
+				<hediffToApply>
+					<li>FSG_InstalledSpaceSuperHull</li>    
+					<li>FSG_InstalledProtectiveDish</li>
+					<li>FSG_InstalledProtectiveDish</li>
+					<li>FSG_InstalledChargeFlak</li>
+					<li>FSG_InstalledDefensiveRailTurret</li>
+					<li>FSG_InstalledTurretSpaceBomb</li>
+					<li>FSG_InstalledTurretSpaceBomb</li>
+				</hediffToApply>
+				<bodyPartDef>
+					<li>Hull</li>
+					<li>Keel</li>
+					<li>Keel</li>
+					<li>AATurret</li>
+					<li>AATurret</li>
+					<li>Turret</li>
+					<li>Turret</li>
+				</bodyPartDef>-->
+			</li>
+		</comps>
+		
+	</HediffDef>
+	
+	
+	
+	
+ 
+	  
+</Defs>

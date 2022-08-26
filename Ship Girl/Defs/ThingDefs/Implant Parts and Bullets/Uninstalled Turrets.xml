@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+
+<!--This should probably be in ThingDefs, but I am used to it here.-->
+
+<HediffDef Name="AddedAuxMountBase" Abstract="True" ParentName="AddedBodyPartBase">
+
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<hediffGivers>
+		</hediffGivers>
+
+</HediffDef>
+
+	<!--Medieval cannons-->
+	<ThingDef ParentName="FSG_SmithableBodypartBase">
+		<defName>FSG_PartTurretCannonBall</defName>
+		<label>Uninstalled cast ball cannon</label>
+		<description>A primitive cannon, ready to be installed, designed to be mounted in a ship girl's shoulder turrets. It's loaded with solid rounds designed to smash buildings and vehicles.</description>
+		<graphicData>
+			<texPath>Turrets/Smithed</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+		  <Steel>100</Steel>
+		 
+		</costList>
+		<recipeMaker>
+		  <researchPrerequisite>Smithing</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+	<ThingDef ParentName="FSG_SmithableBodypartBase">
+		<defName>FSG_PartTurretPetard</defName>
+		<label>Uninstalled cast explosive cannon</label>
+		<description>A primitive cannon and explosive shot, ready to be installed in a ship girl's shoulder turrets. It's loaded with explosive rounds designed to rain destruction down on enemy troops.</description>
+		<graphicData>
+			<texPath>Turrets/Smithed</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingSetMakerTags></thingSetMakerTags>
+		<costList>
+		  <Steel>150</Steel>
+		  
+		</costList>
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>Smithing</li>
+				<li>IEDs</li>
+			</researchPrerequisites>
+		</recipeMaker>
+	</ThingDef>
+	
+	<!--Industrial-->
+		<!--AA Calibers, aux-->
+		
+	<ThingDef ParentName="FSG_MachinableBodypartBase">
+		<defName>FSG_DefensiveScatter</defName>
+		<label>Uninstalled AA Machinegun</label>
+		<description>A defensive scatter gun, ready to be installed, designed to be mounted in a ship girl's aux turrets. A rapid fire weapon for driving off swarms of small targets, or wounding multiple poorly armored foes. It fires very fast, but it has poor accuracy outside of very close range, and doesn't do much damage.</description>
+		<graphicData>
+			<texPath>Turrets/Single</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+		  <Steel>60</Steel>
+		 
+		  <ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+		  <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>		
+		
+		<!--Destroyer Calibers, aux-->
+		
+	<ThingDef ParentName="FSG_MachinableBodypartBase">
+		<defName>FSG_DefensiveFlak</defName>
+		<label>Uninstalled Flak Cannon</label>
+		<description>A defensive flak cannon, ready to be installed, designed to be mounted in a ship girl's Anti-Aircraft turrets. A multi-purpose weapon with a short effective range. It fires more slowly than other anti-aircraft weapons, but has enough firepower to threaten warships, somewhat. It is better than outrigger ramming for a melee combat, but not as good as torpedoes or specilized close combat limbs.</description>
+		<graphicData>
+			<texPath>Turrets/DefensiveFlechette</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+		  <Steel>100</Steel>
+		 
+		  <ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+		  <researchPrerequisite>Mortars</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+		
+		<!--Cruiser Calibers, aux-->
+		
+		<ThingDef ParentName="FSG_MachinableBodypartBase">
+		<defName>FSG_DefensiveTurret</defName>
+		<label>Uninstalled Light Defensive Turret</label>
+		<description>A semi-automatic defensive cannon turret, ready to be installed, designed to be mounted in a ship girl's forward turrets. It's loaded with 16" SAP rounds, due to a programming error, that I will fix later.</description>
+		<graphicData>
+			<texPath>Turrets/Single</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+			<Steel>100</Steel>
+	 
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>Gunsmithing</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+	
+	<ThingDef ParentName="FSG_MachinableBodypartBase">
+		<defName>FSG_PartDefensiveAutoTurret</defName>
+		<label>Uninstalled Light autocannon Turret</label>
+		<description>A defensive autocannon turret, ready to be installed, designed to be mounted in a ship girl's Anti-Aircraft turrets. It's loaded with solid rounds designed to penetrate armor.</description>
+		<graphicData>
+			<texPath>Turrets/DefensiveMulti</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+		  <Steel>100</Steel>
+		 
+		  <ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+		  <researchPrerequisite>GasOperation</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+		
+		<!--BB Cailibers, main-->
+
+			<!--406mm HE-->
+	<ThingDef ParentName="FSG_MachinableBodypartBase">
+		<defName>FSG_PartTurretDualFrag</defName>
+		<label>Uninstalled Dual Frag Cannon</label>
+		<description>A dual mounted cannon array, ready to be installed, designed to be mounted in a ship girl's shoulder turrets. It's loaded with explosive rounds designed to rain destruction down on enemy troops.</description>
+		<graphicData>
+			<texPath>Turrets/Generic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+		  <Steel>150</Steel>
+		  <ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>GunTurrets</li>
+		  
+				<li>Mortars</li>
+			</researchPrerequisites>
+		</recipeMaker>
+	</ThingDef>
+	
+	
+	<ThingDef ParentName="FSG_MachinableBodypartBase">
+		<defName>FSG_PartTurretMultiFrag</defName>
+		<label>Uninstalled Quad Frag Cannon</label>
+		<description>A quad mounted cannon array, ready to be installed, designed to pack a ship girl's shoulder turrets with maximum firepower. It's loaded with explosive rounds designed to rain destruction down on enemy troops.</description>
+		<graphicData>
+			<texPath>Turrets/Multi</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+		  <Steel>150</Steel>
+		  <ComponentSpacer>8</ComponentSpacer>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>HeavyTurrets</li>
+		  
+				<li>Mortars</li>
+			</researchPrerequisites>
+		</recipeMaker>
+	</ThingDef>
+		<!--406mm SAP-->
+	<ThingDef ParentName="FSG_MachinableBodypartBase">
+		<defName>FSG_PartTurretDualSP</defName>
+		<label>Uninstalled Dual Slug Cannon</label>
+		<description>A dual mounted cannon array, ready to be installed, designed to be mounted in a ship girl's shoulder turrets. It's loaded with 406mm SAP rounds designed to pierce armor.</description>
+		<graphicData>
+			<texPath>Turrets/DualSP</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+		  <Steel>100</Steel>
+		 
+		  <ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+		  <researchPrerequisite>GunTurrets</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+	
+	<ThingDef ParentName="FSG_MachinableBodypartBase">
+		<defName>FSG_PartTurretMultiSP</defName>
+		<label>Uninstalled Quad Slug Cannon</label>
+		<description>A quad mounted cannon array, ready to be installed, designed to pack a ship girl's shoulder turrets with maximum firepower. It's loaded with 406mm SAP rounds designed to pierce through armor.</description>
+		<graphicData>
+			<texPath>Turrets/MultiSP</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+		  <Steel>150</Steel>
+		
+		  <ComponentIndustrial>8</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+		  <researchPrerequisite>HeavyTurrets</researchPrerequisite>
+		  
+		</recipeMaker>
+	
+	</ThingDef>
+		<!--406mm HEI-->
+	<ThingDef ParentName="FSG_MachinableBodypartBase">
+		<defName>FSG_PartTurretDualFlame</defName>
+		<label>Uninstalled Dual Flame Cannon</label>
+		<description>A dual mounted cannon array, ready to be installed, designed to be mounted in a ship girl's shoulder turrets. It's loaded with incendiary rounds designed to rain flaming liquid down on enemy troops.</description>
+		<graphicData>
+			<texPath>Turrets/Incendiary</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+		  <Steel>75</Steel>
+		  <Chemfuel>75</Chemfuel>
+		  
+		  <ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+		 <researchPrerequisites>
+				<li>GunTurrets</li>
+		  
+				<li>Mortars</li>
+			</researchPrerequisites>
+		</recipeMaker>
+	</ThingDef>
+	
+	<!-- Anima Spirits' 460mm Yamato triple guns go here. -->
+  
+		
+	<!--Spacer-->
+		<!--AA Calibers, aux-->
+
+	<ThingDef ParentName="FSG_FabricatedBodypartBase">
+		<defName>FSG_DefensiveChargeFlak</defName>
+		<label>Uninstalled Charged Flak Cannon</label>
+		<description>A defensive charged flak cannon, ready to be installed, designed to be mounted in a ship girl's Anti-Aircraft turrets. It's loaded with unstable charged shells that explode at close range, to protect from close combat threats.</description>
+		<graphicData>
+			<texPath>Turrets/DefensiveFlechette</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+		  <Plasteel>100</Plasteel>
+		 
+		  <ComponentSpacer>2</ComponentSpacer>
+		</costList>
+		<recipeMaker>
+		  <researchPrerequisite>ChargedShot</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef ParentName="FSG_FabricatedBodypartBase">
+		<defName>FSG_DefensiveLaserScatter</defName>
+		<label>Uninstalled Laser Scatter Gun</label>
+		<description>A defensive laser scatter gun, ready to be installed, designed to be mounted in a ship girl's Anti-Aircraft turrets. It's loaded with close combat shot.</description>
+		<graphicData>
+			<texPath>Turrets/Single</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		<costList>
+			<Steel>75</Steel>
+	 		<ComponentSpacer>2</ComponentSpacer>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>AdvancedFabrication</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+		
+		<!--Cruiser Calibers, aux-->
+		
+<ThingDef ParentName="FSG_FabricatedBodypartBase">
+    <defName>FSG_DefensiveRailTurret</defName>
+    <label>Uninstalled Defensive Rail Cannon</label>
+    <description>A defensive rail cannon turret, ready to be installed, designed to be mounted in a ship girl's Anti-Aircraft turrets. It drives relativistic masses to penetrate armor.</description>
+    <graphicData>
+		<texPath>Turrets/Single</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>100</Plasteel>
+	 
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>SniperTurret</researchPrerequisite>
+    </recipeMaker>
+</ThingDef>
+
+<ThingDef ParentName="FSG_FabricatedBodypartBase">
+    <defName>FSG_PartDefensiveChargeTurret</defName>
+    <label>Uninstalled Charge Blaster Turret</label>
+    <description>A defensive Charge Blaster turret, ready to be installed, designed to be mounted in a ship girl's Anti-Aircraft turrets. It fires bursts of heavy charged rounds.</description>
+    <graphicData>
+		<texPath>Turrets/DefensiveMulti</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>100</Plasteel>
+	 
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>ChargedShot</researchPrerequisite>
+    </recipeMaker>
+</ThingDef>
+
+		<!--Cruiser Calibers, main-->
+		
+		<!--BB Cailibers, main-->
+	<ThingDef ParentName="FSG_MachinableBodypartBase">
+		<defName>FSG_PartTurretSpaceBomb</defName>
+		<label>Uninstalled Dual Proton Cannon</label>
+		<description>A dual mounted proton launcher, ready to be installed, designed to be mounted in a ship girl's shoulder turrets. It's loaded with advanced Proton bombs.</description>
+		<graphicData>
+			<texPath>Turrets/DualFrag</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+		  <Steel>200</Steel>
+		  <ComponentSpacer>4</ComponentSpacer>
+		</costList>
+		<recipeMaker>
+		  <researchPrerequisite>ShipReactor</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+	
+		<ThingDef ParentName="FSG_MachinableBodypartBase">
+		<defName>FSG_PartTurretRailHeavy</defName>
+		<label>Uninstalled Heavy Rail Gun</label>
+		<description>A heavy railgun, ready to be installed, designed to be mounted in a ship girl's shoulder turrets.</description>
+		<graphicData>
+			<texPath>Turrets/Generic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+		  <Plasteel>100</Plasteel>
+		   <Uranium>100</Uranium>
+		 
+		  <ComponentSpacer>4</ComponentSpacer>
+		</costList>
+		<recipeMaker>
+		  <researchPrerequisite>SniperTurret</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+	
+	<ThingDef ParentName="FSG_MachinableBodypartBase">
+		<defName>FSG_PartTurretRailMulti</defName>
+		<label>Uninstalled Twin Rail Cannon</label>
+		<description>A twin railgun, ready to be mounted.</description>
+		<graphicData>
+			<texPath>Turrets/MultiSP</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+		  <Plasteel>150</Plasteel>
+		  <Uranium>150</Uranium>
+		
+		  <ComponentSpacer>8</ComponentSpacer>
+		</costList>
+		<recipeMaker>
+		  <researchPrerequisite>SniperTurret</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+		
+	<!--Archeotech/Sinister/Ultra-->
+	
+		<!--AA Calibers, aux-->
+		
+		<!--Cruiser Calibers, aux-->
+		
+		<!--Cruiser Calibers, main-->
+		
+		<!--BB Cailibers, main-->
+	<ThingDef ParentName="FSG_UltraBodypartBase">
+		<defName>FSG_PartTurretDualPlasma</defName>
+		<label>Uninstalled Dual Plasma Cannon</label>
+		<description>Each barrel fires two blasts of firey plasma, for a total of four.</description>
+		<graphicData>
+			<texPath>Turrets/Incendiary</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+		  <Plasteel>150</Plasteel>
+		  <ComponentSpacer>4</ComponentSpacer>
+		</costList>
+		
+	</ThingDef>
+
+	<ThingDef ParentName="FSG_UltraBodypartBase">
+		<defName>FSG_PartTurretQuadPlasma</defName>
+		<label>Uninstalled Quad Plasma Cannon</label>
+		<description>A quad mounted plasma cannon array, to reduce all who oppose you to ember and ash.</description>
+		<graphicData>
+			<texPath>Turrets/Incendiary</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+		  <Plasteel>300</Plasteel>
+		  <ComponentSpacer>8</ComponentSpacer>
+		</costList>
+    
+	</ThingDef>
+		
+</Defs>

@@ -1,0 +1,1649 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!--This is a comment-->
+
+	<AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+		<defName>ShipGirlRace</defName>
+		<label>Ship Girl</label>
+		<description>These creatures resemble human females with extensive cybernetic augments, but they are actually physical manifestations of warship personas. They are created by channeling the untapped psychic energies of the collective unconscious to acheive unparaleled firepower miniaturization, at a cost of giving them somewhat eclectic personalities and appearances.
+		
+		Be aware that loading them down with heavy cannons and armor with lower their movement ability and amplify their prodigious appetites.
+		
+		They often resemble tribal deities, colorful pop stars, or historical figures whose names they bear.</description>
+		<alienRace>
+			<graphicPaths>
+				
+				
+			</graphicPaths>
+			
+			<styleSettings>
+                <li>
+                    <key>HairDef</key>
+                    <value>
+                        <hasStyle>true</hasStyle>
+                        
+                    </value>
+                </li>
+                <li>
+                    <key>BeardDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+                <li>
+                    <key>TattooDef</key>
+                    <value>
+                        <hasStyle>true</hasStyle>
+                    </value>
+                </li>
+            </styleSettings>
+
+			<!--<hairSettings>
+			
+				<hasHair>true</hasHair>
+				<getsGreyAt>45</getsGreyAt>
+				<hairTags></hairTags>
+				<shader>Cutout</shader>
+			</hairSettings>-->
+
+			<generalSettings>
+				<maleGenderProbability>0.000000000000000</maleGenderProbability>
+				<!-- avoid using immune to age "true" as it will prevent hediff giver sets, ommit those if you don't want their affects -->
+				<immuneToAge>false</immuneToAge>
+				<humanRecipeImport>true</humanRecipeImport>
+				
+				<!-- My Race can laydown. Defaults to true if you leave it out.  -->
+				<canLayDown>true</canLayDown>
+
+
+				<!-- changes the effect of chemicals for your Race and if they can even ingest such things //can omit -->
+				<chemicalSettings>
+				
+					<li>
+						<chemical>FSG_Octane</chemical>
+						<reactions>
+							<li Class="IngestionOutcomeDoer_GiveHediff">
+								<hediffDef>FSG_OctaneHigh</hediffDef>
+								<severity>0.75</severity>
+								<toleranceChemical>FSG_Octane</toleranceChemical>
+							</li>
+							<li Class="IngestionOutcomeDoer_OffsetNeed">
+								<need>Rest</need>
+								<offset>.1</offset>
+								<toleranceChemical>FSG_Octane</toleranceChemical>
+							</li>
+							<li Class="IngestionOutcomeDoer_GiveHediff">
+								<hediffDef>FSG_FuelFiltration</hediffDef>
+								<severity>.05</severity>
+								
+							</li>
+							<li Class="IngestionOutcomeDoer_GiveHediff">
+								<hediffDef>FSG_OctaneTolerance</hediffDef>
+								<severity>0.008</severity>
+								<divideByBodySize>true</divideByBodySize>
+							</li>
+						</reactions>
+					</li>
+					
+				</chemicalSettings>
+				
+				<forcedRaceTraitEntries>
+					<!-- Your Race will always spawn with these traits -->
+					
+				</forcedRaceTraitEntries>
+				<disallowedTraits>
+										
+					<li>
+						<defName>BodyPurist</defName>
+					</li>
+					<li>
+						<defName>Beauty</defName>
+						<degree>-1</degree>
+					</li>
+					<li>
+						<defName>Beauty</defName>
+						<degree>-2</degree>
+					</li>
+				</disallowedTraits>
+				<!-- 2-6 is a lot, especially since so many of our backstories give even more traits. This race has its crazy pants on. -->
+				<additionalTraits>2~6</additionalTraits>
+
+				
+					 <!-- Used to make Factions of your Race be Friends or enemies with other factions -->
+				<factionRelations>
+				<li>
+					<factions>
+						<!--<li>AnimaSpirits</li>-->
+						<li>BloodSharks</li>
+					</factions>
+					<goodwill>
+						<min>-25</min>
+						<max>80</max>
+					</goodwill>
+				</li>               
+				</factionRelations>
+				
+
+				<maxDamageForSocialfight>8</maxDamageForSocialfight>
+				<allowHumanBios>false</allowHumanBios>
+				<immuneToXenophobia>false</immuneToXenophobia>
+				<notXenophobistTowards>
+					<li>Human</li>
+					<li>ShipGirlSinRace</li>
+				</notXenophobistTowards>
+				<minAgeForAdulthood>0.5</minAgeForAdulthood>
+				<alienPartGenerator>
+					<aliencrowntypes>
+						<li>Average_Normal</li>
+						
+					</aliencrowntypes>
+					<alienbodytypes>
+						
+						<li>Thin</li>
+						<li>Female</li>
+						
+					</alienbodytypes>
+					<useGenderedHeads>true</useGenderedHeads>
+					<useGenderedBodies>false</useGenderedBodies>
+					<customDrawSize>(1, 1)</customDrawSize>
+					<customHeadDrawSize>(1, 1)</customHeadDrawSize>
+					<customPortraitDrawSize>(1, 1)</customPortraitDrawSize>
+					<customPortraitHeadDrawSize>(1, 1)</customPortraitHeadDrawSize>
+					<headOffset>(0, 0)</headOffset>
+					<!--<headBodyPartDef>YourOwnRaceHead</headBodyPartDef>-->
+					
+					<!-- https://github.com/RimWorld-CCL-Reborn/AlienRaces/wiki/General-Settings#bodyaddons -->
+						<!--Colors-->
+						<colorChannels>
+							
+							<li>
+								<name>hair</name>
+								<first Class="ColorGenerator_Options">
+									<options>
+										
+										<!-- grey -->
+										<li>
+											<weight>4</weight>
+											<only>RGBA(215, 215, 216, 255)</only>
+										</li>
+										
+										<li>
+											<weight>4</weight>
+											<only>RGBA(120, 120, 130, 255)</only>
+										</li>
+										<li>
+											<weight>3</weight>
+											<only>RGBA(0.25, 0.2, .15, 1.000)</only>
+										</li>
+										<!-- black -->
+											<li>
+											<weight>3</weight>
+											<only>RGBA(0.31, 0.28, .26, 1.000)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(66, 66, 66, 255)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(.2, .2, .35, 1.000)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(.1, .1, .16, 1.000)</only>
+										</li>
+										<li>
+											<weight>3</weight>
+											<only>RGBA(.1, .1, .1, 1.000)</only>
+										</li>
+										
+										
+										
+										
+										
+										
+										<!--brown-->
+										<li>
+											<weight>2</weight>
+											<only>RGBA(.35, .25, .20, 1.000)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(.25, .25, .20, 1.000)</only>
+										</li>
+										
+										<li>
+											<weight>3</weight>
+											<only>RGBA(125, 85, 80, 255)</only>
+										</li>
+										<li>
+											<weight>3</weight>
+											<only>RGBA(193, 150, 81, 255)</only>
+										</li>
+										<li>
+											<weight>3</weight>
+											<only>RGBA(193, 90, 2, 255)</only>
+										</li>
+										
+
+										<!-- green -->
+										<li>
+											<weight>2</weight>
+											<only>RGBA(.35, 0.800, 0.300, 1)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(.35, 0.800, 0.100, 1)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(44, 150, 80, 255)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(.35, 1.000, 0.300, 1.000)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(82, 220, 55, 255)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(82, 220, 80, 255)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(82, 250, 80, 255)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(140, 190, 113, 255)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(.35, 1.000, 0.000, 1.000)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(44, 233, 55, 255)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(44, 233, 80, 255)</only>
+										</li>
+										<!--Mint-->
+										<li>
+											<weight>3</weight>
+											<only>RGBA(44, 150, 220, 255)</only>
+										</li>
+										
+										<!-- teal and cyan -->
+										<li>
+											<weight>3</weight>
+											<only>RGBA(.35, 1.000, 0.800, 1.000)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(44, 150, 150, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(44, 220, 240, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(45, 217, 215, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(44, 220, 180, 255)</only>
+										</li>
+										
+										<!-- blue -->
+										<li>
+											<weight>3</weight>
+											<only>RGBA(.35, 0.800, 0.800, 1)</only>
+										</li>
+										<li>
+											<weight>3</weight>
+											<only>RGBA(.35, 0.500, 0.800, 1)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(44, 85, 200, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(115, 115, 247, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(95, 95, 230, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(130, 130, 252, 255)</only>
+										</li>
+										
+										<!-- yellow -->
+										<li>
+											<weight>1</weight>
+											<only>RGBA(255, 220, 80, 255)</only>
+										</li>
+										<li>
+											<weight>3</weight>
+											<only>RGBA(235, 220, 81, 255)</only>
+										</li>
+										<li>
+											<weight>4</weight>
+											<only>RGBA(252, 211, 105,255)</only>
+										</li>
+										<li>
+											<weight>4</weight>
+											<only>RGBA(232, 191, 85, 255)</only>
+										</li>
+										
+										<!-- orange -->
+										<li>
+											<weight>3</weight>
+											<only>RGBA(240, 150, 81, 255)</only>
+										</li>
+										<li>
+											<weight>3</weight>
+											<only>RGBA(221, 121, 31, 255)</only>
+										</li>
+										<li>
+											<weight>3</weight>
+											<only>RGBA(239, 166, 77, 255)</only>
+										</li>
+										
+										<!-- purple -->
+										<li>
+											<weight>3</weight>
+											<only>RGBA(.35, 0.300, 0.500, 1)</only>
+										</li>
+										<li>
+											<weight>5</weight>
+											<only>RGBA(170, 126, 234, 255)</only>
+										</li>
+										<li>
+											<weight>5</weight>
+											<only>RGBA(170, 100, 210, 255)</only>
+										</li>
+										<!--lavender-->
+										<li>
+											<weight>3</weight>
+											<only>RGBA(200, 146, 255, 255)</only>
+										</li>
+										<!-- pink -->
+										<li>
+											<weight>5</weight>
+											<only>RGBA(255, 151, 178, 255)</only>
+										</li>
+										<li>
+											<weight>5</weight>
+											<only>RGBA(255, 151, 195, 255)</only>
+										</li>
+										<li>
+											<weight>5</weight>
+											<only>RGBA(220, 115, 115, 255)</only>
+										</li>
+										<!-- red -->
+										<li>
+											<weight>2</weight>
+											<only>RGBA(255, 102, 83, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(255, 150, 150, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(255, 155, 83, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(255, 20, 63, 255)</only>
+										</li>
+										<!-- white -->
+										<li>
+											<weight>6</weight>
+											<only>RGBA( 245, 245, 245, 255)</only>
+										</li>
+										<li>
+											<weight>6</weight>
+											<only>RGBA( 237, 237, 237, 255)</only>
+										</li>
+									</options>
+								</first>
+								<second Class="ColorGenerator_Options">
+									<options>
+										<li>
+											<weight>10</weight>
+											<only>RGBA(1.000, 0.000, 0.000, 1.000)</only>
+										</li>
+									</options>
+								</second>
+							</li>
+													
+							<li>
+								<name>tattoo</name>
+								<first Class="ColorGenerator_Options">
+									<options>
+	
+
+										<!-- green -->
+										<li>
+											<weight>2</weight>
+											<only>RGBA(.35, 0.800, 0.300, 1)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(.35, 0.800, 0.100, 1)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(44, 150, 80, 255)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(.35, 1.000, 0.300, 1.000)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(82, 220, 55, 255)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(82, 220, 80, 255)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(82, 250, 80, 255)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(140, 190, 113, 255)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(.35, 1.000, 0.000, 1.000)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(44, 233, 55, 255)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(44, 233, 80, 255)</only>
+										</li>
+										<!--Mint-->
+										<li>
+											<weight>3</weight>
+											<only>RGBA(44, 150, 220, 255)</only>
+										</li>
+										
+										<!-- teal and cyan -->
+										<li>
+											<weight>3</weight>
+											<only>RGBA(.35, 1.000, 0.800, 1.000)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(44, 150, 150, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(44, 220, 240, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(45, 217, 215, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(44, 220, 180, 255)</only>
+										</li>
+										
+										<!-- blue -->
+										
+										<li>
+											<weight>2</weight>
+											<only>RGBA(115, 115, 247, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(95, 95, 230, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(130, 130, 252, 255)</only>
+										</li>
+										
+										<!-- yellow -->
+										<li>
+											<weight>1</weight>
+											<only>RGBA(255, 220, 80, 255)</only>
+										</li>
+										<li>
+											<weight>3</weight>
+											<only>RGBA(235, 220, 81, 255)</only>
+										</li>
+										<li>
+											<weight>4</weight>
+											<only>RGBA(252, 211, 105,255)</only>
+										</li>
+										<li>
+											<weight>4</weight>
+											<only>RGBA(232, 191, 85, 255)</only>
+										</li>
+										
+										<!-- orange -->
+										<li>
+											<weight>3</weight>
+											<only>RGBA(240, 150, 81, 255)</only>
+										</li>
+										<li>
+											<weight>3</weight>
+											<only>RGBA(221, 121, 31, 255)</only>
+										</li>
+										<li>
+											<weight>3</weight>
+											<only>RGBA(239, 166, 77, 255)</only>
+										</li>
+										
+										<!-- purple -->
+										<li>
+											<weight>3</weight>
+											<only>RGBA(.35, 0.300, 0.500, 1)</only>
+										</li>
+										<li>
+											<weight>5</weight>
+											<only>RGBA(170, 126, 234, 255)</only>
+										</li>
+										<li>
+											<weight>5</weight>
+											<only>RGBA(170, 100, 210, 255)</only>
+										</li>
+										<!--lavender-->
+										<li>
+											<weight>3</weight>
+											<only>RGBA(200, 146, 255, 255)</only>
+										</li>
+										<!-- pink -->
+										<li>
+											<weight>5</weight>
+											<only>RGBA(255, 151, 178, 255)</only>
+										</li>
+										<li>
+											<weight>5</weight>
+											<only>RGBA(255, 151, 195, 255)</only>
+										</li>
+										<li>
+											<weight>5</weight>
+											<only>RGBA(220, 115, 115, 255)</only>
+										</li>
+										<!-- red -->
+										<li>
+											<weight>2</weight>
+											<only>RGBA(255, 102, 83, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(255, 150, 150, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(255, 155, 83, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(255, 20, 63, 255)</only>
+										</li>
+										
+									</options>
+								</first>
+								<second Class="ColorGenerator_Options">
+									<options>
+										
+										<!-- grey -->
+										<li>
+											<weight>4</weight>
+											<only>RGBA(215, 215, 216, 255)</only>
+										</li>
+										
+										<li>
+											<weight>4</weight>
+											<only>RGBA(120, 120, 130, 255)</only>
+										</li>
+										<li>
+											<weight>3</weight>
+											<only>RGBA(0.25, 0.2, .15, 1.000)</only>
+										</li>
+										<!-- black -->
+										
+										<li>
+											<weight>2</weight>
+											<only>RGBA(66, 66, 66, 255)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(.2, .2, .35, 1.000)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(.1, .1, .16, 1.000)</only>
+										</li>
+										
+										
+										
+										
+										
+										
+										
+										<!--brown-->
+										<li>
+											<weight>2</weight>
+											<only>RGBA(.35, .25, .20, 1.000)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(.25, .25, .20, 1.000)</only>
+										</li>
+										
+										<li>
+											<weight>3</weight>
+											<only>RGBA(125, 85, 80, 255)</only>
+										</li>
+										<li>
+											<weight>3</weight>
+											<only>RGBA(193, 150, 81, 255)</only>
+										</li>
+										<li>
+											<weight>3</weight>
+											<only>RGBA(193, 90, 2, 255)</only>
+										</li>
+										
+
+										<!-- green -->
+										<li>
+											<weight>2</weight>
+											<only>RGBA(.35, 0.800, 0.300, 1)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(.35, 0.800, 0.100, 1)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(44, 150, 80, 255)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(.35, 1.000, 0.300, 1.000)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(82, 220, 55, 255)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(82, 220, 80, 255)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(82, 250, 80, 255)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(140, 190, 113, 255)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(.35, 1.000, 0.000, 1.000)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(44, 233, 55, 255)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(44, 233, 80, 255)</only>
+										</li>
+										<!--Mint-->
+										<li>
+											<weight>3</weight>
+											<only>RGBA(44, 150, 220, 255)</only>
+										</li>
+										
+										<!-- teal and cyan -->
+										<li>
+											<weight>3</weight>
+											<only>RGBA(.35, 1.000, 0.800, 1.000)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(44, 150, 150, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(44, 220, 240, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(45, 217, 215, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(44, 220, 180, 255)</only>
+										</li>
+										
+										<!-- blue -->
+										<li>
+											<weight>3</weight>
+											<only>RGBA(.35, 0.800, 0.800, 1)</only>
+										</li>
+										<li>
+											<weight>3</weight>
+											<only>RGBA(.35, 0.500, 0.800, 1)</only>
+										</li>
+										<li>
+											<weight>1</weight>
+											<only>RGBA(44, 85, 200, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(115, 115, 247, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(95, 95, 230, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(130, 130, 252, 255)</only>
+										</li>
+										
+										<!-- yellow -->
+										<li>
+											<weight>1</weight>
+											<only>RGBA(255, 220, 80, 255)</only>
+										</li>
+										<li>
+											<weight>3</weight>
+											<only>RGBA(235, 220, 81, 255)</only>
+										</li>
+										<li>
+											<weight>4</weight>
+											<only>RGBA(252, 211, 105,255)</only>
+										</li>
+										<li>
+											<weight>4</weight>
+											<only>RGBA(232, 191, 85, 255)</only>
+										</li>
+										
+										<!-- orange -->
+										<li>
+											<weight>3</weight>
+											<only>RGBA(240, 150, 81, 255)</only>
+										</li>
+										<li>
+											<weight>3</weight>
+											<only>RGBA(221, 121, 31, 255)</only>
+										</li>
+										<li>
+											<weight>3</weight>
+											<only>RGBA(239, 166, 77, 255)</only>
+										</li>
+										
+										<!-- purple -->
+										<li>
+											<weight>3</weight>
+											<only>RGBA(.35, 0.300, 0.500, 1)</only>
+										</li>
+										<li>
+											<weight>5</weight>
+											<only>RGBA(170, 126, 234, 255)</only>
+										</li>
+										<li>
+											<weight>5</weight>
+											<only>RGBA(170, 100, 210, 255)</only>
+										</li>
+										<!--lavender-->
+										<li>
+											<weight>3</weight>
+											<only>RGBA(200, 146, 255, 255)</only>
+										</li>
+										<!-- pink -->
+										<li>
+											<weight>5</weight>
+											<only>RGBA(255, 151, 178, 255)</only>
+										</li>
+										<li>
+											<weight>5</weight>
+											<only>RGBA(255, 151, 195, 255)</only>
+										</li>
+										<li>
+											<weight>5</weight>
+											<only>RGBA(220, 115, 115, 255)</only>
+										</li>
+										<!-- red -->
+										<li>
+											<weight>2</weight>
+											<only>RGBA(255, 102, 83, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(255, 150, 150, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(255, 155, 83, 255)</only>
+										</li>
+										<li>
+											<weight>2</weight>
+											<only>RGBA(255, 20, 63, 255)</only>
+										</li>
+										<!-- white -->
+										<li>
+											<weight>12</weight>
+											<only>RGBA( 245, 245, 245, 255)</only>
+										</li>
+										
+									</options>
+								
+								</second>
+							</li>
+							<li>
+								<name>biometal</name>
+								<first Class="AlienRace.ColorGenerator_CustomAlienChannel">
+										<colorChannel>tattoo_1</colorChannel>
+								</first>
+								<second Class="AlienRace.ColorGenerator_CustomAlienChannel">
+										<colorChannel>skin_1</colorChannel>
+								</second>
+							</li>
+							
+						</colorChannels>
+						
+						
+					<bodyAddons>
+					
+					<!--center Hulls-->
+						
+						<li>
+							<!--for e.g .../Mods/ShipGirl/Textures/Hulls/Misc/Destroyer/Frame_north.png-->
+							<path>Hulls/Misc/Destroyer/Frame</path>
+							<hediffGraphics>
+							
+								<FSG_InstalledCladHull>Hulls/Misc/Ironclad/Ironclad</FSG_InstalledCladHull>
+							
+								
+								<FSG_InstalledDestroyerHull>Hulls/Industrial/Destroyer</FSG_InstalledDestroyerHull>
+								<FSG_InstalledCruiserHull>Hulls/Industrial/Cruiser</FSG_InstalledCruiserHull>
+								<FSG_InstalledBattleshipHull>Hulls/Industrial/Battleship</FSG_InstalledBattleshipHull>
+								<FSG_InstalledPirateHull>Hulls/Industrial/Pirate</FSG_InstalledPirateHull>
+								
+								<FSG_InstalledSpaceDestroyerHull>Hulls/Spacer/Destroyer</FSG_InstalledSpaceDestroyerHull>
+								<FSG_InstalledSpaceCruiserHull>Hulls/Spacer/Cruiser</FSG_InstalledSpaceCruiserHull>
+								<FSG_InstalledSpaceBattleshipHull>Hulls/Spacer/Battleship</FSG_InstalledSpaceBattleshipHull>
+								<FSG_InstalledSpaceSuperHull>Hulls/Spacer/DreadNot</FSG_InstalledSpaceSuperHull>
+								<FSG_InstalledSpacePirateHull>Hulls/Spacer/Pirate</FSG_InstalledSpacePirateHull>
+								
+							</hediffGraphics>
+							<colorChannel>base</colorChannel>
+							<bodyPart>Hull</bodyPart>
+							<inFrontOfBody>false</inFrontOfBody>
+							<layerInvert>true</layerInvert>
+							<drawnInBed>false</drawnInBed>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<Hulk>(-.42, .2)</Hulk>
+										<Female>(-.42, .25)</Female>
+										<Fat>(0, 0)</Fat>
+										<Thin>(-.42, .19)</Thin>
+										<Male>(0,0)</Male>
+									</bodyTypes>
+									<crownTypes>
+										<Normal_Average>(0, 0)</Normal_Average>
+									</crownTypes>
+								</south>
+								<north>
+									<bodyTypes>
+										<Hulk>(0, .2)</Hulk>
+										<Female>(0, .2)</Female>
+										<Fat>(0, .2)</Fat>
+										<Thin>(0, .15)</Thin>
+										<Male>(0,0)</Male>
+									</bodyTypes>
+									<crownTypes>
+										<Normal_Average>(0, 0)</Normal_Average>
+									</crownTypes>
+								</north>
+								<east>
+									<bodyTypes>
+										<Hulk>(-.2, .15)</Hulk>
+										<Female>(-.20, .15)</Female>
+										<Fat>(-.2, .15)</Fat>
+										<Thin>(-.22, .1)</Thin>
+										<Male>(0,0)</Male>
+									</bodyTypes>
+									<crownTypes>
+										<Normal_Average>(0, 0)</Normal_Average>
+									</crownTypes>
+								</east>
+							</offsets>
+							
+
+							<hiddenUnderApparelTag></hiddenUnderApparelTag>
+							<hiddenUnderApparelFor></hiddenUnderApparelFor>
+						</li>
+							<!--outriggers-->
+								<!--Port(left)-->
+						<li>
+							<path>Rigging/Basic/Port</path>
+							<hediffGraphics>
+								<FSG_InstalledSharkMouth>Rigging/Shark/Port</FSG_InstalledSharkMouth>
+								<FSG_InstalledSpaceSharkMouth>Rigging/Shark/Port</FSG_InstalledSpaceSharkMouth>
+								<FSG_InstalledTorpedoSpread>Rigging/Torpedo/Port</FSG_InstalledTorpedoSpread>
+								<FSG_InstalledTorpedoSingle>Rigging/Torpedo/Port</FSG_InstalledTorpedoSingle>
+								<FSG_InstalledProtectiveKeel>Rigging/Basic/Port</FSG_InstalledProtectiveKeel>
+								<FSG_InstalledProtectiveDish>Rigging/Basic/Port</FSG_InstalledProtectiveDish>
+							</hediffGraphics>
+							<colorChannel>base</colorChannel>
+							<bodyPart>left keel</bodyPart>
+							<inFrontOfBody>true</inFrontOfBody>
+							<layerInvert>false</layerInvert>
+							<drawnInBed>false</drawnInBed>
+							<defaultOffset>Tail</defaultOffset>
+							<offsets>
+								
+								
+								<south>
+									<bodyTypes>
+										<Hulk>(-.39, .1)</Hulk>
+										<Female>(-.42, .25)</Female>
+										<Fat>(-.35, .28)</Fat>
+										<Thin>(-.44, .30)</Thin>
+										<Male>(-.44, .2)</Male>
+									</bodyTypes>
+									<crownTypes>
+										<Normal_Average>(0, 0)</Normal_Average>
+									</crownTypes>
+								</south>
+								<north>
+									<bodyTypes>
+										<Hulk>(0, .15)</Hulk>
+										<Female>(0, .2)</Female>
+										<Fat>(0, .1)</Fat>
+										<Thin>(0, .15)</Thin>
+										<Male>(0,0)</Male>
+									</bodyTypes>
+									<crownTypes>
+										<Normal_Average>(0, 0)</Normal_Average>
+									</crownTypes>
+								</north>
+								<east>
+									<bodyTypes>
+										<Hulk>(-.2, .05)</Hulk>
+										<Female>(-.2, .05)</Female>
+										<Fat>(-.2, .05)</Fat>
+										<Thin>(-.3, 0)</Thin>
+										<Male>(0,0)</Male>
+									</bodyTypes>
+									<crownTypes>
+										<Normal_Average>(0, 0)</Normal_Average>
+									</crownTypes>
+								</east>
+							</offsets>
+							
+
+							<hiddenUnderApparelTag></hiddenUnderApparelTag>
+							<hiddenUnderApparelFor></hiddenUnderApparelFor>
+						</li>
+						<!--Starboard(right)-->
+						<li>
+							
+							<path>Rigging/Basic/Starboard</path>
+							<hediffGraphics>
+								<FSG_InstalledSharkMouth>Rigging/Shark/Starboard</FSG_InstalledSharkMouth>
+								<FSG_InstalledSpaceSharkMouth>Rigging/Shark/Starboard</FSG_InstalledSpaceSharkMouth>
+								<FSG_InstalledProtectiveKeel>Rigging/Basic/Starboard</FSG_InstalledProtectiveKeel>
+								<FSG_InstalledProtectiveDish>Rigging/Basic/Starboard</FSG_InstalledProtectiveDish>
+								<FSG_InstalledTorpedoSpread>Rigging/Torpedo/Starboard</FSG_InstalledTorpedoSpread>
+								<FSG_InstalledTorpedoSingle>Rigging/Torpedo/Starboard</FSG_InstalledTorpedoSingle>
+							</hediffGraphics>
+							<colorChannel>base</colorChannel>
+							<bodyPart>right keel</bodyPart>
+							<inFrontOfBody>true</inFrontOfBody>
+							<layerInvert>false</layerInvert>
+							<drawnInBed>false</drawnInBed>
+							<defaultOffset>Tail</defaultOffset>
+							<offsets>
+								
+								<south>
+									<bodyTypes>
+										<Hulk>(-.44, .1)</Hulk>
+										<Female>(-.42, .25)</Female>
+										<Fat>(-.43, .28)</Fat>
+										<Thin>(-.44, .30)</Thin>
+										<Male>(-.44, .3)</Male>
+									</bodyTypes>
+									<crownTypes>
+										<Normal_Average>(0, 0)</Normal_Average>
+									</crownTypes>
+								</south>
+								<north>
+									<bodyTypes>
+										<Hulk>(0, .2)</Hulk>
+										<Female>(0, .2)</Female>
+										<Fat>(0, .25)</Fat>
+										<Thin>(0, .15)</Thin>
+										<Male>(0,0)</Male>
+									</bodyTypes>
+									<crownTypes>
+										<Normal_Average>(0, 0)</Normal_Average>
+									</crownTypes>
+								</north>
+								<east>
+									<bodyTypes>
+										<Hulk>(-.2, 0)</Hulk>
+										<Female>(-.2, .05)</Female>
+										<Fat>(-.3, 0)</Fat>
+										<Thin>(-.3, 0)</Thin>
+										<Male>(0,0)</Male>
+									</bodyTypes>
+									<crownTypes>
+										<Normal_Average>(0, 0)</Normal_Average>
+									</crownTypes>
+								</east>
+							</offsets>
+							
+
+							<hiddenUnderApparelTag></hiddenUnderApparelTag>
+							<hiddenUnderApparelFor></hiddenUnderApparelFor>
+						</li>
+						
+							<!--Headlights-->
+								<!--Port(left)-->
+						<li>
+							<path>Headlights/Default</path>
+							<hediffGraphics>
+								<FSG_InstalledHeadlightA>Headlights/Left</FSG_InstalledHeadlightA>
+								<FSG_InstalledHeadlightBA>Headlights/Colors/A/Left</FSG_InstalledHeadlightBA>
+								<FSG_InstalledHeadlightBB>Headlights/Colors/B/Left</FSG_InstalledHeadlightBB>
+								<FSG_InstalledHeadlightBC>Headlights/Colors/C/Left</FSG_InstalledHeadlightBC>
+								<FSG_InstalledHeadlightBD>Headlights/Colors/D/Left</FSG_InstalledHeadlightBD>
+								<FSG_InstalledHeadlightBE>Headlights/Colors/E/Left</FSG_InstalledHeadlightBE>
+								<FSG_InstalledHeadlightBF>Headlights/Colors/F/Left</FSG_InstalledHeadlightBF>
+								<FSG_InstalledHeadlightBG>Headlights/Colors/G/Left</FSG_InstalledHeadlightBG>
+								<!--<FSG_InstalledHeadlightBH>Headlights/Colors/H/Left</FSG_InstalledHeadlightBH>-->
+								
+								<FSG_InstalledHeadlightCA>Headlights/ColorsC/A/Left</FSG_InstalledHeadlightCA>
+								<FSG_InstalledHeadlightCD>Headlights/ColorsC/D/Left</FSG_InstalledHeadlightCD>
+								<FSG_InstalledHeadlightCH>Headlights/ColorsC/H/Left</FSG_InstalledHeadlightCH>
+							</hediffGraphics>
+							<shaderType>TransparentPostLight</shaderType>
+							<colorChannel>base</colorChannel>
+							<bodyPart>left eye</bodyPart>
+							<inFrontOfBody>true</inFrontOfBody>
+							<layerInvert>true</layerInvert>
+							<drawnInBed>false</drawnInBed>
+							<defaultOffset>Tail</defaultOffset>
+							<offsets>
+								
+								<south>
+									<bodyTypes>
+										<Hulk>(-.600, .95)</Hulk>
+										<Female>(-.600, .95)</Female>
+										<Fat>(-.600, .95)</Fat>
+										<Thin>(-.600, .95)</Thin>
+										<Male>(-.600, .95)</Male>
+									</bodyTypes>
+									<crownTypes>
+										<Normal_Average>(0, 0)</Normal_Average>
+									</crownTypes>
+									<layerOffset>-.27</layerOffset>
+								</south>
+								<north>
+									<bodyTypes>
+										<Hulk>(0, .0)</Hulk>
+										<Female>(0, .0)</Female>
+										<Fat>(0, .0)</Fat>
+										<Thin>(0, .0)</Thin>
+										<Male>(0,0)</Male>
+									</bodyTypes>
+									<crownTypes>
+										<Normal_Average>(0, 0)</Normal_Average>
+									</crownTypes>
+									<layerOffset>-.27</layerOffset>
+								</north>
+								<east>
+									<bodyTypes>
+										<Hulk>(-.35, .95)</Hulk>
+										<Female>(-.35, .95)</Female>
+										<Fat>(-.35, .95)</Fat>
+										<Thin>(-.35, .95)</Thin>
+										<Male>(0,.9)</Male>
+									</bodyTypes>
+									<crownTypes>
+										<Normal_Average>(0, 0)</Normal_Average>
+									</crownTypes>
+									<layerOffset>-.27</layerOffset>
+								</east>
+								
+							</offsets>
+							
+
+							<hiddenUnderApparelTag></hiddenUnderApparelTag>
+							<hiddenUnderApparelFor></hiddenUnderApparelFor>
+						</li>
+						<!--Starboard(right)-->
+						<li>
+							
+							<path>Headlights/Default</path>
+							<hediffGraphics>
+								<FSG_InstalledHeadlightA>Headlights/Right</FSG_InstalledHeadlightA>
+								<FSG_InstalledHeadlightBA>Headlights/Colors/A/Right</FSG_InstalledHeadlightBA>
+								<FSG_InstalledHeadlightBB>Headlights/Colors/B/Right</FSG_InstalledHeadlightBB>
+								<FSG_InstalledHeadlightBC>Headlights/Colors/C/Right</FSG_InstalledHeadlightBC>
+								<FSG_InstalledHeadlightBD>Headlights/Colors/D/Right</FSG_InstalledHeadlightBD>
+								<FSG_InstalledHeadlightBE>Headlights/Colors/E/Right</FSG_InstalledHeadlightBE>
+								<FSG_InstalledHeadlightBF>Headlights/Colors/F/Right</FSG_InstalledHeadlightBF>
+								<FSG_InstalledHeadlightBG>Headlights/Colors/G/Right</FSG_InstalledHeadlightBG>
+								<!--<FSG_InstalledHeadlightBH>Headlights/Colors/H/Right</FSG_InstalledHeadlightBH>-->
+								
+								<FSG_InstalledHeadlightCA>Headlights/ColorsC/A/Right</FSG_InstalledHeadlightCA>
+								<FSG_InstalledHeadlightCD>Headlights/ColorsC/D/Right</FSG_InstalledHeadlightCD>
+								<FSG_InstalledHeadlightCH>Headlights/ColorsC/H/Right</FSG_InstalledHeadlightCH>
+							</hediffGraphics>
+							<shaderType>TransparentPostLight</shaderType>
+							<colorChannel>base</colorChannel>
+							<bodyPart>right eye</bodyPart>
+							<inFrontOfBody>true</inFrontOfBody>
+							<layerInvert>false</layerInvert>
+							<drawnInBed>false</drawnInBed>
+							<defaultOffset>Tail</defaultOffset>
+							<offsets>
+								
+								<south>
+									<bodyTypes>
+										<Hulk>(-.24, .95)</Hulk>
+										<Female>(-.24, .95)</Female>
+										<Fat>(-.24, .95)</Fat>
+										<Thin>(-.24, .95)</Thin>
+										<Male>(-.24, .95)</Male>
+									</bodyTypes>
+									<crownTypes>
+										<Normal_Average>(0, 0)</Normal_Average>
+									</crownTypes>
+									<layerOffset>-.27</layerOffset>
+								</south>
+								<north>
+									<bodyTypes>
+										<Hulk>(0, .0)</Hulk>
+										<Female>(0, .0)</Female>
+										<Fat>(0, .0)</Fat>
+										<Thin>(0, .0)</Thin>
+										<Male>(0,0)</Male>
+									</bodyTypes>
+									<crownTypes>
+										<Normal_Average>(0, 0)</Normal_Average>
+									</crownTypes>
+									<layerOffset>-.27</layerOffset>
+								</north>
+								<east>
+									<bodyTypes>
+										<Hulk>(-.35, .95)</Hulk>
+										<Female>(-.35, .95)</Female>
+										<Fat>(-.35, .95)</Fat>
+										<Thin>(-.35, .95)</Thin>
+										<Male>(-.35,.95)</Male>
+									</bodyTypes>
+									<crownTypes>
+										<Normal_Average>(0, 0)</Normal_Average>
+									</crownTypes>
+									<layerOffset>-.27</layerOffset>
+								</east>
+								
+							</offsets>
+							
+
+							<hiddenUnderApparelTag></hiddenUnderApparelTag>
+							<hiddenUnderApparelFor></hiddenUnderApparelFor>
+						</li>
+						
+						<!--Faction Greebles. 1 per customer?-->
+						
+						<li>
+							<!--brain implants-->
+							<path>Rigging/Nope</path>
+							<hediffGraphics>
+							
+								<FSG_InstalledSharkControlModule>Apparel/Hats/Shark/ControlModule/Cruiser</FSG_InstalledSharkControlModule>
+								<FSG_InstalledHeadDeflectors>Apparel/Hats/Navy/Deflectors/Deflectors</FSG_InstalledHeadDeflectors>
+								<FSG_InstalledFoxEars>Apparel/Hats/Fox/SmallFoxEars</FSG_InstalledFoxEars>
+								
+							</hediffGraphics>
+							<drawSize>(1,1)</drawSize>
+							<drawRotated>false</drawRotated>
+							<colorChannel>base</colorChannel>
+							<inFrontOfBody>true</inFrontOfBody>
+							<layerInvert>false</layerInvert>
+							<drawnInBed>true</drawnInBed>
+							
+							<defaultOffset>Tail</defaultOffset>
+							<offsets>
+							
+								<south>
+									<bodyTypes>
+										<Hulk>(-.42, .565)</Hulk>
+										<Female>(-.42, .565)</Female>
+										<Fat>(-.42, .565)</Fat>
+										<Thin>(-.42, .565)</Thin>
+										<Male>(-.42,.5650)</Male>
+									</bodyTypes>
+									<crownTypes>
+										<Normal_Average>(0, 0)</Normal_Average>
+									</crownTypes>
+									<layerOffset>-.09</layerOffset>
+								</south>
+								<north>
+									<bodyTypes>
+										<Hulk>(0, .95)</Hulk>
+										<Female>(0, .95)</Female>
+										<Fat>(0, .95)</Fat>
+										<Thin>(0, .95)</Thin>
+										<Male>(0, .95)</Male>
+									</bodyTypes>
+									<crownTypes>
+										<Normal_Average>(0, 0)</Normal_Average>
+									</crownTypes>
+									<layerOffset>-.09</layerOffset>
+								</north>
+								<east>
+									<bodyTypes>
+										<Hulk>(-.53, .573)</Hulk>
+										<Female>(-.52, .573)</Female>
+										<Fat>(-.52, .573)</Fat>
+										<Thin>(-.52, .573)</Thin>
+										<Male>(-.52,.573)</Male>
+									</bodyTypes>
+									<crownTypes>
+										<Normal_Average>(0, 0)</Normal_Average>
+									</crownTypes>
+									<layerOffset>-.09</layerOffset>
+								</east>
+								
+							</offsets>
+							
+
+							<hiddenUnderApparelTag></hiddenUnderApparelTag>
+							<hiddenUnderApparelFor></hiddenUnderApparelFor>
+						</li>
+						
+						<li>
+							<!-- Tailish for e.g .../Mods/ShipGirl/Textures/Rigging/Nope.png-->
+							<path>Rigging/Nopey</path>
+							<hediffGraphics>
+							
+								<FSG_InstalledKitsuneTail>Tails/Kitsune/Kitsune</FSG_InstalledKitsuneTail>
+								<FSG_InstalledRing>Ring/Ring</FSG_InstalledRing>
+								
+							</hediffGraphics>
+							<drawSize>(1.1, 1.1)</drawSize>
+							<drawRotated>false</drawRotated>
+							<colorChannel>base</colorChannel>
+							<inFrontOfBody>false</inFrontOfBody>
+							<layerInvert>true</layerInvert>
+							<drawnInBed>false</drawnInBed>
+
+								<defaultOffset>Tail</defaultOffset>
+							<offsets>
+							
+								<south>
+									<bodyTypes>
+										<Hulk>(-.42, .35)</Hulk>
+										<Female>(-.42, .35)</Female>
+										<Fat>(-.42, .35)</Fat>
+										<Thin>(-.42, .35)</Thin>
+										<Male>(-.42,.350)</Male>
+									</bodyTypes>
+									<crownTypes>
+										<Normal_Average>(0, 0)</Normal_Average>
+									</crownTypes>
+									<layerOffset>-.05</layerOffset>
+								</south>
+								<north>
+									<bodyTypes>
+										<Hulk>(0, .66)</Hulk>
+										<Female>(0, .66)</Female>
+										<Fat>(0, .66)</Fat>
+										<Thin>(0, .66)</Thin>
+										<Male>(0, .66)</Male>
+									</bodyTypes>
+									<crownTypes>
+										<Normal_Average>(0, 0)</Normal_Average>
+									</crownTypes>
+											<layerOffset>-.05</layerOffset>
+								</north>
+								<east>
+									<bodyTypes>
+										<Hulk>(-.0, .4)</Hulk>
+										<Female>(-.0, .4)</Female>
+										<Fat>(-.0, .4)</Fat>
+										<Thin>(-.0, .4)</Thin>
+										<Male>(-.0,.4)</Male>
+									</bodyTypes>
+									<crownTypes>
+										<Normal_Average>(0, 0)</Normal_Average>
+									</crownTypes>
+																<layerOffset>-.05</layerOffset>
+								</east>
+								
+								
+
+							</offsets>
+							
+
+							<hiddenUnderApparelTag></hiddenUnderApparelTag>
+							<hiddenUnderApparelFor></hiddenUnderApparelFor>
+						</li>
+					
+					</bodyAddons>
+
+				</alienPartGenerator>
+			</generalSettings>
+
+			<thoughtSettings>
+				<replacerList>
+					<!-- My Race will see this Normal thought as another thought I made TODO  -->
+
+				</replacerList>
+				
+				<cannotReceiveThoughtsAtAll>false</cannotReceiveThoughtsAtAll>
+				<cannotReceiveThoughts>
+
+				</cannotReceiveThoughts>
+				<canStillReceiveThoughts>
+
+				</canStillReceiveThoughts>
+				
+				<restrictedThoughts>
+
+				</restrictedThoughts>
+				
+				<!--<butcherThoughtGeneral>
+					<thought>ButcheredHumanlikeCorpse</thought>
+					<knowThought>KnowButcheredHumanlikeCorpse</knowThought>
+				</butcherThoughtGeneral>
+				
+				<ateThoughtGeneral>
+					<thought>AteHumanlikeMeatDirect</thought>
+					<ingredientThought>AteHumanlikeMeatAsIngredient</ingredientThought>
+				</ateThoughtGeneral>
+				
+				<butcherThoughtSpecific>
+					<li>
+						<raceList>
+							<li>Human</li>
+						</raceList>
+						<thought>ButcheredHuman</thought>
+						<knowThought>KnowButcheredHuman</knowThought>
+					</li>
+				</butcherThoughtSpecific>
+				
+				<ateThoughtSpecific>
+					<li>
+						<raceList>
+							<li>Human</li>
+						</raceList>
+						<thought>AteHumanlikeMeatDirect</thought>
+						<ingredientThought>AteHumanIngredient</ingredientThought>
+					</li>
+				</ateThoughtSpecific>-->
+			</thoughtSettings>
+
+			<relationSettings><!--  chance factor for my Race to spawn with these relationships 1 would be Normal Human chance -->
+				<relationChanceModifierLover>1</relationChanceModifierLover>
+				<relationChanceModifierExLover>.5</relationChanceModifierExLover>
+
+				<relationChanceModifierFiance>1</relationChanceModifierFiance>
+				<relationChanceModifierSpouse>.5</relationChanceModifierSpouse>
+				<relationChanceModifierExSpouse>.1</relationChanceModifierExSpouse>
+
+				<relationChanceModifierParent>0</relationChanceModifierParent>
+				<relationChanceModifierChild>0</relationChanceModifierChild>
+				<relationChanceModifierSibling>3</relationChanceModifierSibling>
+				
+				<renamer><!--This shouldn't come up unless someone is using other mods-->
+					<li>
+						<relation>Parent</relation>
+						<label>Manufacturer</label>
+						<femaleLabel>Manufacturer</femaleLabel>
+					</li>
+				</renamer>
+			</relationSettings>
+			
+			<!-- only my race = my Race is needed to be able to do these things -->
+			<!-- my race is limited = my Race can not do anything outside this list unless it is in the whitelist-->
+			<!-- items in the white list are not removed from other races, if more than one race has a thing race restricted then any of them can do that thing but unpatched humans or other races can not -->
+			<raceRestriction>
+				<!--only my race
+				<researchList> 
+					
+				</researchList> -->
+				
+				<!-- all the below Lists use the same format -->
+				<onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel> 
+				<!-- <apparelList>
+				
+					
+				</apparelList>-->
+				<whiteApparelList>
+				<!--Rigging armor go here.-->
+				</whiteApparelList>
+				
+				<onlyUseRaceRestrictedWeapons>false</onlyUseRaceRestrictedWeapons>
+				<!--<weaponList>
+				</weaponList>-->
+				<!--TODO: Aux Turret guns go here?-->
+				<!--<whiteWeaponList>
+				
+				</whiteWeaponList>-->
+				
+				<onlyDoRaceRestrictedRecipes>false</onlyDoRaceRestrictedRecipes>
+				<!--<recipeList>
+				</recipeList>
+				<whiteRecipeList>
+				</whiteRecipeList>-->
+				
+				<onlyGetRaceRestrictedTraits>false</onlyGetRaceRestrictedTraits>
+				<!--<traitList>
+				</traitList>
+				<whiteTraitList>
+				</whiteTraitList>-->
+
+				<onlyEatRaceRestrictedFood>false</onlyEatRaceRestrictedFood>
+				<foodList>
+					
+				</foodList>
+				
+				<whiteFoodList>
+					<li>OctaneCola</li>
+					<li>OctaneColaB</li>
+					<li>OctaneColaC</li>
+				</whiteFoodList>
+				
+				<onlyBuildRaceRestrictedBuildings>false</onlyBuildRaceRestrictedBuildings><!-- my race is limited -->
+				<buildingList>
+				</buildingList>
+				<whiteBuildingList>
+				</whiteBuildingList>
+				
+				<!-- <onlyDoRaceRestrictedPlants>false</onlyDoRaceRestrictedPlants> // does not work 
+				<plantList>
+				</plantList>
+				<whitePlantList>
+				</whitePlantList>-->
+				
+				
+				<conceptList>
+				<!-- Like tutorial popups, when you first get a pawn of this race.-->
+				</conceptList>
+				
+				<workGiverList><!-- only my race but no other race, not limited -->
+				</workGiverList>
+			</raceRestriction>
+
+			<compatibility>
+				<!-- this is not really used for the most part but it allows other mods using C# to filter things related to your race -->
+				<isFlesh>true</isFlesh>
+				<isSentient>true</isSentient> 
+				<hasBlood>true</hasBlood>
+			</compatibility>
+		</alienRace>
+		<!-- Below is no longer HAR specific code and can be found in Vanilla -->
+		<race>
+		
+			<!-- Choose your own values  -->
+			<thinkTreeMain>Humanlike</thinkTreeMain>
+			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+			<intelligence>Humanlike</intelligence>
+			<makesFootprints>true</makesFootprints>
+			<lifeExpectancy>100</lifeExpectancy>
+			<leatherDef>blueCube</leatherDef>
+			<nameCategory>HumanStandard</nameCategory>
+			<nameGenerator>NamerPersonShip</nameGenerator>
+			<body>ShipGirlBody</body> 
+			<baseBodySize>2</baseBodySize>
+			<baseHealthScale>1.5</baseHealthScale>
+			<foodType>8396607</foodType>
+			<!-- 8396607 = 8388608 (fuel) + 7999(OmnivoreHuman) -->
+			<gestationPeriodDays>45</gestationPeriodDays>
+			<meatMarketValue>0.8</meatMarketValue>
+			<manhunterOnDamageChance>0.20</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>0.02</manhunterOnTameFailChance>
+			<litterSizeCurve>
+				<!-- how many babies are made, unused in vanilla for humanlikes -->
+				<points>
+					<li>(0.5, 0)</li>
+					<li>(1, 1)</li>
+					<li>(2, 1)</li>
+					<li>(10, 0)</li>
+				</points>
+			</litterSizeCurve>
+			<lifeStageAges>
+			<li>
+				<def>DefaultShipGirlLifeStage</def>
+				<minAge>0</minAge>
+			</li>
+				<!-- These affect stats and if your Race is ready to Lay eggs or be milked if you set that up in the LifeStage, it also determins when your Race is Sexualy Mature and can Reproduce which is not used by Humanlikes in Vanilla -->
+
+				<!-- Abraxis' template below should change the Body Def at that life stage to a completely new Body def,
+				allowing pokemon style evolution teirs. Or you can just unlock milkable/shearing, egglaying, etc tags -twoscythe 
+				<li Class="AlienRace.LifeStageAgeAlien">
+					<def>AlienAdult</def>
+					<minAge>18</minAge>
+					<body>AdultAlienBody</body>
+				</li> -->
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+			<specialShadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+			</specialShadowData>
+			<ageGenerationCurve>
+				<!-- these values must be less than your youngest pawnkind and greater than your oldest pawn kind of this Race -->
+				<points>
+					<li>(1,0)</li>
+					<li>(6,100)</li>
+					<li>(10,50)</li>
+					<li>(20,10)</li>
+					<li>(30,5)</li>
+					<li>(80,1)</li>
+					<li>(90,1)</li>
+					<li>(100,0)</li>
+				</points>
+			</ageGenerationCurve>
+			
+			<hediffGiverSets>
+				<!-- this is what controls what illnesses you get or any hediff really and can be a very powerful tool but you have to set immune to age to false
+				<li>YourOwnRace_HediffGiverSet</li> -->
+				<li>OrganicStandard</li>
+				<!--todo: Replace this!-->
+			</hediffGiverSets>
+		</race>
+
+		<statBases>
+			
+			<MarketValue>6000</MarketValue>
+			<MoveSpeed>4.6</MoveSpeed>
+			<ComfyTemperatureMin>6</ComfyTemperatureMin>
+			<ComfyTemperatureMax>26</ComfyTemperatureMax>
+			<LeatherAmount>1</LeatherAmount>
+			<RoyalFavorValue>3</RoyalFavorValue>
+			<!-- these two below are inherited from BasePawn, if you wanted to overwrite their values you should just list their nodes and use your own values after which the Parent inherited values will be overwritten only in here -->
+			<Mass>100</Mass>
+			<!-- <Flammability>0.7</Flammability> -->
+		</statBases>
+		
+		<tools Inherit="False">
+		<li>
+			<label>Ramming Attack</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>20</power>
+			<cooldownTime>2</cooldownTime>
+			<surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>Stun</def>
+						<amount>36</amount>
+					</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
+		</li>
+		
+		</tools>
+		
+		<recipes>
+		<!-- Just a normal list of recipes mostly not needed if using <humanRecipeImport>true</humanRecipeImport> asdie from adding non human recipes  -->
+		</recipes>
+		
+		<comps>
+		<!-- if you have to use this you will know that you have to usually -->
+		</comps>
+	</AlienRace.ThingDef_AlienRace>
+		
+<!-- By twoscythe, using Abraxas' handy template -->
+
+<!--TODO Move lifestages to another file. Just debug versions for now.-->
+
+
+
+
+
+
+
+
+
+
+	<LifeStageDef>
+
+		<defName>DefaultShipGirlLifeStage</defName>
+
+		<label>adult</label>
+
+		<visible>true</visible>
+
+		<reproductive>false</reproductive>
+
+	</LifeStageDef>
+
+</Defs>

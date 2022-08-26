@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+ <!-- ============================ Sinister Base ========================== -->
+
+	<PawnKindDef Name="FSG_SinisterShipBase" Abstract="True">
+		<label>SinisterShipBasePawn</label>
+		<defaultFactionType>FSG_SinisterAlpha</defaultFactionType>
+		<race>ShipGirlSinRace</race>
+		
+			<apparelColor>(20,20,25)</apparelColor>
+		<chemicalAddictionChance>0.000</chemicalAddictionChance>
+		<baseRecruitDifficulty>0.99</baseRecruitDifficulty>
+	
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					
+					<li>UltraASinisterShipGirlBackstories</li>
+					
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<!--<apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance>-->
+		<apparelTags>
+			<li>Ultra</li>
+		</apparelTags>
+		<apparelDisallowTags>
+			<li>Western</li>
+		</apparelDisallowTags>
+		<disallowedTraits>
+			<li>Nudist</li>
+		</disallowedTraits>
+		<techHediffsTags>
+			<li>FSG_Advanced</li>
+			<li>FSG_SinisterUltra</li>
+			<li>FSG_SinisterSpacer</li>
+			<li>FSG_SinisterArcheotech</li>
+		</techHediffsTags>
+		<techHediffsMoney>
+			<min>0</min>
+			<max>0</max>
+		</techHediffsMoney>
+		<minGenerationAge>2</minGenerationAge>
+		<maxGenerationAge>25</maxGenerationAge>
+		<techHediffsChance>1</techHediffsChance>
+		<backstoryCryptosleepCommonality>0.99</backstoryCryptosleepCommonality>
+	</PawnKindDef>
+  
+  <!-- ============================ Sinister Civilian Base ========================== -->
+
+  <PawnKindDef Name="FSG_SinisterCivBase" ParentName="FSG_SinisterShipBase" Abstract="True">
+	<defName>FSG_SinisterCivilianBase</defName>
+	<label>SinisterCivilianBase</label>
+    <combatPower>90</combatPower>
+	<race>ShipGirlRace</race>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+
+					<li>UltraASinisterShipGirlBackstories</li>
+
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+    <itemQuality>Normal</itemQuality>
+    <isFighter>false</isFighter>
+	
+    <gearHealthRange>
+      <min>0.2</min>
+      <max>2.0</max>
+    </gearHealthRange>
+    <apparelMoney>
+      <min>300</min>
+      <max>1200</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>150</min>
+      <max>250</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>Gun</li>
+      <li>Melee</li>
+    </weaponTags>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+    <techHediffsChance>0</techHediffsChance>
+    <invNutrition>2.55</invNutrition>
+    <inventoryOptions>
+      <skipChance>0.75</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <choiceChance>90</choiceChance>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>25</min>
+            <max>70</max>
+          </countRange>
+        </li>
+        <li>
+          <choiceChance>10</choiceChance>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>700</min>
+            <max>1000</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+  
+  <!-- ============================ Sinister Civilians ========================== -->
+  
+  <PawnKindDef ParentName="FSG_SinisterCivBase">
+    <defName>SinisterColonist</defName>
+    <label>sinister colonist</label>
+	<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>UltraASinisterShipGirlBackstories</li>
+					<li>SpaceASinisterShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="FSG_SinisterCivBase">
+    <defName>SinisterAdmiral</defName>
+    <label>Sinister Princess</label>
+    <factionLeader>true</factionLeader>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>UltraBSinisterShipGirlBackstories</li>
+					<li>RangedUltraSinisterShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<techHediffsTags>
+			<li>FSG_Advanced</li>
+			<li>FSG_Spacer</li>
+			<li>FSG_SinisterUltra</li>
+			<li>FSG_SinisterSpacer</li>
+		</techHediffsTags>
+		<techHediffsMoney>
+			<min>0</min>
+			<max>0</max>
+		</techHediffsMoney>
+		<techHediffsChance>0</techHediffsChance>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="FSG_SinisterCivBase">
+    <defName>SinisterTrader</defName>
+    <label>Sinister Merchant Ship Girl</label>
+    <trader>true</trader>
+  </PawnKindDef>
+  
+
+  
+  <!-- ============================ Sinister Security ========================== -->
+  
+  <PawnKindDef ParentName="FSG_SinisterCivBase">
+    <defName>SinisterSecurityGuard</defName>
+    <label>Sinister Patrol Ship</label>
+    <combatPower>150</combatPower>
+    <maxGenerationAge>30</maxGenerationAge>
+    <gearHealthRange>
+      <min>0.5</min>
+      <max>1.8</max>
+    </gearHealthRange>
+    <apparelMoney>
+      <min>300</min>
+      <max>1200</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>200</min>
+      <max>900</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+   		<techHediffsTags>
+			<li>FSG_Advanced</li>
+			<li>FSG_SinisterUltra</li>
+		</techHediffsTags>
+		<techHediffsMoney>
+			<min>0</min>
+			<max>0</max>
+		</techHediffsMoney>
+		<techHediffsChance>.00</techHediffsChance>
+    <invNutrition>2.55</invNutrition>
+    <inventoryOptions>
+      <skipChance>0.95</skipChance>
+      <thingDef>Silver</thingDef>
+      <countRange>
+        <min>30</min>
+        <max>100</max>
+      </countRange>
+    </inventoryOptions>
+  </PawnKindDef>
+  
+ 
+  <!-- ============================ Sinister Military Base ========================== -->
+  
+  <PawnKindDef Name="FSG_SinisterShipMilBase" ParentName="FSG_SinisterShipBase" Abstract="True">
+    <chemicalAddictionChance>0</chemicalAddictionChance>
+    <isFighter>true</isFighter>
+	<race>ShipGirlRace</race>
+	<invNutrition>2.55</invNutrition>
+    <itemQuality>Normal</itemQuality>
+	<minGenerationAge>5</minGenerationAge>
+    <maxGenerationAge>35</maxGenerationAge>
+    <gearHealthRange>
+		<min>0.7</min>
+		<max>2.3</max>
+    </gearHealthRange>
+    <apparelTags>
+        <li>IndustrialMilitaryBasic</li>
+		<li>IndustrialMilitaryAdvanced</li>
+    </apparelTags>
+	<apparelDisallowTags>
+      <li>Western</li>
+    </apparelDisallowTags>
+    <apparelMoney>
+      <min>1500</min>
+      <max>2800</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>400</min>
+      <max>1000</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+    <techHediffsTags>
+		<li>FSG_Advanced</li>
+		<li>FSG_Ultra</li>	
+	</techHediffsTags>
+	<techHediffsChance>0</techHediffsChance>
+    <techHediffsMoney>
+	 <min>1000</min>
+      <max>4000</max>	
+	</techHediffsMoney>
+    <biocodeWeaponChance>0.8</biocodeWeaponChance>
+    <disallowedTraits>
+      <li>BodyPurist</li>
+    </disallowedTraits>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>
+        </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+  
+  <!-- ============================ Sinister Military ========================== -->
+  
+  <PawnKindDef ParentName="FSG_SinisterShipMilBase">
+    <defName>FSG_UltraAShipsSinister</defName>
+    <label>First Wave Ship</label>
+    <combatPower>400</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					
+					<li>UltraASinisterShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+	
+  </PawnKindDef>
+  
+    <PawnKindDef ParentName="FSG_SinisterShipMilBase">
+    <defName>FSG_UltraBShipsSinister</defName>
+    <label>Archeotech Warship</label>
+    <combatPower>450</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					
+					<li>UltraBSinisterShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+	
+  </PawnKindDef>
+
+  
+  <PawnKindDef ParentName="FSG_SinisterShipMilBase">
+    <defName>FSG_SinisterUltraRanged</defName>
+    <label>Ultra Gunships</label>
+    <combatPower>450</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					
+					<li>RangedUltraSinisterShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+    <minGenerationAge>1</minGenerationAge>
+    <gearHealthRange>
+      <min>0.7</min>
+      <max>2.3</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>Outlander</li>
+      <li>Military</li>
+	  <li>SinisterCombatGear</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>1500</min>
+      <max>2500</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>1200</min>
+      <max>1800</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>Melee</li>
+    </weaponTags>
+    
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineUltratech</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+  
+   <PawnKindDef ParentName="FSG_SinisterShipMilBase">
+    <defName>FSG_SinisterUltraMelee</defName>
+    <label>Sinister Vanguards</label>
+    <combatPower>500</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					
+					<li>MeleeUltraSinisterShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+    <minGenerationAge>1</minGenerationAge>
+    <gearHealthRange>
+      <min>0.7</min>
+      <max>2.3</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>Outlander</li>
+      <li>Military</li>
+	  <li>SinisterCombatGear</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>1500</min>
+      <max>2500</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>1200</min>
+      <max>1800</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+    
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineUltratech</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+  
+
+  <PawnKindDef ParentName="FSG_SinisterShipMilBase">
+    <defName>FSG_SinisterSpacerRanged</defName>
+    <label>Space Gunships</label>
+    <combatPower>300</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					
+					<li>RangedSpaceSinisterShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+    <minGenerationAge>3</minGenerationAge>
+    <gearHealthRange>
+      <min>0.5</min>
+      <max>2.3</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>Outlander</li>
+      <li>Military</li>
+	  <li>SinisterPrestigeCombatGear</li>
+	  <li>SinisterCombatGear</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>1000</min>
+      <max>2600</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>1200</min>
+      <max>2000</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>SniperRifle</li>
+    </weaponTags>
+   
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>180</min>
+            <max>400</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineUltratech</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>2</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="FSG_SinisterShipMilBase">
+    <defName>FSG_SinisterSpacerMelee</defName>
+    <label>Space Blockadeers</label>
+    <combatPower>300</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					
+					<li>SpaceMeleeUltraSinisterShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+    <minGenerationAge>3</minGenerationAge>
+    <gearHealthRange>
+      <min>0.5</min>
+      <max>2.3</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>Outlander</li>
+      <li>Military</li>
+	  <li>SinisterPrestigeCombatGear</li>
+	  <li>SinisterCombatGear</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>1000</min>
+      <max>2600</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>1200</min>
+      <max>2000</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>Melee</li>
+    </weaponTags>
+   
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>180</min>
+            <max>400</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineUltratech</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>2</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="FSG_SinisterShipMilBase">
+    <defName>FSG_SinisterSpacerA</defName>
+    <label>Space Warships</label>
+    <combatPower>300</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					
+					<li>SpaceASinisterShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+    <minGenerationAge>3</minGenerationAge>
+    <gearHealthRange>
+      <min>0.5</min>
+      <max>2.3</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>Outlander</li>
+      <li>Military</li>
+	  <li>SinisterPrestigeCombatGear</li>
+	  <li>SinisterCombatGear</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>1000</min>
+      <max>2600</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>1200</min>
+      <max>2000</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>Melee</li>
+    </weaponTags>
+   
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>180</min>
+            <max>400</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineUltratech</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>2</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="FSG_SinisterShipMilBase">
+    <defName>FSG_SinisterSpacerB</defName>
+    <label>Elite Space Warships</label>
+    <combatPower>350</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					
+					<li>SpaceBSinisterShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+    <minGenerationAge>3</minGenerationAge>
+    <gearHealthRange>
+      <min>0.8</min>
+      <max>2.3</max>
+    </gearHealthRange>
+    <apparelTags>
+      
+      <li>Military</li>
+	  <li>SinisterPrestigeCombatGear</li>
+	  <li>SinisterCombatGear</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>4000</min>
+      <max>8600</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>1200</min>
+      <max>8000</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>Melee</li>
+	  <li>GunHeavy</li>
+      <li>SpacerGun</li>
+	  <li>UltratechMelee</li>
+    </weaponTags>
+   
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>180</min>
+            <max>400</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineUltratech</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>2</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="FSG_SinisterShipMilBase">
+     <defName>FSG_SinisterCommandElite</defName>
+    <label>Sinister Command Ship</label>
+    <combatPower>550</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					
+					<li>UltraBSinisterShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+	
+    <minGenerationAge>5</minGenerationAge>
+    <gearHealthRange>
+      <min>0.8</min>
+      <max>3.5</max>
+    </gearHealthRange>
+    <apparelTags>
+      
+      <li>Spacer</li>
+	  <li>EmpirePrestigeCombatGear</li>
+	  
+    </apparelTags>
+    <apparelMoney>
+      <min>4500</min>
+      <max>10200</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>4600</min>
+      <max>12000</max>
+    </weaponMoney>
+    <weaponTags>
+		<li>EliteGun</li>
+		<li>AdvancedGun</li>
+        <li>UltratechMelee</li>
+		<li>Bladelink</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>4000</min>
+      <max>20000</max>
+    </techHediffsMoney>
+    <combatEnhancingDrugsCount>
+      <min>1</min>
+      <max>5</max>
+    </combatEnhancingDrugsCount>
+    <combatEnhancingDrugsChance>0.1</combatEnhancingDrugsChance>
+    <techHediffsTags>
+      <li>FSG_Advanced</li>
+	  <li>FSG_Spacer</li>
+	  <li>FSG_SinisterArcheotech</li>
+
+      
+      <li>ImplantEmpireRoyal</li>
+      <li>ImplantEmpireCommon</li>
+    
+    </techHediffsTags>
+    <techHediffsChance>1</techHediffsChance>
+    <inventoryOptions>
+      <skipChance>0.5</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>1120</min>
+            <max>1480</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineUltratech</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>3</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+
+</Defs>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+    <!-- ################## Do not remove this. Do not use directly. mama.lightcode uses it. ######################## -->
+
+   <ThingDef ParentName="BuildingBase">
+
+        <defName>Ha_Useless</defName>
+
+        <label>useless</label>
+
+        <description>Don't mind me, i'm useless for you</description>
+
+        <graphicData>
+
+            <texPath>Headlights/Default</texPath>
+
+            <graphicClass>Graphic_Single</graphicClass>
+
+        </graphicData>
+
+        <selectable>false</selectable>
+
+        <building>
+
+            <isInert>true</isInert>
+
+            <isEdifice>false</isEdifice>
+
+            <deconstructible>false</deconstructible>
+
+        </building>
+
+        <comps>
+
+            <li Class="CompProperties_Glower">
+
+                <glowRadius>6</glowRadius>
+
+                <glowColor>(255,255,255,0)</glowColor>
+
+            </li>
+
+        </comps>
+
+    </ThingDef>
+<!--
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>hediff_FlashLight</defName>
+    <hediffClass>mama.lightcode</hediffClass>
+    <label>light source</label>
+    <labelNoun>a light source</labelNoun>
+	<description>this pawn brings their own light source</description>
+    <stages>
+      <li>
+		
+        <label>Lamp</label>
+        <statOffsets>
+          <AimingDelayFactor>-0.02</AimingDelayFactor>
+          <ConstructionSpeedFactor>0.05</ConstructionSpeedFactor>
+          <MiningSpeed>0.10</MiningSpeed>
+          <MiningYield>0.15</MiningYield>
+        </statOffsets>
+        <capMods>
+			<li>
+			<capacity>Sight</capacity>
+			<offset>0.05</offset>
+			</li>
+		</capMods>
+      </li>
+    </stages>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.00</partEfficiency>
+    </addedPartProps>
+    <spawnThingOnRemoved>FlashLight</spawnThingOnRemoved>
+  </HediffDef>-->
+
+
+</Defs>

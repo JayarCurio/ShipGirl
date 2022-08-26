@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+<!--"Natural" organs-->
+	<!--fuel pump-->
+
+	<ThingDef ParentName="FSG_MachinableNaturalBodypartBase">
+		<defName>FSG_FuelPump</defName>
+		<label>Basic Fuel Pump</label>
+		<description>A standard fuel pump for ship girls.</description>
+		<descriptionHyperlinks><RecipeDef>InstallBasicFSG_FuelPump</RecipeDef></descriptionHyperlinks>
+		
+		
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartNaturalBase">
+		<defName>InstallBasicFSG_FuelPump</defName>
+		<label>install basic fuel pump</label>
+		<description>Install a replacement fuel pump in a ship girl.</description>
+		<descriptionHyperlinks><ThingDef>FSG_FuelPump</ThingDef></descriptionHyperlinks>
+		<jobString>Installing fuel pump.</jobString>
+		<deathOnFailedSurgeryChance>0.005</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>2</Medicine>
+			
+		</skillRequirements>
+		<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>FSG_FuelPump</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_FuelPump</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>FuelPump</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+<!--fuel filter-->
+
+	<ThingDef ParentName="FSG_MachinableNaturalBodypartBase">
+		<defName>FSG_FuelFilter</defName>
+		<label>Basic Fuel Filter</label>
+		<description>A standard fuel filter for ship girls.</description>
+		<descriptionHyperlinks><RecipeDef>InstallBasicFSG_FuelFilter</RecipeDef></descriptionHyperlinks>
+		<!--<graphicData>
+			<texPath></texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			
+		</graphicData>-->
+		
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartNaturalBase">
+		<defName>InstallBasicFSG_FuelFilter</defName>
+		<label>install basic fuel filter</label>
+		<description>Install a replacement fuel filter in a ship girl.</description>
+		<descriptionHyperlinks><ThingDef>FSG_FuelFilter</ThingDef></descriptionHyperlinks>
+		<jobString>Installing fuel filter.</jobString>
+		<deathOnFailedSurgeryChance>0.0005</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			
+			<Medicine>2</Medicine>
+		</skillRequirements>
+		<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>FSG_FuelFilter</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>FSG_FuelFilter</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+		<li>FuelFilter</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  
+  <!--Engine-->
+
+	<ThingDef ParentName="FSG_MachinableNaturalBodypartBase">
+		<defName>FSG_Engine</defName>
+		<label>Basic Engine</label>
+		<description>A standard engine for ship girls.</description>
+		<descriptionHyperlinks><RecipeDef>FSG_InstallEngine</RecipeDef></descriptionHyperlinks>
+		
+		<graphicData>
+				<texPath>Organs/Engines/BoilerA</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartNaturalBase">
+		<defName>FSG_InstallEngine</defName>
+		<label>install basic engine</label>
+		<description>Install a replacement engine in a ship girl.</description>
+		<descriptionHyperlinks><ThingDef>FSG_Engine</ThingDef></descriptionHyperlinks>
+		<jobString>Installing engine.</jobString>
+		<deathOnFailedSurgeryChance>0.01</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			
+			<Medicine>2</Medicine>
+		</skillRequirements>
+		<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>FSG_Engine</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>FSG_Engine</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Engine</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+	
+	  <!--Funnel-->
+
+	<ThingDef ParentName="FSG_MachinableNaturalBodypartBase">
+		<defName>FSG_Funnel</defName>
+		<label>Spare Funnel</label>
+		<description>A standard exhaust funnel for ship girls.</description>
+		<descriptionHyperlinks><RecipeDef>FSG_InstallFunnel</RecipeDef></descriptionHyperlinks>
+		<graphicData>
+			<texPath>Organs/Replacements/Funnel</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			
+		</graphicData>
+		
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartNaturalBase">
+		<defName>FSG_InstallFunnel</defName>
+		<label>install ehaust funnel</label>
+		<description>Install a replacement exhaust funnel on a ship girl.</description>
+		<descriptionHyperlinks><ThingDef>FSG_Funnel</ThingDef></descriptionHyperlinks>
+		<jobString>Installing Funnel.</jobString>
+		<deathOnFailedSurgeryChance>0.00</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			
+			<Medicine>2</Medicine>
+		</skillRequirements>
+		<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>FSG_Funnel</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>FSG_Funnel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Funnel</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+	
+	<!--Rudder-->
+
+	<ThingDef ParentName="FSG_SmithableNaturalBodyPartBase">
+		<defName>FSG_Rudder</defName>
+		<label>Rudder</label>
+		<description>A replacement rudder for ship girls.</description>
+		<descriptionHyperlinks><RecipeDef>FSG_InstallRudder</RecipeDef></descriptionHyperlinks>
+		<graphicData>
+			<texPath>Organs/Replacements/Rudder</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			
+		</graphicData>
+		
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartNaturalBase">
+		<defName>FSG_InstallRudder</defName>
+		<label>install rudder</label>
+		<description>Install a replacement rudder on a ship girl.</description>
+		<descriptionHyperlinks><ThingDef>FSG_Rudder</ThingDef></descriptionHyperlinks>
+		<jobString>Installing Rudder.</jobString>
+		<deathOnFailedSurgeryChance>0.00</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			
+			<Medicine>2</Medicine>
+		</skillRequirements>
+		<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>FSG_Rudder</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>FSG_Rudder</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Rudder</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+
+<!--End of Replacements -->
+
+<!--Engine Upgrades-->
+
+  
+
+  <!-- Nuclear Engine -->
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_NuclearEngine</defName>
+		<label>nuclear ship engine</label>
+		<labelNoun>a nuclear ship engine</labelNoun>
+		<description>An installed nuclear ship engine.</description>
+    
+		<spawnThingOnRemoved>FSG_NuclearEngine</spawnThingOnRemoved>
+		
+		<hediffGivers>
+			<li Class="HediffGiver_Random">
+			<mtbDays>600</mtbDays>
+			<hediff>Carcinoma</hediff>
+			<partsToAffect>
+				<li>Torso</li>
+			</partsToAffect>
+			</li>
+		</hediffGivers>
+		<stages>
+			<li>
+				<hungerRateFactor>0.25</hungerRateFactor>
+				<foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_ReactOnDamage">
+				<damageDefIncoming>EMP</damageDefIncoming>
+				<vomit>true</vomit>
+			</li>
+		</comps>
+		<addedPartProps>
+			<solid>false</solid>
+			
+			
+			<partEfficiency>1.1</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>			
+		</addedPartProps>
+	</HediffDef>
+
+	<ThingDef ParentName="FSG_FabricatedBodypartBase">
+		<defName>FSG_NuclearEngine</defName>
+		<label>nuclear ship engine</label>
+		<description>A full size nuclear engine, designed to be installed in the engine room of a nuclear age battleship, and miniaturized via ship girl psyence. Becasue of it's size, it is much better shielded than a nuclear stomach.</description>
+		<graphicData>
+				<texPath>Organs/Engines/BoilerNuke</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+			<Plasteel>15</Plasteel>
+			<Uranium>15</Uranium>
+			<ComponentSpacer>4</ComponentSpacer>
+		</costList>
+		<recipeMaker>
+			<!--<researchPrerequisite>ArtificialMetabolism</researchPrerequisite>-->
+		</recipeMaker>
+		<statBases>
+			<MarketValue>400</MarketValue>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallFSG_Nuclearengine</defName>
+		<label>install nuclear engine</label>
+		<description>Install a nuclear engine.</description>
+
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing nuclear engine.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSG_NuclearEngine</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>FSG_NuclearEngine</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Engine</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>FSG_NuclearEngine</addsHediff>
+	</RecipeDef>
+	
+	<!-- Turbo Engine 1 -->
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_InstalledTurboEngine</defName>
+		<label>turbo ship engine</label>
+		<labelNoun>a turbocharged ship engine</labelNoun>
+		<description>An installed turbo ship engine.</description>
+		
+		<spawnThingOnRemoved>FSG_TurboEngine</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>false</solid>
+			
+			
+			<partEfficiency>1.1</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>			
+		</addedPartProps>
+		
+		<stages>
+			<li>
+				<hungerRateFactor>1.1</hungerRateFactor>
+				<foodPoisoningChanceFactor>.75</foodPoisoningChanceFactor>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>1.15</postFactor>
+					</li>
+				</capMods>
+				<statOffsets>
+					<MeleeDodgeChance>3</MeleeDodgeChance>
+				</statOffsets>
+			</li>
+		</stages>
+		
+	</HediffDef>
+
+	<ThingDef ParentName="FSG_MachinableBodypartBase">
+		<defName>FSG_TurboEngine</defName>
+		<label>Turbo ship engine</label>
+		<description>An industrial tech, turbocharged warship engine, miniaturized via ship girl psyence. It consumes additional fuel, but provides better top speed and acceleration.</description>
+		<graphicData>
+				<texPath>Organs/Engines/BoilerA</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+			<Steel>75</Steel>
+			<Chemfuel>50</Chemfuel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+			<!--<researchPrerequisite>ArtificialMetabolism</researchPrerequisite>-->
+		</recipeMaker>
+		<statBases>
+			<MarketValue>1000</MarketValue>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallFSG_Turboengine</defName>
+		<label>install turbo engine</label>
+		<description>Install a turbo engine.</description>
+
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing turbo engine.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSG_TurboEngine</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>FSG_TurboEngine</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Engine</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>FSG_InstalledTurboEngine</addsHediff>
+		
+	</RecipeDef>
+	
+	<!-- Turbo Engine 2 -->
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_InstalledAdvancedTurboEngine</defName>
+		<label>Advanced turbo ship engine</label>
+		<labelNoun>an advanced turbocharged engine</labelNoun>
+		<description>An installed advanced turbo ship engine.</description>
+		
+		<spawnThingOnRemoved>FSG_AdvancedTurboEngine</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>false</solid>
+			
+			
+			<partEfficiency>1.25</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>			
+		</addedPartProps>
+		
+		<stages>
+			<li>
+				<hungerRateFactor>1.35</hungerRateFactor>
+				<foodPoisoningChanceFactor>.25</foodPoisoningChanceFactor>
+				<statOffsets>
+					<MeleeDodgeChance>5</MeleeDodgeChance>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>1.30</postFactor>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_ReactOnDamage">
+				<damageDefIncoming>EMP</damageDefIncoming>
+				<vomit>true</vomit>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<ThingDef ParentName="FSG_FabricatedBodypartBase">
+		<defName>FSG_AdvancedTurboEngine</defName>
+		<label>Advanced turbo ship engine</label>
+		<description>A spacer tech, turbocharged warship engine, miniaturized via ship girl psyence. It consumes significant additional fuel, but provides much better top speed and acceleration. It's electronic fuel injectors may be vulnerable to EMP attacks.</description>
+		<graphicData>
+				<texPath>Organs/Engines/BoilerB</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+		<costList>
+			<Plasteel>75</Plasteel>
+			<Chemfuel>75</Chemfuel>
+			<ComponentSpacer>4</ComponentSpacer>
+		</costList>
+		<recipeMaker>
+			<!--<researchPrerequisite>ArtificialMetabolism</researchPrerequisite>-->
+		</recipeMaker>
+		<statBases>
+			<MarketValue>3000</MarketValue>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallFSG_AdvancedTurboengine</defName>
+		<label>install advanced turbo engine</label>
+		<description>Install an advanced turbo engine.</description>
+
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing advanced turbo engine.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSG_AdvancedTurboEngine</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>FSG_AdvancedTurboEngine</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Engine</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>FSG_InstalledAdvancedTurboEngine</addsHediff>
+	</RecipeDef>
+	
+		<!-- Turbo Engine 3 -->
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_InstalledThrottledTurboEngine</defName>
+		<label>Throttle-Limited Turbo Engine</label>
+		<labelNoun>a Throttle-Limited Prototype Turbo Engine</labelNoun>
+		<description>An installed Throttle-Limited Prototype Turbo Engine. This archeotech engine is capable of incredable bursts of speed, which can be very useful in combat, but it consumes enourmous amounts of fuel, such that it was re-designed to run at a very low RPM outside of combat.</description>
+		
+		<spawnThingOnRemoved>FSG_ThrottledTurboEngine</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>false</solid>
+			
+			
+			<partEfficiency>1.50</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>			
+		</addedPartProps>
+		
+		<stages>
+			<li>
+				<hungerRateFactor>2</hungerRateFactor>
+				<foodPoisoningChanceFactor>.2</foodPoisoningChanceFactor>
+				<statOffsets>
+					<MeleeDodgeChance>25</MeleeDodgeChance>
+					<AimingDelayFactor>0.125</AimingDelayFactor>
+					<ShootingAccuracyPawn>5</ShootingAccuracyPawn>
+					<MeleeHitChance>10</MeleeHitChance>
+					<WorkSpeedGlobal>.5</WorkSpeedGlobal>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>1.50</postFactor>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<postFactor>0.9</postFactor>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_ReactOnDamage">
+				<damageDefIncoming>EMP</damageDefIncoming>
+				<vomit>true</vomit>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<ThingDef ParentName="BodyPartArchotechBase">
+		<defName>FSG_ThrottledTurboEngine</defName>
+		<label>Experimental Turbo ship engine</label>
+		<description>An archeotech, turbocharged warship engine, miniaturized via ship girl psyence. This archeotech engine is capable of incredable bursts of speed, which can be very useful in combat, but it consumes enourmous amounts of fuel, such that it was re-designed to run at a very low RPM outside of combat. It's electronic fuel injectors may be vulnerable to EMP attacks.</description>
+		<graphicData>
+				<texPath>Organs/Engines/BoilerC</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+
+		<statBases>
+			<MarketValue>8000</MarketValue>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallFSG_ThrottledTurboengine</defName>
+		<label>install Experimental Turbo ship engine</label>
+		<description>Install a throttle-limited prototype turbo engine.</description>
+
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing prototype turbo engine.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSG_ThrottledTurboEngine</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>FSG_ThrottledTurboEngine</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Engine</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>FSG_InstalledThrottledTurboEngine</addsHediff>
+	</RecipeDef>
+  
+</Defs>

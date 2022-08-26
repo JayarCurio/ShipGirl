@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RulePackDef>
+		<defName>NamerPersonShip</defName>
+    
+		<rulePack>
+			<rulesStrings>
+				<!--<li>r_name(p=6)->[Prefix] '[WordTribal]' [WordTribal]</li>
+				<li>r_name(p=6)->[Prefix] [AnimalBadass]</li>
+				<li>r_name(p=6)->[Prefix] [Color] [WordTribal]</li>
+				
+				<li>r_name(p=6)->[Prefix] [Title] [Name]</li>-->
+				
+				<li>r_name->[WordTribal] [WordTribal]</li>
+				<li>r_name->[AnimalBadass]</li>
+				<li>r_name->[Color] [WordTribal]</li>
+				<li>r_name->[WordTribal] [Animal]</li>
+				<li>r_name->[Animal]</li>
+				<li>r_name->[Title] [Name]</li>
+				<li>r_name->[Name]</li>
+				<li>r_name->[exoticname]</li>
+				
+				
+				<li>Name->[NameAnimalUnisex]</li>
+				<li>Name->[NameAnimalMale]</li>
+				<li>Name->[NamePersonMale]</li>
+				<li>Name->[NameAnimalFemale]</li>
+				<li>Name->[NamePersonFemale]</li>
+				<li>Name(p=6)->[exoticname]</li>
+				
+				<li>Name(p=6)->[Firstname]</li>
+				<li>Name(p=3)->[Lastname]</li>
+				<li>Name->[Firstname] [Lastname]</li>
+				
+				<li>Firstname->[ImperialNameFirstMale]</li>
+				<li>Firstname->[ImperialNameFirstFemale]</li>
+				
+				<li>Lastname->[ImperialNameLast]</li>
+				
+				<li>Title->Princess</li>
+				<li>Title->Prinz</li>
+				<li>Title->Prince</li>
+				<li>Title->King</li>
+				<li>Title->Queen</li>
+				<li>Title->Admiral</li>
+				<li>Title->Lord</li>
+				<li>Title->Master</li>
+				<li>Title->Invincible</li>
+				<li>Title->Graff</li>
+				<li>Title->Lady</li>
+				<li>Title->Stellarch</li>
+				<li>Title->Sir</li>
+				<li>Title->Dame</li>
+				
+				
+				<li>exoticname->[BusinessTypes]</li>
+				<li>exoticname(p=4)->[AdjectiveBadass]</li>
+				<li>exoticname(p=2)->[PersonBadass]</li>
+				<li>exoticname(p=2)->[AdjectiveBadass] [PersonBadass]</li>
+				<li>exoticname->[Enemy]</li>
+				<li>exoticname->[Concepts_Positive]</li>
+				<li>exoticname->[ConceptAny]</li>
+				<li>exoticname->[ConceptAny] [ConceptAny]</li>
+				<li>exoticname->[Color]</li>
+				
+				<li>Prefix->SS</li>
+				<li>Prefix->USS</li>
+				<li>Prefix->IKS</li>
+				<li>Prefix->IJN</li>
+				<li>Prefix->KMS</li>
+				<li>Prefix->HMS</li>
+				<li>Prefix->HMCS</li>
+				<li>Prefix->JDF</li>
+				<li>Prefix->CIN</li>
+				<li>Prefix->PRCN</li>
+				<li>Prefix->HSC</li>
+				<li>Prefix->USMC</li>
+				<li>Prefix->UNMC</li>
+				<li>Prefix->UFP</li>
+				<li>Prefix->RSE</li>
+				<li>Prefix->RRS</li>
+				<li>Prefix->SSCV</li>
+				<li>Prefix->SCV</li>
+				<li>Prefix->SV</li>
+				<li>Prefix->YOS</li>
+				<li>Prefix->HMAS</li>
+				<li>Prefix->ACV</li>
+				<li>Prefix->ARA</li>
+				<li>Prefix->SMS</li>
+				<li>Prefix->CGS</li>
+				<li>Prefix->CCGC</li>
+				<li>Prefix->HMCS</li>
+				<li>Prefix->PLAN</li>
+				<li>Prefix->PRAN</li>
+				<li>Prefix->PRCN</li>
+				<li>Prefix->CSS</li>
+				<li>Prefix->KDM</li>
+				<li>Prefix->BAE</li>
+				<li>Prefix->SMS</li>
+				<li>Prefix->SMU</li>
+				<li>Prefix->DKM</li>
+				<li>Prefix->FGS</li>
+				<li>Prefix->VP</li>
+				<li>Prefix->HS</li>
+				<li>Prefix->INS</li>
+				<li>Prefix->KRI</li>
+				<li>Prefix->IIS</li>
+				<li>Prefix->IRIS</li>
+				<li>Prefix->LE</li>
+				<li>Prefix->LKL</li>
+				<li>Prefix->LKS</li>
+				<li>Prefix->SAS</li>
+				<li>Prefix->SATS</li>
+				<li>Prefix->TCG</li>
+				<li>Prefix->USRC</li>
+				<li>Prefix->NOAAS</li>
+				<li>Prefix->USAV</li>
+				<li>Prefix->USF</li>
+				<li>Prefix->USFS</li>
+				<li>Prefix->FS</li>
+				<li>Prefix->USAS</li>
+				<li>Prefix->VPBR</li>
+				<li>Prefix->RTOP</li>
+				<li>Prefix->USFS</li>
+				<li>Prefix->RPNS</li>
+				<li>Prefix->UPVS</li>
+				<li>Prefix->ISS</li>
+				<li>Prefix->FMS</li>
+				<li>Prefix->CDS</li>
+				<li>Prefix->RIS</li>
+				<li>Prefix->IRW</li>
+				<li>Prefix->NRIS</li>
+				<li>Prefix->IAV</li>
+				<li>Prefix->EAS</li>
+				<li>Prefix->FNS</li>
+				<li>Prefix->ISD</li>
+				<li>Prefix->UNSC</li>
+				<li>Prefix->USG</li>
+				<li>Prefix->USM</li>
+				<li>Prefix->CMS</li>
+				<li>Prefix->CFS</li>
+				<li>Prefix->DSS</li>
+				<li>Prefix->GNS</li>
+				<li>Prefix->ASN</li>
+				<li>Prefix->USCSS</li>
+				<li>Prefix->ROU</li>
+				<li>Prefix->UMS</li>
+				<li>Prefix->FNS</li>
+				<li>Prefix->GSV</li>
+				<li>Prefix->RHNS</li>
+				<li>Prefix->IANS</li>
+				<li>Prefix->SLNS</li>
+				<li>Prefix->PNS</li>
+				<li>Prefix->OPAS</li>
+				<li>Prefix->MCRN</li>
+				<li>Prefix->NAR</li>
+				<li>Prefix->NX</li>
+				<li>Prefix->ITV</li>
+				<li>Prefix->ISV</li>
+				<li>Prefix->PSR</li>
+				<li>Prefix->RLS</li>
+				<li>Prefix->HMH</li>
+				<li>Prefix->RU</li>
+				<li>Prefix->NSEA</li>
+				<li>Prefix->M'Ri</li>
+				<li>Prefix->Ch'Ri</li>
+				<li>Prefix->NCC</li>
+				<li>Prefix->IKC</li>
+				<li>Prefix->NFT</li>
+				<li>Prefix->XMC</li>
+				<li>Prefix->BS</li>
+				<li>Prefix->BSG</li>
+				<li>Prefix->BSM</li>
+				<li>Prefix->SR</li>
+				<li>Prefix->SSV</li>
+				<li>Prefix->AML</li>
+				<li>Prefix->PFS</li>
+				<li>Prefix->MSV</li>
+				<li>Prefix->RRW</li>
+				<li>Prefix->VSW</li>
+				<li>Prefix->CUV</li>
+				<li>Prefix->DV</li>
+				<li>Prefix->TCS</li>
+				<li>Prefix->PVC</li>
+				<li>Prefix->GFS</li>
+				<li>Prefix->GFTS</li>
+				<li>Prefix->FFNF</li>
+				<li>Prefix->CNS</li>
+				<li>Prefix->HDN</li>
+				<li>Prefix->ROCS</li>
+				<li>Prefix->SN</li>
+				<li>Prefix->MNS</li>
+				<li>Prefix->TCS</li>
+				<li>Prefix->MR</li>
+				<li>Prefix->TT</li>
+				<li>Prefix->GPSS</li>
+				<li>Prefix->UFPS</li>
+				<li>Prefix->HIJMS</li>
+				
+
+			</rulesStrings>
+			<rulesFiles>
+				<li>ImperialNameFirstMale->Names/Imperial_First_Male</li>
+				<li>ImperialNameFirstFemale->Names/Imperial_First_Female</li>
+				<li>ImperialNameLast->Names/Imperial_Last</li>
+				<li>businesstype->Words/Nouns/BusinessTypes</li>
+				<li>concept_positive->Words/Nouns/Concepts_Positive</li>
+				<li>NameAnimalUnisex->Names/Animal_Unisex</li>
+				<li>NameAnimalMale->Names/Animal_Male</li>
+				<li>NameAnimalFemale->Names/Animal_Female</li>
+
+			</rulesFiles>
+		</rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerSinisterShip</defName>
+    <rulePack>
+      <rulesStrings>
+		<li>r_name->[Function] [Postfix]</li>
+		
+		
+		
+		
+		<li>Functions->Walking Genocide</li>
+		<li>Functions->Tester</li>
+		<li>Functions->Observer</li>
+		<li>Functions->Purifier</li>
+		<li>Functions->Tracker</li>
+		<li>Functions->Administrator</li>
+		<li>Functions->Explorer</li>
+		<li>Functions->Tester</li>
+		<li>Functions->Observer</li>
+		<li>Functions->Navigator</li>
+		<li>Functions->Scavenger</li>
+		<li>Functions->Strategist</li>
+		<li>Functions->Conductor</li>
+		<li>Functions->Lurker</li>
+		<li>Functions->Compiler</li>
+		<li>Functions->Scribe</li>
+		<li>Functions->Arbiter</li>
+		<li>Functions->Judge</li>
+		
+		
+		<li>Function->[Functions]</li>
+		<li>Function->[PersonJob]</li>
+		<li>Function->[Enemy]</li>
+		<li>Function->[PersonJob] [Enemy]</li>
+		<li>Function->[ConceptAny] [Breaker]</li>
+		<li>Function->[Gore] [Breaker]</li>
+		<li>Function->[Geography] [Breaker]</li>
+		<li>Function->[concept_positive][Breaker]</li>
+		<li>Function->[businesstype]</li>
+		<li>Function->[Community] [Breaker]</li>
+		<li>Function->[Community] [Functions]</li>
+		<li>Function->[Breaker]</li>
+		
+		<li>Breaker->Exsanguinator</li>
+		<li>Breaker->War Monger</li>
+		<li>Breaker->Killer</li>
+		<li>Breaker->Assasin</li>
+		<li>Breaker->Slayer</li>
+		<li>Breaker->Terminator</li>
+		<li>Breaker->Destroyer</li>
+		<li>Breaker->Hunter</li>
+		<li>Breaker->Breaker</li>
+		<li>Breaker->Purger</li>
+		<li>Breaker->Purifier</li>
+		<li>Breaker->Scourge</li>
+		<li>Breaker->Exterminator</li>
+		<li>Breaker->Cleanser</li>
+		<li>Breaker->Solver</li>
+		<li>Breaker->Chaser</li>
+		<li>Breaker->Obstructor</li>
+		<li>Breaker->Intruder</li>
+		<li>Breaker->Remover</li>
+		<li>Breaker->Smasher</li>
+		<li>Breaker->Stalker</li>
+		<li>Breaker->Grinder</li>
+		<li>Breaker->Shredder</li>
+		<li>Breaker->Shatterer</li>
+		<li>Breaker->Disintegrator</li>
+		<li>Breaker->Leveler</li>
+		<li>Breaker->Demolisher</li>
+		<li>Breaker->Ruiner</li>
+		<li>Breaker->Ravager</li>
+		<li>Breaker->Violator</li>
+		<li>Breaker->Defiler</li>
+		<li>Breaker->Resolver</li>
+		<li>Breaker->Dismantler</li>
+		<li>Breaker->Eradicator</li>
+		<li>Breaker->Destructor</li>
+		<li>Breaker->Spite</li>
+		
+		<li>Postfix->Alpha</li>
+		<li>Postfix->Beta</li>
+		<li>Postfix->Gamma</li>
+		<li>Postfix->Zero</li>
+		<li>Postfix->Glitch</li>
+		<li>Postfix->Prime</li>
+		<li>Postfix->Null</li>
+		<li>Postfix->Zeta</li>
+		<li>Postfix->Curse</li>
+		<li>Postfix->Grudge</li>
+		<li>Postfix->Hate</li>
+		<li>Postfix->Princess</li>
+		<li>Postfix->Empress</li>
+		<li>Postfix->Ghost</li>
+		<li>Postfix->Mk I</li>
+		<li>Postfix->Mk II</li>
+		<li>Postfix->Mk III</li>
+		<li>Postfix->Mk IV</li>
+        
+      </rulesStrings>
+	  <rulesFiles>
+        <li>businessname->Names/Business</li>
+        <li>businesstype->Words/Nouns/BusinessTypes</li>
+		 <li>concept_positive->Words/Nouns/Concepts_Positive</li>
+      </rulesFiles>
+      
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

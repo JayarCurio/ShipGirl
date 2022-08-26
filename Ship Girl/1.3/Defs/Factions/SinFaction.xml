@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--The Sinister have long memories-->
+	<FactionDef ParentName="FactionBase" Name="FSG_SinisterFactionBase" Abstract="True">
+		<defName>FSG_SinisterFactionBase</defName>
+		<label>sinister faction base</label>
+		<!--<pawnNameMaker>NamerSinisterShip</pawnNameMaker>-->
+		<categoryTag>Outlander</categoryTag>
+		<maxConfigurableAtWorldCreation>100</maxConfigurableAtWorldCreation>
+		
+	</FactionDef>
+
+	<FactionDef ParentName="FSG_SinisterFactionBase">
+		<defName>FSG_SinisterAlpha</defName>
+		<label>Hostile Sinister Forces</label>
+		<description>They seem to come from alternate realities or possibly the future. The acheotechts that sent them must surely be inimicable to life.</description>
+		<pawnsPlural>Sinister hostiles</pawnsPlural>
+		<pawnSingular>Sinister Ship Girl</pawnSingular>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		
+		<settlementGenerationWeight>1</settlementGenerationWeight>
+		<canMakeRandomly>true</canMakeRandomly>
+		<listOrderPriority>32</listOrderPriority>
+		<canSiege>true</canSiege>
+		<canStageAttacks>true</canStageAttacks>
+		<geneticVariance>0.2</geneticVariance>
+		<leaderTitle>Administrative Empress</leaderTitle>
+		<naturalEnemy>true</naturalEnemy>
+		<allowedCultures>
+			<li>FSG_SinCultureAlpha</li>
+		</allowedCultures>
+		<disallowedMemes>
+
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
+
+			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+
+		</disallowedMemes>
+		<requiredMemes>
+
+			<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
+		</requiredMemes>
+		<structureMemeWeights>
+
+			<Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">2</Structure_TheistEmbodied>
+
+			<Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistAbstract>
+
+			<Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">4</Structure_Ideological>
+
+			<Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>
+
+			<Structure_OriginChristian MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginChristian>
+
+			<Structure_OriginIslamic MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginIslamic>
+
+			<Structure_OriginHindu MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginHindu>
+
+			<Structure_OriginBuddhist MayRequire="Ludeon.RimWorld.Ideology">2</Structure_OriginBuddhist>
+
+		</structureMemeWeights>
+		
+		
+		
+		<!--<permanentEnemy>true</permanentEnemy>
+		<startingGoodwill>
+			<min>-90</min>
+			<max>-76</max>
+		</startingGoodwill>
+		<naturalColonyGoodwill>
+			<min>-90</min>
+			<max>-50</max>
+		</naturalColonyGoodwill>
+		<goodwillDailyGain>0.01</goodwillDailyGain>
+		<goodwillDailyFall>0.1</goodwillDailyFall>-->
+		<!--<permanentEnemyToEveryoneExcept>
+			<li>BloodSharks</li>
+			<li>AnimaSpirits</li>
+			<li>FSG_SinisterBeta</li>
+			<li>Ancients</li>
+		</permanentEnemyToEveryoneExcept>
+		-->
+			<settlementNameMaker>FSG_NamerSettlementSinister</settlementNameMaker>
+			<factionNameMaker>FSG_NamerFactionSinister</factionNameMaker>
+		<techLevel>Ultra</techLevel>
+		<raidLootMaker>PirateRaidLootMaker</raidLootMaker>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Pirate</li>
+					
+				</categories>
+				<commonality>10</commonality>
+			</li>
+			<li>
+				<categories>
+					<li>Offworld</li>
+					
+				</categories>
+				<commonality>10</commonality>
+			</li>
+		</backstoryFilters>
+		<!--<hairTags>
+			<li>Punk</li>
+			<li>Urban</li>
+		</hairTags>-->
+		<visitorTraderKinds>
+			<li>SinisterTrader</li>
+		</visitorTraderKinds>
+		<caravanTraderKinds>
+			<li>Caravan_Outlander_BulkGoods</li>
+			<li>Caravan_Outlander_CombatSupplier</li>
+			<li>Caravan_Outlander_Exotic</li>
+			<li>Caravan_Outlander_PirateMerchant</li>
+		</caravanTraderKinds>
+		<baseTraderKinds>
+			<li>Base_Outlander_Standard</li>
+			<li>SinisterTrader</li>
+		</baseTraderKinds>
+		<allowedArrivalTemperatureRange>
+			<min>-65</min>
+			<max>35</max>
+		</allowedArrivalTemperatureRange>
+		<maxPawnCostPerTotalPointsCurve>
+			<points>
+				<li>(0,35)</li>
+				<li>(150, 50)</li>
+				<li>(800, 400)</li>
+				<li>(1300, 800)</li>
+				<li>(100000, 10000)</li>
+			</points>
+		</maxPawnCostPerTotalPointsCurve>
+		
+		<pawnGroupMakers>
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+					<SinisterColonist>20</SinisterColonist>
+					<SinisterSecurityGuard>10</SinisterSecurityGuard>
+					<SinisterAdmiral>5</SinisterAdmiral>
+				</options>
+			</li>
+		
+			<li>
+				<kindDef>Combat</kindDef>
+				<commonality>50</commonality>
+				<options>
+					
+					<SinisterSecurityGuard>90</SinisterSecurityGuard>
+					<SinisterAdmiral>10</SinisterAdmiral>
+					<FSG_UltraAShipsSinister>100</FSG_UltraAShipsSinister>
+					<FSG_SinisterUltraRanged>130</FSG_SinisterUltraRanged>
+					<FSG_SinisterUltraMelee>130</FSG_SinisterUltraMelee>
+					
+					
+				</options>
+			</li>
+			<li>
+				<kindDef>Combat</kindDef>
+				<commonality>5</commonality>
+				<options>
+					
+					<SinisterSecurityGuard>90</SinisterSecurityGuard>
+					<SinisterAdmiral>200</SinisterAdmiral>
+					<FSG_SinisterUltraRanged>130</FSG_SinisterUltraRanged>
+					<FSG_SinisterUltraMelee>130</FSG_SinisterUltraMelee>
+					
+					<SinisterColonist>200</SinisterColonist>
+				</options>
+			</li>
+			<li>
+				<kindDef>Settlement</kindDef>
+				<options>
+					<SinisterColonist>250</SinisterColonist>
+					<SinisterSecurityGuard>90</SinisterSecurityGuard>
+					<SinisterAdmiral>90</SinisterAdmiral>
+					<FSG_UltraAShipsSinister>100</FSG_UltraAShipsSinister>
+					<FSG_SinisterUltraRanged>130</FSG_SinisterUltraRanged>
+					<FSG_SinisterUltraMelee>130</FSG_SinisterUltraMelee>
+
+				</options>
+			</li>
+			<li>
+				<kindDef>Trader</kindDef>
+				<traders>
+					<SinisterTrader>1</SinisterTrader>
+				</traders>
+				<carriers>
+					<Muffalo>2</Muffalo>
+					<Dromedary>2</Dromedary>
+				</carriers>
+				<guards>
+					<SinisterSecurityGuard>90</SinisterSecurityGuard>
+					<SinisterColonist>250</SinisterColonist>
+					<FSG_UltraAShipsSinister>100</FSG_UltraAShipsSinister>
+					<FSG_SinisterUltraRanged>130</FSG_SinisterUltraRanged>
+					<FSG_SinisterUltraMelee>130</FSG_SinisterUltraMelee>
+				</guards>
+			</li>
+		
+		</pawnGroupMakers>
+		<factionIconPath>Sins/base</factionIconPath>
+		<!--<homeIconPath>Sinister/Capital</homeIconPath>-->
+		<settlementTexturePath>Sins/base</settlementTexturePath>
+		<colorSpectrum>
+			<li>(1, 1, 1)</li>
+		</colorSpectrum>
+	
+	</FactionDef>
+	
+		<FactionDef ParentName="FSG_SinisterFactionBase">
+		<defName>FSG_SinisterBeta</defName>
+		<label>Cryptic Sinister Forces</label>
+		<description>They seem to come from alternate realities or possibly the future, for secret purposes. It may be possible to trade with them.</description>
+		<pawnsPlural>Sinister ship girls</pawnsPlural>
+		<pawnSingular>Sinister Ship Girl</pawnSingular>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		
+		<settlementGenerationWeight>1</settlementGenerationWeight>
+		<canMakeRandomly>true</canMakeRandomly>
+		<listOrderPriority>32</listOrderPriority>
+		<canSiege>true</canSiege>
+		<canStageAttacks>true</canStageAttacks>
+		<geneticVariance>0.2</geneticVariance>
+		<leaderTitle>Transcendant Prophet</leaderTitle>
+		<allowedCultures>
+			<li>FSG_SinCultureBeta</li>
+		</allowedCultures>
+		<disallowedMemes>
+
+			
+
+			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+
+		</disallowedMemes>
+		<requiredMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+
+		</requiredMemes>
+		<structureMemeWeights>
+			<Structure_Animist MayRequire="Ludeon.RimWorld.Ideology">3</Structure_Animist>
+
+			<Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">4</Structure_TheistEmbodied>
+
+			<Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistAbstract>
+
+			<Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">2</Structure_Ideological>
+
+			<Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>
+
+			<Structure_OriginChristian MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginChristian>
+
+			<Structure_OriginIslamic MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginIslamic>
+
+			<Structure_OriginHindu MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginHindu>
+
+			<Structure_OriginBuddhist MayRequire="Ludeon.RimWorld.Ideology">2</Structure_OriginBuddhist>
+
+		</structureMemeWeights>		
+		<!--<permanentEnemy>true</permanentEnemy>
+		<startingGoodwill>
+			<min>-90</min>
+			<max>-76</max>
+		</startingGoodwill>
+		<naturalColonyGoodwill>
+			<min>-90</min>
+			<max>-50</max>
+		</naturalColonyGoodwill>
+		<goodwillDailyGain>0.01</goodwillDailyGain>
+		<goodwillDailyFall>0.1</goodwillDailyFall>-->
+		
+		
+			<settlementNameMaker>FSG_NamerSettlementSinister</settlementNameMaker>
+			<factionNameMaker>FSG_NamerFactionSinister</factionNameMaker>
+		<techLevel>Ultra</techLevel>
+		<raidLootMaker>PirateRaidLootMaker</raidLootMaker>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Pirate</li>
+					
+				</categories>
+				<commonality>10</commonality>
+			</li>
+			<li>
+				<categories>
+					<li>Offworld</li>
+					
+				</categories>
+				<commonality>10</commonality>
+			</li>
+		</backstoryFilters>
+		<!--<hairTags>
+			<li>Punk</li>
+			<li>Urban</li>
+		</hairTags>-->
+		<visitorTraderKinds>
+			<li>SinisterTrader</li>
+		</visitorTraderKinds>
+		<caravanTraderKinds>
+			<li>Caravan_Outlander_BulkGoods</li>
+			<li>Caravan_Outlander_CombatSupplier</li>
+			<li>Caravan_Outlander_Exotic</li>
+			<li>Caravan_Outlander_PirateMerchant</li>
+		</caravanTraderKinds>
+		<baseTraderKinds>
+			<li>Base_Outlander_Standard</li>
+			<li>SinisterTrader</li>
+		</baseTraderKinds>
+		<allowedArrivalTemperatureRange>
+			<min>-65</min>
+			<max>35</max>
+		</allowedArrivalTemperatureRange>
+		<maxPawnCostPerTotalPointsCurve>
+			<points>
+				<li>(0,35)</li>
+				<li>(150, 50)</li>
+				<li>(800, 400)</li>
+				<li>(1300, 800)</li>
+				<li>(100000, 10000)</li>
+			</points>
+		</maxPawnCostPerTotalPointsCurve>
+		
+		<pawnGroupMakers>
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+					<SinisterColonist>20</SinisterColonist>
+					<SinisterSecurityGuard>10</SinisterSecurityGuard>
+					<SinisterAdmiral>5</SinisterAdmiral>
+				</options>
+			</li>
+		
+			<li>
+				<kindDef>Combat</kindDef>
+				<commonality>50</commonality>
+				<options>
+					
+					<SinisterSecurityGuard>90</SinisterSecurityGuard>
+					<SinisterAdmiral>10</SinisterAdmiral>
+					<FSG_UltraAShipsSinister>100</FSG_UltraAShipsSinister>
+					<FSG_SinisterUltraRanged>130</FSG_SinisterUltraRanged>
+					<FSG_SinisterUltraMelee>130</FSG_SinisterUltraMelee>
+					
+					
+				</options>
+			</li>
+			<li>
+				<kindDef>Combat</kindDef>
+				<commonality>5</commonality>
+				<options>
+					
+					<SinisterSecurityGuard>90</SinisterSecurityGuard>
+					<SinisterAdmiral>200</SinisterAdmiral>
+					<FSG_SinisterUltraRanged>130</FSG_SinisterUltraRanged>
+					<FSG_SinisterUltraMelee>130</FSG_SinisterUltraMelee>
+					
+					<SinisterColonist>200</SinisterColonist>
+				</options>
+			</li>
+			<li>
+				<kindDef>Settlement</kindDef>
+				<options>
+					<SinisterColonist>250</SinisterColonist>
+					<SinisterSecurityGuard>90</SinisterSecurityGuard>
+					<SinisterAdmiral>90</SinisterAdmiral>
+					<FSG_UltraAShipsSinister>100</FSG_UltraAShipsSinister>
+					<FSG_SinisterUltraRanged>130</FSG_SinisterUltraRanged>
+					<FSG_SinisterUltraMelee>130</FSG_SinisterUltraMelee>
+
+				</options>
+			</li>
+			<li>
+				<kindDef>Trader</kindDef>
+				<traders>
+					<SinisterTrader>1</SinisterTrader>
+				</traders>
+				<carriers>
+					<Muffalo>2</Muffalo>
+					<Dromedary>2</Dromedary>
+				</carriers>
+				<guards>
+					<SinisterSecurityGuard>90</SinisterSecurityGuard>
+					<SinisterColonist>250</SinisterColonist>
+					<FSG_UltraAShipsSinister>100</FSG_UltraAShipsSinister>
+					<FSG_SinisterUltraRanged>130</FSG_SinisterUltraRanged>
+					<FSG_SinisterUltraMelee>130</FSG_SinisterUltraMelee>
+				</guards>
+			</li>
+		
+		</pawnGroupMakers>
+		<factionIconPath>Sins/base</factionIconPath>
+		<!--<homeIconPath>Sinister/Capital</homeIconPath>-->
+		<settlementTexturePath>Sins/base</settlementTexturePath>
+		<colorSpectrum>
+			<li>(1, 1, 1)</li>
+		</colorSpectrum>
+	
+	</FactionDef>
+  
+  <TraderKindDef>
+    <defName>SinisterTrader</defName>
+    <label>trader</label>
+    <stockGenerators>
+      
+      <!-- Resources -->
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Silver</thingDef>
+        <countRange>50~250</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>ComponentIndustrial</thingDef>
+        <countRange>-2~5</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>MealSurvivalPack</thingDef>
+        <countRange>3~6</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>MedicineIndustrial</thingDef>
+        <countRange>1~6</countRange>
+      </li>
+      <li Class="StockGenerator_MultiDef">
+        <thingDefs>
+          <li>Cloth</li>
+          <li>Chocolate</li>
+        </thingDefs>
+      </li>
+      
+      <!-- Drugs -->
+      <li Class="StockGenerator_Category">
+        <categoryDef>Drugs</categoryDef>
+        <thingDefCountRange>-1~1</thingDefCountRange>
+        <totalPriceRange>100~300</totalPriceRange>
+      </li>
+
+      <!-- Techprints -->
+      <li Class="StockGenerator_Techprints">
+        <countChances>
+          <li>
+            <count>1</count>
+            <chance>0.5</chance>
+          </li>
+        </countChances>
+      </li>
+      
+      <!-- Weapons -->
+      
+      <li Class="StockGenerator_WeaponsRanged">
+        <countRange>5~5</countRange>
+      </li>
+      <li Class="StockGenerator_Category">
+        <categoryDef>WeaponsMelee</categoryDef>
+        <thingDefCountRange>6~6</thingDefCountRange>
+        <countRange>1~1</countRange>
+      </li>
+      <li Class="StockGenerator_Tag">
+        <tradeTag>MortarShell</tradeTag>
+        <thingDefCountRange>1~2</thingDefCountRange>
+        <countRange>3~15</countRange>
+      </li>
+
+      <!-- Apparel -->
+      <li Class="StockGenerator_Clothes">
+        <countRange>0~1</countRange>
+      </li>
+	  
+	  <li Class="StockGenerator_Category">
+        <categoryDef>Drugs</categoryDef>
+      </li>
+	  
+	   <!-- Techprints -->
+      <li Class="StockGenerator_Techprints">
+        <countChances>
+          <li>
+            <count>1</count>
+            <chance>1</chance>
+          </li>
+        </countChances>
+      </li>
+
+      <!-- Implants -->
+      <!-- none -->
+
+      <!-- Buildings -->
+      <!-- none -->
+      
+		<!-- Exotic -->
+		    <li Class="StockGenerator_Tag">
+        <tradeTag>ExoticMisc</tradeTag>
+        <thingDefCountRange>3~3</thingDefCountRange>
+        <countRange>1~1</countRange>
+        <excludedThingDefs>
+          <li>MedicineUltratech</li> <!-- already handled by single def -->
+          <li>ComponentSpacer</li> <!-- already handled by single def -->
+        </excludedThingDefs>
+        <customCountRanges>
+          <Luciferium>7~25</Luciferium>
+          <Hyperweave>40~120</Hyperweave>
+        </customCountRanges>
+      </li>
+      <li Class="StockGenerator_Tag">
+        <tradeTag>Artifact</tradeTag>
+        <thingDefCountRange>2~2</thingDefCountRange>
+        <countRange>1~1</countRange>
+      </li>
+		<!-- Implants -->
+		<li Class="StockGenerator_Tag">
+			<tradeTag>TechHediff</tradeTag>
+			<thingDefCountRange>3</thingDefCountRange>
+			<countRange>1</countRange>
+		</li>
+      
+     <!-- Slaves -->
+      <li Class="StockGenerator_Slaves">
+        <countRange>2~6</countRange>
+      </li>
+      
+      <!-- Animals -->
+      <li Class="StockGenerator_Animals">
+        <tradeTagsSell>
+          <li>AnimalUncommon</li>
+          <li>AnimalFighter</li>
+        </tradeTagsSell>
+        <tradeTagsBuy>
+          <li>AnimalExotic</li>
+        </tradeTagsBuy>
+        <kindCountRange>2~3</kindCountRange>
+        <countRange>1~6</countRange>
+      </li>
+      
+      <!-- Buying -->
+		<li Class="StockGenerator_BuyExpensiveSimple" />
+		<li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
+		<li Class="StockGenerator_BuyTradeTag"><tag>MusicalInstrument</tag></li>
+        <li Class="StockGenerator_BuyTradeTag"><tag>HiTechArmor</tag></li>
+        <li Class="StockGenerator_BuyTradeTag"><tag>Drugs</tag></li>
+		<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireCommon</tag></li>
+		<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireRoyal</tag></li>
+		<li Class="StockGenerator_BuyTradeTag"><tag>PsylinkNeuroformer</tag></li>
+		<li Class="StockGenerator_BuyTradeTag"><tag>ExoticBuilding</tag></li>
+      
+    </stockGenerators>
+  </TraderKindDef>
+
+</Defs>

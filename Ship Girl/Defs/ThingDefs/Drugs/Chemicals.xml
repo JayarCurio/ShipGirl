@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs> 
+  
+    <ChemicalDef>
+    <defName>FSG_Fuel</defName>
+    <label>Fuel Additives</label>
+    <addictionHediff>FSG_FuelAddiction</addictionHediff>
+    <toleranceHediff>FSG_OctaneTolerance</toleranceHediff>
+    
+		<onGeneratedAddictedEvents>
+      
+		</onGeneratedAddictedEvents>
+	</ChemicalDef>
+	
+	<HediffDef ParentName="AddictionBase">
+    <defName>FSG_FuelAddiction</defName>
+    <label>don't drink gasoline</label>
+    <description>This pawn has been consuming beverages mixed with chemical fuel additives not intended for his race, and now they don't feel well.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <causesNeed>FSG_Chemical_Octane</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1.0</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>been drinking excessive gasoline</label>
+        <restFallFactor>2.0</restFallFactor>
+        <capMods>
+         
+        </capMods>
+        <mentalStateGivers>
+         
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  
+  <!-- Octane addiction -->
+  
+  <ChemicalDef>
+    <defName>FSG_Octane</defName>
+    <label>octane</label>
+    <addictionHediff>FSG_OctaneAddiction</addictionHediff>
+    <toleranceHediff>FSG_OctaneTolerance</toleranceHediff>
+    
+    <onGeneratedAddictedEvents>
+      <!--<li>
+        <hediff>Cirrhosis</hediff>
+        <chance>0.15</chance>
+        <partsToAffect>
+          <li>Liver</li>
+        </partsToAffect>
+      </li>-->
+    </onGeneratedAddictedEvents>
+  </ChemicalDef>
+  
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>FSG_Chemical_Octane</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>octane need</label>
+    <description>Because of an addiction to chemical fuel additives, this pawn needs to regularly consume them to avoid withdrawal symptoms.</description>
+    <listPriority>33</listPriority>
+  </NeedDef>
+
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>FSG_OctaneTolerance</defName>
+    <label>octane tolerance</label>
+    <description>A built-up tolerance to octane. The more severe this tolerance is, the more octane it takes to get the same effect.</description>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.06</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>FSG_Octane</chemical>
+      </li>
+    </comps>
+    <hediffGivers>
+     <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>Cirrhosis</hediff>
+        <minSeverity>0.50</minSeverity>
+        <baseMtbDays>120</baseMtbDays>
+        <partsToAffect>
+          <li>Liver</li>
+        </partsToAffect>
+      </li>
+      <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>Carcinoma</hediff>
+        <minSeverity>0.50</minSeverity>
+        <baseMtbDays>360</baseMtbDays>
+        <partsToAffect>
+          <li>Liver</li>
+        </partsToAffect>
+      </li>
+    </hediffGivers>
+  </HediffDef>
+
+  <HediffDef ParentName="AddictionBase">
+    <defName>FSG_OctaneAddiction</defName>
+    <label>octane addiction</label>
+    <description>A chemical addiction to nautical fuel additives. Long-term presence of octane boosters has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.
+\nWithout regular doses of octane, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <causesNeed>FSG_Chemical_Octane</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.08</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>withdrawal</label>
+        <restFallFactor>1.5</restFallFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <postFactor>0.8</postFactor>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <postFactor>0.5</postFactor>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_OwnRoom</mentalState>
+            <mtbDays>10</mtbDays>
+          </li>
+		  <li>
+            <mentalState>Binging_DrugExtreme</mentalState>
+            <mtbDays>40</mtbDays>
+          </li>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>2</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThoughtDef>
+    <defName>FSG_OctaneWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>FSG_OctaneAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>engine knock</label>
+        <description>Feeling shaky and tired, like I have no cylinder compression, and my spark timing is off. Everything exhausts me. I'd rather be napping.</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+		
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <HediffDef>
+	<defName>FSG_FuelFiltration</defName>
+	<label>Fuel Filtration</label>
+	<description>A recent infusion of boosted fuel is stimulating this pawn's fuel filtration system. You don't want to slam too many of these at once, or you risk Toxic Buildup.</description>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<hediffClass>HediffWithComps</hediffClass>
+	<comps>
+		
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-6.00</severityPerDay>
+				<showHoursToRecover>false</showHoursToRecover>
+			</li>
+			<li Class="MoharRegeneration.HediffCompProperties_Regeneration">
+				<CheckingTicksPeriod>50</CheckingTicksPeriod>
+				<ChemicalHediffRegenParams>
+					<TreatmentLabel>chemical removal</TreatmentLabel>
+
+					<PeriodBase>200</PeriodBase>
+					<HealingQuality>.1</HealingQuality>
+
+					<TargetedHediffDefs>
+						<li>ToxicBuildup</li>
+						<li>DrugOverdose</li>
+						<li>Hangover</li>
+					</TargetedHediffDefs>
+
+					<HungerCost>.01</HungerCost>
+					<RestCost>.01</RestCost>
+
+					<FleckDef>FSG_SmokestackMote</FleckDef>
+				</ChemicalHediffRegenParams>
+			</li>
+	</comps>
+  
+  
+  </HediffDef>
+  
+	<FleckDef ParentName="FleckBase">
+		<defName>FSG_SmokestackMote</defName>
+		<graphicData>
+			<texPath>Flecks/Smoke</texPath>
+			<shaderType>Transparent</shaderType>
+			<color>(255, 255, 255)</color>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		
+		<fadeInTime>0.350</fadeInTime>
+		<solidTime>4</solidTime>
+		<fadeOutTime>.8</fadeOutTime>
+		<growthRate>0.08</growthRate>
+		
+	</FleckDef>
+</Defs>

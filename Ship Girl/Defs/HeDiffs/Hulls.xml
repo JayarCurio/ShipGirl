@@ -1,0 +1,1403 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+<!--Hull Types-->
+	<!--Pre Industrial-->
+<HediffDef ParentName="AddedBodyPartBase">
+    <defName>FSG_InstalledCladHull</defName>
+		<label>hull cladding</label>
+		<labelNoun>armor clad hull</labelNoun>
+		<description>The pre-industrial solution to people blowing holes in your boat.</description>
+
+		<spawnThingOnRemoved>FSG_BattleshipHullKit</spawnThingOnRemoved>
+		<stages>
+		  <li>
+			<!--<bodySize>1</bodySize>-->
+			<hungerRateFactor>1.4</hungerRateFactor>
+			<capMods>
+			  <li>
+				<capacity>Moving</capacity>
+				<postFactor>.83</postFactor>
+			  </li>
+			</capMods>
+			<statOffsets>
+			  <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+			  <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+			  <ArmorRating_Heat>0.3</ArmorRating_Heat>
+			  
+			</statOffsets>
+		  </li>
+		</stages>
+		<addedPartProps>
+			<solid>false</solid>
+		
+			
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>			
+		</addedPartProps>
+   
+  </HediffDef>
+
+  <ThingDef ParentName="FSG_SmithableBodypartBase">
+    <defName>FSG_CladHullKit</defName>
+    <label>Clad Hull Refit</label>
+    <description>This kit includes everything you'd need to refit a ship girl persona with primitive, heavy, replacement armor.</description>
+   
+	
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <costList>
+      <Steel>150</Steel>
+      
+    </costList>
+	<statBases>
+      <MarketValue>1000</MarketValue>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>Smithing</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  
+	
+  
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallCladHull</defName>
+    <label>refit hull to ironclad</label>
+	<recipeUsers>
+		<li>ShipGirlRace</li>
+    </recipeUsers>
+    <description>Convert an existing ship girl's hull structure to that of a primitive ironclad.</description>
+    
+    <jobString>Refitting to ironclad Specifications.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_CladHullKit</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_CladHullKit</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hull</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledCladHull</addsHediff>
+
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+	<defName>RemoveCladHullSurgery</defName>
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <label>Scrap iron clad Hull</label>
+    <description>Strip the iron plating off of this girl's hull. Honestly, how much worse could it be?</description>
+  
+    <jobString>scrapping iron clad hull.</jobString>
+    <removesHediff>FSG_InstalledCladHull</removesHediff>
+  </RecipeDef>
+	
+	
+	<!--Industrial-->
+	
+		<!--Pirate Hull-->
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_InstalledPirateHull</defName>
+			<label>pirate raider hull</label>
+			<labelNoun>a pirate raider hull</labelNoun>
+			<description>The pirate raider's hull is lightweight and outfitted for quick attacks and escapes. It has very poor fuel economy and lacks any fire safety systems.</description>
+
+			<spawnThingOnRemoved>FSG_PirateHullKit</spawnThingOnRemoved>
+			<stages>
+			  <li>
+				<hungerRateFactor>1.4</hungerRateFactor>
+				<capMods>
+				  <li>
+					<capacity>Moving</capacity>
+					<postFactor>1.1</postFactor>
+				  </li>
+				</capMods>
+				<statOffsets>
+				  <ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+				  <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+				  <ArmorRating_Heat>0.0</ArmorRating_Heat>
+				  
+				</statOffsets>
+			  </li>
+			</stages>
+			<addedPartProps>
+				<solid>false</solid>
+			
+				
+				<partEfficiency>1.0</partEfficiency>
+				<betterThanNatural>false</betterThanNatural>			
+			</addedPartProps>
+	   
+	  </HediffDef>
+
+  <ThingDef ParentName="FSG_MachinableBodypartBase">
+    <defName>FSG_PirateHullKit</defName>
+    <label>Pirate Hull Refit</label>
+    <description>This kit includes everything you'd need to refit a ship girl persona with a pirate raider class hull structure.</description>
+   <statBases>
+      <MarketValue>2000</MarketValue>
+    </statBases>
+	<techHediffsTags>
+		
+	</techHediffsTags>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <costList>
+      <Chemfuel>25</Chemfuel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Mortars</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  
+	
+  
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallPirateHull</defName>
+    <label>refit hull to pirate</label>
+	<recipeUsers>
+		<li>ShipGirlRace</li>
+    </recipeUsers>
+    <description>Convert an existing ship girl's hull structure to that of a pirate raider.</description>
+    
+    <jobString>Refitting to Raider Specifications.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_PirateHullKit</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_PirateHullKit</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hull</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledPirateHull</addsHediff>
+
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+	<defName>RemovePirateHullSurgery</defName>
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <label>Scrap Pirate Hull</label>
+    <description>Dismantle the ship girl's hull for parts. This may be hazardous to her health.</description>
+  
+    <jobString>scrapping pirate hull.</jobString>
+    <removesHediff>FSG_InstalledPirateHull</removesHediff>
+  </RecipeDef>
+  
+  <!-- Battleship Hull -->
+  
+  
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>FSG_InstalledBattleshipHull</defName>
+    <label>battleship hull</label>
+    <labelNoun>a battleship hull</labelNoun>
+    <description>The battleship's hull is a massive construction of armor and structural struts.</description>
+
+    <spawnThingOnRemoved>FSG_BattleshipHullKit</spawnThingOnRemoved>
+    <stages>
+      <li>
+		<hungerRateFactor>1.4</hungerRateFactor>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.80</postFactor>
+          </li>
+        </capMods>
+        <statOffsets>
+          <ArmorRating_Sharp>0.70</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.7</ArmorRating_Heat>
+          
+        </statOffsets>
+      </li>
+    </stages>
+		<addedPartProps>
+			<solid>false</solid>
+		
+			
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>			
+		</addedPartProps>
+   
+  </HediffDef>
+
+  <ThingDef ParentName="FSG_MachinableBodypartBase">
+    <defName>FSG_BattleshipHullKit</defName>
+    <label> Battleship Hull Refit</label>
+    <description>This kit includes everything you'd need to refit a ship girl persona with a Battleship class hull structure.</description>
+   <statBases>
+      <MarketValue>3000</MarketValue>
+    </statBases>
+	<techHediffsTags>
+		
+	</techHediffsTags>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>25</Plasteel>
+      <ComponentSpacer>8</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>FlakArmor</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  
+	
+  
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallBattleshipHull</defName>
+    <label>refit hull to battleship</label>
+	<recipeUsers>
+		<li>ShipGirlRace</li>
+    </recipeUsers>
+    <description>Convert an existing ship girl's hull structure to that of a heavy battleship.</description>
+    
+    <jobString>Refitting to Battleship Specifications.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_BattleshipHullKit</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_BattleshipHullKit</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hull</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledBattleshipHull</addsHediff>
+
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+	<defName>RemoveBattleshipSurgery</defName>
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <label>Scrap Battleship Hull</label>
+    <description>Dismantle the ship girl's hull for parts. This may be hazardous to her health.</description>
+  
+    <jobString>scrapping battleship hull.</jobString>
+    <removesHediff>FSG_InstalledBattleshipHull</removesHediff>
+  </RecipeDef>
+  
+  <!--cruiser-->
+  
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>FSG_InstalledCruiserHull</defName>
+    <label>cruiser hull</label>
+    <labelNoun>a cruiser hull</labelNoun>
+    <description>The cruiser's hull is a mid-size craft.</description>
+ 
+    <spawnThingOnRemoved>FSG_CruiserHullKit</spawnThingOnRemoved>
+    <stages>
+      <li>
+		<hungerRateFactor>1.25</hungerRateFactor>
+		<capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.90</postFactor>
+          </li>
+        </capMods>
+        <statOffsets>
+          <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.4</ArmorRating_Heat>
+          
+        </statOffsets>
+      </li>
+    </stages>
+	<addedPartProps>
+			<solid>false</solid>
+		
+			
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>			
+		</addedPartProps>
+    
+  </HediffDef>
+  
+  <ThingDef ParentName="FSG_MachinableBodypartBase">
+    <defName>FSG_CruiserHullKit</defName>
+    <label>Cruiser Hull Refit</label>
+    <description>This kit includes everything you'd need to refit a ship girl persona with a cruiser class hull structure. Cruisers are mid-size ships, and work well with a variety of weapon configurations.</description>
+    <statBases>
+      <MarketValue>2000</MarketValue>
+    </statBases>
+	<techHediffsTags>
+		
+	</techHediffsTags>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>25</Plasteel>
+      <ComponentSpacer>8</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>FlakArmor</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallCruiserHull</defName>
+    <label>refit hull to cruiser</label>
+	<recipeUsers>
+		<li>ShipGirlRace</li>
+    </recipeUsers>
+    <description>Convert an existing ship girl's hull structure to that of a medium sized cruiser.</description>
+
+    <jobString>Refitting to cruiser specifications.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_CruiserHullKit</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_CruiserHullKit</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hull</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledCruiserHull</addsHediff>
+    <incompatibleWithHediffTags>
+      
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+	<defName>RemoveCruiserSurgery</defName>
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+ 
+    <label>Scrap Cruiser Hull</label>
+    <description>Dismantle the ship girl's hull for parts. This may be hazardous to her health.</description>
+
+    <jobString>dismanting cruiser.</jobString>
+    <removesHediff>FSG_InstalledCruiserHull</removesHediff>
+  </RecipeDef>
+  
+  
+  
+  
+  
+<!--Destroyer Hull -->
+  
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>FSG_InstalledDestroyerHull</defName>
+    <label>destroyer hull</label>
+    <labelNoun>a destroyer hull</labelNoun>
+    <description>The destroyer's hull is the main body of a small ship. These ships are usually armed for close defense or mid-range fire support, due to their superior mobility.</description>
+
+    <spawnThingOnRemoved>FSG_DestroyerHullKit</spawnThingOnRemoved>
+    <stages>
+      <li>
+		<hungerRateFactor>1.1</hungerRateFactor>
+        <statOffsets>
+          <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.15</ArmorRating_Heat>
+		  <MeleeDodgeChance>5</MeleeDodgeChance>
+          
+        </statOffsets>
+      </li>
+    </stages>
+    
+		<addedPartProps>
+			<solid>false</solid>
+		
+			
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>			
+		</addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="FSG_MachinableBodypartBase">
+    <defName>FSG_DestroyerHullKit</defName>
+    <label>Destroyer Hull Refit</label>
+    <description>This kit includes everything you'd need to refit a ship girl persona with a lightweight destroyer class hull structure.</description>
+    <statBases>
+      <MarketValue>2000</MarketValue>
+    </statBases>
+	<techHediffsTags>
+		
+	</techHediffsTags>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>25</Plasteel>
+      <ComponentSpacer>8</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>FlakArmor</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallDestroyerHull</defName>
+    <label>refit hull to destroyer</label>
+	<recipeUsers>
+		<li>ShipGirlRace</li>
+    </recipeUsers>
+    <description>Convert an existing ship girl's hull structure to that of a small destroyer.</description>
+
+    <jobString>Refitting to destroyer specifications.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_DestroyerHullKit</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_DestroyerHullKit</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hull</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledDestroyerHull</addsHediff>
+    
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+	<defName>RemoveDestroyerSurgery</defName>
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+
+    <label>Scrap Destroyer Hull</label>
+    <description>Dismantle the ship girl's hull for parts. This may be hazardous to her health.</description>
+
+    <jobString>dismanting destroyer.</jobString>
+    <removesHediff>FSG_InstalledDestroyerHull</removesHediff>
+  </RecipeDef>
+  
+<!-- Space Hulls -->
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_InstalledSpacePirateHull</defName>
+		<label>Space pirate raider hull</label>
+		<labelNoun>a spacer pirate raider hull</labelNoun>
+		<description>The spacer pirate raider's hull is lightweight and outfitted for quick attacks and escapes. It has very poor fuel economy and lacks any fire safety systems.</description>
+		<spawnThingOnRemoved>FSG_SpacePirateHullKit</spawnThingOnRemoved>
+		<stages>
+			<li>
+				<hungerRateFactor>1.5</hungerRateFactor>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>1.2</postFactor>
+					</li>
+				</capMods>
+				<statOffsets>
+					<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.60</ArmorRating_Blunt>
+					<ArmorRating_Heat>0.0</ArmorRating_Heat>
+				</statOffsets>
+			</li>
+		</stages>
+		<addedPartProps>
+			<solid>false</solid>
+			<partEfficiency>1.1</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>			
+		</addedPartProps>
+	   
+	</HediffDef>
+	
+	<ThingDef ParentName="FSG_SmithableBodypartBase">
+    <defName>FSG_SpacePirateHullKit</defName>
+    <label>Space Pirate Hull Refit</label>
+    <description>This kit includes everything you'd need to refit a ship girl persona to match the specifications of a space pirate's raider.</description>
+	<statBases>
+      <MarketValue>5000</MarketValue>
+    </statBases>
+	<techHediffsTags>
+		
+	</techHediffsTags>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <costList>
+		<Chemfuel>150</Chemfuel>
+		<Plasteel>75</Plasteel>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Fabrication</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  
+	
+  
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallSpacePirateHull</defName>
+    <label>refit hull to Space Pirate</label>
+	<recipeUsers>
+		<li>ShipGirlRace</li>
+    </recipeUsers>
+    <description>Convert an existing ship girl's hull structure to that of a space pirate raider.</description>
+    
+    <jobString>Refitting to star raider specifications.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_SpacePirateHullKit</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_SpacePirateHullKit</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hull</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledSpacePirateHull</addsHediff>
+
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+	<defName>RemoveSpacePirateHullSurgery</defName>
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <label>Scrap space pirate Hull</label>
+    <description>Strip off the space pirate hull from this ship girl.</description>
+  
+    <jobString>scrapping space pirte hull.</jobString>
+    <removesHediff>FSG_InstalledSpacePirateHull</removesHediff>
+  </RecipeDef>
+
+	 <!-- space Battleship Hull -->
+  
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>FSG_InstalledSpaceBattleshipHull</defName>
+    <label>space battleship hull</label>
+    <labelNoun>a space battleship hull</labelNoun>
+    <description>The space battleship's hull is a massive construction of armor and structural struts.</description>
+	
+    <spawnThingOnRemoved>FSG_BattleshipHullKit</spawnThingOnRemoved>
+    <stages>
+      <li>
+		<hungerRateFactor>1.50</hungerRateFactor>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.75</postFactor>
+          </li>
+        </capMods>
+        <statOffsets>
+          <ArmorRating_Sharp>1.00</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.60</ArmorRating_Heat>
+          
+        </statOffsets>
+      </li>
+    </stages>
+		<addedPartProps>
+			<solid>false</solid>
+
+			
+			<partEfficiency>1.1</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>			
+		</addedPartProps>
+   
+  </HediffDef>
+
+  <ThingDef ParentName="FSG_MachinableBodypartBase">
+    <defName>FSG_SpaceBattleshipHullKit</defName>
+    <label>Space Battleship Hull Refit</label>
+    <description>This kit includes everything you'd need to refit a ship girl persona with a Space Battleship class hull structure.</description>
+   <statBases>
+      <MarketValue>6000</MarketValue>
+    </statBases>
+	<techHediffsTags>
+		
+	</techHediffsTags>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>75</Plasteel>
+	  <Uranium>25</Uranium>
+      <ComponentSpacer>25</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>ShipBasics</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallSpaceBattleshipHull</defName>
+    <label>refit hull to space battleship</label>
+	<recipeUsers>
+		<li>ShipGirlRace</li>
+    </recipeUsers>
+    <description>Convert an existing ship girl's hull structure to that of a space battleship.</description>
+    
+    <jobString>Refitting to Space Battleship Specifications.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_SpaceBattleshipHullKit</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_SpaceBattleshipHullKit</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hull</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledSpaceBattleshipHull</addsHediff>
+
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+	<defName>RemoveSpaceBattleshipSurgery</defName>
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <label>Scrap Space Battleship Hull</label>
+    <description>Dismantle the ship girl's hull for parts. This may be hazardous to her health.</description>
+  
+    <jobString>scrapping space battleship hull.</jobString>
+    <removesHediff>FSG_InstalledSpaceBattleshipHull</removesHediff>
+  </RecipeDef>
+  
+  <!--star cruiser-->
+  
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>FSG_InstalledSpaceCruiserHull</defName>
+    <label>cruiser hull</label>
+    <labelNoun>a space cruiser hull</labelNoun>
+    <description>The space cruiser is an advanced, mid-size craft.</description>
+	
+    <spawnThingOnRemoved>FSG_SpaceCruiserHullKit</spawnThingOnRemoved>
+    <stages>
+      <li>
+		<hungerRateFactor>1.3</hungerRateFactor>
+		<capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.90</postFactor>
+          </li>
+        </capMods>
+        <statOffsets>
+          <ArmorRating_Sharp>0.95</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.53</ArmorRating_Heat>
+          
+        </statOffsets>
+      </li>
+    </stages>
+		<addedPartProps>
+			<solid>false</solid>
+
+			
+			<partEfficiency>1.1</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>			
+		</addedPartProps>
+    
+  </HediffDef>
+  
+  <ThingDef ParentName="FSG_MachinableBodypartBase">
+    <defName>FSG_SpaceCruiserHullKit</defName>
+    <label>Space Cruiser Hull Refit</label>
+    <description>This kit includes everything you'd need to refit a ship girl persona with a cruiser class hull structure. Cruisers are mid-size ships, and work well with a variety of weapon configurations.</description>
+    <statBases>
+      <MarketValue>4000</MarketValue>
+    </statBases>
+	<techHediffsTags>
+		
+	</techHediffsTags>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>75</Plasteel>
+      <ComponentSpacer>20</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>ShipBasics</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallSpaceCruiserHull</defName>
+    <label>refit hull to space cruiser</label>
+	<recipeUsers>
+		<li>ShipGirlRace</li>
+    </recipeUsers>
+    <description>Convert an existing ship girl's hull structure to that of a space cruiser.</description>
+
+    <jobString>Refitting to space cruiser specifications.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_SpaceCruiserHullKit</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_SpaceCruiserHullKit</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hull</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledSpaceCruiserHull</addsHediff>
+    <incompatibleWithHediffTags>
+      
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+	<defName>RemoveSpaceCruiserSurgery</defName>
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+ 
+    <label>Scrap Space Cruiser Hull</label>
+    <description>Dismantle the ship girl's hull for parts. This may be hazardous to her health.</description>
+
+    <jobString>dismanting cruiser.</jobString>
+    <removesHediff>FSG_InstalledSpaceCruiserHull</removesHediff>
+  </RecipeDef>
+  
+  
+  
+  
+  
+<!--Star Destroyer Hull -->
+  
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>FSG_InstalledSpaceDestroyerHull</defName>
+    <label>space destroyer hull</label>
+    <labelNoun>a space destroyer hull</labelNoun>
+    <description>The space destroyer's hull is the main body of a small star ship. These ships are usually armed for close defense or mid-range fire support, due to their superior mobility.</description>
+
+    <spawnThingOnRemoved>FSG_SpaceDestroyerHullKit</spawnThingOnRemoved>
+    <stages>
+      <li>
+		<hungerRateFactor>1.20</hungerRateFactor>
+        <statOffsets>
+          <ArmorRating_Sharp>0.82</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.35</ArmorRating_Heat>
+		  <MeleeDodgeChance>10</MeleeDodgeChance>
+          
+        </statOffsets>
+      </li>
+    </stages>
+    
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.05</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>			
+		</addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="FSG_MachinableBodypartBase">
+    <defName>FSG_SpaceDestroyerHullKit</defName>
+    <label>Space Destroyer Hull Refit</label>
+    <description>This kit includes everything you'd need to refit a ship girl persona with a lightweight space destroyer class hull structure.</description>
+    <statBases>
+      <MarketValue>4000</MarketValue>
+    </statBases>
+	<techHediffsTags>
+		
+	</techHediffsTags>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>50</Plasteel>
+      <ComponentSpacer>15</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>ShipBasics</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallSpaceDestroyerHull</defName>
+    <label>refit hull to space destroyer</label>
+	<recipeUsers>
+		<li>ShipGirlRace</li>
+    </recipeUsers>
+    <description>Convert an existing ship girl's hull structure to that of a small space destroyer.</description>
+
+    <jobString>Refitting to space destroyer specifications.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_SpaceDestroyerHullKit</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_SpaceDestroyerHullKit</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hull</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledSpaceDestroyerHull</addsHediff>
+    
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+	<defName>RemoveSpaceDestroyerSurgery</defName>
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+
+    <label>Scrap Space Destroyer Hull</label>
+    <description>Dismantle the ship girl's hull for parts. This may be hazardous to her health.</description>
+
+    <jobString>dismanting destroyer.</jobString>
+    <removesHediff>FSG_InstalledSpaceDestroyerHull</removesHediff>
+  </RecipeDef>
+
+
+
+
+<!-- Dreadnaught Hull -->
+  
+  
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>FSG_InstalledSpaceSuperHull</defName>
+    <label>Dread-Not(tm) Battleship hull</label>
+    <labelNoun>a super-heavy space battleship hull</labelNoun>
+    <description>An ultra-advanced, space battleship hull of preposterous bulk and density.</description>
+
+    <spawnThingOnRemoved>FSG_SpaceSuperHullKit</spawnThingOnRemoved>
+    <stages>
+      <li>
+		<hungerRateFactor>1.60</hungerRateFactor>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.60</postFactor>
+          </li>
+        </capMods>
+        <statOffsets>
+          <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.65</ArmorRating_Heat>
+          
+        </statOffsets>
+      </li>
+    </stages>
+		<addedPartProps>
+			<solid>false</solid>
+
+			
+			<partEfficiency>1.2</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>			
+		</addedPartProps>
+   
+  </HediffDef>
+
+  <ThingDef ParentName="FSG_FabricatedBodypartBase">
+    <defName>FSG_SpaceSuperHullKit</defName>
+    <label>Space Battleship Hull Refit</label>
+    <description>This kit includes everything you'd need to refit a ship girl persona with a super-heavy Space Battleship class hull structure.</description>
+	<techHediffsTags>
+		
+	</techHediffsTags>
+	
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>75</Plasteel>
+	  <Uranium>75</Uranium>
+      <ComponentSpacer>25</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>ShipEngine</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  
+	
+  
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallSpaceSuperHull</defName>
+    <label>refit hull to super-heavy battleship</label>
+	<recipeUsers>
+		<li>ShipGirlRace</li>
+    </recipeUsers>
+    <description>Convert an existing ship girl's hull structure to that of a super-heavy space battleship.</description>
+    
+    <jobString>Refitting to Space Dreadnought Specifications.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_SpaceSuperHullKit</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_SpaceSuperHullKit</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hull</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledSpaceSuperHull</addsHediff>
+
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+	<defName>RemoveSpaceSuperSurgery</defName>
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <label>Scrap Space Dreadnought Hull</label>
+    <description>Dismantle the ship girl's hull for parts. This may be hazardous to her health.</description>
+  
+    <jobString>scrapping space dreadnought hull.</jobString>
+    <removesHediff>FSG_InstalledSpaceSuperHull</removesHediff>
+  </RecipeDef>
+  
+  <!--Ultra Tech Hulls-->
+		 <!-- Ultra Battleship Hull -->
+  
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>FSG_InstalledUltraBattleshipHull</defName>
+    <label>Ultra battleship hull</label>
+    <labelNoun>a Ultra battleship hull</labelNoun>
+    <description>The Ultra battleship's hull is a massive construction of armor and structural struts.</description>
+	
+    <spawnThingOnRemoved>FSG_BattleshipHullKit</spawnThingOnRemoved>
+    <stages>
+      <li>
+		<hungerRateFactor>1.55</hungerRateFactor>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.75</postFactor>
+          </li>
+        </capMods>
+        <statOffsets>
+          <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.70</ArmorRating_Heat>
+          
+        </statOffsets>
+      </li>
+    </stages>
+		<addedPartProps>
+			<solid>false</solid>
+
+			
+			<partEfficiency>1.1</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>			
+		</addedPartProps>
+   
+  </HediffDef>
+
+  <ThingDef ParentName="FSG_UltraBodypartBase">
+    <defName>FSG_UltraBattleshipHullKit</defName>
+    <label>Ultra Battleship Hull Refit</label>
+    <description>This kit includes everything you'd need to refit a ship girl persona with a Ultra Battleship class hull structure.</description>
+   <statBases>
+      <MarketValue>6000</MarketValue>
+    </statBases>
+	<techHediffsTags>
+		
+	</techHediffsTags>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+
+  </ThingDef>
+  
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallUltraBattleshipHull</defName>
+    <label>refit hull to Ultra battleship</label>
+	<recipeUsers>
+		<li>ShipGirlRace</li>
+    </recipeUsers>
+    <description>Convert an existing ship girl's hull structure to that of a Ultra battleship.</description>
+    
+    <jobString>Refitting to Ultra Battleship Specifications.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_UltraBattleshipHullKit</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_UltraBattleshipHullKit</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hull</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledUltraBattleshipHull</addsHediff>
+
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+	<defName>RemoveUltraBattleshipSurgery</defName>
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <label>Scrap Ultra Battleship Hull</label>
+    <description>Dismantle the ship girl's hull for parts. This may be hazardous to her health.</description>
+  
+    <jobString>scrapping Ultra battleship hull.</jobString>
+    <removesHediff>FSG_InstalledUltraBattleshipHull</removesHediff>
+  </RecipeDef>
+  
+  <!--ultra cruiser-->
+  
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>FSG_InstalledUltraCruiserHull</defName>
+    <label>ultra-tech cruiser hull</label>
+    <labelNoun>a Ultra cruiser hull</labelNoun>
+    <description>The Ultra cruiser is an advanced, mid-size craft.</description>
+	
+    <spawnThingOnRemoved>FSG_UltraCruiserHullKit</spawnThingOnRemoved>
+    <stages>
+      <li>
+		<hungerRateFactor>1.35</hungerRateFactor>
+		<capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.90</postFactor>
+          </li>
+        </capMods>
+        <statOffsets>
+          <ArmorRating_Sharp>1.05</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.58</ArmorRating_Heat>
+          
+        </statOffsets>
+      </li>
+    </stages>
+		<addedPartProps>
+			<solid>false</solid>
+
+			
+			<partEfficiency>1.1</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>			
+		</addedPartProps>
+    
+  </HediffDef>
+  
+  <ThingDef ParentName="FSG_UltraBodypartBase">
+    <defName>FSG_UltraCruiserHullKit</defName>
+    <label>Ultra Cruiser Hull Refit</label>
+    <description>This kit includes everything you'd need to refit a ship girl persona with a cruiser class hull structure. Cruisers are mid-size ships, and work well with a variety of weapon configurations.</description>
+    <statBases>
+      <MarketValue>4000</MarketValue>
+    </statBases>
+	<techHediffsTags>
+		
+	</techHediffsTags>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallUltraCruiserHull</defName>
+    <label>refit hull to Ultra cruiser</label>
+	<recipeUsers>
+		<li>ShipGirlRace</li>
+    </recipeUsers>
+    <description>Convert an existing ship girl's hull structure to that of a Ultra cruiser.</description>
+
+    <jobString>Refitting to Ultra cruiser specifications.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_UltraCruiserHullKit</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_UltraCruiserHullKit</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hull</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledUltraCruiserHull</addsHediff>
+    <incompatibleWithHediffTags>
+      
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+	<defName>RemoveUltraCruiserSurgery</defName>
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+ 
+    <label>Scrap Ultra Cruiser Hull</label>
+    <description>Dismantle the ship girl's hull for parts. This may be hazardous to her health.</description>
+
+    <jobString>dismanting cruiser.</jobString>
+    <removesHediff>FSG_InstalledUltraCruiserHull</removesHediff>
+  </RecipeDef>
+  
+  
+  
+  
+  
+<!--Ultra Destroyer Hull -->
+  
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>FSG_InstalledUltraDestroyerHull</defName>
+    <label>Ultra destroyer hull</label>
+    <labelNoun>a Ultra destroyer hull</labelNoun>
+    <description>The Ultra destroyer's hull is the main body of a small star ship. These ships are usually armed for close defense or mid-range fire support, due to their superior mobility.</description>
+
+    <spawnThingOnRemoved>FSG_UltraDestroyerHullKit</spawnThingOnRemoved>
+    <stages>
+      <li>
+		<hungerRateFactor>1.25</hungerRateFactor>
+        <statOffsets>
+          <ArmorRating_Sharp>0.92</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.70</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.35</ArmorRating_Heat>
+		  <MeleeDodgeChance>12</MeleeDodgeChance>
+          
+        </statOffsets>
+      </li>
+    </stages>
+    
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.05</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>			
+		</addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="FSG_UltraBodypartBase">
+    <defName>FSG_UltraDestroyerHullKit</defName>
+    <label>Ultra Destroyer Hull Refit</label>
+    <description>This kit includes everything you'd need to refit a ship girl persona with a lightweight Ultra destroyer class hull structure.</description>
+    <statBases>
+      <MarketValue>4000</MarketValue>
+    </statBases>
+	<techHediffsTags>
+		
+	</techHediffsTags>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallUltraDestroyerHull</defName>
+    <label>refit hull to Ultra destroyer</label>
+	<recipeUsers>
+		<li>ShipGirlRace</li>
+    </recipeUsers>
+    <description>Convert an existing ship girl's hull structure to that of a small Ultra destroyer.</description>
+
+    <jobString>Refitting to Ultra destroyer specifications.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_UltraDestroyerHullKit</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_UltraDestroyerHullKit</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hull</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledUltraDestroyerHull</addsHediff>
+    
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+	<defName>RemoveUltraDestroyerSurgery</defName>
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+
+    <label>Scrap Ultra Destroyer Hull</label>
+    <description>Dismantle the ship girl's hull for parts. This may be hazardous to her health.</description>
+
+    <jobString>dismanting Ultra Dreadnought Hull.</jobString>
+    <removesHediff>FSG_InstalledUltraDestroyerHull</removesHediff>
+  </RecipeDef>
+
+
+
+
+<!-- Dreadnaught Hull -->
+  
+  
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>FSG_InstalledUltraSuperHull</defName>
+    <label>Ultra Super Dreadnought hull</label>
+    <labelNoun>a super-heavy Ultra battleship hull</labelNoun>
+    <description>An ultra-advanced, Super battleship hull of seemingly impossible density.</description>
+
+    <spawnThingOnRemoved>FSG_UltraSuperHullKit</spawnThingOnRemoved>
+    <stages>
+      <li>
+		<hungerRateFactor>1.70</hungerRateFactor>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.60</postFactor>
+          </li>
+        </capMods>
+        <statOffsets>
+          <ArmorRating_Sharp>1.4</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.70</ArmorRating_Heat>
+          
+        </statOffsets>
+      </li>
+    </stages>
+		<addedPartProps>
+			<solid>false</solid>
+
+			
+			<partEfficiency>1.2</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>			
+		</addedPartProps>
+   
+  </HediffDef>
+
+  <ThingDef ParentName="FSG_UltraBodypartBase">
+    <defName>FSG_UltraSuperHullKit</defName>
+    <label>Ultra-Tech Super-Battleship Hull Refit</label>
+    <description>This kit includes everything you'd need to refit a ship girl persona with a super-heavy Ultra Battleship class hull structure.</description>
+	<techHediffsTags>
+		
+	</techHediffsTags>
+	
+    <thingSetMakerTags></thingSetMakerTags>
+    
+  </ThingDef>
+  
+	
+  
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallUltraSuperHull</defName>
+    <label>refit hull to super-heavy battleship</label>
+	<recipeUsers>
+		<li>ShipGirlRace</li>
+    </recipeUsers>
+    <description>Convert an existing ship girl's hull structure to that of a super-heavy Ultra battleship.</description>
+    
+    <jobString>Refitting to Ultra Dreadnought Specifications.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_UltraSuperHullKit</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_UltraSuperHullKit</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hull</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledUltraSuperHull</addsHediff>
+
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+	<defName>RemoveUltraSuperSurgery</defName>
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <label>Scrap Ultra Dreadnought Hull</label>
+    <description>Dismantle the ship girl's hull for parts. This may be hazardous to her health.</description>
+  
+    <jobString>scrapping Ultra dreadnought hull.</jobString>
+    <removesHediff>FSG_InstalledUltraSuperHull</removesHediff>
+  </RecipeDef>
+
+
+</Defs>

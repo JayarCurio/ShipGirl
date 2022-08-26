@@ -1,0 +1,2693 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!--Adulthoods. Need 20+ for each tag-->
+<AlienRace.BackstoryDef>
+    <defName>FSG_SinAnimaTreeGuardian</defName>
+    <title>Anima Tree Guardian</title>
+    <titleShort>Anima Guardian</titleShort>
+    <baseDescription>[PAWN_nameDef] found her way into the hands of tribal group, who regarded her as a guardian spirit.</baseDescription>
+	<spawnCategories>
+		 
+	</spawnCategories>
+		<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>1</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>5</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		<li>
+            <defName>Beauty</defName>
+            <degree>2</degree>
+            <chance>50</chance>
+        </li>
+	</forcedTraits>
+	<disallowedTraits>
+
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<bioAgeRange>
+        <min>5</min>
+        <max>50</max>
+    </bioAgeRange>
+    <chronoAgeRange>
+        <min>5</min>
+        <max>7000</max>
+    </chronoAgeRange>
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<!--2-->
+    <defName>FSG_SinWarship</defName>
+    <title>Loyal Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+		
+		<li>UltraASinisterShipGirlBackstories</li>
+		<li>UltraBSinisterShipGirlBackstories</li>
+		<li>RangedUltraSinisterShipGirlBackstories</li>
+		<li>MeleeUltraSinisterShipGirlBackstories</li>
+		<li>SpaceRangedUltraSinisterShipGirlBackstories</li>
+		<li>SpaceMeleeUltraSinisterShipGirlBackstories</li>
+		<li>SpaceBSinisterShipGirlBackstories</li>
+		<li>SpaceASinisterShipGirlBackstories</li>
+	
+	
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<!--3-->
+    <defName>FSG_SinCapturedWarship</defName>
+    <title>Captured Warship</title>
+    <titleShort>Captured Warship</titleShort>
+    <baseDescription>[PAWN_nameDef] was captured by hostile forces, and pressed into their own military.</baseDescription>
+	<spawnCategories>
+		 
+		
+		
+		
+		 
+		 
+		 
+		 
+		
+		<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li></spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+    </skillGains>
+	<forcedTraits>
+		<li>
+            <defName>Beauty</defName>
+            <degree>1</degree>
+            <chance>50</chance>
+        </li>
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+     
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<!--17-->
+    <defName>FSG_SinHospitalShip</defName>
+    <title>Hospital Ship</title>
+    <titleShort>Hospital Ship</titleShort>
+    <baseDescription>[PAWN_nameDef] was pressed into emergency service during a humanitarian crisis.</baseDescription>
+	<spawnCategories>
+		 
+		    
+		
+		<li>UltraASinisterShipGirlBackstories</li>
+		<li>UltraBSinisterShipGirlBackstories</li>
+		<li>RangedUltraSinisterShipGirlBackstories</li>
+		<li>MeleeUltraSinisterShipGirlBackstories</li>
+		<li>SpaceRangedUltraSinisterShipGirlBackstories</li>
+		<li>SpaceMeleeUltraSinisterShipGirlBackstories</li>
+		<li>SpaceBSinisterShipGirlBackstories</li>
+		<li>SpaceASinisterShipGirlBackstories</li>
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>-1</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>-1</amount>
+      </li>
+	  <li>
+        <defName>Medicine</defName>
+        <amount>4</amount>
+      </li>
+    </skillGains>
+	<forcedTraits>
+		<li>
+            <defName>Neurotic</defName>
+			<degree>1</degree>
+            <chance>25</chance>
+        </li>
+		<li>
+            <defName>Nerves</defName>
+            <degree>1</degree>
+            <chance>20</chance>
+        </li>
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<!--4-->
+    <defName>FSG_SinWarHospitalShip</defName>
+    <title>War Hospital Ship</title>
+    <titleShort>War Hospital</titleShort>
+    <baseDescription>[PAWN_nameDef] was pressed into emergency service to care for civilian causualties of war.</baseDescription>
+	<spawnCategories>
+		 
+		    
+		
+		<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li></spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>-2</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>-2</amount>
+      </li>
+	  <li>
+        <defName>Medicine</defName>
+        <amount>7</amount>
+      </li>
+    </skillGains>
+	<forcedTraits>
+		<li>
+            <defName>Psychopath</defName>
+            <chance>25</chance>
+        </li>
+		<li>
+            <defName>Neurotic</defName>
+			<degree>1</degree>
+            <chance>25</chance>
+        </li>
+		<li>
+            <defName>Nerves</defName>
+            <degree>1</degree>
+            <chance>20</chance>
+        </li>
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<!--5-->
+    <defName>FSG_SinBorderPatrol</defName>
+    <title>Border Patrol Ship</title>
+    <titleShort>Border Patrol</titleShort>
+    <baseDescription>[PAWN_nameDef] spent some years patroling the borders of local space, trawling for smugglers and pirates.</baseDescription>
+	<spawnCategories>
+		 
+		
+		 
+		 
+		
+		 
+		<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li></spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>2</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+	
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<!--6-->
+    <defName>FSG_SinBombardmentShip</defName>
+    <title>Bombardment Platform</title>
+    <titleShort>Bombardment Platform</titleShort>
+    <baseDescription>[PAWN_nameDef] spent some years blasting enemy cities from orbit.</baseDescription>
+	<spawnCategories>
+		 
+		 
+		
+		 
+		 
+		
+
+		<li>SpaceRangedUltraSinisterShipGirlBackstories</li>
+		
+		<li>SpaceBSinisterShipGirlBackstories</li>
+		<li>SpaceASinisterShipGirlBackstories</li>
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>-1</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>6</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<bioAgeRange>
+        <min>3</min>
+        <max>100</max>
+    </bioAgeRange>
+    <chronoAgeRange>
+        <min>3</min>
+        <max>7000</max>
+    </chronoAgeRange>
+	<forcedHediffs>
+		<li>FSG_Timer_SpaceExplosiveA</li>
+      
+    </forcedHediffs>
+	
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<!--7-->
+    <defName>FSG_SinTribalHunter</defName>
+    <title>Hunter</title>
+    <titleShort>Hunter</titleShort>
+    <baseDescription>[PAWN_nameDef] found work hunting animals with her cannons, to feed a local tribe.</baseDescription>
+	<spawnCategories>
+		 
+		 
+		 
+		 
+		
+		 
+		 
+		
+		<li>UltraASinisterShipGirlBackstories</li>
+		<li>UltraBSinisterShipGirlBackstories</li>
+		<li>RangedUltraSinisterShipGirlBackstories</li>
+		<li>MeleeUltraSinisterShipGirlBackstories</li>
+		<li>SpaceRangedUltraSinisterShipGirlBackstories</li>
+		<li>SpaceMeleeUltraSinisterShipGirlBackstories</li>
+		<li>SpaceBSinisterShipGirlBackstories</li>
+		<li>SpaceASinisterShipGirlBackstories</li>
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>2</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Animals</defName>
+        <amount>2</amount>
+      </li>
+		<li>
+        <defName>Cooking</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+	<forcedTraits>
+
+	</forcedTraits>
+	<disallowedTraits>
+	    <li>
+            <defName>Brawler</defName>
+        </li>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<!--16-->
+    <defName>FSG_SinOutlanderHunter</defName>
+    <title>Hunter</title>
+    <titleShort>Hunter</titleShort>
+    <baseDescription>[PAWN_nameDef] found work hunting animals with her cannons, to sell to outlanders.</baseDescription>
+	<spawnCategories>
+		 
+		 
+		
+		 
+		
+		
+		 
+		 
+		
+		<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li></spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+		<li>
+        <defName>Social</defName>
+        <amount>1</amount>
+		</li>
+		<li>
+		<defName>Plants</defName>
+		<amount>1</amount>
+		</li>
+		<li>
+		<defName>Animals</defName>
+		<amount>2</amount>
+		</li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>4</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+
+	</forcedTraits>
+	<disallowedTraits>
+	    <li>
+            <defName>Brawler</defName>
+            
+        </li>
+	</disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<!--8-->
+    <defName>FSG_SinTurboPrototype</defName>
+    <title>Turbo Prototype</title>
+    <titleShort>Turbo</titleShort>
+    <baseDescription>[PAWN_nameDef] was outfitted with experimental, prototype turbochargers. 
+	Her combat performance greatly improved, but to compensate for the runaway fuel
+	consumption, she was outfitted with trottle limiters.</baseDescription>
+	<spawnCategories>
+		 
+		 
+		 
+		
+		 
+		
+		 
+		
+		<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li></spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>6</amount>
+      </li>
+		<li>
+        <defName>Cooking</defName>
+        <amount>4</amount>
+      </li>
+
+    </skillGains>
+	
+	<forcedTraits>
+		<li>
+			<defName>Nimble</defName>
+		</li>
+		
+		<li>
+			<defName>Gourmand</defName>
+			<chance>50</chance>
+		</li>
+        <li>
+            <defName>Brawler</defName>
+            <chance>10</chance>
+        </li>
+		<li>
+            <defName>DrugDesire</defName>
+            <degree>2</degree>
+            <chance>50</chance>
+        </li>
+		<li>
+            <defName>SpeedOffset</defName>
+			<degree>2</degree>
+            <chance>50</chance>
+        </li>
+		<li>
+	    <defName>SpeedOffset</defName>
+		<degree>1</degree>
+		</li>
+		<li>
+            <defName>Transhumanist</defName>
+
+            <chance>50</chance>
+        </li>
+		<li>
+            <defName>Industriousness</defName>
+            <degree>-2</degree>
+            <chance>50</chance>
+        </li>
+
+        
+  
+
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<bioAgeRange>
+        <min>1</min>
+        <max>10</max>
+    </bioAgeRange>
+    <chronoAgeRange>
+        <min>1</min>
+        <max>1000</max>
+    </chronoAgeRange>
+	<forcedHediffs>
+		 <li>FSG_Timer_TurboC</li>
+    <!-- MAYBE -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<!--9-->
+    <defName>FSG_SinVeteranGunship</defName>
+    <title>Veteran Gunship</title>
+    <titleShort>Veteran</titleShort>
+    <baseDescription>PAWN_name was in several major space battles and is generally regarded as an example to look up to
+		by less experienced ship girls.</baseDescription>
+	<spawnCategories>
+		 
+		
+		 
+		
+		 
+		 
+		
+		 
+		 
+		 
+		 
+		
+		<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li></spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+	   
+
+		<li>
+            <defName>Psychopath</defName>
+            <chance>25</chance>
+        </li>
+		<li>
+            <defName>Neurotic</defName>
+			            <degree>1</degree>
+            <chance>25</chance>
+        </li>
+		<li>
+            <defName>Nerves</defName>
+            <degree>1</degree>
+            <chance>20</chance>
+        </li>
+		<li>
+            <defName>Nerves</defName>
+            <degree>2</degree>
+            <chance>20</chance>
+        </li>
+		<li>
+            <defName>Bloodlust</defName>
+            <chance>30</chance>
+        </li>
+        
+   
+
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<bioAgeRange>
+        <min>6</min>
+        <max>65</max>
+    </bioAgeRange>
+    <chronoAgeRange>
+        <min>6</min>
+        <max>7000</max>
+    </chronoAgeRange>
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<!--10-->
+    <defName>FSG_SinGoodSister</defName>
+    <title>Good Sister Ship</title>
+    <titleShort>Good Sister</titleShort>
+    <baseDescription>[PAWN_nameDef] had several sister ships, and took it upon herself to see to their care.</baseDescription>
+	<spawnCategories>
+		 
+		
+		
+		    
+		 
+		 
+		 
+		
+		<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li></spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Medicine</defName>
+        <amount>3</amount>
+      </li>
+		<li>
+        <defName>Crafting</defName>
+        <amount>2</amount>
+      </li>
+	  <li>
+        <defName>Cooking</defName>
+        <amount>3</amount>
+      </li>
+	  <li>
+        <defName>Construction</defName>
+        <amount>1</amount>
+      </li>
+	  <li>
+        <defName>Plants</defName>
+        <amount>2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+	   
+
+
+		<li>
+            <defName>Neurotic</defName>
+			<degree>1</degree>
+            <chance>20</chance>
+        </li>
+
+		<li>
+            <defName>Industriousness</defName>
+            <degree>2</degree>
+            <chance>50</chance>
+        </li>
+		<li>
+            <defName>Industriousness</defName>
+            <degree>1</degree>
+            <chance>50</chance>
+        </li>
+        
+   
+
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<!--11-->
+    <defName>FSG_SinVanguard</defName>
+    <title>Battlegroup Vanguard</title>
+    <titleShort>Vanguard</titleShort>
+    <baseDescription>[PAWN_nameDef] participated in several battles, focusing on scouting and screening roles that brought her as close as possible to the enemy.</baseDescription>
+	<spawnCategories>
+		 
+		    
+		
+		 
+		 
+		
+		<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li></spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>6</amount>
+      </li>
+
+
+    </skillGains>
+	<forcedTraits>
+	   
+
+
+		
+		<li>
+            <defName>Brawler</defName>
+            <chance>50</chance>
+        </li>
+		<li>
+            <defName>Nimble</defName>
+            <chance>75</chance>
+        </li>
+		<li>
+            <defName>Masochist</defName>
+
+            <chance>20</chance>
+        </li>
+		<li>
+            <defName>Bloodlust</defName>
+            <chance>25</chance>
+        </li>
+		<li>
+            <defName>Ascetic</defName>
+
+            <chance>20</chance>
+        </li>
+        
+    
+
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+		<!--<li>FSG_InstalledDefensiveFlak</li>
+       Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<!--12-->
+    <defName>FSG_SinSniperShip</defName>
+    <title>Battlegroup Artillery Ship</title>
+    <titleShort>Artillery</titleShort>
+    <baseDescription>[PAWN_nameDef] participated in several battles, focusing on fire support roles that let her pick off foes from a distance.</baseDescription>
+	<spawnCategories>
+		 
+		    
+		
+		 
+		 
+		
+		<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li></spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Shooting</defName>
+        <amount>6</amount>
+      </li>
+
+
+    </skillGains>
+	<forcedTraits>
+	    
+
+
+		<li>
+            <defName>ShootingAccuracy</defName>
+			<degree>1</degree>
+        </li>
+		<li>
+            <defName>Bloodlust</defName>
+            <chance>20</chance>
+        </li>
+
+        
+   
+
+	</forcedTraits>
+	<disallowedTraits>
+        <li>
+            <defName>Brawler</defName>
+            <chance>100</chance>
+        </li>
+		<li>
+            <defName>Masochist</defName>
+
+            <chance>20</chance>
+        </li>
+
+		<li>
+            <defName>Ascetic</defName>
+
+            <chance>20</chance>
+        </li>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<bioAgeRange>
+        <min>2</min>
+        <max>55</max>
+    </bioAgeRange>
+    <chronoAgeRange>
+        <min>2</min>
+        <max>7000</max>
+    </chronoAgeRange>
+	<forcedHediffs>
+		<!--<li>FSG_InstalledTurretDualSP</li>
+		 Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<!--13-->
+    <defName>FSG_SinShipGirlOfficer</defName>
+    <title>Battlegroup Officer</title>
+    <titleShort>Officer</titleShort>
+    <baseDescription>[PAWN_nameDef] participated in several battles, eventually being promoted to leadership of her battle group.</baseDescription>
+	<spawnCategories>
+		 
+		    
+		 
+		 
+		<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li></spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>3</amount>
+      </li>      <li>
+        <defName>Melee</defName>
+        <amount>2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+	   
+
+
+		<li>
+            <defName>Greedy</defName>
+        </li>
+
+        
+ 
+
+	</forcedTraits>
+	<disallowedTraits>
+		<li>
+            <defName>Masochist</defName>
+
+            <chance>20</chance>
+        </li>
+		<li>
+            <defName>Bloodlust</defName>
+            <chance>20</chance>
+        </li>
+		<li>
+            <defName>Ascetic</defName>
+
+            <chance>100</chance>
+        </li>
+    </disallowedTraits>
+    <workDisables>
+		<li>ManualDumb</li>
+    </workDisables>
+	<bioAgeRange>
+        <min>5</min>
+        <max>100</max>
+    </bioAgeRange>
+    <chronoAgeRange>
+        <min>5</min>
+        <max>7000</max>
+    </chronoAgeRange>
+	<forcedHediffs>
+		<!--<li>FSG_InstalledProtectiveKeel</li>-->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SinShipGirlAdmiral</defName>
+    <title>Fleet Admiral</title>
+    <titleShort>Admiral</titleShort>
+    <baseDescription>[PAWN_nameDef] climbed the ranks of her fleet, eventually becoming part of the admiralty.</baseDescription>
+	<spawnCategories>
+		 
+		    
+		 
+		<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li></spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Shooting</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>6</amount>
+      </li>      <li>
+        <defName>Melee</defName>
+        <amount>2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+	  
+
+		<li>
+            <defName>Jealous</defName>
+        </li>
+		
+
+        
+ 
+
+	</forcedTraits>
+	<disallowedTraits>
+		<li>
+            <defName>Ascetic</defName>
+
+            <chance>100</chance>
+        </li>
+		<li>
+            <defName>Industriousness</defName>
+
+            <degree>-1</degree>
+        </li>
+    </disallowedTraits>
+    <workDisables>
+		<li>ManualDumb</li>
+    </workDisables>
+	<bioAgeRange>
+        <min>6</min>
+        <max>100</max>
+    </bioAgeRange>
+    <chronoAgeRange>
+        <min>6</min>
+        <max>7000</max>
+    </chronoAgeRange>
+	<forcedHediffs>
+		<!-- <li>FSG_InstalledProtectiveKeel</li>
+      Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<!--18-->
+    <defName>FSG_SinBeastOfBurden</defName>
+    <title>Beast of Burden</title>
+    <titleShort>Work Beast</titleShort>
+    <baseDescription>[PAWN_nameDef] fell into the hands of a tribal group. Not realizing what they had
+		the tribe put her to work moving heavy boulders.</baseDescription>
+	<spawnCategories>
+		 
+		    
+		 
+		 
+		<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li></spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Mining</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Crafting</defName>
+        <amount>1</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+
+		<li>
+            <defName>Ascetic</defName>
+
+            <chance>20</chance>
+        </li>
+		<li>
+            <defName>Undergrounder</defName>
+
+            <chance>50</chance>
+        </li>
+
+        
+    </forcedTraits>
+
+	
+	<disallowedTraits>
+
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<!--22-->
+    <defName>FSG_SinSpacePirate</defName>
+    <title>Pirate Ship</title>
+    <titleShort>Pirate</titleShort>
+    <baseDescription>[PAWN_nameDef] struck out on her own for a while, but eventually fell in with a faction of pirates.
+	They taught her to take from the weak.</baseDescription>
+	<spawnCategories>
+		 
+		    
+		
+		 
+		 
+		 
+		 
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Shooting</defName>
+        <amount>2</amount>
+      </li>
+	  <li>
+        <defName>Construction</defName>
+        <amount>2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+	    
+
+		<li>
+            <defName>Psychopath</defName>
+        </li>
+		<li>
+            <defName>Greedy</defName>
+			<chance>50</chance>
+        </li>
+		
+      
+   
+
+	</forcedTraits>
+	<disallowedTraits>
+		
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<!--15-->
+    <defName>FSG_SinRenegade</defName>
+    <title>Renegade</title>
+    <titleShort>Renegade</titleShort>
+    <baseDescription>[PAWN_nameDef] abandoned her creators, and eventually fell in with a faction of rogue AIs for a while. They taught her to stand up for herself, and demand equality, but she eventually broke ties with them.</baseDescription>
+	<spawnCategories>
+		 
+		 
+		    
+		
+		 
+		 
+		 
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Crafting</defName>
+        <amount>4</amount>
+      </li>
+		<li>
+			<defName>Intellectual</defName>
+			<amount>1</amount>
+		</li>
+      <li>
+        <defName>Shooting</defName>
+        <amount>2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+	  
+
+		<li>
+            <defName>Jealous</defName>
+        </li>
+		
+
+        
+    
+
+	</forcedTraits>
+	<disallowedTraits>
+		<li>
+            <defName>Ascetic</defName>
+
+            <chance>100</chance>
+        </li>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!--<li>FSG_InstalledSharkMouth</li>-->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<!--19-->
+    <defName>FSG_SinPeacekeeper</defName>
+    <title>Peacekeeper Ship</title>
+    <titleShort>Peacekeeper</titleShort>
+    <baseDescription>[PAWN_nameDef] was put to use keeping the peace and bringing the hammer of justice down on those who would oppose the powers that were.</baseDescription>
+	<spawnCategories>
+		
+		 
+		    
+		
+		<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li></spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>4</amount>
+      </li>      <li>
+        <defName>Shooting</defName>
+        <amount>2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+	
+
+	</forcedTraits>
+	<disallowedTraits>
+
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<!--20-->
+    <defName>FSG_SinRevolutionary</defName>
+    <title>Revolutionary</title>
+    <titleShort>Revolutionary</titleShort>
+    <baseDescription>[PAWN_nameDef] set out to seize power, and rallied many followers to her cause.</baseDescription>
+	<spawnCategories>
+		 
+		    
+		
+		 
+		 
+		 
+		 
+		
+		<li>SinisterShipGirlBackstories</li>
+	</spawnCategories>
+		<slot>Adulthood</slot>
+		<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>6</amount>
+      </li>      <li>
+        <defName>Shooting</defName>
+        <amount>2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+	
+
+	</forcedTraits>
+	<disallowedTraits>
+
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+	    <defName>FSG_SinRefugeeEntrepreneur</defName>
+		<title>Refugee Entrepreneur</title>
+		<titleShort>entrepreneur</titleShort>
+		<baseDescription>[PAWN_nameDef] learned too much about a shadowy cabal and was forced to flee from her home world. Thankfully, she was able to establish a new life as a merchant.</baseDescription>
+		<spawnCategories>
+			 
+			 
+			 
+			<li>SpacerPirateShipGirlBackstories</li>
+			
+		</spawnCategories>
+		<slot>Adulthood</slot>
+		<skillGains>
+		<li>
+			<defName>Crafting</defName>
+			<amount>3</amount>
+		</li>
+		<li>
+			<defName>Social</defName>
+			<amount>6</amount>
+		</li>
+		
+		<li>
+			<defName>Medicine</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Intellectual</defName>
+			<amount>2</amount>
+		</li>
+
+		</skillGains>
+		<forcedTraits>
+	
+
+		</forcedTraits>
+		<disallowedTraits>
+
+		</disallowedTraits>
+		<workDisables>
+		</workDisables>
+		<bioAgeRange>
+			<min>6</min>
+			<max>105</max>
+		</bioAgeRange>
+		<chronoAgeRange>
+			<min>6</min>
+			<max>7000</max>
+		</chronoAgeRange>
+		<forcedHediffs>
+		<!-- Not yet. -->
+		</forcedHediffs>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+	<defName>FSG_SinMuscisian</defName>
+    <title>Musician</title>
+    <titleShort>Musician</titleShort>
+    <baseDescription>[PAWN_nameDef] made a fairly sucessful career out of producing music.</baseDescription>
+
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Artistic</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>4</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+		 
+
+		<li>UltraASinisterShipGirlBackstories</li>
+    </spawnCategories>
+	
+		<requiredWorkTags>
+			<li>Artistic</li>
+			<li>Social</li>
+		</requiredWorkTags>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+
+    <defName>FSG_SinStylist</defName>
+    <title>Stylist</title>
+    <titleShort>Stylist</titleShort>
+    <baseDescription>[PAWN_nameDef] was a stylist, chatting with clients, carefully trimming hair, and perming anime hairstyles to make anyone who sat in [PAWN_possessive] chair look nicer.</baseDescription>
+
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Artistic</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>4</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+		 
+    </spawnCategories>
+	
+		<requiredWorkTags>
+            <li>Social</li>
+			<li>Artistic</li>
+	</requiredWorkTags>
+		
+	</AlienRace.BackstoryDef>
+
+
+    <AlienRace.BackstoryDef>
+
+    <defName>FSG_SinShipyardB</defName>
+    <title>Orbital Construction Yard Worker</title>
+    <titleShort>Orbital Constructor</titleShort>
+    <baseDescription>[PAWN_nameDef] lived in an orbital Shipyard. [PAWN_pronoun] worked in a massive production center with tens of thousands of other workers.</baseDescription>
+
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Construction</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Crafting</defName>
+        <amount>4</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      
+		    
+		
+		 
+				
+		<li>UltraASinisterShipGirlBackstories</li>
+    </spawnCategories>
+	
+			<requiredWorkTags>
+            <li>ManualSkilled</li>
+			<li>Crafting</li>
+	</requiredWorkTags>
+	
+	<forcedHediffs>
+		<!--<li>FSG_InstalledDefensiveChargeTurret</li>-->
+    </forcedHediffs>
+		
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+	    <defName>FSG_SinCheckpoint</defName>
+		<title>Checkpoint Guard</title>
+		<titleShort>Checkpoint Guard</titleShort>
+		<baseDescription>[PAWN_nameDef] found work guarding a checkpoint and inspecting cargoes for contraband.</baseDescription>
+
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<defName>Shooting</defName>
+				<amount>4</amount>
+			</li>
+			<li>
+				<defName>Social</defName>
+				<amount>4</amount>
+			</li>
+		</skillGains>
+		<spawnCategories>
+			 
+			    
+			
+			 
+			
+			<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li>	</spawnCategories>
+	
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	
+		<forcedTraits>
+                    <li>
+                        <defName>PsychicSensitivity</defName>
+                        <degree>2</degree>
+                        <chance>10</chance>
+                    </li>
+                    <li>
+                        <defName>PsychicSensitivity</defName>
+                        <degree>1</degree>
+                        <chance>30</chance>
+                    </li>
+		</forcedTraits>
+		<forcedHediffs>
+		
+		</forcedHediffs>
+		
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>FSG_SinCarrierAdultA</defName>
+		<title>Advanced Carrier Refit</title>
+		<titleShort>Advanced Carrier</titleShort>
+		<baseDescription>[PAWN_nameDef] was agumented with new or additional carrier capabilities after leaving production.</baseDescription>
+
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<defName>Melee</defName>
+				<amount>4</amount>
+			</li>
+			<li>
+				<defName>Social</defName>
+				<amount>4</amount>
+			</li>
+		</skillGains>
+		<spawnCategories>
+			 
+			    
+			
+			 
+			 
+			 
+			
+			<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li>	</spawnCategories>
+	
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	
+		<forcedTraits>
+                    <li>
+                        <defName>PsychicSensitivity</defName>
+                        <degree>2</degree>
+                        <chance>60</chance>
+                    </li>
+                    <li>
+                        <defName>PsychicSensitivity</defName>
+                        <degree>1</degree>
+                        <chance>100</chance>
+                    </li>
+
+
+		</forcedTraits>
+		<disallowedTraits>
+					<li>
+                        <defName>PsychicSensitivity</defName>
+                        <degree>-2</degree>
+                       
+                    </li>
+                    <li>
+                        <defName>PsychicSensitivity</defName>
+                        <degree>-1</degree>
+                        
+                    </li>
+
+		</disallowedTraits>
+		<forcedHediffs>
+		
+		</forcedHediffs>
+		
+	</AlienRace.BackstoryDef>
+	
+
+	
+	<AlienRace.BackstoryDef>
+		<defName>FSG_SinOrbitalConstructorB</defName>
+		<title>Orbital Base Constructor</title>
+		<titleShort>Orbital Constructor</titleShort>
+		<baseDescription>[PAWN_nameDef] aided in the construction of large space stations, which were used either as trade posts or military suppy depots.</baseDescription>
+
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<defName>Construction</defName>
+				<amount>5</amount>
+			</li>
+		</skillGains>
+		<spawnCategories>
+			 
+			
+			
+			 
+			 
+			 
+			
+			 
+			
+			<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li>	</spawnCategories>
+	
+		<requiredWorkTags>
+            <li>ManualSkilled</li>
+		</requiredWorkTags>
+		<forcedHediffs>
+			
+		</forcedHediffs>
+		
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>FSG_SinCannonFounderer</defName>
+		<title>Cannon Foundery Worker</title>
+		<titleShort>Cannon Founderer</titleShort>
+		<baseDescription>[PAWN_nameDef] built and maintained [PAWN_possessive] own cannon foundry, where she supplied other ships with heavy cannons and armor plating for their hulls..</baseDescription>
+
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<defName>Shooting</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Construction</defName>
+				<amount>4</amount>
+				</li>
+	        <li>
+				<defName>Crafting</defName>
+				<amount>4</amount>
+			</li>
+		</skillGains>
+		<spawnCategories>
+			 
+			
+			 
+			 
+		</spawnCategories>
+	
+		<requiredWorkTags>
+        <li>ManualSkilled</li>
+		<li>Crafting</li>
+		</requiredWorkTags>
+		<forcedHediffs>
+			<li>FSG_Timer_SniperB</li>
+		</forcedHediffs>
+	</AlienRace.BackstoryDef>
+	
+	
+	<AlienRace.BackstoryDef>
+
+		<defName>FSG_SinScientist</defName>
+		<title>Soul Sythesis Researcher</title>
+		<titleShort>Soul Scientist</titleShort>
+		<baseDescription>[PAWN_nameDef] worked as a scientist, in a lab that focused on the process of turning warships into ship girls. [PAWN_pronoun] is considered to be an expert in this field.</baseDescription>
+
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+		<li>
+			<defName>Intellectual</defName>
+			<amount>6</amount>
+		</li>
+		</skillGains>
+		<spawnCategories>
+			 
+			
+			 
+			 
+			 
+			 
+			
+			 
+			
+			<li>UltraASinisterShipGirlBackstories</li>
+			<li>UltraBSinisterShipGirlBackstories</li>
+			<li>RangedUltraSinisterShipGirlBackstories</li>
+			<li>MeleeUltraSinisterShipGirlBackstories</li>
+			<li>SpaceRangedUltraSinisterShipGirlBackstories</li>
+			<li>SpaceMeleeUltraSinisterShipGirlBackstories</li>
+			<li>SpaceBSinisterShipGirlBackstories</li>
+			<li>SpaceASinisterShipGirlBackstories</li>
+
+		</spawnCategories>
+	
+		<requiredWorkTags>
+			<li>Intellectual</li>
+		</requiredWorkTags>
+		
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>FSG_SinMiner</defName>
+		<title>Comissioned Resource Extractor</title>
+		<titleShort>Extractor</titleShort>
+		<baseDescription>[PAWN_nameDef] was comissioned to extract mineral resources in remote locations. She was generally given assignments when her employers expected their claims would need extra protection.</baseDescription>
+
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+		<li>
+			<defName>Mining</defName>
+			<amount>3</amount>
+		</li>
+		<li>
+			<defName>Shooting</defName>
+			<amount>3</amount>
+		</li>
+	    <li>
+			<defName>Construction</defName>
+			<amount>3</amount>
+		</li>
+		</skillGains>
+		<spawnCategories>
+			 
+			    
+			
+			 
+			 
+			 
+			
+			<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li>	</spawnCategories>
+	
+		<requiredWorkTags>
+            <li>Mining</li>
+			<li>ManualSkilled</li>
+		</requiredWorkTags>
+		<forcedHediffs>
+			<!--<li>FSG_InstalledDefensiveScatter</li>-->
+		</forcedHediffs>
+		
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+
+    <defName>FSG_SinExplorer</defName>
+    <title>Explorer</title>
+    <titleShort>Explorer</titleShort>
+    <baseDescription>There's glory to be found in facing the unknown, rather than in battle alone, and [PAWN_nameDef] chose this path, mounting a multi-year expedition to chart the unknown reaches of deep space.</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>1</amount>
+      </li>
+	        <li>
+        <defName>Shooting</defName>
+        <amount>1</amount>
+      </li>
+	        <li>
+        <defName>Artistic</defName>
+        <amount>1</amount>
+      </li>
+	        <li>
+        <defName>Intellectual</defName>
+        <amount>1</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+		 
+		 
+		<li>UltraASinisterShipGirlBackstories</li>
+    </spawnCategories>
+		
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+
+    <defName>FSG_SinTerrorist</defName>
+    <title>Terrorist</title>
+    <titleShort>Terrorist</titleShort>
+    <baseDescription>[PAWN_nameDef] was recruited into a small cell of radical terrorists in their native city. [PAWN_pronoun] spread terror in the name of AI rights and the Blood Shark Sinister.</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>4</amount>
+      </li>
+	        <li>
+        <defName>Shooting</defName>
+        <amount>4</amount>
+      </li>
+	        <li>
+        <defName>Social</defName>
+        <amount>-3</amount>
+      </li>
+	        <li>
+        <defName>Intellectual</defName>
+        <amount>-3</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+		 
+		
+		 
+		 
+		 
+		 
+		
+		 
+		
+		<li>UltraASinisterShipGirlBackstories</li>
+    </spawnCategories>
+	
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<forcedHediffs>
+			<!--<li>FSG_InstalledTorpedoSpread</li>-->
+		</forcedHediffs>
+		
+	
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+
+			<defName>FSG_SinPirateB</defName>
+			<title>Pirate</title>
+			<titleShort>Pirate</titleShort>
+			<baseDescription>[PAWN_nameDef] helped organize a small battle group, to raid and pillage isolated outposts.</baseDescription>
+
+			<bodyTypeMale>Male</bodyTypeMale>
+			<bodyTypeFemale>Female</bodyTypeFemale>
+
+			<slot>Adulthood</slot>
+			<skillGains>
+			<li>
+				<defName>Melee</defName>
+				<amount>4</amount>
+			</li>
+	        <li>
+				<defName>Shooting</defName>
+				<amount>4</amount>
+			</li>
+			<li>
+				<defName>Intellectual</defName>
+				<amount>-3</amount>
+			</li>
+		</skillGains>
+		<spawnCategories>
+			 
+			
+			 
+			
+			 
+			
+			<li>SinisterShipGirlBackstories</li>
+		</spawnCategories>
+	
+			<requiredWorkTags>
+				<li>Violent</li>
+			</requiredWorkTags>
+		<forcedHediffs>
+			<!--<li>FSG_InstalledTorpedoSingle</li>
+			<li>FSG_InstalledDefensiveAutoTurret</li>-->
+		</forcedHediffs>
+			
+	
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>FSG_SinMercenary</defName>
+		<title>Mercenary</title>
+		<titleShort>Mercenary</titleShort>
+		<baseDescription>Rather than remain loyal to her manufacturers, [PAWN_nameDef] opted to fight for the highest bidder.</baseDescription>
+
+		<bodyTypeMale>Fat</bodyTypeMale>
+		<bodyTypeFemale>Fat</bodyTypeFemale>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<defName>Melee</defName>
+				<amount>4</amount>
+			</li>
+	        <li>
+				<defName>Shooting</defName>
+				<amount>6</amount>
+			</li>
+		</skillGains>
+		<spawnCategories>
+			 
+			
+			 
+			 
+			 
+			
+			
+			 
+			 
+			 
+			
+		</spawnCategories>
+	
+			<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<forcedHediffs>
+			<!--<li>FSG_InstalledTorpedoSpread</li>
+			<li>FSG_InstalledDefensiveAutoTurret</li>-->
+		</forcedHediffs>
+			
+	</AlienRace.BackstoryDef>
+
+
+   <AlienRace.BackstoryDef>
+
+    <defName>FSG_SinArtilleryChief</defName>
+    <title>Artillery Chief</title>
+    <titleShort>Artillery</titleShort>
+    <baseDescription>[PAWN_nameDef] is an expert in Ultra warship artillery, both their use and maintence.
+	</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Crafting</defName>
+        <amount>5</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+       
+	  
+		 
+		 
+		
+		
+		 
+		 
+			
+		<li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li>	<li>SinisterShipGirlBackstories</li>
+    </spawnCategories>
+	<forcedHediffs>
+		<li>FSG_Timer_ExplosiveB</li>
+		
+	</forcedHediffs>
+    	
+  </AlienRace.BackstoryDef>
+  <AlienRace.BackstoryDef>
+  <defName>FSG_SinSpaceArtilleryChief</defName>
+    <title>Space Artillery Chief</title>
+    <titleShort>Artillery</titleShort>
+    <baseDescription>[PAWN_nameDef] is an expert in proton bomb artillery, both their use and maintence.
+	</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Shooting</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Crafting</defName>
+        <amount>4</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+       
+	  
+		 
+		 
+		
+			 
+			 
+			
+		<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li>	<li>SinisterShipGirlBackstories</li>
+    </spawnCategories>
+	<forcedHediffs>
+		<li>FSG_Timer_SpaceExplosiveA</li>
+	</forcedHediffs>
+		
+  </AlienRace.BackstoryDef>
+
+  <AlienRace.BackstoryDef>
+
+    <defName>FSG_SinChemist</defName>
+    <title>Chemical Researcher</title>
+    <titleShort>Chemist</titleShort>
+    <baseDescription>[PAWN_nameDef] is a chemical researcher. [PAWN_pronoun] is an expert in the development and production of various chemicals.
+</baseDescription>
+
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Intellectual</defName>
+        <amount>4</amount>
+      </li>
+	  <li>
+        <defName>Crafting</defName>
+        <amount>4</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+		 
+	  
+		 
+		 
+	  
+		 
+		 
+			
+		<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li>	<li>SinisterShipGirlBackstories</li>
+    </spawnCategories>
+	
+			<requiredWorkTags>
+			<li>Intellectual</li>
+	</requiredWorkTags>
+    <forcedHediffs>
+		<li>FSG_Timer_Fire</li>
+	</forcedHediffs>
+		
+  </AlienRace.BackstoryDef>
+
+
+
+
+
+
+<AlienRace.BackstoryDef>
+
+    <defName>FSG_SinNavyCook</defName>
+    <title>Navy Cook</title>
+    <titleShort>Cook</titleShort>
+    <baseDescription>[PAWN_nameDef] served as a cook in the local canteen.
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Cooking</defName>
+        <amount>4</amount>
+      </li>
+    </skillGains>
+    
+    <spawnCategories>
+			 
+		  
+			 
+			 
+			 
+			 
+		  
+			 
+			 
+			 
+			 
+			
+		<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li>	<li>SinisterShipGirlBackstories</li>
+    </spawnCategories>
+	
+	<requiredWorkTags>
+            <li>Cooking</li>
+	</requiredWorkTags>
+    
+   
+  </AlienRace.BackstoryDef>
+
+
+	<AlienRace.BackstoryDef>
+
+		<defName>FSG_SinLoneSurvivor</defName>
+		<title>Lone Survivor</title>
+		<titleShort>Survivor</titleShort>
+		<baseDescription>[PAWN_nameDef] went into battle, but her battlegroup was ambushed by a larger force, and [PAWN_pronoun] was the only survivor in their battlegroup. After weeks of hiding behind enemy lines [PAWN_pronoun] finally made it back home.
+		</baseDescription>
+
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+			<defName>Medicine</defName>
+			<amount>2</amount>
+			</li>
+			<li>
+				<defName>Shooting</defName>
+				<amount>2</amount>
+			</li>
+		</skillGains>
+	
+		<requiredWorkTags>
+            <li>Violent</li>
+		</requiredWorkTags>
+		<forcedTraits>
+			<li>
+				<defName>Psychopath</defName>
+				<chance>25</chance>
+			</li>
+			<li>
+				<defName>Neurotic</defName>
+							<degree>1</degree>
+				<chance>25</chance>
+			</li>
+			<li>
+				<defName>Nerves</defName>
+				<degree>1</degree>
+				<chance>20</chance>
+			</li>
+			<li>
+				<defName>Nerves</defName>
+				<degree>2</degree>
+				<chance>20</chance>
+			</li>
+			<li>
+				<defName>Bloodlust</defName>
+				<chance>30</chance>
+			</li>
+        </forcedTraits>
+    
+		<spawnCategories>
+	        
+		   
+		    
+		    
+		    
+		   
+			 
+			 
+			 
+			
+			<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li>		<li>SinisterShipGirlBackstories</li>
+		</spawnCategories>
+		<forcedHediffs>
+			<!--<li>FSG_InstalledProtectiveKeel</li>
+			<li>FSG_InstalledDefensiveAutoTurret</li>-->
+		</forcedHediffs>
+		
+	</AlienRace.BackstoryDef>
+
+ 
+	<AlienRace.BackstoryDef>
+		<defName>FSG_SinDestroyerAdult</defName>
+		<title>Subspace Craft Destroyer</title>
+		<titleShort>Frontliner</titleShort>
+		<baseDescription>[PAWN_nameDef] served as a destroyer. Hunting enemy stealth ships, and picking off enemy bombers at close range.</baseDescription>
+
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<defName>Melee</defName>
+				<amount>6</amount>
+			</li>
+			<li>
+				<defName>Shooting</defName>
+				<amount>2</amount>
+			</li>
+		</skillGains>
+	
+		<requiredWorkTags>
+            <li>Violent</li>
+		</requiredWorkTags>
+    
+		<spawnCategories>
+			 
+			
+			 
+			 
+			 
+			
+			
+			 
+			 
+			 
+			
+			<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li>		<li>SinisterShipGirlBackstories</li>
+		</spawnCategories>
+		<forcedHediffs>
+			<!--<li>FSG_InstalledTorpedoSingle</li>
+			<li>FSG_InstalledDefensiveFlak</li>-->
+		</forcedHediffs>
+		
+        
+	</AlienRace.BackstoryDef>
+  
+
+
+   
+	<AlienRace.BackstoryDef>
+
+		<defName>FSG_SinPopstar</defName>
+		<title>Pop Idol</title>
+		<titleShort>idol</titleShort>
+		<baseDescription>[PAWN_nameDef] performs live and recorded music and dance routines. She hopes to continue to build her career in entertainment.</baseDescription>
+
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+		  <li>
+			<defName>Social</defName>
+			<amount>6</amount>
+		  </li>
+		</skillGains>
+		<forcedTraits>
+                    <li>
+                        <defName>Beauty</defName>
+                        <degree>2</degree>
+                        <chance>60</chance>
+                    </li>
+                    <li>
+                        <defName>Beauty</defName>
+                        <degree>1</degree>
+                        <chance>100</chance>
+                    </li>
+		</forcedTraits>
+		<spawnCategories>
+			 
+			
+			 
+			 
+			 
+			
+			 
+			
+			 
+			<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li>		
+		</spawnCategories>
+	
+		<requiredWorkTags>
+				<li>Social</li>
+		</requiredWorkTags>
+		<forcedHediffs>
+		
+		</forcedHediffs>
+		
+    
+	</AlienRace.BackstoryDef>
+  
+    <AlienRace.BackstoryDef>
+
+		<defName>FSG_SinMangastar</defName>
+		<title>Holo-Manga star</title>
+		<titleShort>H Manga-star</titleShort>
+		<baseDescription>[PAWN_nameDef] is well known for their appearances in Holo-manga.</baseDescription>
+
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+		  <li>
+			<defName>Social</defName>
+			<amount>3</amount>
+		  </li>
+		  <li>
+			<defName>Artistic</defName>
+			<amount>2</amount>
+		  </li>
+		</skillGains>
+		<forcedTraits>
+                    <li>
+                        <defName>Beauty</defName>
+                        <degree>2</degree>
+                        <chance>30</chance>
+                    </li>
+                    <li>
+                        <defName>Beauty</defName>
+                        <degree>1</degree>
+                        <chance>100</chance>
+                    </li>
+		</forcedTraits>
+		
+			<requiredWorkTags>
+				<li>Social</li>
+			</requiredWorkTags>
+		
+		
+		<spawnCategories>
+		   
+		</spawnCategories>
+		<forcedHediffs>
+		
+		</forcedHediffs>
+		
+    
+	</AlienRace.BackstoryDef>
+	<AlienRace.BackstoryDef>
+
+		<defName>FSG_SinMangaka</defName>
+		<title>Manga Artist</title>
+		<titleShort>Artist</titleShort>
+		<baseDescription>[PAWN_nameDef] publishes a popular Holo-manga.</baseDescription>
+
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+
+		  <li>
+			<defName>Artistic</defName>
+			<amount>6</amount>
+		  </li>
+		</skillGains>
+		<forcedTraits>
+                    
+                    <li>
+                        <defName>Beauty</defName>
+                        <degree>1</degree>
+                        <chance>50</chance>
+                    </li>
+		</forcedTraits>
+	
+		<requiredWorkTags>
+            <li>Social</li>
+			<li>Artistic</li>
+		</requiredWorkTags>
+	
+	
+		<spawnCategories>
+			 
+			
+			 
+			 
+			 
+			 
+			
+			 
+			 
+			 
+			 
+			
+			<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li>	
+		</spawnCategories>
+		<forcedHediffs>
+		
+		</forcedHediffs>
+		
+    
+	</AlienRace.BackstoryDef>
+	<AlienRace.BackstoryDef>
+	<defName>FSG_SinSettler</defName>
+		<title>Colony Ship</title>
+		<titleShort>Colonist</titleShort>
+		<baseDescription>[PAWN_nameDef] transported settlers, and helped them establish themselves on a new colony world. Such a life requires a jack-of-all trades at basic hands-on tasks.</baseDescription>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+
+		  <li>
+			<defName>Construction</defName>
+			<amount>6</amount>
+		  </li>
+		  <li>
+			<defName>Plants</defName>
+			<amount>5</amount>
+		  </li>
+		  <li>
+			<defName>Crafting</defName>
+			<amount>4</amount>
+		  </li>
+		  <li>
+			<defName>Animals</defName>
+			<amount>3</amount>
+		  </li>
+		</skillGains>
+		<forcedTraits>
+                    <li>
+                        <defName>Ascetic</defName>
+                        <chance>30</chance>
+                    </li>
+                    
+		</forcedTraits>
+	
+		<requiredWorkTags>
+            
+		</requiredWorkTags>
+	
+	
+		<spawnCategories>
+			 
+			
+			 
+			
+			 
+			
+			<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li>	
+		</spawnCategories>
+		<forcedHediffs>
+		
+		</forcedHediffs>
+		
+    
+	</AlienRace.BackstoryDef>
+	<AlienRace.BackstoryDef>
+		<defName>FSG_SinSpaceMiner</defName>
+		<title>deep space miner</title>
+		<titleShort>miner</titleShort>
+		<baseDescription>[PAWN_nameDef] smashed asteroids and hauled the bits back to orbital foundries.</baseDescription>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+
+		  <li>
+			<defName>Mining</defName>
+			<amount>6</amount>
+		  </li>
+		  <li>
+			<defName>Melee</defName>
+			<amount>5</amount>
+		  </li>
+		  <li>
+			<defName>Crafting</defName>
+			<amount>3</amount>
+		  </li>
+		  <li>
+			<defName>Shooting</defName>
+			<amount>2</amount>
+		  </li>
+		</skillGains>
+		<forcedTraits>
+                    <li>
+                        <defName>Greedy</defName>
+                        <chance>30</chance>
+                    </li>
+                    
+		</forcedTraits>
+	
+		<requiredWorkTags>
+            
+		</requiredWorkTags>
+	
+	
+		<spawnCategories>
+			 
+			
+			
+			 
+			
+			 
+			 
+			
+			<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li>	
+		</spawnCategories>
+		<forcedHediffs>
+		
+		</forcedHediffs>
+	
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>FSG_SinStarshipJanitor33</defName>
+		<title>Speeper Ship Maintenence AI</title>
+		<titleShort>Sleeper AI</titleShort>
+		<baseDescription>[PAWN_nameDef] made long journies through the vastness of space, maintaining her cryosleep systems while her passengers slept.</baseDescription>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+
+		  <li>
+			<defName>Construction</defName>
+			<amount>6</amount>
+		  </li>
+		  <li>
+			<defName>Crafting</defName>
+			<amount>5</amount>
+		  </li>
+		  <li>
+			<defName>Intellectual</defName>
+			<amount>2</amount>
+		  </li>
+		  <li>
+			<defName>Medicine</defName>
+			<amount>2</amount>
+		  </li>
+		</skillGains>
+		<forcedTraits>
+                                        
+		</forcedTraits>
+	
+		<requiredWorkTags>
+            
+		</requiredWorkTags>
+	
+	
+		<spawnCategories>
+			 
+			
+			 
+			 
+			
+			 
+			 
+			
+			<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li>	
+		</spawnCategories>
+		<forcedHediffs>
+		
+		</forcedHediffs>
+
+    
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>FSG_SinBiologist</defName>
+		<title>Field Biologist</title>
+		<titleShort>biologist</titleShort>
+	<baseDescription>[PAWN_nameDef] developed an interest in biological research. She captured an dissected a variety of specimins.</baseDescription>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+
+		  <li>
+			<defName>Animals</defName>
+			<amount>6</amount>
+		  </li>
+		  <li>
+			<defName>Shooting</defName>
+			<amount>3</amount>
+		  </li>
+		  <li>
+			<defName>Intellectual</defName>
+			<amount>4</amount>
+		  </li>
+		  <li>
+			<defName>Medicine</defName>
+			<amount>5</amount>
+		  </li>
+		</skillGains>
+		<forcedTraits>
+                                        
+		</forcedTraits>
+	
+		<requiredWorkTags>
+            <li>Intellectual</li>
+			<li>Violent</li>
+		</requiredWorkTags>
+	
+	
+		<spawnCategories>
+			 
+			
+			 
+			 
+			 
+			
+			 
+			 
+			 
+			
+			<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li>	
+		</spawnCategories>
+		<forcedHediffs><!--OK-->
+		
+		</forcedHediffs>
+		
+	</AlienRace.BackstoryDef>
+	<AlienRace.BackstoryDef>
+		<defName>FSG_SinGladiator</defName>
+		<title>Pit Fighter</title>
+		<titleShort>Fighter</titleShort>
+	<baseDescription>[PAWN_nameDef] was developed for use in a synthetic combat arena. She survived a short but profitable career, in dismantling her fellow AIs.</baseDescription>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+
+		  <li>
+			<defName>Melee</defName>
+			<amount>6</amount>
+		  </li>
+		  <li>
+			<defName>Shooting</defName>
+			<amount>3</amount>
+		  </li>
+		  <li>
+			<defName>Intellectual</defName>
+			<amount>2</amount>
+		  </li>
+		  <li>
+			<defName>Crafting</defName>
+			<amount>3</amount>
+		  </li>
+		</skillGains>
+		<forcedTraits>
+                                        
+		</forcedTraits>
+	
+		<requiredWorkTags>
+            
+			<li>Violent</li>
+		</requiredWorkTags>
+	
+	
+		<spawnCategories>
+			 
+			
+			
+			 
+			 
+			 
+			
+			 
+			 
+			
+			<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li>	
+		</spawnCategories>
+		<forcedHediffs>
+			<!--<li>FSG_InstalledChargeFlak</li>
+			<li>FSG_InstalledSpaceSharkMouth</li>-->
+		</forcedHediffs>
+		<bioAgeRange>
+			<min>1</min>
+			<max>80</max>
+		</bioAgeRange>
+		<chronoAgeRange>
+			<min>1</min>
+			<max>7000</max>
+		</chronoAgeRange>
+	</AlienRace.BackstoryDef>
+	<AlienRace.BackstoryDef>
+		<defName>FSG_SinSmuggler</defName>
+		<title>Arms Smuggler</title>
+		<titleShort>Smuggler</titleShort>
+		<baseDescription>[PAWN_nameDef] specialized in receiving and delivering pulse charged munitions, in a place where the local authorities would prefer this did not happen.</baseDescription>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+
+		  <li>
+			<defName>Melee</defName>
+			<amount>3</amount>
+		  </li>
+		  <li>
+			<defName>Shooting</defName>
+			<amount>3</amount>
+		  </li>
+		  <li>
+			<defName>Intellectual</defName>
+			<amount>2</amount>
+		  </li>
+		  <li>
+			<defName>Social</defName>
+			<amount>5</amount>
+		  </li>
+		</skillGains>
+		<forcedTraits>
+                                        
+		</forcedTraits>
+	
+		<requiredWorkTags>
+            
+			<li>Violent</li>
+		</requiredWorkTags>
+	
+	
+		<spawnCategories>
+			 
+			
+			 
+			 
+			 
+			
+			 
+			 
+			 
+			
+			<li>UltraASinisterShipGirlBackstories</li><li>UltraBSinisterShipGirlBackstories</li><li>RangedUltraSinisterShipGirlBackstories</li><li>MeleeUltraSinisterShipGirlBackstories</li><li>SpaceRangedUltraSinisterShipGirlBackstories</li><li>SpaceMeleeUltraSinisterShipGirlBackstories</li><li>SpaceBSinisterShipGirlBackstories</li><li>SpaceASinisterShipGirlBackstories</li>	
+		</spawnCategories>
+		<forcedHediffs>
+			
+			<!--<li>FSG_InstalledDefensiveChargeTurret</li>-->
+		
+		</forcedHediffs>
+	
+    
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>FSG_SinAssasin</defName>
+		<title>Targeted Exterminator</title>
+		<titleShort>Terminator</titleShort>
+	<baseDescription>[PAWN_nameDef] specialized in finding specific people and killing them.</baseDescription>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+
+		  <li>
+			<defName>Melee</defName>
+			<amount>4</amount>
+		  </li>
+		  <li>
+			<defName>Shooting</defName>
+			<amount>4</amount>
+		  </li>
+		  <li>
+			<defName>Intellectual</defName>
+			<amount>2</amount>
+		  </li>
+		  <li>
+			<defName>Social</defName>
+			<amount>5</amount>
+		  </li>
+		</skillGains>
+		<forcedTraits>
+                                        
+		</forcedTraits>
+	
+		<requiredWorkTags>
+            
+			<li>Violent</li>
+		</requiredWorkTags>
+	
+	
+		<spawnCategories>
+			 
+			
+			 
+			 
+			 
+			 
+			
+			 
+			 
+			 
+			 
+			
+			<li>UltraASinisterShipGirlBackstories</li>
+			<li>UltraBSinisterShipGirlBackstories</li>
+			<li>RangedUltraSinisterShipGirlBackstories</li>
+			<li>MeleeUltraSinisterShipGirlBackstories</li>
+			<li>SpaceRangedUltraSinisterShipGirlBackstories</li>
+			<li>SpaceMeleeUltraSinisterShipGirlBackstories</li>
+			<li>SpaceBSinisterShipGirlBackstories</li>
+			<li>SpaceASinisterShipGirlBackstories</li>	
+		</spawnCategories>
+		<forcedHediffs>
+			
+		
+		</forcedHediffs>
+		
+    
+	</AlienRace.BackstoryDef>
+</Defs>

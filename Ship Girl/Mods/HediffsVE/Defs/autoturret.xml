@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" ParentName="AddedAuxMountBase">
+		<defName>FSG_VEInstalledVETestTurret</defName>
+		<label>installed VE defenive gun</label>
+		<labelNoun>a defenive gun turret</labelNoun>
+		<description>A small Turret to fight off enemy ships.</description>
+		<spawnThingOnRemoved>FSG_DefensiveTurret</spawnThingOnRemoved>
+		<stages>
+			<li>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0.98</postFactor>
+				</li>
+			</capMods>
+			</li>
+		</stages>
+		<comps>
+			<!--<li Class="HediffCompProperties_VerbGiver">
+				
+			</li>-->
+			<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+				
+				<!-- <toggleBackgroundPath>UI/Widgets/Prosthetic/DesButBGLG</toggleBackgroundPath> -->
+				<tools>
+					<li>
+						<label>Defensive Cannon</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>18</power>
+						<cooldownTime>2</cooldownTime>
+						<soundMeleeHit>Shot_IncendiaryLauncher</soundMeleeHit>
+						<soundMeleeMiss>Shot_IncendiaryLauncher</soundMeleeMiss>
+					</li>
+				</tools>
+				
+				<verbs>
+					<li>
+						<label>Test VE Cannon</label>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.65</accuracyTouch>
+						<accuracyShort>0.60</accuracyShort>
+						<accuracyMedium>0.55</accuracyMedium>
+						<accuracyLong>0.50</accuracyLong>
+						<defaultCooldownTime>10</defaultCooldownTime>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>FSG_Proj_SPShell</defaultProjectile>
+						<warmupTime>2</warmupTime>
+						<range>18.9</range>
+						<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+						<burstShotCount>1</burstShotCount>
+						<soundCast>Shot_IncendiaryLauncher</soundCast>
+						<soundCastTail>GunTail_Medium</soundCastTail>
+						<muzzleFlashScale>9</muzzleFlashScale>
+						
+						<commandIcon>Turrets/Single</commandIcon>
+					</li>
+				</verbs>	
+				<verbProps>
+					<li>
+						 <label>Test VE Cannon</label>
+						 <draw>false</draw>
+						 <canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Turrets/Single</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+					</li>
+				</verbProps>
+	
+				
+			</li>
+		</comps>
+		
+	</HediffDef>
+
+
+ 
+  
+<RecipeDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_VETestTurret</defName>
+    <label>install testing turret</label>
+    <description>Mount a defensive cannon with solid shells in anit-aircraft turret.</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing defense turret.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_DefensiveTurret</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_DefensiveTurret</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>AATurret</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_VEInstalledVETestTurret</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" ParentName="SurgeryRemoveImplantBase">
+
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <defName>RemoveVETestTurret</defName>
+    <label>Unmount test Cannon</label>
+    <description>Remove the defensive cannon from this ship girl, so they can be reallocated or replaced.</description>
+
+    <jobString>unmounting cannons.</jobString>
+    <removesHediff>FSG_VEInstalledVETestTurret</removesHediff>
+  </RecipeDef>
+  
+  
+</Defs>

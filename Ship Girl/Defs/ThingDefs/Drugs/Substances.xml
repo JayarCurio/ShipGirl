@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+
+<ThingDef Name="FSG_MealBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <useHitPoints>true</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <selectable>true</selectable>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>2.0</Flammability>
+      <Beauty>0</Beauty>
+      <Mass>0.44</Mass>
+      <DeteriorationRate>10</DeteriorationRate>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>25</stackLimit>
+    <tickerType>Rare</tickerType>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <thingCategories>
+      
+	  <li>Drugs</li>
+    </thingCategories>
+    <alwaysHaulable>true</alwaysHaulable>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+      <!--<li Class="CompProperties_Ingredients" />-->
+      
+    </comps>
+    <pathCost>12</pathCost>
+    <resourceReadoutPriority>Last</resourceReadoutPriority>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <uiIconForStackCount>1</uiIconForStackCount>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+	  <!--<drugCategory>Social</drugCategory>-->
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <!--<optimalityOffsetHumanlikes>17</optimalityOffsetHumanlikes>-->
+    </ingestible>
+  </ThingDef>
+  
+  <!--<ThingDef ParentName="FSG_MealBase">
+    <defName>FSG_FuelDrink</defName>
+    <label>Chemfuel Cooler</label>
+    <description>A preperation of chemfuel to make it palatable for drinking, for a biomechanical war machine, at least.</description>
+    
+    <graphicData>
+      <texPath>Food/Cola</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <color>(25,200,200)</color>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+		
+		<Mass>0.015</Mass>
+        <Nutrition>1.5</Nutrition>
+		<WorkToMake>300</WorkToMake>
+		<MarketValue>15</MarketValue>
+    
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+		<preferability>MealSimple</preferability>
+		<optimalityOffsetHumanlikes>-5</optimalityOffsetHumanlikes>
+		<foodType>8388608</foodType>
+		<optimalityOffsetFeedingAnimals>-1000</optimalityOffsetFeedingAnimals>
+		
+		
+		<baseIngestTicks>210</baseIngestTicks>
+		<nurseable>true</nurseable>
+		<ingestSound>Ingest_Drink</ingestSound>
+		<ingestHoldOffsetStanding>
+			<northDefault>
+				<offset>(0.18,0,0)</offset>
+			</northDefault>
+		</ingestHoldOffsetStanding>
+		<ingestHoldUsesTable>true</ingestHoldUsesTable>
+		<ingestCommandString>Drink {0}</ingestCommandString>
+		<ingestReportString>Drinking {0}.</ingestReportString>
+      
+    </ingestible>
+    <recipeMaker>
+        <recipeUsers>
+			<li>BiofuelRefinery</li>
+			<li>DrugLab</li>
+		</recipeUsers>
+		
+    </recipeMaker>
+    <costList>
+      <Chemfuel>10</Chemfuel>
+    </costList>
+    
+  </ThingDef>-->
+
+<ThingDef ParentName="FSG_MealBase">
+    <defName>OctaneCola</defName>
+    <label>octane cola black</label>
+    <description>A cheap blend of octane boosters, for ship girls. Improves engine output, and replaces some of the need for fuel. Not for human consumption. May contain traces of methinol, lead, arsenic and brain damage.</description>
+    <descriptionHyperlinks>
+      <HediffDef>FSG_OctaneHigh</HediffDef>
+      <HediffDef>FSG_OctaneAddiction</HediffDef>
+      
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Food/Cola</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <color>(40,10,60)</color>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+		
+		<Mass>0.015</Mass>
+        <Nutrition>1.0</Nutrition>
+		<WorkToMake>300</WorkToMake>
+		<MarketValue>15</MarketValue>
+    
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+		<drugCategory>Medical</drugCategory>
+		<preferability>NeverForNutrition</preferability>
+		<optimalityOffsetHumanlikes>5</optimalityOffsetHumanlikes>
+		<optimalityOffsetFeedingAnimals>-1000</optimalityOffsetFeedingAnimals>
+		<foodType>8388608</foodType>
+		<joyKind>Chemical</joyKind>
+		<joy>0.05</joy>
+		<baseIngestTicks>210</baseIngestTicks>
+		<nurseable>true</nurseable>
+		<ingestSound>Ingest_Drink</ingestSound>
+		<ingestHoldOffsetStanding>
+			<northDefault>
+				<offset>(0.18,0,0)</offset>
+			</northDefault>
+		</ingestHoldOffsetStanding>
+		<ingestHoldUsesTable>true</ingestHoldUsesTable>
+		<ingestCommandString>Drink {0}</ingestCommandString>
+		<ingestReportString>Drinking {0}.</ingestReportString>
+      <outcomeDoers>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+			<hediffDef>ToxicBuildup</hediffDef>
+			<severity>0.08</severity>
+			<divideByBodySize>false</divideByBodySize>
+		</li>
+        
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>FSG_OctaneTolerance</hediffDef>
+          <severity>0.016</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+        <recipeUsers>
+			<li>BiofuelRefinery</li>
+			<li>DrugLab</li>
+		</recipeUsers>
+		
+    </recipeMaker>
+    <costList>
+      <Chemfuel>10</Chemfuel>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>FSG_Octane</chemical>
+        <addictiveness>0.02</addictiveness>
+        <existingAddictionSeverityOffset>0.05</existingAddictionSeverityOffset>
+		<minToleranceToAddict>0.03</minToleranceToAddict>
+        <needLevelOffset>0.5</needLevelOffset>
+        <listOrder>210</listOrder>
+        <overdoseSeverityOffset>0~.5</overdoseSeverityOffset>
+        <largeOverdoseChance>.000000001</largeOverdoseChance>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="FSG_MealBase">
+    <defName>OctaneColaB</defName>
+    <label>octane cola crystal</label>
+    <description>A refined, flavored blend of octane rich fuels, for ship girls. Improves engine output, and nutrition efficiency. Not for human consumption, but much safer for ship girls.</description>
+    <descriptionHyperlinks>
+      <HediffDef>FSG_OctaneHigh</HediffDef>
+      <HediffDef>FSG_OctaneAddiction</HediffDef>
+      
+    </descriptionHyperlinks>
+     <graphicData>
+      <texPath>Food/Cola</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <color>(160,130,30)</color>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+		
+		<Mass>0.015</Mass>
+        <Nutrition>0.9</Nutrition>
+		<WorkToMake>450</WorkToMake>
+		<MarketValue>25</MarketValue>
+    
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+		<drugCategory>Medical</drugCategory>
+		<preferability>NeverForNutrition</preferability>
+		<optimalityOffsetFeedingAnimals>-1000</optimalityOffsetFeedingAnimals>
+		<tasteThought>AteFineMeal</tasteThought>
+		<foodType>8388608</foodType>
+		<joyKind>Chemical</joyKind>
+		<joy>0.05</joy>
+		<baseIngestTicks>210</baseIngestTicks>
+		<nurseable>true</nurseable>
+		<ingestSound>Ingest_Drink</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+		<ingestHoldUsesTable>false</ingestHoldUsesTable>
+		<ingestCommandString>Drink {0}</ingestCommandString>
+		<ingestReportString>Drinking {0}.</ingestReportString>
+      <outcomeDoers>
+		
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+			<hediffDef>FSG_OctaneHigh</hediffDef>
+			<severity>0.25</severity>
+			<toleranceChemical>FSG_Octane</toleranceChemical>
+		</li>
+       
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>FSG_OctaneTolerance</hediffDef>
+          <severity>0.006</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisites>
+			<li>BiofuelRefining</li>
+			<li>Brewing</li>
+		</researchPrerequisites>
+		
+      <recipeUsers>
+		<li>BiofuelRefinery</li>
+        
+      </recipeUsers>
+	  
+    </recipeMaker>
+    <costList>
+      <Chemfuel>9</Chemfuel>
+	  <Beer>1</Beer>
+    </costList>
+    <comps>
+		<li Class="CompProperties_Drug">
+			<chemical>FSG_Octane</chemical>
+			<addictiveness>0.015</addictiveness>
+			<minToleranceToAddict>0.10</minToleranceToAddict>
+			<existingAddictionSeverityOffset>0.04</existingAddictionSeverityOffset>
+			<needLevelOffset>.75</needLevelOffset>
+			<listOrder>210</listOrder>
+			<overdoseSeverityOffset>0</overdoseSeverityOffset>
+			<largeOverdoseChance>.00000000001</largeOverdoseChance>
+		  </li>
+	</comps>
+  </ThingDef>
+
+  <ThingDef ParentName="FSG_MealBase">
+    <defName>OctaneColaC</defName>
+    <label>octane cola code red</label>
+    <description>An intense, premium blend of octane rich fuels, for ship girls. Improves engine output, and nutrition efficiency. Not for human consumption.</description>
+    <descriptionHyperlinks>
+      <HediffDef>FSG_OctaneHigh</HediffDef>
+      <HediffDef>FSG_OctaneAddiction</HediffDef>
+      
+    </descriptionHyperlinks>
+     <graphicData>
+      <texPath>Food/Vodka</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <color>(255,255,255)</color>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+		
+		<Mass>0.015</Mass>
+        <Nutrition>1.0</Nutrition>
+		<WorkToMake>900</WorkToMake>
+		<MarketValue>50</MarketValue>
+    
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+		<drugCategory>Medical</drugCategory>
+		<preferability>NeverForNutrition</preferability>
+		<optimalityOffsetFeedingAnimals>-1000</optimalityOffsetFeedingAnimals>
+		<tasteThought>AteLavishMeal</tasteThought>
+		<foodType>8388608</foodType>
+		<joyKind>Chemical</joyKind>
+		<joy>0.20</joy>
+		<baseIngestTicks>210</baseIngestTicks>
+		<nurseable>true</nurseable>
+		<ingestSound>Ingest_Drink</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+		<ingestHoldUsesTable>false</ingestHoldUsesTable>
+		<ingestCommandString>Drink {0}</ingestCommandString>
+		<ingestReportString>Drinking {0}.</ingestReportString>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>FSG_OctaneTolerance</hediffDef>
+          <severity>0.008</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+		
+		
+
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      
+      <recipeUsers>
+        
+		<li>BiofuelRefinery</li>
+      </recipeUsers>
+	  <researchPrerequisites>
+		<li>BiofuelRefining</li>
+		<li>Brewing</li>
+	  </researchPrerequisites>
+    </recipeMaker>
+    <costList>
+      <Chemfuel>8</Chemfuel>
+	  <Beer>1</Beer>
+	  <Neutroamine>1</Neutroamine>
+    </costList>
+      <comps>
+		
+		<li Class="CompProperties_Drug">
+			<chemical>FSG_Octane</chemical>
+			<addictiveness>0.01</addictiveness>
+			<existingAddictionSeverityOffset>0.03</existingAddictionSeverityOffset>
+			<minToleranceToAddict>0.15</minToleranceToAddict>
+			<needLevelOffset>.9</needLevelOffset>
+			<listOrder>210</listOrder>
+			<overdoseSeverityOffset>0</overdoseSeverityOffset>
+			<largeOverdoseChance>0</largeOverdoseChance>
+		  </li>
+	</comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="FSG_MealBase">
+    <defName>OctaneColaD</defName>
+    <label>nuclear octane cola</label>
+    <description>A dangerous, radioactive blend of fuels, for ship girls. Greatly improves engine output, and replaces some of the need for fuel. NOT for human consumption, EVER. Do you want kidney cancer? -becasue that's how you get kidney cancer.</description>
+    <descriptionHyperlinks>
+      <HediffDef>FSG_OctaneHigh</HediffDef>
+      <HediffDef>FSG_OctaneAddiction</HediffDef>
+      
+    </descriptionHyperlinks>
+     <graphicData>
+      <texPath>Food/Cola</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <color>(0,255,0)</color>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+		
+		<Mass>0.015</Mass>
+        <Nutrition>1.0</Nutrition>
+		<WorkToMake>900</WorkToMake>
+		<MarketValue>50</MarketValue>
+    
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+		<drugCategory>Medical</drugCategory>
+		
+		<preferability>NeverForNutrition</preferability>
+		<optimalityOffsetFeedingAnimals>-1000</optimalityOffsetFeedingAnimals>
+		<tasteThought>AteLavishMeal</tasteThought>
+		<foodType>8388608</foodType>
+		<joyKind>Chemical</joyKind>
+		<joy>0.20</joy>
+		<baseIngestTicks>210</baseIngestTicks>
+		<nurseable>true</nurseable>
+		<ingestSound>Ingest_Drink</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+		<ingestHoldUsesTable>false</ingestHoldUsesTable>
+		<ingestCommandString>Drink {0}</ingestCommandString>
+		<ingestReportString>Drinking {0}.</ingestReportString>
+      <outcomeDoers>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+			<hediffDef>ToxicBuildup</hediffDef>
+			<severity>0.12</severity>
+			<divideByBodySize>false</divideByBodySize>
+		</li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>FSG_OctaneTolerance</hediffDef>
+          <severity>0.016</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+				<hediffDef>FSG_OctaneHigh</hediffDef>
+				<severity>0.75</severity>
+				<toleranceChemical>FSG_Octane</toleranceChemical>
+			</li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisites><li>GoJuiceProduction</li>
+	  <li>BiofuelRefining</li></researchPrerequisites>
+      <recipeUsers>
+        
+		<li>BiofuelRefinery</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <Chemfuel>8</Chemfuel>
+	  <Beer>1</Beer>
+	  <Uranium>5</Uranium>
+    </costList>
+      <comps>
+		<li Class="CompProperties_Drug">
+			<chemical>FSG_Octane</chemical>
+			<addictiveness>0.05</addictiveness>
+			<existingAddictionSeverityOffset>0.06</existingAddictionSeverityOffset>
+			<minToleranceToAddict>0.05</minToleranceToAddict>
+			<needLevelOffset>1.00</needLevelOffset>
+			<listOrder>210</listOrder>
+			<overdoseSeverityOffset>0</overdoseSeverityOffset>
+			<largeOverdoseChance>.0001</largeOverdoseChance>
+		</li>
+	</comps>
+  </ThingDef>
+
+
+<!--Turbo Boost-->
+<HediffDef>
+    <defName>FSG_OctaneHigh</defName>
+    <label>Octane</label>
+    <labelNoun>Octane</labelNoun>
+    <description>Octane in the fuel system. It improves a ship's engine output, but beware of overdoses or impurities in your octane boosters. An engine fire does not feel good.</description>
+    <hediffClass>Hediff_High</hediffClass>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <isBad>false</isBad>
+    <comps>
+		<!--<li Class="HediffCompProperties_Effecter">
+        <stateEffecter>Drunk</stateEffecter>
+        <severityIndices>3~5</severityIndices>
+      </li>-->
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1.00</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+	 
+        <li>
+          <label>Mild Octane Boost</label>
+		  
+          <painFactor>0.9</painFactor>
+          
+            <capMods>
+              
+			<li>
+                <capacity>Moving</capacity>
+                <offset>0.10</offset>
+              </li>
+             
+            </capMods>
+        </li>
+        <li>
+			<minSeverity>1.0</minSeverity>
+			<label>Octane Boost</label>
+			<painFactor>0.8</painFactor>
+			
+            <capMods>
+              <li>
+                <capacity>Moving</capacity>
+                <offset>.15</offset>
+              </li>
+            </capMods>
+        </li>
+        <li>
+			<minSeverity>1.5</minSeverity>
+			<label>Heavy Octane Boost</label>
+		 
+			<painFactor>0.75</painFactor>
+        
+            <capMods>
+              <li>
+                <capacity>Consciousness</capacity>
+                <postFactor>0.98</postFactor>
+              </li>
+              <li>
+                <capacity>Moving</capacity>
+                <offset>0.18</offset>
+              </li>
+            </capMods>
+        </li>
+        <li>
+			<minSeverity>2.0</minSeverity>
+			<label>Redline Octane Boost</label>
+			
+			<painFactor>0.7</painFactor>
+			
+     
+			<painOffset>0.05</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<postFactor>0.90</postFactor>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.20</offset>
+					</li>
+				</capMods>
+			<hediffGivers>
+				<li Class="HediffGiver_Random">
+					<hediff>ChemicalDamageModerate</hediff>
+					<mtbDays>10</mtbDays>
+					<partsToAffect>
+						<li>Engine</li>
+					</partsToAffect>
+				</li>
+				<li Class="HediffGiver_Random">
+					<hediff>Burn</hediff>
+					<mtbDays>25</mtbDays>
+					<partsToAffect>
+						<li>Engine</li>
+					</partsToAffect>
+				</li>
+			</hediffGivers>
+        </li>
+        <li>
+          <minSeverity>2.3</minSeverity>
+          <label>Excessive Octane Boost</label>
+		  
+          <painFactor>0.6</painFactor>
+		  <painOffset>0.15</painOffset>
+          <capMods>
+			 <li>
+                <capacity>Consciousness</capacity>
+                <postFactor>0.75</postFactor>
+            </li>
+            
+			<li>
+                <capacity>Moving</capacity>
+                <offset>0.18</offset>
+              </li>
+          </capMods>
+          <hediffGivers>
+            <li Class="HediffGiver_Random">
+              <hediff>ChemicalDamageModerate</hediff>
+              <mtbDays>2.5</mtbDays>
+              <partsToAffect>
+                <li>Engine</li>
+              </partsToAffect>
+            </li>
+			<li Class="HediffGiver_Random">
+              <hediff>ChemicalBurn</hediff>
+              <mtbDays>6</mtbDays>
+              <partsToAffect>
+                <li>FuelPump</li>
+				<li>FuelFilter</li>
+              </partsToAffect>
+            </li>
+			
+			<li Class="HediffGiver_Random">
+              <hediff>Burn</hediff>
+              <mtbDays>6</mtbDays>
+              <partsToAffect>
+                <li>Engine</li>
+              </partsToAffect>
+            </li>
+          </hediffGivers>
+        </li>
+      </stages>
+  </HediffDef>
+  
+
+
+</Defs>
+

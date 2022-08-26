@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<AlienRace.BackstoryDef>
+	<defName>FSG_HatchedA</defName>
+    <title>Hatched Destroyer</title>
+    <titleShort>Destroyer</titleShort>
+    <baseDescription>[PAWN_nameDef] was hatched in your lab. She seems like a pretty standard destroyer.</baseDescription>
+	<slot>Childhood</slot>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+	<spawnCategories>
+		<li>HatchedShipGirlBackstories</li>
+		<li>HatchedIndustrialShipGirlBackstories</li>
+		
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+	  <li>
+        <defName>Shooting</defName>
+        <amount>4</amount>
+      </li>
+    </skillGains>
+	<forcedTraits>
+			<li>
+				<defName>Brawler</defName>
+				<chance>90</chance>
+			</li>
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_DestroyerA</li>
+	
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<defName>FSG_HatchedB</defName>
+    <title>Hatched Shark Destroyer</title>
+    <titleShort>Destroyer</titleShort>
+    <baseDescription>[PAWN_nameDef] was hatched in your lab. She seems like a Blood Shark style destroyer.</baseDescription>
+	<slot>Childhood</slot>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+	<spawnCategories>
+		<li>HatchedShipGirlBackstories</li>
+		<li>HatchedIndustrialShipGirlBackstories</li>
+		
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>4</amount>
+      </li>
+	  <li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+    </skillGains>
+	<forcedTraits>
+			<li>
+				<defName>Brawler</defName>
+				<chance>100</chance>
+			</li>
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_DestroyerB</li>
+	
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef> <!--add royalty Mayrequire-->
+	<defName>FSG_HatchedC</defName>
+    <title>Hatched Anima Destroyer</title>
+    <titleShort>Destroyer</titleShort>
+    <baseDescription>[PAWN_nameDef] was hatched in your lab. She exhibits animalistic traits, akin to an Anima Spirit destroyer.</baseDescription>
+	<slot>Childhood</slot>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+	<spawnCategories>
+		<li>HatchedShipGirlBackstories</li>
+		<li>HatchedIndustrialShipGirlBackstories</li>
+		
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>4</amount>
+      </li>
+	  <li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+    </skillGains>
+	<forcedTraits>
+			<li>
+				<defName>Brawler</defName>
+				<chance>75</chance>
+			</li>
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_DestroyerC</li>
+	
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<defName>FSG_HatchedD</defName>
+    <title>Hatched Pirate Raiding Ship</title>
+    <titleShort>Raider</titleShort>
+    <baseDescription>[PAWN_nameDef] was hatched in your lab. She exhibits features of an industrial pirate's raiding vessel.</baseDescription>
+	<slot>Childhood</slot>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+	<spawnCategories>
+		<li>HatchedShipGirlBackstories</li>
+		<li>HatchedIndustrialShipGirlBackstories</li>
+		
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>4</amount>
+      </li>
+	  <li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+    </skillGains>
+	<forcedTraits>
+			<li>
+				<defName>Brawler</defName>
+				<chance>50</chance>
+			</li>
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_PirateA</li>
+	
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<defName>FSG_HatchedE</defName>
+    <title>Hatched Shark Raiding Ship</title>
+    <titleShort>Raider</titleShort>
+    <baseDescription>[PAWN_nameDef] was hatched in your lab. She exhibits features of a Blood Shark Privater.</baseDescription>
+	<slot>Childhood</slot>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+	<spawnCategories>
+		<li>HatchedShipGirlBackstories</li>
+		<li>HatchedIndustrialShipGirlBackstories</li>
+		
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>4</amount>
+      </li>
+	  <li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+    </skillGains>
+	<forcedTraits>
+			<li>
+				<defName>Brawler</defName>
+				<chance>75</chance>
+			</li>
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_PirateB</li>
+	
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<defName>FSG_HatchedF</defName>
+    <title>Hatched Cruiser</title>
+    <titleShort>Cruiser</titleShort>
+    <baseDescription>[PAWN_nameDef] was hatched in your lab. She exhibits features of picket cruiser.</baseDescription>
+	<slot>Childhood</slot>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+	<spawnCategories>
+		<li>HatchedShipGirlBackstories</li>
+		<li>HatchedIndustrialShipGirlBackstories</li>
+		
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>4</amount>
+      </li>
+	  <li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+    </skillGains>
+	<forcedTraits>
+			<li>
+				<defName>Brawler</defName>
+				<chance>75</chance>
+			</li>
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_CruiserA</li>
+	
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<defName>FSG_HatchedG</defName>
+    <title>Hatched Shark Cruiser</title>
+    <titleShort>Cruiser</titleShort>
+    <baseDescription>[PAWN_nameDef] was hatched in your lab. She exhibits features of Blood Shark picket cruiser.</baseDescription>
+	<slot>Childhood</slot>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+	<spawnCategories>
+		<li>HatchedShipGirlBackstories</li>
+		<li>HatchedIndustrialShipGirlBackstories</li>
+		
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>4</amount>
+      </li>
+	  <li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+    </skillGains>
+	<forcedTraits>
+			<li>
+				<defName>Brawler</defName>
+				<chance>100</chance>
+			</li>
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_CruiserB</li>
+	
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<defName>FSG_HatchedH</defName>
+    <title>Hatched Gun Cruiser</title>
+    <titleShort>Cruiser</titleShort>
+    <baseDescription>[PAWN_nameDef] was hatched in your lab. She exhibits features of gunship cruiser.</baseDescription>
+	<slot>Childhood</slot>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+	<spawnCategories>
+		<li>HatchedShipGirlBackstories</li>
+		<li>HatchedIndustrialShipGirlBackstories</li>
+		
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>2</amount>
+      </li>
+	  <li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+    </skillGains>
+	<forcedTraits>
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_CruiserC</li>
+	
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<defName>FSG_HatchedI</defName>
+    <title>Artillery Battleship</title>
+    <titleShort>Battleship</titleShort>
+    <baseDescription>[PAWN_nameDef] was hatched in your lab. She exhibits features of an artillery battleship.</baseDescription>
+	<slot>Childhood</slot>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+	<spawnCategories>
+		<li>HatchedShipGirlBackstories</li>
+		<li>HatchedIndustrialShipGirlBackstories</li>
+		
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>1</amount>
+      </li>
+	  <li>
+        <defName>Shooting</defName>
+        <amount>4</amount>
+      </li>
+    </skillGains>
+	<forcedTraits>
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_BattleshipA</li>
+	
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<defName>FSG_HatchedJ</defName>
+    <title>Blockade Battleship</title>
+    <titleShort>Battleship</titleShort>
+    <baseDescription>[PAWN_nameDef] was hatched in your lab. She exhibits features of a blockade battleship.</baseDescription>
+	<slot>Childhood</slot>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+	<spawnCategories>
+		<li>HatchedShipGirlBackstories</li>
+		<li>HatchedIndustrialShipGirlBackstories</li>
+		
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Melee</defName>
+			<amount>1</amount>
+		</li>
+		<li>
+			<defName>Shooting</defName>
+			<amount>6</amount>
+		</li>
+		<li>
+			<defName>Construction</defName>
+			<amount>1</amount>
+		</li>
+    </skillGains>
+	<forcedTraits>
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_BattleshipB</li>
+	
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<defName>FSG_HatchedK</defName>
+    <title>Blockade Battleship</title>
+    <titleShort>Battleship</titleShort>
+    <baseDescription>[PAWN_nameDef] was hatched in your lab. She exhibits features of a flame battleship.</baseDescription>
+	<slot>Childhood</slot>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+	<spawnCategories>
+		<li>HatchedShipGirlBackstories</li>
+		<li>HatchedIndustrialShipGirlBackstories</li>
+		
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Melee</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Shooting</defName>
+			<amount>4</amount>
+		</li>
+		<li>
+			<defName>Intellectual</defName>
+			<amount>1</amount>
+		</li>
+    </skillGains>
+	<forcedTraits>
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_BattleshipC</li>
+	
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+	<defName>FSG_HatchedL</defName>
+    <title>Hatched Artillery Cruiser</title>
+    <titleShort>Cruiser</titleShort>
+    <baseDescription>[PAWN_nameDef] was hatched in your lab. She exhibits features of an artillery cruiser.</baseDescription>
+	<slot>Childhood</slot>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+	<spawnCategories>
+		<li>HatchedShipGirlBackstories</li>
+		<li>HatchedIndustrialShipGirlBackstories</li>
+		
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>4</amount>
+      </li>
+	  <li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+    </skillGains>
+	<forcedTraits>
+			
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_CruiserD</li>
+	
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	<defName>FSG_HatchedM</defName>
+    <title>Hatched siege Battleship</title>
+    <titleShort>Battleship</titleShort>
+    <baseDescription>[PAWN_nameDef] was hatched in your lab. She exhibits features of a siege platform battleship.</baseDescription>
+	<slot>Childhood</slot>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+	<spawnCategories>
+		<li>HatchedShipGirlBackstories</li>
+		<li>HatchedIndustrialShipGirlBackstories</li>
+		
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>4</amount>
+      </li>
+	  <li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+    </skillGains>
+	<forcedTraits>
+			
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_BattleshipD</li>
+	
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+
+</Defs>

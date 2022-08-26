@@ -1,0 +1,1902 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkAdultA</defName>
+    <title>Loyal Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+		
+		
+		<li>SpacePirateShipGirlBackstories</li>
+		
+		
+		<li>SpaceSharkShipGirlBackstories</li>
+		<li>RangedSharkShipGirlBackstories</li>
+		<li>MeleeSharkShipGirlBackstories</li>
+		<li>IndustrialSharkShipGirlBackstories</li>
+		
+		
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkAdultB</defName>
+    <title>Loyal Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+		
+		
+		<li>SpacePirateShipGirlBackstories</li>
+		
+		
+		<li>SpaceSharkShipGirlBackstories</li>
+		<li>RangedSharkShipGirlBackstories</li>
+		<li>MeleeSharkShipGirlBackstories</li>
+		<li>IndustrialSharkShipGirlBackstories</li>
+		
+		
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkAdultC</defName>
+    <title>Loyal Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+		
+		
+		<li>SpacePirateShipGirlBackstories</li>
+		
+		
+		<li>SpaceSharkShipGirlBackstories</li>
+		<li>RangedSharkShipGirlBackstories</li>
+		<li>MeleeSharkShipGirlBackstories</li>
+		<li>IndustrialSharkShipGirlBackstories</li>
+		
+		
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkAdultD</defName>
+    <title>Loyal Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+		
+		
+		<li>SpacePirateShipGirlBackstories</li>
+		
+		
+		<li>SpaceSharkShipGirlBackstories</li>
+		<li>RangedSharkShipGirlBackstories</li>
+		<li>MeleeSharkShipGirlBackstories</li>
+		<li>IndustrialSharkShipGirlBackstories</li>
+		
+		
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkAdultE</defName>
+    <title>Loyal Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+		
+		
+		<li>SpacePirateShipGirlBackstories</li>
+		
+		
+		<li>SpaceSharkShipGirlBackstories</li>
+		<li>RangedSharkShipGirlBackstories</li>
+		<li>MeleeSharkShipGirlBackstories</li>
+		<li>IndustrialSharkShipGirlBackstories</li>
+		
+		
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkAdultF</defName>
+    <title>Loyal Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+		
+		
+		<li>SpacePirateShipGirlBackstories</li>
+		
+		
+		<li>SpaceSharkShipGirlBackstories</li>
+		<li>RangedSharkShipGirlBackstories</li>
+		<li>MeleeSharkShipGirlBackstories</li>
+		<li>IndustrialSharkShipGirlBackstories</li>
+		
+		
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkAdultG</defName>
+    <title>Loyal Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+		
+		
+		<li>SpacePirateShipGirlBackstories</li>
+		
+		
+		<li>SpaceSharkShipGirlBackstories</li>
+		<li>RangedSharkShipGirlBackstories</li>
+		<li>MeleeSharkShipGirlBackstories</li>
+		<li>IndustrialSharkShipGirlBackstories</li>
+		
+	
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkAdultH</defName>
+    <title>Loyal Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+		
+		
+		<li>SpacePirateShipGirlBackstories</li>
+		
+		
+		<li>SpaceSharkShipGirlBackstories</li>
+		<li>RangedSharkShipGirlBackstories</li>
+		<li>MeleeSharkShipGirlBackstories</li>
+		<li>IndustrialSharkShipGirlBackstories</li>
+		
+		
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkAdultI</defName>
+    <title>Loyal Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+		
+		
+		<li>SpacePirateShipGirlBackstories</li>
+		
+		
+		<li>SpaceSharkShipGirlBackstories</li>
+		<li>RangedSharkShipGirlBackstories</li>
+		<li>MeleeSharkShipGirlBackstories</li>
+		<li>IndustrialSharkShipGirlBackstories</li>
+		
+		
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkAdultJ</defName>
+    <title>Loyal Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+		
+		
+		<li>SpacePirateShipGirlBackstories</li>
+		
+		
+		<li>SpaceSharkShipGirlBackstories</li>
+		<li>RangedSharkShipGirlBackstories</li>
+		<li>MeleeSharkShipGirlBackstories</li>
+		<li>IndustrialSharkShipGirlBackstories</li>
+		
+		
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkAdultK</defName>
+    <title>Loyal Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+		
+		
+		<li>SpacePirateShipGirlBackstories</li>
+		
+		
+		<li>SpaceSharkShipGirlBackstories</li>
+		<li>RangedSharkShipGirlBackstories</li>
+		<li>MeleeSharkShipGirlBackstories</li>
+		<li>IndustrialSharkShipGirlBackstories</li>
+		
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkAdultL</defName>
+    <title>Loyal Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+		
+		
+		<li>SpacePirateShipGirlBackstories</li>
+		
+		
+		<li>SpaceSharkShipGirlBackstories</li>
+		<li>RangedSharkShipGirlBackstories</li>
+		<li>MeleeSharkShipGirlBackstories</li>
+		<li>IndustrialSharkShipGirlBackstories</li>
+		
+		
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkAdultM</defName>
+    <title>Loyal Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+		
+		
+		<li>SpacePirateShipGirlBackstories</li>
+		
+		
+		<li>SpaceSharkShipGirlBackstories</li>
+		<li>RangedSharkShipGirlBackstories</li>
+		<li>MeleeSharkShipGirlBackstories</li>
+		<li>IndustrialSharkShipGirlBackstories</li>
+		
+		
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkAdultN</defName>
+    <title>Loyal Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+		
+		
+		<li>SpacePirateShipGirlBackstories</li>
+		
+		
+		<li>SpaceSharkShipGirlBackstories</li>
+		<li>RangedSharkShipGirlBackstories</li>
+		<li>MeleeSharkShipGirlBackstories</li>
+		<li>IndustrialSharkShipGirlBackstories</li>
+		
+		
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkAdultO</defName>
+    <title>Loyal Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+		
+		
+		<li>SpacePirateShipGirlBackstories</li>
+		
+		
+		<li>SpaceSharkShipGirlBackstories</li>
+		<li>RangedSharkShipGirlBackstories</li>
+		<li>MeleeSharkShipGirlBackstories</li>
+		<li>IndustrialSharkShipGirlBackstories</li>
+		
+		
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkAdultP</defName>
+    <title>Loyal Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+		
+		
+		<li>SpacePirateShipGirlBackstories</li>
+		
+		
+		<li>SpaceSharkShipGirlBackstories</li>
+		<li>RangedSharkShipGirlBackstories</li>
+		<li>MeleeSharkShipGirlBackstories</li>
+		<li>IndustrialSharkShipGirlBackstories</li>
+		
+		
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkAdultQ</defName>
+    <title>Loyal Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+		
+		
+		<li>SpacePirateShipGirlBackstories</li>
+		
+		
+		<li>SpaceSharkShipGirlBackstories</li>
+		<li>RangedSharkShipGirlBackstories</li>
+		<li>MeleeSharkShipGirlBackstories</li>
+		<li>IndustrialSharkShipGirlBackstories</li>
+		
+		
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkAdultR</defName>
+    <title>Loyal Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+		
+		
+		<li>SpacePirateShipGirlBackstories</li>
+		
+		
+		<li>SpaceSharkShipGirlBackstories</li>
+		<li>RangedSharkShipGirlBackstories</li>
+		<li>MeleeSharkShipGirlBackstories</li>
+		<li>IndustrialSharkShipGirlBackstories</li>
+		
+		
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkAdultS</defName>
+    <title>Loyal Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+		
+		
+		<li>SpacePirateShipGirlBackstories</li>
+		
+		
+		<li>SpaceSharkShipGirlBackstories</li>
+		<li>RangedSharkShipGirlBackstories</li>
+		<li>MeleeSharkShipGirlBackstories</li>
+		<li>IndustrialSharkShipGirlBackstories</li>
+		
+		
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkAdultT</defName>
+    <title>Loyal Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+		
+		
+		<li>SpacePirateShipGirlBackstories</li>
+		
+		
+		<li>SpaceSharkShipGirlBackstories</li>
+		<li>RangedSharkShipGirlBackstories</li>
+		<li>MeleeSharkShipGirlBackstories</li>
+		<li>IndustrialSharkShipGirlBackstories</li>
+		
+		<li>BSpaceSharkShipGirlBackstories</li>
+		<li>BRangedSharkShipGirlBackstories</li>
+		<li>BMeleeSharkShipGirlBackstories</li>
+		<li>BIndustrialSharkShipGirlBackstories</li>
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkAdultU</defName>
+    <title>Loyal Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+		
+		
+		<li>SpacePirateShipGirlBackstories</li>
+		
+		
+		<li>SpaceSharkShipGirlBackstories</li>
+		<li>RangedSharkShipGirlBackstories</li>
+		<li>MeleeSharkShipGirlBackstories</li>
+		<li>IndustrialSharkShipGirlBackstories</li>
+		
+		<li>BSpaceSharkShipGirlBackstories</li>
+		<li>BRangedSharkShipGirlBackstories</li>
+		<li>BMeleeSharkShipGirlBackstories</li>
+		<li>BIndustrialSharkShipGirlBackstories</li>
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+
+<!--B Series -->
+
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkEliteA</defName>
+    <title>Elite Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+				
+		<li>BSpaceSharkShipGirlBackstories</li>
+		<li>BRangedSharkShipGirlBackstories</li>
+		<li>BMeleeSharkShipGirlBackstories</li>
+		<li>BIndustrialSharkShipGirlBackstories</li>
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-3</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkEliteB</defName>
+    <title>Elite Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+				
+		<li>BSpaceSharkShipGirlBackstories</li>
+		<li>BRangedSharkShipGirlBackstories</li>
+		<li>BMeleeSharkShipGirlBackstories</li>
+		<li>BIndustrialSharkShipGirlBackstories</li>
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-3</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkEliteC</defName>
+    <title>Elite Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+				
+		<li>BSpaceSharkShipGirlBackstories</li>
+		<li>BRangedSharkShipGirlBackstories</li>
+		<li>BMeleeSharkShipGirlBackstories</li>
+		<li>BIndustrialSharkShipGirlBackstories</li>
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-3</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkEliteD</defName>
+    <title>Elite Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+				
+		<li>BSpaceSharkShipGirlBackstories</li>
+		<li>BRangedSharkShipGirlBackstories</li>
+		<li>BMeleeSharkShipGirlBackstories</li>
+		<li>BIndustrialSharkShipGirlBackstories</li>
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-3</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkEliteE</defName>
+    <title>Elite Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+				
+		<li>BSpaceSharkShipGirlBackstories</li>
+		<li>BRangedSharkShipGirlBackstories</li>
+		<li>BMeleeSharkShipGirlBackstories</li>
+		<li>BIndustrialSharkShipGirlBackstories</li>
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-3</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkEliteF</defName>
+    <title>Elite Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+				
+		<li>BSpaceSharkShipGirlBackstories</li>
+		<li>BRangedSharkShipGirlBackstories</li>
+		<li>BMeleeSharkShipGirlBackstories</li>
+		<li>BIndustrialSharkShipGirlBackstories</li>
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-3</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkEliteG</defName>
+    <title>Elite Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+				
+		<li>BSpaceSharkShipGirlBackstories</li>
+		<li>BRangedSharkShipGirlBackstories</li>
+		<li>BMeleeSharkShipGirlBackstories</li>
+		<li>BIndustrialSharkShipGirlBackstories</li>
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-3</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkEliteH</defName>
+    <title>Elite Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+				
+		<li>BSpaceSharkShipGirlBackstories</li>
+		<li>BRangedSharkShipGirlBackstories</li>
+		<li>BMeleeSharkShipGirlBackstories</li>
+		<li>BIndustrialSharkShipGirlBackstories</li>
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-3</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkEliteI</defName>
+    <title>Elite Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+				
+		<li>BSpaceSharkShipGirlBackstories</li>
+		<li>BRangedSharkShipGirlBackstories</li>
+		<li>BMeleeSharkShipGirlBackstories</li>
+		<li>BIndustrialSharkShipGirlBackstories</li>
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-3</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkEliteJ</defName>
+    <title>Elite Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+				
+		<li>BSpaceSharkShipGirlBackstories</li>
+		<li>BRangedSharkShipGirlBackstories</li>
+		<li>BMeleeSharkShipGirlBackstories</li>
+		<li>BIndustrialSharkShipGirlBackstories</li>
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-3</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkEliteK</defName>
+    <title>Elite Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+				
+		<li>BSpaceSharkShipGirlBackstories</li>
+		<li>BRangedSharkShipGirlBackstories</li>
+		<li>BMeleeSharkShipGirlBackstories</li>
+		<li>BIndustrialSharkShipGirlBackstories</li>
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-3</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkEliteL</defName>
+    <title>Elite Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+				
+		<li>BSpaceSharkShipGirlBackstories</li>
+		<li>BRangedSharkShipGirlBackstories</li>
+		<li>BMeleeSharkShipGirlBackstories</li>
+		<li>BIndustrialSharkShipGirlBackstories</li>
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-3</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkEliteM</defName>
+    <title>Elite Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+				
+		<li>BSpaceSharkShipGirlBackstories</li>
+		<li>BRangedSharkShipGirlBackstories</li>
+		<li>BMeleeSharkShipGirlBackstories</li>
+		<li>BIndustrialSharkShipGirlBackstories</li>
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-3</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkEliteN</defName>
+    <title>Elite Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+				
+		<li>BSpaceSharkShipGirlBackstories</li>
+		<li>BRangedSharkShipGirlBackstories</li>
+		<li>BMeleeSharkShipGirlBackstories</li>
+		<li>BIndustrialSharkShipGirlBackstories</li>
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-3</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkEliteO</defName>
+    <title>Elite Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+				
+		<li>BSpaceSharkShipGirlBackstories</li>
+		<li>BRangedSharkShipGirlBackstories</li>
+		<li>BMeleeSharkShipGirlBackstories</li>
+		<li>BIndustrialSharkShipGirlBackstories</li>
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-3</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkEliteP</defName>
+    <title>Elite Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+				
+		<li>BSpaceSharkShipGirlBackstories</li>
+		<li>BRangedSharkShipGirlBackstories</li>
+		<li>BMeleeSharkShipGirlBackstories</li>
+		<li>BIndustrialSharkShipGirlBackstories</li>
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-3</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkEliteQ</defName>
+    <title>Elite Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+				
+		<li>BSpaceSharkShipGirlBackstories</li>
+		<li>BRangedSharkShipGirlBackstories</li>
+		<li>BMeleeSharkShipGirlBackstories</li>
+		<li>BIndustrialSharkShipGirlBackstories</li>
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-3</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkEliteR</defName>
+    <title>Elite Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+				
+		<li>BSpaceSharkShipGirlBackstories</li>
+		<li>BRangedSharkShipGirlBackstories</li>
+		<li>BMeleeSharkShipGirlBackstories</li>
+		<li>BIndustrialSharkShipGirlBackstories</li>
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-3</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkEliteS</defName>
+    <title>Elite Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+				
+		<li>BSpaceSharkShipGirlBackstories</li>
+		<li>BRangedSharkShipGirlBackstories</li>
+		<li>BMeleeSharkShipGirlBackstories</li>
+		<li>BIndustrialSharkShipGirlBackstories</li>
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-3</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+	
+    <defName>FSG_SharkEliteT</defName>
+    <title>Elite Warship</title>
+    <titleShort>Warship</titleShort>
+    <baseDescription>Until recently [PAWN_nameDef] loyally served her creators as a war ship.</baseDescription>
+	<spawnCategories>
+				
+		<li>BSpaceSharkShipGirlBackstories</li>
+		<li>BRangedSharkShipGirlBackstories</li>
+		<li>BMeleeSharkShipGirlBackstories</li>
+		<li>BIndustrialSharkShipGirlBackstories</li>
+		
+		
+	</spawnCategories>
+	<slot>Adulthood</slot>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+		<li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-3</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	
+	<forcedHediffs>
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+</Defs>

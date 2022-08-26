@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+
+<!--This should probably be in ThingDefs, but I am used to it here.-->
+
+<!--Projectile bases-->
+  <ThingDef Name="FSG_BaseProjectile" Abstract="True">
+	<defName>FSG_BaseProjectile</defName>
+    <category>Projectile</category>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Projectile_Explosive</thingClass>
+    <label>projectile</label>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <projectile>
+      <speed>12</speed>
+      <arcHeightFactor>6</arcHeightFactor>
+      <shadowSize>0.4</shadowSize>
+    </projectile>
+  </ThingDef>	
+
+	<ThingDef Name="FSG_BaseExplosiveProjectile" ParentName="FSG_BaseProjectile" Abstract="True">
+		<defName>FSG_BaseExplosiveProjectile</defName>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+		  <texPath>Turrests/ShellSmall</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+
+		 
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<explosionRadius>1.9</explosionRadius >
+			<damageDef>Bomb</damageDef>
+			<!-- Use default damage from explosion def -->
+			<explosionDelay>80</explosionDelay>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<soundExplode>MortarBomb_Explode</soundExplode>
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Name="FSG_BaseIncendiaryProjectile" ParentName="FSG_BaseProjectile" Abstract="true">
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<projectile>
+			<defName>FSG_BaseIncendiaryProjectile</defName>
+			 <explosionRadius>1.1</explosionRadius>
+			 <damageDef>Flame</damageDef>
+			 <!-- Use default damage from explosion def -->
+			 <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+			 <ai_IsIncendiary>true</ai_IsIncendiary>
+			 <shadowSize>0.6</shadowSize>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<soundExplode>MortarBomb_Explode</soundExplode>
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+		</projectile>
+	</ThingDef>
+	<ThingDef Name="FSG_BaseSolidProjectile" Abstract="True">
+		<defName>FSG_BaseSolidProjectile</defName>
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<thingClass>Bullet</thingClass>
+		<label>bullet</label>
+		<useHitPoints>False</useHitPoints>
+		<neverMultiSelect>True</neverMultiSelect>
+		<graphicData>
+			<shaderType>Transparent</shaderType>
+		</graphicData>
+	</ThingDef>
+	
+	<!--Medieval cannons-->
+	
+	
+		<!--Standard 24 pound cannons-->
+	<ThingDef ParentName="FSG_BaseExplosiveProjectile">
+		<defName>FSG_Proj_Petard</defName>
+		<label>petard</label>
+		<graphicData>
+			<texPath>Turrets/PetardSmall</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<color>(200,205,50)</color>
+		</graphicData>
+		<projectile>
+			<speed>32</speed>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="FSG_BaseSolidProjectile">
+		<defName>FSG_Proj_Cannonball</defName>
+		<label>solid cannonball</label>
+		<graphicData>
+				<texPath>Turrets/CannonballSmall</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>15</damageAmountBase>
+			<armorPenetrationBase>0.15</armorPenetrationBase>
+			<speed>60</speed>
+			<arcHeightFactor>4</arcHeightFactor>
+		</projectile>
+	</ThingDef>
+		<!--Imperial 34 pound cannons go here. If I need them. When would this come up??-->
+	
+	<!--Industrial-->
+		<!--AA Calibers-->
+		
+	<ThingDef ParentName="FSG_BaseSolidProjectile">
+		<defName>FSG_Proj_AABulletA</defName>
+		<label>40mm AA</label>
+		<graphicData>
+				<texPath>Turrets/MicroPulseB</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+				<shaderType>TransparentPostLight</shaderType>
+				<color>(255,255,255)</color>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>5</damageAmountBase>
+			<armorPenetrationBase>0.1</armorPenetrationBase>
+			<speed>25</speed>
+		</projectile>
+	</ThingDef>
+	
+	
+	
+			<!--Imperial Navy .303 incendiary B Mk VI goes here -->
+		
+
+		
+	<ThingDef ParentName="FSG_BaseSolidProjectile">
+		<defName>FSG_Proj_AABulletB</defName>
+		<label>120mm DP Flak/HE</label>
+		<graphicData>
+				<texPath>Turrets/MicroPulseA</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+				<shaderType>TransparentPostLight</shaderType>
+				<color>(130,190,130)</color>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationBase>0.15</armorPenetrationBase>
+			<speed>20</speed>
+		</projectile>
+	</ThingDef>
+		
+		<!--Cruiser Calibers-->
+
+		
+		<!--BB Cailibers-->
+			<!--406mm SAP rounds-->
+	<ThingDef ParentName="FSG_BaseSolidProjectile">
+		<defName>FSG_Proj_SPShell</defName>
+		<label>Heavy Shell</label>
+		<graphicData>
+				<texPath>Turrets/ShellSmall</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+				<color>(230,225,55)</color>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>25</damageAmountBase>
+			<armorPenetrationBase>0.20</armorPenetrationBase>
+			<speed>80</speed>
+		</projectile>
+	</ThingDef>
+			<!--406mm HE rounds-->
+	<ThingDef ParentName="FSG_BaseExplosiveProjectile">
+		<defName>FSG_Proj_IndustrialShell</defName>
+		<label>explosive shell</label>
+		<graphicData>
+			<texPath>Turrets/ShellSmall</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<color>(250,94,8)</color>
+		</graphicData>
+		
+		<projectile>
+			<speed>40</speed>
+			<explosionRadius>2.6</explosionRadius>
+			<explosionDelay>20</explosionDelay>
+			<arcHeightFactor>10</arcHeightFactor>
+		</projectile>
+	</ThingDef>
+			<!--406mm HEI rounds-->
+	<ThingDef	Parent="FSG_BaseIncendiaryProjectile">
+		<defName>FSG_IndustrialFlameProjectile</defName>
+		<label>Incendiary Shell</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+			<texPath>Turrets/ShellSmall</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<color>(240,65,30)</color>
+		</graphicData>
+		<projectile>
+			<explosionDelay>20</explosionDelay>
+			<speed>40</speed>
+			<arcHeightFactor>8</arcHeightFactor>
+		</projectile>
+	</ThingDef>
+
+	<!--Spacer-->
+		<!--AA Calibers-->
+	<ThingDef ParentName="FSG_BaseSolidProjectile">
+		<defName>FSG_Proj_AALaserA</defName>
+		<label>AA laser tracer</label>
+		<graphicData>
+				<texPath>Turrets/MicroPulseC</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+				<shaderType>TransparentPostLight</shaderType>
+				<color>(77,200,100)</color>
+		</graphicData>
+		<projectile>
+			<damageDef>Flame</damageDef>
+			<damageAmountBase>8</damageAmountBase>
+			<armorPenetrationBase>0.3</armorPenetrationBase>
+			<speed>65</speed>
+		</projectile>
+	</ThingDef>
+  
+  
+	<ThingDef ParentName="FSG_BaseSolidProjectile">
+		<defName>FSG_Proj_AALaserB</defName>
+		<label>AA blaster</label>
+		<graphicData>
+				<texPath>Turrets/MicroPulseB</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+				<shaderType>TransparentPostLight</shaderType>
+				<color>(1,8,8)</color>
+		</graphicData>
+		<projectile>
+			<damageDef>Flame</damageDef>
+			<damageAmountBase>15</damageAmountBase>
+			<armorPenetrationBase>0.35</armorPenetrationBase>
+			<speed>60</speed>
+		</projectile>
+	</ThingDef>		
+		
+
+		
+		<!--Cruiser Calibers aux-->
+		
+	<ThingDef ParentName="FSG_BaseSolidProjectile">
+		<defName>FSG_Proj_RailgunShell</defName>
+		<label>Medium Railgun Shell</label>
+		<graphicData>
+				<texPath>Turrets/ShellSmall</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+				<shaderType>TransparentPostLight</shaderType>
+				<color>(77,200,100)</color>
+				
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>50</damageAmountBase>
+			<armorPenetrationBase>0.20</armorPenetrationBase>
+			<speed>85</speed>
+		</projectile>
+	</ThingDef>
+	
+		<ThingDef ParentName="FSG_BaseSolidProjectile">
+		<defName>FSG_Bullet_ChargeBlasterHeavy</defName>
+		<label>charge blaster shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/Charge_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<color>(35,200,245)</color>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>15</damageAmountBase>
+			<armorPenetrationBase>0.35</armorPenetrationBase>
+			<speed>90</speed>
+		</projectile>
+	</ThingDef>
+	
+	<!--Cruiser Calibers Main-->
+
+
+		
+		<!--BB Main Cailibers-->
+		
+		
+		
+	<ThingDef ParentName="FSG_BaseExplosiveProjectile">
+		<defName>FSG_Proj_SpacerShell</defName>
+		<label>proton bomb</label>
+		<graphicData>
+			<texPath>Turrets/Tracer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<color>(150,175,231)</color>
+		</graphicData>
+		<projectile>
+			<explosionRadius>3.6</explosionRadius>
+			<explosionDelay>2</explosionDelay>
+			<speed>48</speed>
+			<arcHeightFactor>10</arcHeightFactor>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="FSG_BaseSolidProjectile">
+		<defName>FSG_Proj_HeavyRailgunShell</defName>
+		<label>Heavy Railgun Shell</label>
+		<graphicData>
+				<texPath>Turrets/ShellSmall</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+				<shaderType>TransparentPostLight</shaderType>
+				<color>(50,230,70)</color>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>50</damageAmountBase>
+			<armorPenetrationBase>0.4</armorPenetrationBase>
+			<speed>100</speed>
+		</projectile>
+	</ThingDef>
+		
+	<!--Ultra/Archeotech-->
+		<!--AA Calibers-->
+		
+		
+		
+		<!--Cruiser Calibers-->
+		
+
+		
+		<!--BB Main Cailibers-->
+	<ThingDef Name="FSG_BasePlasmaProjectile" ParentName="FSG_BaseProjectile">
+		<defName>FSG_BasePlasmaProjectile</defName>
+		<label>Plasma Bolt</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+				<texPath>Turrets/Tracer</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+				<shaderType>TransparentPostLight</shaderType>
+				<color>(210,130,251)</color>
+		</graphicData>
+		<projectile>
+			<speed>50</speed>
+			<arcHeightFactor>12</arcHeightFactor>
+			<shadowSize>0.5</shadowSize>
+			<explosionRadius>2.5</explosionRadius>
+			<damageDef>Flame</damageDef>
+			<!-- Use default damage from explosion def -->
+			<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+			
+		</projectile>
+	</ThingDef>		
+	
+	<!--Torpedoes-->
+	<!-- Industrial -->
+	
+
+
+	
+
+
+	<!--A standard, 533mm, electric drive, thermobaric percussion torpedo-->
+	
+	<ThingDef ParentName="FSG_BaseSolidProjectile">
+		<defName>FSG_Proj_IndustrialTorpedo</defName>
+		<label>Standard Percussion Torpedo</label>
+		<graphicData>
+				<texPath>Turrets/Torpedo</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Blunt</damageDef>
+			<damageAmountBase>15</damageAmountBase>
+			<armorPenetrationBase>0.35</armorPenetrationBase>
+			<speed>30</speed>
+		</projectile>
+	</ThingDef>
+
+	<!--Anima Spirits' 610mm heavy torpedo goes here.-->
+	
+		<!--Spacer. -->
+		
+	<!--I dunno, it implodes you to do crushing damage with gravitons or something.-->
+	
+	<ThingDef ParentName="FSG_BaseSolidProjectile">
+		<defName>FSG_Proj_SpaceTorpedo</defName>
+		<label>Implosion torpedo</label>
+		<graphicData>
+				<texPath>Turrets/Torpedo</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Blunt</damageDef>
+			<damageAmountBase>18</damageAmountBase>
+			<armorPenetrationBase>0.50</armorPenetrationBase>
+			<speed>60</speed>
+		</projectile>
+	</ThingDef>
+	
+</Defs>

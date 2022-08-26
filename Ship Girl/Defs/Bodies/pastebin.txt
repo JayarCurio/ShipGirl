@@ -1,0 +1,109 @@
+<colorChannels>
+						<li>
+							<name>skin</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<!-- pink -->
+									<li>
+										<weight>10</weight>
+										<only>RGBA(255, 151, 178,255)</only>
+									</li>
+									<li>
+										<weight>10</weight>
+										<only>RGB(255, 197, 197)</only>
+									</li>
+									<li>
+										<weight>10</weight>
+										<only>RGB(255, 185, 185)</only>
+									</li>
+									<li>
+										<weight>1</weight>
+										<only>RGB(255, 255, 255)</only>
+									</li>
+									<li>
+										<weight>1</weight>
+										<only>RGB(165, 127, 29)</only>
+									</li>
+								</options>
+							</first>
+							<second Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<only>RGB(255, 255, 255)</only>
+									</li>
+								</options>
+							</second>
+						</li>
+						<li>
+							<name>hair</name>
+							<first Class="AlienRace.ColorGenerator_CustomAlienChannel">
+								<colorChannel>skin_2</colorChannel>
+							</first>
+							<second Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<only>RGB(120, 120, 120)</only>
+									</li>
+						<!-- green -->
+						<li>
+							<weight>10</weight>
+							<only>RGBA(140,159,113,255)</only>
+						</li>
+						<!-- blue -->
+						<li>
+							<weight>10</weight>
+							<only>RGBA(130,141,247,255)</only>
+						</li>
+						<!-- yellow -->
+						<li>
+							<weight>10</weight>
+							<only>RGBA(252, 211, 105,255)</only>
+						</li>
+						<!-- grey -->
+						<li>
+							<weight>10</weight>
+							<only>RGBA(215, 215, 216,255)</only>
+						</li>
+						<!-- black -->
+						<li>
+							<weight>10</weight>
+							<only>RGBA(66, 66, 66,255)</only>
+						</li>
+						<!-- orange -->
+						<li>
+							<weight>10</weight>
+							<only>RGBA(221, 121, 31,255)</only>
+						</li>
+						<!-- teal -->
+						<li>
+							<weight>10</weight>
+							<only>RGBA(0, 197, 195,255)</only>
+						</li>
+						<!-- purple -->
+						<li>
+							<weight>10</weight>
+							<only>RGBA(170, 126, 234,255)</only>
+						</li>
+						<!-- pink -->
+						<li>
+							<weight>10</weight>
+							<only>RGBA(255, 151, 178,255)</only>
+						</li>
+						<!-- red -->
+						<li>
+							<weight>10</weight>
+							<only>RGBA(255, 102, 83,255)</only>
+						</li>
+						<!-- white -->
+						<li>
+							<weight>10</weight>
+							<only>RGBA( 245, 245, 245,255)</only>
+						</li>
+								</options>
+							</second>
+						</li>
+					</colorChannels>
+					
+										

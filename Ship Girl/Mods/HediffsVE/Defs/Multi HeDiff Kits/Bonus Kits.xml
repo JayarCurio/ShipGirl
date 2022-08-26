@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<!--Bonus Adulthood Kits-->
+			<HediffDef>
+		<defName>FSG_Timer_TurboA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of basic turbo upgrages. Give it a few seconds to kick in.</description>
+		<label>timed dreadnought Kit</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_TurboA</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Hediff_TurboA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of prototype turbo equipment.</description>
+		<label>Dreadnought loadout</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledTurboEngine</hediff>
+						<bodyPart>Engine</bodyPart>
+					</li>
+				</hediffAndBodypart>
+
+			</li>
+		</comps>
+		
+	</HediffDef>
+		<HediffDef>
+		<defName>FSG_Timer_TurboB</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of Improved turbo upgrages. Give it a few seconds to kick in.</description>
+		<label>timed dreadnought Kit</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_TurboB</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Hediff_TurboB</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of prototype turbo equipment.</description>
+		<label>turbo bonus B</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledAdvancedTurboEngine</hediff>
+						<bodyPart>Engine</bodyPart>
+					</li>
+				</hediffAndBodypart>
+				
+			</li>
+		</comps>
+		
+	</HediffDef>
+	<HediffDef>
+		<defName>FSG_Timer_TurboC</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of experimental turbo upgrages. Give it a few seconds to kick in.</description>
+		<label>timed dreadnought Kit</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_TurboC</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Hediff_TurboC</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of prototype turbo equipment.</description>
+		<label>Dreadnought loadout</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledThrottledTurboEngine</hediff>
+						<bodyPart>Engine</bodyPart>
+					</li>
+				</hediffAndBodypart>
+				
+			</li>
+		</comps>
+		
+	</HediffDef>
+
+<!--Adulthood-added heavy guns-->
+
+	<HediffDef>
+		<defName>FSG_Timer_Fire</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of extra flame cannons. Give it a few seconds to kick in.</description>
+		<label>arming dual flame cannon</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_Fire</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Hediff_Fire</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of prototype flamer equipment.</description>
+		<label>arming dual flame cannon</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_VE_InstalledTurretDualFlame</hediff>
+						<bodyPart>Turret</bodyPart>
+					</li>
+				</hediffAndBodypart>
+				
+				
+			</li>
+		</comps>
+		
+	</HediffDef> 
+	<HediffDef>
+		<defName>FSG_Timer_SpaceFire</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of extra Spacer tier plasma cannons. Give it a few seconds to kick in.</description>
+		<label>arming dual flame cannon</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_SpaceFire</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Hediff_SpaceFire</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of prototype plasma cannons.</description>
+		<label>arming dual flame cannon</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_VE_InstalledTurretDualPlasma</hediff>
+						<bodyPart>Turret</bodyPart>
+					</li>
+				</hediffAndBodypart>
+				
+				
+			</li>
+		</comps>
+	</HediffDef>
+		
+	
+	<HediffDef> 
+		<defName>FSG_Timer_UltraFire</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of Ultra tier plasma cannons. Give it a few seconds to warm up, and kiss your base goodbye.</description>
+		<label>arming quad plasma cannon</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_UltraFire</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	
+	<HediffDef>
+		<defName>FSG_Hediff_UltraFire</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of posthuman plasma cannons.</description>
+		<label>arming quad plasma cannon</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_VE_InstalledTurretQuadPlasma</hediff>
+						<bodyPart>Turret</bodyPart>
+					</li>
+				</hediffAndBodypart>
+			</li>
+		</comps>
+		
+	</HediffDef>
+	<!--Explosives-->
+	<HediffDef>
+		<defName>FSG_Timer_ExplosiveA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of extra flame cannons. Give it a few seconds to kick in.</description>
+		<label>arming dual flame cannon</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_ExplosiveA</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Hediff_ExplosiveA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of explosive cannon equipment.</description>
+		<label>arming dual flame cannon</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_VE_InstalledTurretDualFrag</hediff>
+						<bodyPart>Turret</bodyPart>
+					</li>
+				</hediffAndBodypart>
+				
+			</li>
+		</comps>
+		
+	</HediffDef> 
+	<HediffDef>
+		<defName>FSG_Timer_ExplosiveB</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of extra artillery cannons. Give it a few seconds to kick in.</description>
+		<label>arming quad cannon</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_ExplosiveB</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Hediff_ExplosiveB</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of prototype flamer equipment.</description>
+		<label>arming Quad Explosive cannon</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_VE_InstalledTurretMultiFrag</hediff>
+						<bodyPart>Turret</bodyPart>
+					</li>
+				</hediffAndBodypart>
+				
+			</li>
+		</comps>
+		
+	</HediffDef>
+	<HediffDef>
+		<defName>FSG_Timer_SpaceExplosiveA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of extra Spacer tier plasma cannons. Give it a few seconds to kick in.</description>
+		<label>arming dual flame cannon</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_SpaceExplosiveA</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Hediff_SpaceExplosiveA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of prototype proton cannons.</description>
+		<label>arming quad cannon</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_VE_InstalledTurretSpaceBomb</hediff>
+						<bodyPart>Turret</bodyPart>
+					</li>
+				</hediffAndBodypart>
+				
+			</li>
+		</comps>
+		
+	</HediffDef> 
+	
+	<!--Solids-->
+	
+	<HediffDef>
+		<defName>FSG_Timer_SniperA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of extra slug cannons. Give it a few seconds to kick in.</description>
+		<label>arming dual flame cannon</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_SniperA</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Hediff_SniperA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of advanced sniper equipment.</description>
+		<label>arming dual flame cannon</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_VE_InstalledTurretDualSP</hediff>
+						<bodyPart>Turret</bodyPart>
+					</li>
+				</hediffAndBodypart>
+				
+			</li>
+		</comps>
+		
+	</HediffDef> 
+	<HediffDef>
+		<defName>FSG_Timer_SniperB</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of many slug cannons. Give it a few seconds to kick in.</description>
+		<label>arming quad slug cannon</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_SniperB</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Hediff_SniperB</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of prototype flamer equipment.</description>
+		<label>arming quad slug cannon</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_VE_InstalledTurretMultiSP</hediff>
+						<bodyPart>Turret</bodyPart>
+					</li>
+				</hediffAndBodypart>
+				
+			</li>
+		</comps>
+		
+	</HediffDef> 
+	<HediffDef>
+		<defName>FSG_Timer_SpaceSniperA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A Heavy mass driver. Give it a few seconds to charge.</description>
+		<label>arming mass driver</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_SpaceSniperA</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Hediff_SpaceSniperA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of heavy Mass Driver equipment.</description>
+		<label>arming mass driver</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_VE_InstalledTurretRailHeavy</hediff>
+						<bodyPart>Turret</bodyPart>
+					</li>
+				</hediffAndBodypart>
+				
+			</li>
+		</comps>
+		
+	</HediffDef> 
+	<HediffDef>
+		<defName>FSG_Timer_SpaceSniperB</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A kit of prototype mass drivers. Give it a few seconds to charge.</description>
+		<label>arming dual mass drivers</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>751~751</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_SpaceSniperB</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Hediff_SpaceSniperB</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of prototype Mass Driver equipment.</description>
+		<label>arming dual mass drivers</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_VE_InstalledTurretRailMulti</hediff>
+						<bodyPart>Turret</bodyPart>
+					</li>
+				</hediffAndBodypart>
+				
+			</li>
+		</comps>
+		
+	</HediffDef> 
+	
+
+</Defs>

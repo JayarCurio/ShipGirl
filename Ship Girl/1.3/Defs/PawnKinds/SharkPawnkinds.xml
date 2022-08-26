@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+ <!-- ============================ Shark Base ========================== -->
+
+	<PawnKindDef Name="SharkBase" Abstract="True">
+		<label>SharkBasePawn</label>
+		<defaultFactionType>BloodSharks</defaultFactionType>
+		<race>ShipGirlRace</race>
+		<apparelColor>(32,32,38)</apparelColor>	
+		<initialResistanceRange>1~30</initialResistanceRange>
+		<initialWillRange>1~15</initialWillRange>
+		<chemicalAddictionChance>0.035</chemicalAddictionChance>
+		<baseRecruitDifficulty>0.75</baseRecruitDifficulty>
+		<!--<apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance>-->
+		 
+		<apparelTags>
+			<li>IndustrialBasic</li>
+			<li>IndustrialAdvanced</li>
+			<li>IndustrialMilitaryBasic</li>
+			<li>IndustrialMilitaryAdvanced</li>
+		</apparelTags>
+		<weaponTags>
+			<li>Gun</li>
+			<li>MedievalMeleeBasic</li>
+			<li>MedievalMeleeDecent</li>
+		</weaponTags>
+		<techHediffsTags>
+			<li>FSG_Advanced</li>
+			<li>FSG_Simple</li>
+			<li>FSG_SharkIndustrial</li>
+		</techHediffsTags>
+		<techHediffsMoney>
+			<min>0</min>
+			<max>4000</max>
+		</techHediffsMoney>
+		<minGenerationAge>2</minGenerationAge>
+	<maxGenerationAge>20</maxGenerationAge>
+	<techHediffsChance>0</techHediffsChance>
+	</PawnKindDef>
+  
+  <!-- ============================ Shark Civilian Base ========================== -->
+
+  <PawnKindDef Name="SharkCivBase" ParentName="SharkBase" Abstract="True">
+	<defName>SharkCivilianBase</defName>
+	<label>SharkCivilianBase</label>
+    <combatPower>90</combatPower>
+	<race>ShipGirlRace</race>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					
+					<li>IndustrialSharkShipGirlBackstories</li>
+					<li>SpaceSharkShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+    <itemQuality>Normal</itemQuality>
+    <isFighter>false</isFighter>
+	
+    <gearHealthRange>
+      <min>0.2</min>
+      <max>2.0</max>
+    </gearHealthRange>
+    <apparelMoney>
+      <min>300</min>
+      <max>900</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>150</min>
+      <max>250</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>Gun</li>
+      <li>Melee</li>
+    </weaponTags>
+    
+    <techHediffsChance>0</techHediffsChance>
+    <invNutrition>2.55</invNutrition>
+    <inventoryOptions>
+      <skipChance>0.75</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <choiceChance>90</choiceChance>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>25</min>
+            <max>70</max>
+          </countRange>
+        </li>
+        <li>
+          <choiceChance>10</choiceChance>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>700</min>
+            <max>1000</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+  
+  <!-- ============================ Shark Civilians ========================== -->
+  
+  <PawnKindDef ParentName="SharkCivBase">
+    <defName>SharkColonist</defName>
+    <label>Blood Shark colonist</label>
+	<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>IndustrialSharkShipGirlBackstories</li>
+					<li>SpaceSharkShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<apparelTags>
+			<li>IndustrialBasic</li>
+			<li>IndustrialAdvanced</li>
+			
+		</apparelTags>
+		<minGenerationAge>2</minGenerationAge>
+	<maxGenerationAge>20</maxGenerationAge>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SharkCivBase">
+    <defName>SharkAdmiral</defName>
+    <label>Blood Shark Admiral</label>
+    <factionLeader>true</factionLeader>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>BSpaceSharkShipGirlBackstories</li>
+					<li>BIndustrialSharkShipGirlBackstories</li>
+					
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<apparelTags>
+			
+			<li>IndustrialAdvanced</li>
+			
+			<li>IndustrialMilitaryAdvanced</li>
+		</apparelTags>
+		<techHediffsTags>
+			<li>FSG_Advanced</li>
+			<li>FSG_Spacer</li>
+			<li>FSG_SharkIndustrial</li>
+			<li>FSG_SharkSpacer</li>
+		</techHediffsTags>
+		<techHediffsMoney>
+			<min>0</min>
+			<max>12000</max>
+		</techHediffsMoney>
+		<techHediffsChance>0</techHediffsChance>
+		<minGenerationAge>3</minGenerationAge>
+		<maxGenerationAge>40</maxGenerationAge>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="SharkCivBase">
+    <defName>SharkTrader</defName>
+    <label>blood shark merchant</label>
+    <trader>true</trader>
+  </PawnKindDef>
+  
+
+  
+  <!-- ============================ Shark Security ========================== -->
+  
+  <PawnKindDef ParentName="SharkCivBase">
+    <defName>SharkSecurityGuard</defName>
+    <label>blood shark guard</label>
+    <combatPower>150</combatPower>
+    <maxGenerationAge>50</maxGenerationAge>
+    <gearHealthRange>
+      <min>0.5</min>
+      <max>1.8</max>
+    </gearHealthRange>
+    <apparelMoney>
+      <min>300</min>
+      <max>900</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>200</min>
+      <max>800</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+   		<techHediffsTags>
+			<li>FSG_Advanced</li>
+			<li>FSG_SharkIndustrial</li>
+		</techHediffsTags>
+		<techHediffsMoney>
+			<min>0</min>
+			<max>0</max>
+		</techHediffsMoney>
+		<techHediffsChance>0</techHediffsChance>
+    <invNutrition>2.55</invNutrition>
+    <inventoryOptions>
+      <skipChance>0.95</skipChance>
+      <thingDef>Silver</thingDef>
+      <countRange>
+        <min>30</min>
+        <max>100</max>
+      </countRange>
+    </inventoryOptions>
+  </PawnKindDef>
+  
+ 
+  <!-- ============================ Shark Military Base ========================== -->
+  
+  <PawnKindDef Name="SharkMilBase" ParentName="SharkBase" Abstract="True">
+    <chemicalAddictionChance>0</chemicalAddictionChance>
+    <isFighter>true</isFighter>
+	<race>ShipGirlRace</race>
+	<invNutrition>2.55</invNutrition>
+    <itemQuality>Normal</itemQuality>
+	<minGenerationAge>5</minGenerationAge>
+    <maxGenerationAge>45</maxGenerationAge>
+    <gearHealthRange>
+      <min>0.7</min>
+      <max>2.3</max>
+    </gearHealthRange>
+    <apparelTags>
+			<li>IndustrialBasic</li>
+			<li>IndustrialAdvanced</li>
+			<li>IndustrialMilitaryBasic</li>
+			<li>IndustrialMilitaryAdvanced</li>
+			<li>FSG_SharkMilitary</li>
+		</apparelTags>
+    <apparelMoney>
+      <min>1500</min>
+      <max>2800</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>400</min>
+      <max>1000</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+    <techHediffsTags>
+		<li>FSG_Advanced</li>
+		<li>FSG_SharkIndustrial</li>	
+	</techHediffsTags>
+	<techHediffsMoney>
+		<min>0</min>
+		<max>0</max>
+	</techHediffsMoney>
+	<techHediffsChance>0</techHediffsChance>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>
+        </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+  
+  <!-- ============================ Shark Military ========================== -->
+  
+  <PawnKindDef ParentName="SharkMilBase">
+    <defName>SharkRecruit</defName>
+    <label>recruit</label>
+    <combatPower>150</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					
+					<li>IndustrialSharkShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+	
+  </PawnKindDef>
+
+  
+  <PawnKindDef ParentName="SharkMilBase">
+    <defName>SharkHunter</defName>
+    <label>patrol ship</label>
+    <combatPower>150</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					
+					<li>MeleeSharkShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+    <minGenerationAge>1</minGenerationAge>
+    <gearHealthRange>
+      <min>0.7</min>
+      <max>2.3</max>
+    </gearHealthRange>
+    
+    <apparelMoney>
+      <min>1500</min>
+      <max>2500</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>1200</min>
+      <max>1800</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>Melee</li>
+    </weaponTags>
+    
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+  
+
+  <PawnKindDef ParentName="SharkMilBase">
+    <defName>SharkCommando</defName>
+    <label>blood shark warship</label>
+    <combatPower>150</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					
+					<li>RangedSharkShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+    <minGenerationAge>3</minGenerationAge>
+    <gearHealthRange>
+      <min>0.5</min>
+      <max>2.3</max>
+    </gearHealthRange>
+    
+    
+	 <apparelMoney>1600~1800</apparelMoney>
+    <weaponMoney>
+      <min>1200</min>
+      <max>2000</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>SniperRifle</li>
+    </weaponTags>
+   
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>180</min>
+            <max>400</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>2</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+
+  
+  <PawnKindDef ParentName="SharkMilBase">
+     <defName>SharkCommandoElite</defName>
+    <label>blood shark stormtrooper</label>
+    <combatPower>200</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					
+					<li>SpaceSharkShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+    <minGenerationAge>3</minGenerationAge>
+    <gearHealthRange>
+      <min>0.8</min>
+      <max>3.5</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>Military</li>
+      <li>Spacer</li>
+	  <li>SharkPrestigeCombatGear</li>
+	  
+    </apparelTags>
+    <apparelMoney>1600~1800</apparelMoney>
+    <weaponMoney>
+      <min>1600</min>
+      <max>2000</max>
+    </weaponMoney>
+    <weaponTags>
+		<li>EliteGun</li>
+		<li>AdvancedGun</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>0</min>
+      <max>0</max>
+    </techHediffsMoney>
+    <combatEnhancingDrugsCount>
+      <min>1</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    <combatEnhancingDrugsChance>0.3</combatEnhancingDrugsChance>
+    <techHediffsTags>
+      <li>FSG_Advanced</li>
+	  <li>FSG_Spacer</li>
+	  <li>FSG_SharkSpacer</li>
+    </techHediffsTags>
+    <techHediffsChance>0</techHediffsChance>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>120</min>
+            <max>480</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineUltratech</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>2</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="SharkMilBase">
+    <defName>SharkRecruitB</defName>
+    <label>veteran</label>
+    <combatPower>200</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					
+					<li>BIndustrialSharkShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+	
+  </PawnKindDef>
+
+  
+  <PawnKindDef ParentName="SharkMilBase">
+    <defName>SharkHunterB</defName>
+    <label>elite vanguard</label>
+    <combatPower>250</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					
+					<li>BMeleeSharkShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+    <minGenerationAge>1</minGenerationAge>
+    <gearHealthRange>
+      <min>0.7</min>
+      <max>2.3</max>
+    </gearHealthRange>
+     <apparelTags>
+			<li>IndustrialBasic</li>
+			<li>IndustrialAdvanced</li>
+			<li>IndustrialMilitaryBasic</li>
+			<li>IndustrialMilitaryAdvanced</li>
+			<li>FSG_SharkMilitary</li>
+		</apparelTags>
+    <apparelMoney>
+      <min>1500</min>
+      <max>2500</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>1200</min>
+      <max>1800</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>Melee</li>
+    </weaponTags>
+    
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+  
+
+  <PawnKindDef ParentName="SharkMilBase">
+    <defName>SharkCommandoB</defName>
+    <label>elite siege warship</label>
+    <combatPower>250</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					
+					<li>BRangedSharkShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+    <minGenerationAge>3</minGenerationAge>
+    <gearHealthRange>
+      <min>0.5</min>
+      <max>2.3</max>
+    </gearHealthRange>
+     <apparelTags>
+			
+			<li>IndustrialAdvanced</li>
+			
+			<li>IndustrialMilitaryAdvanced</li>
+			<li>FSG_SharkMilitary</li>
+		</apparelTags>
+    <apparelMoney>
+      <min>1000</min>
+      <max>2600</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>1200</min>
+      <max>2000</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>SniperRifle</li>
+    </weaponTags>
+   
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>180</min>
+            <max>400</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>2</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+
+  
+  <PawnKindDef ParentName="SharkMilBase">
+     <defName>SharkCommandoEliteB</defName>
+    <label>blood shark elite stormtrooper</label>
+    <combatPower>300</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					
+					<li>BSpaceSharkShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+    <minGenerationAge>3</minGenerationAge>
+    <gearHealthRange>
+      <min>0.8</min>
+      <max>3.5</max>
+    </gearHealthRange>
+    <apparelTags>
+			
+			<li>IndustrialAdvanced</li>
+			
+			<li>IndustrialMilitaryAdvanced</li>
+			<li>Spacer</li>
+			
+			<li>FSG_SharkMilitary</li>
+		</apparelTags>
+    <apparelMoney>
+      <min>2500</min>
+      <max>4200</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>1600</min>
+      <max>2000</max>
+    </weaponMoney>
+    <weaponTags>
+		<li>EliteGun</li>
+		<li>AdvancedGun</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>0</min>
+      <max>0</max>
+    </techHediffsMoney>
+    <combatEnhancingDrugsCount>
+      <min>1</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    <combatEnhancingDrugsChance>0.3</combatEnhancingDrugsChance>
+    <techHediffsTags>
+      <li>FSG_Advanced</li>
+	  <li>FSG_Spacer</li>
+	  <li>FSG_SharkSpacer</li>
+    </techHediffsTags>
+    <techHediffsChance>0</techHediffsChance>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>120</min>
+            <max>480</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineUltratech</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>2</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+
+</Defs>

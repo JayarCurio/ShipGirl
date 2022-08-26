@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+<!--VE Aux gun hediffs-->
+
+
+
+<!-- Defensive gun -->
+
+	<HediffDef  ParentName="AddedAuxMountBase">
+		<defName>FSG_VE_InstalledDefensiveTurret</defName>
+		<label>installed defensive gun</label>
+		<labelNoun>a defenive gun turret</labelNoun>
+		<description>A small, semi-automatic Turret to fight off enemy ships. It's loaded with battleship main gun sized 16" SAP rounds, due to a programming error, that I will fix later.</description>
+		<spawnThingOnRemoved>FSG_DefensiveTurret</spawnThingOnRemoved>
+		<stages>
+			<li>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0.98</postFactor>
+				</li>
+			</capMods>
+			</li>
+		</stages>
+		<comps>
+			
+			<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+				
+				<!-- <toggleBackgroundPath>UI/Widgets/Prosthetic/DesButBGLG</toggleBackgroundPath> -->
+				<tools>
+					<li>
+						<label>Defensive Cannon</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>18</power>
+						<cooldownTime>2</cooldownTime>
+						<soundMeleeHit>Shot_IncendiaryLauncher</soundMeleeHit>
+						<soundMeleeMiss>Shot_IncendiaryLauncher</soundMeleeMiss>
+					</li>
+				</tools>
+				
+				<verbs>
+					<li>
+						<label>Test VE Cannon</label>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.65</accuracyTouch>
+						<accuracyShort>0.60</accuracyShort>
+						<accuracyMedium>0.55</accuracyMedium>
+						<accuracyLong>0.50</accuracyLong>
+						<defaultCooldownTime>10</defaultCooldownTime>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>FSG_Proj_SPShell</defaultProjectile>
+						<warmupTime>2</warmupTime>
+						<range>18.9</range>
+						<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+						<burstShotCount>1</burstShotCount>
+						<soundCast>Shot_IncendiaryLauncher</soundCast>
+						<soundCastTail>GunTail_Medium</soundCastTail>
+						<muzzleFlashScale>9</muzzleFlashScale>
+						
+						<commandIcon>Turrets/Single</commandIcon>
+					</li>
+				</verbs>	
+				<verbProps>
+					<li>
+						 <label>Test VE Cannon</label>
+						 <draw>false</draw>
+						 <canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Turrets/Single</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+					</li>
+				</verbProps>
+
+			</li>
+		</comps>
+	</HediffDef>
+
+
+
+  
+<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_VE_DefensiveTurret</defName>
+    <label>install defensive turret</label>
+    <description>Mount a defensive cannon with SAP shells in anit-aircraft turret.</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing defense turret.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_DefensiveTurret</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_DefensiveTurret</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>AATurret</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_VE_InstalledDefensiveTurret</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <defName>RemoveFSG_VE_DefensiveTurret</defName>
+    <label>Unmount Defensive Cannon</label>
+    <description>Remove the defensive cannon from this ship girl, so it can be reallocated or replaced.</description>
+
+    <jobString>unmounting cannons.</jobString>
+    <removesHediff>FSG_VE_InstalledDefensiveTurret</removesHediff>
+  </RecipeDef>
+  
+  <!-- Automatic-->
+
+<HediffDef ParentName="AddedAuxMountBase">
+	<defName>FSG_VE_InstalledDefensiveAutoTurret</defName>
+	<label>installed defensive auto gun</label>
+	<labelNoun>a defenive autogun turret</labelNoun>
+	<description>A small, burst-fire Turret to fight off enemy ships. It's loaded with 16" SAP rounds, due to a programming error, that I will fix later.</description>
+    <spawnThingOnRemoved>FSG_PartDefensiveAutoTurret</spawnThingOnRemoved>
+	<stages>
+			<li>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0.95</postFactor>
+				</li>
+			</capMods>
+			</li>
+	</stages>
+	<comps>
+		<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+				
+				<!-- <toggleBackgroundPath>UI/Widgets/Prosthetic/DesButBGLG</toggleBackgroundPath> -->
+				<tools>
+					<li>
+						<label>Defensive Autocannon</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>18</power>
+						<cooldownTime>2</cooldownTime>
+						<soundMeleeHit>Shot_IncendiaryLauncher</soundMeleeHit>
+						<soundMeleeMiss>Shot_IncendiaryLauncher</soundMeleeMiss>
+					</li>
+				</tools>
+				
+				<verbs>
+					<li>
+						<label>Defensive Autocannon</label>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.65</accuracyTouch>
+						<accuracyShort>0.50</accuracyShort>
+						<accuracyMedium>0.45</accuracyMedium>
+						<accuracyLong>0.40</accuracyLong>
+						<defaultCooldownTime>0</defaultCooldownTime>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>FSG_Proj_SPShell</defaultProjectile>
+						<warmupTime>4</warmupTime>
+						<range>18.9</range>
+						<ticksBetweenBurstShots>22</ticksBetweenBurstShots>
+						<burstShotCount>3</burstShotCount>
+						<soundCast>Shot_IncendiaryLauncher</soundCast>
+						<soundCastTail>GunTail_Medium</soundCastTail>
+						<muzzleFlashScale>8</muzzleFlashScale>
+						
+						<commandIcon>Turrets/Single</commandIcon>
+					</li>
+				</verbs>	
+				<verbProps>
+					<li>
+						 <label>Defensive Autocannon</label>
+						 <draw>false</draw>
+						 <canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Turrets/Single</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+					</li>
+				</verbProps>
+
+			</li>
+		</comps>
+		
+
+
+
+</HediffDef>
+
+
+  
+<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_VE_PartDefensiveAutoTurret</defName>
+    <label>install defensive turret</label>
+    <description>Mount a defensive autocannon with solid shells in an anti-aircraft turret.</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing autocannon turret.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_PartDefensiveAutoTurret</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_PartDefensiveAutoTurret</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>AATurret</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_VE_InstalledDefensiveAutoTurret</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <defName>RemoveFSG_VE_PartDefensiveAutoTurret</defName>
+    <label>Unmount Defensive Autocannon</label>
+    <description>Remove the defensive autocannon from this ship girl, so it can can be reallocated or replaced.</description>
+
+    <jobString>unmounting autocannon.</jobString>
+    <removesHediff>FSG_VE_InstalledDefensiveAutoTurret</removesHediff>
+  </RecipeDef>
+  
+
+  
+
+  
+  
+
+  
+    <!-- Flak Cannon-->
+		
+		
+
+<HediffDef ParentName="AddedAuxMountBase">
+	<defName>FSG_VE_InstalledDefensiveFlak</defName>
+	<label>installed Flak Cannon</label>
+	<labelNoun>a flak cannon</labelNoun>
+	<description>A multi-purpose weapon with a short effective range. It fires more slowly than other ranged anti-aircraft weapons, but does more damage. It is better than outrigger ramming for a melee combat, but lacks the first strike power of torpedoes or the DPS specialized close combat limbs.</description>
+    <spawnThingOnRemoved>FSG_DefensiveFlak</spawnThingOnRemoved>
+	
+		<comps>
+		<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+				
+				<!-- <toggleBackgroundPath>UI/Widgets/Prosthetic/DesButBGLG</toggleBackgroundPath> -->
+				<tools>
+					<li>
+						<label>Flak Cannon</label>
+						<capacities>
+							<li>Blunt</li>
+							<li>Scratch</li>
+						</capacities>
+						<power>30</power>
+						<cooldownTime>1</cooldownTime>
+						<soundMeleeHit>Shot_IncendiaryLauncher</soundMeleeHit>
+						<soundMeleeMiss>Shot_IncendiaryLauncher</soundMeleeMiss>
+					</li>
+				</tools>
+				
+				<verbs>
+					<li>
+						<label>Flak Cannon</label>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.65</accuracyTouch>
+						<accuracyShort>0.30</accuracyShort>
+						<accuracyMedium>0.15</accuracyMedium>
+						<accuracyLong>0.10</accuracyLong>
+						<defaultCooldownTime>1</defaultCooldownTime>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>FSG_Proj_AABulletB</defaultProjectile>
+						<warmupTime>2.5</warmupTime>
+						<range>7</range>
+						<ticksBetweenBurstShots>14</ticksBetweenBurstShots>
+						<burstShotCount>4</burstShotCount>
+						<soundCast>Shot_IncendiaryLauncher</soundCast>
+						<soundCastTail>GunTail_Light</soundCastTail>
+						<muzzleFlashScale>2</muzzleFlashScale>
+						
+						<commandIcon>Turrets/Single</commandIcon>
+					</li>
+				</verbs>	
+				<verbProps>
+					<li>
+						 <label>Flak Cannon</label>
+						 <draw>false</draw>
+						 <canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Turrets/MicroPulseC</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+					</li>
+				</verbProps>
+
+			</li>
+		</comps>
+
+
+
+
+</HediffDef>
+
+
+  
+<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_VE_DefensiveFlak</defName>
+    <label>install defensive flak cannon</label>
+    <description>Mount a defensive flak cannon</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing flak cannon.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_DefensiveFlak</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_DefensiveFlak</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>AATurret</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_VE_InstalledDefensiveFlak</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <defName>RemoveFSG_VE_DefensiveFlak</defName>
+    <label>Unmount Defensive Flak Cannon</label>
+    <description>Remove the defensive flak cannon from this ship girl, so it can be reallocated or replaced.</description>
+
+    <jobString>unmounting autocannon.</jobString>
+    <removesHediff>FSG_VE_InstalledDefensiveFlak</removesHediff>
+  </RecipeDef>
+  
+      <!-- Scattergun-->
+
+<HediffDef ParentName="AddedAuxMountBase">
+	<defName>FSG_VE_InstalledDefensiveScatter</defName>
+	<label>AAMachinegun</label>
+	<labelNoun>AA Machinegun</labelNoun>
+	<description>A rapid fire, short range weapon for driving off swarms of small targets, or wounding multiple poorly armored foes. It fires fast, but it has poor accuracy outside of very close range, and doesn't do much damage.</description>
+    <spawnThingOnRemoved>FSG_DefensiveScatter</spawnThingOnRemoved>
+	<comps>
+		<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+				
+				<!-- <toggleBackgroundPath>UI/Widgets/Prosthetic/DesButBGLG</toggleBackgroundPath> -->
+				<tools>
+					<li>
+						<label>Machinegun Fire</label>
+						<capacities>
+							
+							<li>Scratch</li>
+						</capacities>
+						<power>24</power>
+						<cooldownTime>1.5</cooldownTime>
+						<soundMeleeHit>Shot_IncendiaryLauncher</soundMeleeHit>
+						<soundMeleeMiss>Shot_IncendiaryLauncher</soundMeleeMiss>
+					</li>
+				</tools>
+				
+				<verbs>
+					<li>
+						<label>AA Machinegun</label>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.65</accuracyTouch>
+						<accuracyShort>0.45</accuracyShort>
+						<accuracyMedium>0.25</accuracyMedium>
+						<accuracyLong>0.12</accuracyLong>
+						<defaultCooldownTime>0</defaultCooldownTime>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>FSG_Proj_AABulletA</defaultProjectile>
+						<warmupTime>2</warmupTime>
+						<range>10</range>
+						<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+						<burstShotCount>5</burstShotCount>
+						<soundCast>Shot_IncendiaryLauncher</soundCast>
+						<soundCastTail>GunTail_Light</soundCastTail>
+						<muzzleFlashScale>2</muzzleFlashScale>
+						
+						<commandIcon>Turrets/MicroPulseB</commandIcon>
+					</li>
+				</verbs>	
+				<verbProps>
+					<li>
+						 <label>AA Machinegun</label>
+						 <draw>false</draw>
+						 <canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Turrets/MicroPulseB</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+					</li>
+				</verbProps>
+
+			</li>
+		</comps>
+
+
+
+
+</HediffDef>
+
+
+  
+<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_VE_DefensiveScatter</defName>
+    <label>install defensive Scatter Gun</label>
+    <description>Mount a defensive scatter gun</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing scatter gun.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_DefensiveScatter</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_DefensiveScatter</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>AATurret</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_VE_InstalledDefensiveScatter</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <defName>RemoveFSG_VE_DefensiveScatter</defName>
+    <label>Unmount Defensive Scatter Gun</label>
+    <description>Remove the defensive AA Machinegun from this ship girl, so it can be reallocated or replaced.</description>
+
+    <jobString>unmounting AA Machinegun.</jobString>
+    <removesHediff>FSG_VE_InstalledDefensiveScatter</removesHediff>
+  </RecipeDef>
+  
+	<!--Spacer Tech Guns-->
+
+  
+
+
+	
+
+	
+
+	
+	<HediffDef ParentName="AddedAuxMountBase">
+	<defName>FSG_VE_InstalledDefensiveRailTurret</defName>
+	<label>installed Defensive Rail Gun</label>
+	<labelNoun>a defenive gun turret</labelNoun>
+	<description>A small railgun turret to fight off enemy starships.</description>
+    <spawnThingOnRemoved>FSG_DefensiveRailTurret</spawnThingOnRemoved>
+	<stages>
+			<li>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0.96</postFactor>
+				</li>
+			</capMods>
+			</li>
+		</stages>
+	<comps>
+		<!--<li Class="HediffCompProperties_VerbGiver">
+			<tools>
+				<li>
+					<label>Defensive Rail Cannon</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>22</power>
+					<cooldownTime>7.5</cooldownTime>
+					<soundMeleeHit>Shot_IncendiaryLauncher</soundMeleeHit>
+					<soundMeleeMiss>Shot_IncendiaryLauncher</soundMeleeMiss>
+				</li>
+			</tools>
+		</li>-->
+		
+
+	
+		<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+				
+				<!-- <toggleBackgroundPath>UI/Widgets/Prosthetic/DesButBGLG</toggleBackgroundPath> -->
+				<tools>
+					<li>
+						<label>Rail Gun Barrel</label>
+						<capacities>
+							
+							<li>Blunt</li>
+						</capacities>
+						<power>22</power>
+						<cooldownTime>7.5</cooldownTime>
+						<soundMeleeHit>Shot_IncendiaryLauncher</soundMeleeHit>
+						<soundMeleeMiss>Shot_IncendiaryLauncher</soundMeleeMiss>
+					</li>
+				</tools>
+				
+				<verbs>
+					<li>
+						<label>Defensive Rail Gun</label>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.58</accuracyTouch>
+						<accuracyShort>0.45</accuracyShort>
+						<accuracyMedium>0.50</accuracyMedium>
+						<accuracyLong>0.55</accuracyLong>
+						<defaultCooldownTime>0</defaultCooldownTime>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>FSG_Bullet_ChargeBlasterHeavy</defaultProjectile>
+						<warmupTime>6</warmupTime>
+						<range>32.9</range>
+						<ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+						<burstShotCount>1</burstShotCount>
+						<soundCast>Shot_TurretSniper</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+						<muzzleFlashScale>10</muzzleFlashScale>
+						
+						<commandIcon>Turrets/Single</commandIcon>
+					</li>
+				</verbs>	
+				<verbProps>
+					<li>
+						 <label>Defensive Rail Gun</label>
+						 <draw>false</draw>
+						 <canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Turrets/Single</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+					</li>
+				</verbProps>
+
+			</li>
+		</comps>
+
+
+</HediffDef>
+
+
+  
+<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_VE_DefensiveRailTurret</defName>
+    <label>install defensive rail turret</label>
+    <description>Mount a defensive rail cannon in an anti-aircraft turret.</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing rail cannon turret.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_DefensiveRailTurret</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_DefensiveRailTurret</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>AATurret</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_VE_InstalledDefensiveRailTurret</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <defName>RemoveFSG_VE_DefensiveRailTurret</defName>
+    <label>Unmount Defensive Rail Cannon</label>
+    <description>Remove the defensive rail cannon from this ship girl, so it can be reallocated or replaced.</description>
+
+    <jobString>unmounting cannons.</jobString>
+    <removesHediff>FSG_VE_InstalledDefensiveRailTurret</removesHediff>
+  </RecipeDef>
+  
+  <!-- Automatic charge blaster-->
+
+<HediffDef ParentName="AddedAuxMountBase">
+	<defName>FSG_VE_InstalledDefensiveChargeTurret</defName>
+	<label>installed defensive charge blaster</label>
+	<labelNoun>a defensive charge blaster turret</labelNoun>
+	<description>A rapid fire Turret to fight off enemy starships.</description>
+    <spawnThingOnRemoved>FSG_PartDefensiveChargeTurret</spawnThingOnRemoved>
+	<stages>
+			<li>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0.94</postFactor>
+				</li>
+			</capMods>
+			</li>
+		</stages>
+	
+
+	<comps>
+		<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+				
+				<!-- <toggleBackgroundPath>UI/Widgets/Prosthetic/DesButBGLG</toggleBackgroundPath> -->
+				<tools>
+					<li>
+						<label>Charge Blaster Barrel</label>
+						<capacities>
+							
+							<li>Blunt</li>
+						</capacities>
+						<power>25</power>
+						<cooldownTime>2.5</cooldownTime>
+						<soundMeleeHit>ChargeLance_Fire</soundMeleeHit>
+						<soundMeleeMiss>ChargeLance_Fire</soundMeleeMiss>
+					</li>
+				</tools>
+				
+				<verbs>
+					<li>
+						<label>Charge Blaster</label>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.65</accuracyTouch>
+						<accuracyShort>0.50</accuracyShort>
+						<accuracyMedium>0.45</accuracyMedium>
+						<accuracyLong>0.40</accuracyLong>
+						<defaultCooldownTime>0</defaultCooldownTime>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>FSG_Bullet_ChargeBlasterHeavy</defaultProjectile>
+						<warmupTime>6</warmupTime>
+						<range>21.9</range>
+						<ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+						<burstShotCount>6</burstShotCount>
+						<soundCast>Shot_ChargeRifle</soundCast>
+						<soundCastTail>GunTail_Medium</soundCastTail>
+						<muzzleFlashScale>8</muzzleFlashScale>
+						
+						<commandIcon>Turrets/Single</commandIcon>
+					</li>
+				</verbs>	
+				<verbProps>
+					<li>
+						 <label>Charge Blaster</label>
+						 <draw>false</draw>
+						 <canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Turrets/Single</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+					</li>
+				</verbProps>
+
+			</li>
+		</comps>
+
+
+</HediffDef>
+
+
+  
+<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_VE_PartDefensiveChargeTurret</defName>
+    <label>install charge blaster turret</label>
+    <description>Mount a defensive charge blaster in an anti-aircraft turret.</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing charge blaster.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_PartDefensiveChargeTurret</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_PartDefensiveChargeTurret</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>AATurret</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_VE_InstalledDefensiveChargeTurret</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <defName>RemoveFSG_VE_PartDefensiveChargeTurret</defName>
+    <label>Unmount charge blaster turret</label>
+    <description>Remove the defensive charge blaster from this ship girl, so it can can be reallocated or replaced.</description>
+
+    <jobString>unmounting charge blaster.</jobString>
+    <removesHediff>FSG_VE_InstalledDefensiveChargeTurret</removesHediff>
+  </RecipeDef>
+  
+    <!-- Charge Flak Cannon-->
+
+<HediffDef ParentName="AddedAuxMountBase">
+	<defName>FSG_VE_InstalledChargeFlak</defName>
+	<label>installed Charged Flak Cannon</label>
+	<labelNoun>a charged flak cannon for close combat</labelNoun>
+	<description>Weapon for fighting of swarms of space fighters./n/nThis weapon can set foes on fire./n/n  It fires unstable charged shells, which can be set to explode at close range, creating a shield of fiery debris. It fires more slowly than a scatter laser, but does a bit more damage, and is more deadly in melee.</description>
+    <spawnThingOnRemoved>FSG_DefensiveChargeFlak</spawnThingOnRemoved>
+		<comps>
+		<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+				
+				<!-- <toggleBackgroundPath>UI/Widgets/Prosthetic/DesButBGLG</toggleBackgroundPath> -->
+				<tools>
+					<li>
+						<label>Charged Flak Gun close burst</label>
+						<capacities>
+							
+							<li>Scratch</li>
+						</capacities>
+						<extraMeleeDamages>
+						<li>
+							<def>Flame</def>
+							<amount>10</amount>
+							<chance>0.5</chance>
+						</li>
+						</extraMeleeDamages>
+						<power>32</power>
+						<cooldownTime>.8</cooldownTime>
+						<soundMeleeHit>ChargeLance_Fire</soundMeleeHit>
+						<soundMeleeMiss>ChargeLance_Fire</soundMeleeMiss>
+					</li>
+				</tools>
+				
+				<verbs>
+					<li>
+						<label>Charged Flak Gun</label>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.50</accuracyTouch>
+						<accuracyShort>0.38</accuracyShort>
+						<accuracyMedium>0.10</accuracyMedium>
+						<accuracyLong>0.05</accuracyLong>
+						<defaultCooldownTime>0</defaultCooldownTime>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>FSG_Proj_AALaserB</defaultProjectile>
+						<warmupTime>2</warmupTime>
+						<range>5.9</range>
+						<ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+						<burstShotCount>3</burstShotCount>
+						<soundCast>Shot_ChargeRifle</soundCast>
+						<soundCastTail>GunTail_Light</soundCastTail>
+						<muzzleFlashScale>6</muzzleFlashScale>
+						
+						<commandIcon>Turrets/Single</commandIcon>
+					</li>
+				</verbs>	
+				<verbProps>
+					<li>
+						 <label>Charged Flak Gun</label>
+						 <draw>false</draw>
+						 <canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Turrets/Single</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+					</li>
+				</verbProps>
+
+			</li>
+		</comps>
+
+
+
+
+</HediffDef>
+
+  
+<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_VE_DefensiveChargeFlak</defName>
+    <label>install charged flak cannon</label>
+    <description>Mount a defensive charged flak cannon</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing flak cannon.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_DefensiveChargeFlak</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_DefensiveChargeFlak</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>AATurret</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_VE_InstalledChargeFlak</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <defName>RemoveFSG_VE_DefensiveChargeFlak</defName>
+    <label>Unmount Charged Flak Cannon</label>
+    <description>Remove the charged flak cannon from this ship girl, so it can be reallocated or replaced.</description>
+
+    <jobString>unmounting charged flak cannon.</jobString>
+    <removesHediff>FSG_VE_InstalledChargeFlak</removesHediff>
+  </RecipeDef>
+  
+      <!-- Scattergun-->
+
+<HediffDef ParentName="AddedAuxMountBase">
+	<defName>FSG_VE_InstalledDefensiveLaserScatter</defName>
+	<label>scatter laser</label>
+	<labelNoun>a close range multi-laser gun</labelNoun>
+	<description>an array of pulse lasers, with a relatively short focal length. It is intended to protect against starfighter bombing attacks by saturating the local area with deadly beams. It features a higher fire rate than the charged flak cannon, but does not perform as well against large targets.</description>
+    <spawnThingOnRemoved>FSG_DefensiveLaserScatter</spawnThingOnRemoved>
+		<comps>
+		<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+				
+				<!-- <toggleBackgroundPath>UI/Widgets/Prosthetic/DesButBGLG</toggleBackgroundPath> -->
+				<tools>
+					<li>
+						<label>laser beam</label>
+						<capacities>
+							
+							<li>Stab</li>
+						</capacities>
+						<extraMeleeDamages>
+						<li>
+							<def>Flame</def>
+							<amount>5</amount>
+							<chance>0.5</chance>
+						</li>
+						</extraMeleeDamages>
+						<power>30</power>
+						<cooldownTime>1</cooldownTime>
+						<soundMeleeHit>Shot_IncendiaryLauncher</soundMeleeHit>
+						<soundMeleeMiss>Shot_IncendiaryLauncher</soundMeleeMiss>
+					</li>
+				</tools>
+				
+				<verbs>
+					<li>
+						<label>Scatter laser Gun</label>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.58</accuracyTouch>
+						<accuracyShort>0.35</accuracyShort>
+						<accuracyMedium>0.10</accuracyMedium>
+						<accuracyLong>0.05</accuracyLong>
+						<defaultCooldownTime>0</defaultCooldownTime>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>FSG_Proj_AALaserA</defaultProjectile>
+						<warmupTime>3</warmupTime>
+						<range>5.9</range>
+						<ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+						<burstShotCount>6</burstShotCount>
+						<soundCast>Shot_ChargeRifle</soundCast>
+						<soundCastTail>GunTail_Light</soundCastTail>
+						<muzzleFlashScale>5</muzzleFlashScale>
+						
+						<commandIcon>Turrets/Single</commandIcon>
+					</li>
+				</verbs>	
+				<verbProps>
+					<li>
+						 <label>Scatter laser Gun</label>
+						 <draw>false</draw>
+						 <canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Turrets/Single</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+					</li>
+				</verbProps>
+
+			</li>
+		</comps>
+	</HediffDef>
+
+
+  
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallFSG_VE_DefensiveLaserScatter</defName>
+		<label>install defensive Scatter Laser</label>
+		<description>Mount a defensive scatter laser</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing scatter laser.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSG_DefensiveLaserScatter</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>FSG_DefensiveLaserScatter</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>AATurret</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>FSG_VE_InstalledDefensiveLaserScatter</addsHediff>
+	</RecipeDef>
+  
+	<RecipeDef ParentName="SurgeryRemoveImplantBase">
+
+		<recipeUsers>
+			<li>ShipGirlRace</li>
+		</recipeUsers>
+		<defName>RemoveFSG_VE_DefensiveLaserScatter</defName>
+		<label>Unmount Laser Scatter Gun</label>
+		<description>Remove the Laser Scatter Gun from this ship girl, so it can be reallocated or replaced.</description>
+
+		<jobString>unmounting scatter laser.</jobString>
+		<removesHediff>FSG_VE_InstalledDefensiveLaserScatter</removesHediff>
+	</RecipeDef>
+
+</Defs>

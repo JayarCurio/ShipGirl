@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<BodyPartGroupDef>
+		<defName>HullGroup</defName>
+		<label>hull</label>
+		<listOrder>70</listOrder>
+	</BodyPartGroupDef>
+	
+	<BodyPartGroupDef>
+		<defName>Outrigging</defName>
+		<label>outrigging</label>
+		<listOrder>60</listOrder>
+	</BodyPartGroupDef>
+	
+	<BodyPartGroupDef>
+		<defName>Turrets</defName>
+		<label>turret housings</label>
+		<listOrder>65</listOrder>
+	</BodyPartGroupDef>
+  
+	<BodyPartGroupDef>
+		<defName>Greebles</defName>
+		<label>superstructure</label>
+		<listOrder>69</listOrder>
+	</BodyPartGroupDef>
+	
+	<BodyPartGroupDef>
+		<defName>Keel</defName>
+		<label>keel</label>
+		<listOrder>20</listOrder>
+	</BodyPartGroupDef>
+	
+	<BodyPartGroupDef>
+		<defName>Prow</defName>
+		<label>prow reinforcement</label>
+		<listOrder>22</listOrder>
+	</BodyPartGroupDef>
+	
+	
+	<BodyPartGroupDef>
+		<defName>AntiAircraft</defName>
+		<label>defensive guns</label>
+		<listOrder>106</listOrder>
+	</BodyPartGroupDef>
+	
+
+</Defs>

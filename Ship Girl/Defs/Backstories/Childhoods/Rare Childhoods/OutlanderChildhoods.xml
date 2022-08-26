@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--Childhods. Need 12+ for each spawnCategory. I should have sorted these by spawn categories.-->
+<AlienRace.BackstoryDef>
+	<defName>FSG_R_OutlanderDestroyer</defName>
+    <title>outlander patrol ship</title>
+    <titleShort>PT Destroyer</titleShort>
+    <baseDescription>[PAWN_nameDef]'s original form was built by outlanders to serve as a coastal patrol ship.</baseDescription>
+	<slot>Childhood</slot>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+	<spawnCategories>
+		<li>DefaultShipGirlBackstories</li>
+		<li>OutlanderShipGirlBackstories</li>
+		
+		<li>IndustrialPirateShipGirlBackstories</li><!--1-->
+		<li>MeleePirateShipGirlBackstories</li>
+		
+		<li>IndustrialSharkShipGirlBackstories</li>
+		<li>MeleeSharkShipGirlBackstories</li>
+		
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>4</amount>
+      </li>
+	  <li>
+        <defName>Shooting</defName>
+        <amount>1</amount>
+      </li>
+    </skillGains>
+	<forcedTraits>
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_DestroyerA</li>
+		<li>FSG_Timer_BlandLightKitAT</li>
+		<!--<li>FSG_InstalledDefensiveTurret</li>-->
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+
+
+<AlienRace.BackstoryDef>
+    <defName>FSG_R_OutlanderBattleship</defName>
+    <title>outlander siege engine</title>
+    <titleShort>siege engine</titleShort>
+    <baseDescription>[PAWN_nameDef] was created from an outlander siege bombardment platform.</baseDescription>
+	<slot>Childhood</slot>
+	<bodyTypeMale>Thin</bodyTypeMale>
+	<bodyTypeFemale>Fat</bodyTypeFemale>
+	<spawnCategories>
+		<li>DefaultShipGirlBackstories</li>
+		<li>OutlanderShipGirlBackstories</li>
+		<li>IndustrialPirateShipGirlBackstories</li><!--2-->
+		<li>RangedPirateShipGirlBackstories</li>
+		
+		<li>IndustrialSharkShipGirlBackstories</li>
+		
+		<li>RangedSharkShipGirlBackstories</li>
+		
+		
+		<li>OutlanderShipGirlBackstories</li>
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>1</amount>
+      </li>
+	  <li>
+        <defName>Shooting</defName>
+        <amount>4</amount>
+      </li>
+    </skillGains>
+	<forcedTraits>
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<!--<li>FSG_Hediff_BattleshipA</li>
+		<li>FSG_InstalledTurretMultiFrag</li>
+		<li>FSG_InstalledProtectiveKeel</li>-->
+		<li>FSG_Timer_BattleshipA</li>
+		<li>FSG_Timer_BlandLightKitAT</li>
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+    <defName>FSG_R_EmpireDestroyer</defName>
+    <title>Imperial Destroyer</title>
+    <titleShort>Destroyer</titleShort>
+    <baseDescription>[PAWN_nameDef] was salvaged from an Imperial space destroyer.</baseDescription>
+	<slot>Childhood</slot>
+	<bodyTypeMale>Thin</bodyTypeMale>
+	<bodyTypeFemale>Thin</bodyTypeFemale>
+	<spawnCategories>
+		<li>DefaultShipGirlBackstories</li>
+		
+		<li>SpacePirateShipGirlBackstories</li>
+		<li>MeleePirateShipGirlBackstories</li>
+		
+		<li>MeleeSharkShipGirlBackstories</li>
+		<li>SpaceSharkShipGirlBackstories</li>
+		
+		<li>SpaceEmpireShipGirlBackstories</li>
+		<li>OutlanderShipGirlBackstories</li>
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>4</amount>
+      </li>
+	  <li>
+        <defName>Shooting</defName>
+        <amount>1</amount>
+      </li>
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<!--<li>FSG_Hediff_SpaceDestroyerA</li>
+		<li>FSG_InstalledChargeFlak</li>
+		<li>FSG_InstalledDefensiveChargeTurret</li>
+		
+       Not yet. -->
+		<li>FSG_Timer_SpaceDestroyerA</li>
+		<li>FSG_Timer_BlandLightKitAT</li>
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+    <defName>FSG_R_PirateDestroyer</defName>
+    <title>Pirate Raider</title>
+    <titleShort>Raider</titleShort>
+    <baseDescription>[PAWN_nameDef] was built by pirates, from salvaged scraps.</baseDescription>
+	<slot>Childhood</slot>
+	<bodyTypeMale>Thin</bodyTypeMale>
+	<bodyTypeFemale>Thin</bodyTypeFemale>
+	<spawnCategories>
+		<li>DefaultShipGirlBackstories</li>
+		
+		<li>OutlanderShipGirlBackstories</li>
+		
+		<li>IndustrialPirateShipGirlBackstories</li><!--3-->
+		<li>SpacePirateShipGirlBackstories</li>
+		<li>MeleePirateShipGirlBackstories</li>	
+
+		<li>IndustrialSharkShipGirlBackstories</li>
+		<li>MeleeSharkShipGirlBackstories</li>
+		<li>RangedSharkShipGirlBackstories</li>
+		<li>SpaceSharkShipGirlBackstories</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Melee</defName>
+			<amount>4</amount>
+		</li>
+		<li>
+			<defName>Shooting</defName>
+			<amount>2</amount>
+		</li>
+    </skillGains>
+	<forcedTraits>
+			<li>
+				<defName>Psychopath</defName>
+				<chance>75</chance>
+			</li>
+			<li>
+				<defName>Greedy</defName>
+				<chance>50</chance>
+			</li>
+			<li>
+				<defName>Jealous</defName>
+				<chance>50</chance>
+			</li>
+			<li>
+				<defName>Brawler</defName>
+				<chance>75</chance>
+			</li>
+			<li>
+				<defName>Bloodlust</defName>
+				<chance>50</chance>
+			</li>
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+	<requiredWorkTags>
+		<li>Violent</li>
+	</requiredWorkTags>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<!--<li>FSG_Hediff_PirateA</li>
+		<li>FSG_InstalledDefensiveTurret</li>
+		<li>FSG_InstalledTurretMultiFrag</li>-->
+		<li>FSG_Timer_PirateA</li>
+		<li>FSG_Timer_BlandLightKitAT</li>
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+    <defName>FSG_R_ImperialBattleship</defName>
+    <title>Imperial Battleship</title>
+    <titleShort>Battleship</titleShort>
+    <baseDescription>[PAWN_nameDef] was salvaged from the systems of an Imperial Battleship.</baseDescription>
+	<slot>Childhood</slot>
+	<bodyTypeMale>Thin</bodyTypeMale>
+	<bodyTypeFemale>Hulk</bodyTypeFemale>
+	<spawnCategories>
+     
+	  
+	  <!--4-->
+	  <li>RangedPirateShipGirlBackstories</li>
+	  
+	  <li>RangedSharkShipGirlBackstories</li>
+	  <li>SpaceSharkShipGirlBackstories</li>
+	  
+	  <li>ImperialShipGirlBackstories</li>
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>1</amount>
+      </li>
+	  <li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+    </skillGains>
+	<forcedTraits>
+	
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+	<requiredWorkTags>
+		<li>Violent</li>
+	</requiredWorkTags>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_SpaceBattleshipA</li>
+		<li>FSG_Timer_BlandLightKitAT</li>
+		<!--<li>FSG_Hediff_BattleshipA</li>
+		<li>FSG_InstalledTurretMultiFrag</li>
+		<li>FSG_InstalledProtectiveKeel</li>-->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+    <defName>FSG_R_ImperialCruiser</defName>
+    <title>Imperial Cruiser</title>
+    <titleShort>Cruiser</titleShort>
+    <baseDescription>[PAWN_nameDef] was created from a mid-size Imperial warship.</baseDescription>
+	<slot>Childhood</slot>
+	<bodyTypeMale>Thin</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<spawnCategories>
+		
+		
+		<!--5-->
+		<li>MeleePirateShipGirlBackstories</li>
+		
+		<li>RangedSharkShipGirlBackstories</li>
+		<li>SpaceSharkShipGirlBackstories</li>
+		
+		<li>EmpireShipGirlBackstories</li>
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+	  <li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+    </skillGains>
+	<forcedTraits>
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_SpaceCruiserA</li>
+		<li>FSG_Timer_BlandLightKitAT</li>
+			<!--<li>FSG_Hediff_CruiserA</li>
+			<li>FSG_InstalledDefensiveFlak</li>
+			<li>FSG_InstalledProtectiveKeel</li>-->
+			
+			
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+    <defName>FSG_R_OutlanderTradeship</defName>
+    <title>outlander armed trade ship</title>
+    <titleShort>Armed Trader</titleShort>
+    <baseDescription>[PAWN_nameDef] was built from early spacer tech and salvaged parts, to be a transport, but with self defense capability.</baseDescription>
+	<slot>Childhood</slot>
+	<bodyTypeMale>Thin</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<spawnCategories>
+      <li>DefaultShipGirlBackstories</li>
+	  <li>OutlanderShipGirlBackstories</li>
+	  
+	  <li>MeleeSharkShipGirlBackstories</li><li>SpaceSharkShipGirlBackstories</li>
+	  <li>EmpireShipGirlBackstories</li>
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>2</amount>
+      </li>
+	  <li>
+        <defName>Shooting</defName>
+        <amount>1</amount>
+		</li>
+	    <li>
+        <defName>Social</defName>
+        <amount>4</amount>
+      </li>
+	  <li>
+        <defName>Construction</defName>
+        <amount>1</amount>
+      </li>
+	   
+	  
+    </skillGains>
+	<forcedTraits>
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_SpaceDestroyerA</li>
+		<li>FSG_Timer_BlandLightKitAT</li>
+		 <!--<li>FSG_Hediff_DestroyerA</li>
+		<li>FSG_InstalledProtectiveKeel</li>
+		<li>FSG_InstalledDefensiveLaserScatter</li>
+       -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+    <defName>FSG_R_ExplorationShip</defName>
+    <title>Exploration Ship</title>
+    <titleShort>explorer</titleShort>
+    <baseDescription>[PAWN_nameDef] was generated from a deep space exploration craft.</baseDescription>
+	<slot>Childhood</slot>
+	<bodyTypeMale>Thin</bodyTypeMale>
+	<bodyTypeFemale>Thin</bodyTypeFemale>
+	<spawnCategories>
+      <li>DefaultShipGirlBackstories</li>
+	  <li>OutlanderShipGirlBackstories</li>
+	  
+	  <li>SpaceImperialShipGirlBackstories</li>
+	  
+	  <li>IndustrialSharkShipGirlBackstories</li>
+	  <li>MeleeSharkShipGirlBackstories</li>
+	  <li>RangedSharkShipGirlBackstories</li>
+	  <li>SpaceSharkShipGirlBackstories</li>
+	  
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <defName>Crafting</defName>
+        <amount>4</amount>
+      </li>
+	  <li>
+        <defName>Medicine</defName>
+        <amount>1</amount>
+      </li>
+	  	  <li>
+        <defName>Intellectual</defName>
+        <amount>6</amount>
+      </li>
+	  	  <li>
+        <defName>Construction</defName>
+        <amount>1</amount>
+      </li>
+	  
+    </skillGains>
+	<forcedTraits>
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_SpaceDestroyerA</li>
+		<li>FSG_Timer_BlandLightKitAT</li>
+		<!--<li>FSG_Hediff_SpaceDestroyerA</li>
+		<li>FSG_InstalledDefensiveLaserScatter</li>-->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+    <defName>FSG_R_SuperPrototype</defName>
+    <title>Experimental Prototype</title>
+    <titleShort>prototype</titleShort>
+    <baseDescription>[PAWN_nameDef] was created by a cabal of scientists of tremendous ambition and questionable sanity.</baseDescription>
+	<slot>Childhood</slot>
+	<spawnCategories>
+      <li>DefaultShipGirlBackstories</li>
+	  <li>OutlanderShipGirlBackstories</li>
+	  
+	  <li>SinisterShipGirlBackstories</li>
+	  
+	  <li>SpacePirateShipGirlBackstories</li>
+	
+	  <li>MeleeSharkShipGirlBackstories</li>
+	  
+	  <li>SpaceSharkShipGirlBackstories</li>
+	  
+	  <li>EmpireShipGirlBackstories</li>
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>4</amount>
+      </li>
+	  <li>
+        <defName>Shooting</defName>
+        <amount>4</amount>
+      </li>
+    </skillGains>
+	<forcedTraits>
+			<li>
+				<defName>Psychopath</defName>
+				<chance>50</chance>
+			</li>
+			<li>
+				<defName>Greedy</defName>
+				<chance>65</chance>
+			</li>
+			<li>
+				<defName>Cannibal</defName>
+				<chance>65</chance>
+			</li>
+			<li>
+				<defName>Brawler</defName>
+				<chance>65</chance>
+			</li>
+			<li>
+				<defName>Bloodlust</defName>
+				<chance>75</chance>
+			</li>
+			<li>
+				<defName>TooSmart</defName>
+				<chance>67</chance>
+			</li>
+			<li>
+				<defName>Neurotic</defName>
+			    <degree>1</degree>
+				<chance>25</chance>
+			</li>
+			<li>
+				<defName>Neurotic</defName>
+			    <degree>2</degree>
+				<chance>25</chance>
+			</li>
+			<li>
+				<defName>Nerves</defName>
+				<degree>1</degree>
+				<chance>20</chance>
+			</li>
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+	<requiredWorkTags>
+	</requiredWorkTags>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_SpaceCruiserA</li>
+		<li>FSG_Timer_BlandLightKitAT</li>
+		<!--<li>FSG_Hediff_SpaceDestroyerA</li>
+		<li>FSG_InstalledDefensiveLaserScatter</li>
+		<li>FSG_InstalledTurretMultiSP</li>
+		<li>FSG_InstalledAdvancedTurboEngine</li>-->
+    
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+		
+    <defName>FSG_R_RogueSupport</defName>
+    <title>Rogue AI Support Ship</title>
+    <titleShort>Rogue Support Ship</titleShort>
+    <baseDescription>[PAWN_nameDef] Was created by Ship Girls, with a seperatist ideology. She quickly learned to help out around their shipyard.</baseDescription>
+	<slot>Childhood</slot>
+	<bodyTypeMale>Thin</bodyTypeMale>
+	<bodyTypeFemale>Thin</bodyTypeFemale>
+	<spawnCategories>
+      <li>DefaultShipGirlBackstories</li>
+	  
+	  <li>SinisterShipGirlBackstories</li>
+	  
+	  <!--<li>CivilianSharkShipGirlBackstories</li>
+	  <li>IndustrialSharkShipGirlBackstories</li><li>MeleeSharkShipGirlBackstories</li><li>RangedSharkShipGirlBackstories</li><li>SpaceSharkShipGirlBackstories</li>-->
+	  
+	</spawnCategories>
+	<skillGains>
+
+	  <li>
+        <defName>Medicine</defName>
+        <amount>2</amount>
+      </li>
+	  <li>
+        <defName>Crafting</defName>
+        <amount>4</amount>
+      </li>
+	  	  <li>
+        <defName>Mining</defName>
+        <amount>2</amount>
+      </li>
+	  <li>
+        <defName>Construction</defName>
+        <amount>4</amount>
+      </li>
+    </skillGains>
+	<forcedTraits>
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_DestroyerA</li>
+		<li>FSG_Timer_SharkLightKitAT</li>
+		<!--<li>FSG_Hediff_DestroyerA</li>
+		<li>FSG_InstalledDefensiveFlak</li>
+		<li>FSG_InstalledSharkMouth</li>-->
+      
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+		
+    <defName>FSG_R_RogueVanguard</defName>
+    <title>Rogue AI Vanguard</title>
+    <titleShort>Rogue vanguard</titleShort>
+    <baseDescription>[PAWN_nameDef] Was created by Ship Girls, with a seperatist ideology. She make herself useful guarding their bases.</baseDescription>
+	<slot>Childhood</slot>
+	<bodyTypeMale>Thin</bodyTypeMale>
+	<bodyTypeFemale>Thin</bodyTypeFemale>
+	<spawnCategories>
+      <li>DefaultShipGirlBackstories</li>
+	  <li>OutlanderShipGirlBackstories</li>
+	  <li>SinisterShipGirlBackstories</li>
+	  
+	  <li>IndustrialPirateShipGirlBackstories</li><!--6-->
+	  
+	  <li>SharkShipGirlBackstories</li>
+	</spawnCategories>
+	<skillGains>
+
+	  <li>
+        <defName>Shooting</defName>
+        <amount>2</amount>
+      </li>
+	  <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+	  <li>
+        <defName>Construction</defName>
+        <amount>4</amount>
+      </li>
+    </skillGains>
+	<forcedTraits>
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+	
+	<requiredWorkTags>
+		
+	</requiredWorkTags>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_DestroyerA</li>
+		<li>FSG_Timer_SharkLightKitAT</li>
+		<!--<li>FSG_Hediff_DestroyerA</li>
+		<li>FSG_InstalledDefensiveFlak</li>
+		<li>FSG_InstalledSharkMouth</li>-->
+      
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+		
+    <defName>FSG_R_SpacerCruiser</defName>
+    <title>Glitterworld Police Cruiser</title>
+    <titleShort>Police Cruiser</titleShort>
+    <baseDescription>[PAWN_nameDef] was once a space cuiser used by the global police force of a glitterworld. Her memory banks are full of tense standoffs, high-stakes negotiations and intense shootouts.</baseDescription>
+	<slot>Childhood</slot>
+	<spawnCategories>
+      <li>OutlanderShipGirlBackstories</li>
+	  <li>SpaceSinisterShipGirlBackstories</li>
+	  
+	  <li>SpaceImperialShipGirlBackstories</li>
+	</spawnCategories>
+	<skillGains>
+
+	  <li>
+        <defName>Social</defName>
+        <amount>2</amount>
+      </li>
+	  <li>
+        <defName>Melee</defName>
+        <amount>4</amount>
+      </li>
+	  	  <li>
+        <defName>Shooting</defName>
+        <amount>2</amount>
+      </li>
+	  <li>
+        <defName>Construction</defName>
+        <amount>1</amount>
+      </li>
+    </skillGains>
+	<forcedTraits>
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_SpaceCruiserA</li>
+		<li>FSG_Timer_BlandLightKitAT</li>
+		<!--<li>FSG_Hediff_SpaceCruiserA</li>
+		<li>FSG_InstalledDefensiveLaserScatter</li>-->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+		
+    <defName>FSG_R_PicketCruiser</defName>
+    <title>Flak Corvette</title>
+    <titleShort>Flak CL</titleShort>
+    <baseDescription>[PAWN_nameDef] was once a light cruiser designed and deployed to protect larger artillery battleships from starfighter torpedo attacks. She likes to keep her enemies close to her and far from her allies.</baseDescription>
+	<slot>Childhood</slot>
+	<bodyTypeMale>Thin</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<spawnCategories>
+		<li>OutlanderShipGirlBackstories</li>
+		
+	  <li>SinisterShipGirlBackstories</li>
+	  
+	  <li>SpacePirateShipGirlBackstories</li>
+	  <li>IndustrialSharkShipGirlBackstories</li>
+	  <li>MeleeSharkShipGirlBackstories</li>
+	  <li>RangedSharkShipGirlBackstories</li>
+	  <li>SpaceSharkShipGirlBackstories</li>
+	</spawnCategories>
+	<skillGains>
+
+	  <li>
+        <defName>Social</defName>
+        <amount>1</amount>
+      </li>
+	  <li>
+        <defName>Melee</defName>
+        <amount>6</amount>
+      </li>
+	  <li>
+        <defName>Shooting</defName>
+        <amount>2</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		<!--TODO: add brawler etc-->
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+	<requiredWorkTags>
+		<li>Violent</li>
+	</requiredWorkTags>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_SpaceCruiserA</li>
+		<li>FSG_Timer_BlandLightKitAT</li>
+		<!--<li>FSG_Hediff_SpaceCruiserA</li>
+		<li>FSG_InstalledChargeFlak</li>-->
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+		
+    <defName>FSG_R_LargeCruiser</defName>
+    <title>Gunship Cruiser</title>
+    <titleShort>Gun Cruiser</titleShort>
+    <baseDescription>[PAWN_nameDef] was an outsized gunship cruiser. She was designed to pulverize foes from a distance, without the risk and expense of sending en entire battleship.</baseDescription>
+	<slot>Childhood</slot>
+	<bodyTypeMale>Thin</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<spawnCategories>
+      <li>DefaultShipGirlBackstories</li>
+	  <li>OutlanderShipGirlBackstories</li>
+	  
+	  <li>IndustrialPirateShipGirlBackstories</li><!--7-->
+	  
+	  <li>IndustrialSharkShipGirlBackstories</li><li>MeleeSharkShipGirlBackstories</li><li>RangedSharkShipGirlBackstories</li><li>SpaceSharkShipGirlBackstories</li>
+	</spawnCategories>
+	<skillGains>
+
+	
+	  <li>
+        <defName>Shooting</defName>
+        <amount>6</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		<!--TODO: add brawler etc-->
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+	<requiredWorkTags>
+		<li>Violent</li>
+	</requiredWorkTags>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_CruiserA</li>
+		<li>FSG_Timer_BlandLightKitAT</li>
+		<!--<li>FSG_Hediff_CruiserA</li>
+		
+		<li>FSG_InstalledTurretMultiSP</li>-->
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+		
+    <defName>FSG_R_BattleCruiser</defName>
+    <title>Battlecruiser</title>
+    <titleShort>BC</titleShort>
+    <baseDescription>[PAWN_nameDef] was originally a lightweight battleship. She was christened with long range atrillery, and a powerful engine.</baseDescription>
+	<slot>Childhood</slot>
+	<bodyTypeMale>Thin</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<spawnCategories>
+		<li>OutlanderShipGirlBackstories</li>
+	  <li>SinisterShipGirlBackstories</li>
+	  
+	  <li>IndustrialPirateShipGirlBackstories</li><!--8-->
+	  <li>RangedPirateShipGirlBackstories</li>
+	  
+	  <li>IndustrialSharkShipGirlBackstories</li><li>RangedSharkShipGirlBackstories</li>
+	</spawnCategories>
+	<skillGains>
+
+	
+	  <li>
+        <defName>Shooting</defName>
+        <amount>6</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		<!--TODO: add brawler etc-->
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+	<requiredWorkTags>
+		
+	</requiredWorkTags>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_BattleshipA</li>
+		<li>FSG_Timer_BlandLightKitAT</li>
+		<!--<li>FSG_Hediff_BattleshipA</li>
+		 <li>FSG_InstalledDefensiveAutoTurret</li>
+		<li>FSG_InstalledTurretDualFrag</li>
+		<li>FSG_InstalledTurboEngine</li>
+      Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+		
+    <defName>FSG_R_BattleShip</defName>
+    <title>BattleShip</title>
+    <titleShort>Outlander BC</titleShort>
+    <baseDescription>[PAWN_nameDef] was originally a heavy battleship. Her massive hull bristles with long ranged artillery.</baseDescription>
+	<slot>Childhood</slot>
+	<bodyTypeMale>Thin</bodyTypeMale>
+	<bodyTypeFemale>Hulk</bodyTypeFemale>
+	<spawnCategories>
+      <li>OutlanderShipGirlBackstories</li>
+	  <li>SinisterShipGirlBackstories</li>
+	  
+	  <li>IndustrialPirateShipGirlBackstories</li><!--9-->
+	  <li>RangedPirateShipGirlBackstories</li>
+	  
+	  <li>IndustrialSharkShipGirlBackstories</li>
+	  <li>RangedSharkShipGirlBackstories</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Shooting</defName>
+			<amount>6</amount>
+		</li>
+    </skillGains>
+	<forcedTraits>
+		
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+	<requiredWorkTags>
+		<li>Violent</li>
+	</requiredWorkTags>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_BattleshipA</li>
+		<li>FSG_Timer_BlandLightKitAT</li>
+		<!--<li>FSG_Hediff_BattleshipA</li>
+		<li>FSG_InstalledDefensiveTurret</li>
+		
+		<li>FSG_InstalledTurretMultiSP</li>
+		<li>FSG_InstalledProtectiveKeel</li>OK-->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+<AlienRace.BackstoryDef>
+		
+    <defName>FSG_R_SpaceBattleShip</defName>
+    <title>Space BattleShip</title>
+    <titleShort>Outlander BC</titleShort>
+    <baseDescription>[PAWN_nameDef] was originally a heavy space battleship. Her massive, depleted uranium and plasteel hull bristles with long ranged artillery.</baseDescription>
+	<slot>Childhood</slot>
+	<bodyTypeMale>Thin</bodyTypeMale>
+	<bodyTypeFemale>Hulk</bodyTypeFemale>
+	<spawnCategories>
+      
+	  
+	  <li>OutlanderShipGirlBackstories</li>
+	  <li>SinisterShipGirlBackstories</li>
+	  <li>SpacePirateShipGirlBackstories</li>
+	  
+	  <li>RangedSharkShipGirlBackstories</li>
+	  <li>SpaceSharkShipGirlBackstories</li>
+	</spawnCategories>
+	<skillGains>
+
+	
+	  <li>
+        <defName>Shooting</defName>
+        <amount>6</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		<!--TODO: add tough etc-->
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_SpaceBattleshipA</li>
+		<li>FSG_Timer_BlandLightKitAT</li>
+		<!--<li>FSG_Hediff_SpaceBattleshipA</li>
+		<li>FSG_InstalledDefensiveChargeTurret</li>
+		<li>FSG_InstalledTurretSpaceBomb</li>	
+		<li>FSG_InstalledProtectiveKeel</li>OK-->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+
+<!--Sinister Childhoods-->
+<AlienRace.BackstoryDef>
+		
+    <defName>FSG_R_LightCruiser</defName>
+    <title>Light Cruiser</title>
+    <titleShort>Gun Cruiser</titleShort>
+    <baseDescription>[PAWN_nameDef] was designed as a light cruiser. She was designed to provide a battlegroup with a versitile combatant.</baseDescription>
+	<slot>Childhood</slot>
+	<bodyTypeMale>Thin</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<spawnCategories>
+      <li>DefaultShipGirlBackstories</li>
+	  
+	  <li>OutlanderShipGirlBackstories</li>
+	  
+	  <li>IndustrialPirateShipGirlBackstories</li><!--7-->
+	  
+	  <li>IndustrialSharkShipGirlBackstories</li><li>MeleeSharkShipGirlBackstories</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+	
+	  <li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+
+    </skillGains>
+	<forcedTraits>
+		<!--TODO: add brawler etc-->
+	</forcedTraits>
+	<disallowedTraits>
+    </disallowedTraits>
+	<requiredWorkTags>
+		<li>Violent</li>
+	</requiredWorkTags>
+    <workDisables>
+    </workDisables>
+	<forcedHediffs>
+		<li>FSG_Timer_CruiserA</li>
+		<li>FSG_Timer_BlandLightKitAT</li>
+		<!--<li>FSG_Hediff_CruiserA</li>
+		
+		<li>FSG_InstalledTurretMultiSP</li>-->
+      <!-- Not yet. -->
+    </forcedHediffs>
+</AlienRace.BackstoryDef>
+
+
+
+</Defs>

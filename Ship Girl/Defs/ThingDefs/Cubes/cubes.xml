@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Abstract="True" Name="CubeBase" ParentName="ResourceBase">
+    <description>A cube shaped fragment of a psychic persona core. These are generally butchered from the wreckage of starships and ship girls.</description>
+    <graphicData>
+      <texPath>Food/Cubes/Wisdom</texPath>
+		<shaderType>TransparentPostLight</shaderType>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <DeteriorationRate>1</DeteriorationRate>
+      <Mass>0.03</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>25</MarketValue>
+      <StuffPower_Armor_Sharp>0.81</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.24</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.5</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>30</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>16</StuffPower_Insulation_Heat>
+	
+    </statBases>
+	
+	<tradeability>Sellable</tradeability>
+    
+	<thingCategories>
+      <li>Leathers</li>
+    </thingCategories>
+    <burnableByRecipe>false</burnableByRecipe>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <minRewardCount>1</minRewardCount>
+    
+  </ThingDef>
+	<ThingDef ParentName="CubeBase">
+		<defName>blueCube</defName>
+		<label>Anima Crystal Cube</label>
+		<description>A cube shaped fragment of a humanoid warship's persona core. These precious ultratech components are essental to the manufacture of new ship girls.</description>
+  
+  
+	</ThingDef>
+  
+	<ThingDef ParentName="CubeBase">
+		<defName>blackCube</defName>
+		<label>Black Anima Crystal Cube</label>
+		<description>A cube shaped fragment of a psychic warship's persona core. This one seems to be tainted by some form of malevolent aura.</description>
+		<graphicData>
+			<texPath>Food/Cubes/Black</texPath>
+			<shaderType>TransparentPostLight</shaderType>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>50</MarketValue>
+			
+		</statBases>
+		<tradeability>None</tradeability>
+		
+	</ThingDef>
+  
+  
+  
+  </Defs>

@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+
+	<!--Shark-->
+		<!--Control Modules-->
+	<HediffDef Parent="ImplantHediffBase">
+		<defName>FSG_InstalledSharkControlModule</defName>
+		<label>Sieg Laurel</label>
+		<labelNoun>a Sieg Laurel</labelNoun>
+		<description>An installed Sieg Laurel.</description>
+		<spawnThingOnRemoved>FSG_PartSharkControlModule</spawnThingOnRemoved>
+		<stages>
+			<li>
+				<painFactor>.5</painFactor>
+				<painOffset>0.16</painOffset>
+				<statOffsets>
+					<MentalBreakThreshold>-.20</MentalBreakThreshold>
+					<Comfort>-100</Comfort>
+				</statOffsets>
+			</li>
+		</stages>
+		
+	</HediffDef>
+	
+	<RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>FSG_InstallSharkControlModule</defName>
+    <label>install Sieg Laurel</label>
+    <description>Install a Sieg Laurel.</description>
+
+    <jobString>Installing Sieg Laurel.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_PartSharkControlModule</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_PartSharkControlModule</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledSharkControlModule</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>FSG_RemoveSharkControlModule</defName>
+    <label>remove sieg laurel</label>
+    <description>Remove sieg laurel.</description>
+    <descriptionHyperlinks>
+      <ThingDef>FSG_PartSharkControlModule</ThingDef>
+      <HediffDef>FSG_InstalledSharkControlModule</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing Sieg Laurel.</jobString>
+    <removesHediff>FSG_InstalledSharkControlModule</removesHediff>
+  </RecipeDef>
+  
+  <ThingDef>
+	<defName>FSG_PartSharkControlModule</defName>
+	<label>Sieg Laurel</label>
+	<description>A fearsome implant of Blood Shark manufacture. It combines elements of the mindscrew, a milder variation of the painstopper and the joywire, and rivets them directly into the subject's brainstem. The Blood Sharks' elite vanguards wear them as a badge of loyalty.</description>
+	<thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+	<thingCategories>
+		<li>BodyPartsBionic</li>
+	</thingCategories>
+	<graphicData>
+		<texPath>Apparel/Hats/Shark/ControlModule/Cruiser</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>1.2</drawSize>
+	</graphicData>
+	<techHediffsTags>
+		<li>FSG_SharkIndustrial</li>
+	</techHediffsTags>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <tickerType>Never</tickerType>
+    <alwaysHaulable>true</alwaysHaulable>
+    <isTechHediff>true</isTechHediff>
+    <pathCost>14</pathCost>
+    <statBases>
+		<MaxHitPoints>50</MaxHitPoints>
+		<Flammability>0.7</Flammability>
+		<Beauty>-4</Beauty>
+		<DeteriorationRate>2.0</DeteriorationRate>
+		<Mass>1</Mass>
+		<MarketValue>200</MarketValue>
+    </statBases>
+    <tradeTags>
+		<li>TechHediff</li>
+    </tradeTags>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+  </ThingDef>
+  
+  <!--Empire-->
+	<!--Head shields-->
+
+	<HediffDef Parent="ImplantHediffBase">
+		<defName>FSG_InstalledHeadDeflectors</defName>
+		<label>Head Mounted Deflectors</label>
+		<labelNoun>an array of head mounted deflectors</labelNoun>
+		<description>An array of defensive deflectors, mounted on a shipgirl's head. The Shattered Empire uses these to supplement the defenses of their space destroyers.</description>
+		<spawnThingOnRemoved>FSG_PartHeadDeflectors</spawnThingOnRemoved>
+		<stages>
+			<li>
+				<statOffsets>
+					<ArmorRating_Sharp>0.035</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+					<ArmorRating_Heat>0.07</ArmorRating_Heat>
+		 		</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>FSG_InstallHeadDeflectors</defName>
+    <label>install Head Deflectors</label>
+    <description>Install head mounted deflector.</description>
+    
+    <jobString>Installing deflectors.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_PartHeadDeflectors</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_PartHeadDeflectors</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledHeadDeflectors</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>FSG_RemoveHeadDeflectors</defName>
+    <label>Remove Head Deflectors</label>
+    <description>Remove Head Deflectors.</description>
+    <descriptionHyperlinks>
+      <ThingDef>FSG_PartHeadDeflectors</ThingDef>
+      <HediffDef>FSG_InstalledHeadDeflectors</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing Head Deflectors.</jobString>
+    <removesHediff>FSG_InstalledHeadDeflectors</removesHediff>
+  </RecipeDef>
+  
+  <ThingDef>
+	<defName>FSG_PartHeadDeflectors</defName>
+	<label>Starship Head Deflectors</label>
+	<description>A pair of head mounted deflectors, removed from an Imperial starship. The Shattered Empire used these to supplement the defenses of their space destroyers.</description>
+	<thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+	<thingCategories>
+		<li>BodyPartsBionic</li>
+	</thingCategories>
+	<graphicData>
+		<texPath>Apparel/Hats/Navy/Deflectors/Deflectors</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>.8</drawSize>
+	</graphicData>
+	<techHediffsTags>
+			<li>FSG_EmpireBionic</li>
+	</techHediffsTags>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <tickerType>Never</tickerType>
+    <alwaysHaulable>true</alwaysHaulable>
+    <isTechHediff>true</isTechHediff>
+    <pathCost>14</pathCost>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <Beauty>-4</Beauty>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Mass>1</Mass>
+	  <MarketValue>600</MarketValue>
+    </statBases>
+    <tradeTags>
+      <li>TechHediff</li>
+    </tradeTags>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+  </ThingDef>
+  
+  <!--Ring-->
+
+	<HediffDef Parent="ImplantHediffBase">
+		<defName>FSG_InstalledRing</defName>
+		<label>Ring Section</label>
+		<labelNoun>an imperial ring segment</labelNoun>
+		<description>An installed imperial ring segment. Even the empire's ships are infused with expensive eltex circuitry.</description>
+		<spawnThingOnRemoved>FSG_PartRing</spawnThingOnRemoved>
+		<stages>
+			<li>
+				<painFactor>.90</painFactor>
+				<statOffsets>
+					<PsychicSensitivity>0.125</PsychicSensitivity>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>FSG_InstallRing</defName>
+    <label>install Ring Section</label>
+    <description>Install a Ring.</description>
+    
+    <jobString>Installing ring section.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_PartRing</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_PartRing</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Tailbone</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledRing</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>FSG_RemoveRing</defName>
+    <label>remove ring</label>
+    <description>Remove ring.</description>
+    <descriptionHyperlinks>
+      <ThingDef>FSG_PartRing</ThingDef>
+      <HediffDef>FSG_InstalledRing</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing ring.</jobString>
+    <removesHediff>FSG_InstalledRing</removesHediff>
+  </RecipeDef>
+  
+  <ThingDef>
+	<defName>FSG_PartRing</defName>
+	<label>Starship ring segment</label>
+	<description>A ring segment removed from an Imperial starship. What do these things do anyway?</description>
+	<thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+	<thingCategories>
+		<li>BodyPartsBionic</li>
+	</thingCategories>
+	<graphicData>
+		<texPath>Ring/Ring</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>.8</drawSize>
+	</graphicData>
+	<techHediffsTags>
+			<li>FSG_EmpireBionic</li>
+	</techHediffsTags>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <tickerType>Never</tickerType>
+    <alwaysHaulable>true</alwaysHaulable>
+    <isTechHediff>true</isTechHediff>
+    <pathCost>14</pathCost>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <Beauty>-4</Beauty>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Mass>1</Mass>
+	  <MarketValue>600</MarketValue>
+    </statBases>
+    <tradeTags>
+      <li>TechHediff</li>
+    </tradeTags>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+  </ThingDef>
+  
+   <!--Sakura Spirits-->
+		<!--Ears-->
+			<!--Fox-->
+	<HediffDef Parent="ImplantHediffBase">
+		<defName>FSG_InstalledFoxEars</defName>
+		<label>Kitsune Ears</label>
+		<labelNoun>kitsune ears</labelNoun>
+		<description>Installed kitsune ears. Tribal worshipers regard this as a sign of a shipgirl's connection to the global anima.</description>
+		<spawnThingOnRemoved>FSG_PartFoxEars</spawnThingOnRemoved>
+		<stages>
+			<li>
+				<statOffsets>
+					<PsychicSensitivity>0.125</PsychicSensitivity>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>FSG_InstallFoxEars</defName>
+    <label>install Kitsune Ears</label>
+    <description>Install a Kitsune Ears. Tribal worshipers regard this as a sign of a shipgirl's connection to the global anima.</description>
+    
+    <jobString>Installing fox ears.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+			<thingDefs>
+				<li>FSG_PartFoxEars</li>
+			</thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+		<thingDefs>
+			<li>FSG_PartFoxEars</li>
+		</thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+		<li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledFoxEars</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>FSG_RemoveFoxEars</defName>
+    <label>uproot Kitsune Ears</label>
+    <description>Root out the Kitsune Ship Girl's ears, so you can give them to someone else.</description>
+    <descriptionHyperlinks>
+      <ThingDef>FSG_PartFoxEars</ThingDef>
+      <HediffDef>FSG_InstalledFoxEars</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>uprooting kitsune ears.</jobString>
+    <removesHediff>FSG_InstalledFoxEars</removesHediff>
+  </RecipeDef>
+  
+	<ThingDef>
+		<defName>FSG_PartFoxEars</defName>
+		<label>removed kitsune ears</label>
+		<description>Tribal worshipers regard this as a sign of a shipgirl's connection to the global anima.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<thingCategories>
+			<li>BodyPartsArchotech</li>
+		</thingCategories>
+		<graphicData>
+			<texPath>Apparel/Hats/Fox/FoxEars</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<techHediffsTags>
+			<li>FSG_SpiritBionic</li>
+		</techHediffsTags>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<tickerType>Never</tickerType>
+		<alwaysHaulable>true</alwaysHaulable>
+		<isTechHediff>true</isTechHediff>
+		<pathCost>14</pathCost>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0.9</Flammability>
+			<Beauty>4</Beauty>
+			<DeteriorationRate>2.0</DeteriorationRate>
+			<Mass>1</Mass>
+			<MarketValue>400</MarketValue>
+		</statBases>
+		<tradeTags>
+			<li>TechHediff</li>
+		</tradeTags>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+	</ThingDef>
+	
+	<!--Cat-->
+	<HediffDef Parent="ImplantHediffBase">
+		<defName>FSG_InstalledCatEars</defName>
+		<label>Felid Anima Ears</label>
+		<labelNoun>felid anima ears</labelNoun>
+		<description>Installed felid anima ears. These ears carry the instincts of a patient hunter from the planetary anima network into a ship girl.</description>
+		<spawnThingOnRemoved>FSG_PartCatEars</spawnThingOnRemoved>
+		<stages>
+			<li>
+				<statOffsets>
+					<AimingDelayFactor>0.125</AimingDelayFactor>
+					<ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+					<MeleeHitChance>2</MeleeHitChance>
+				</statOffsets>
+			</li>
+		</stages>
+
+	</HediffDef>
+	
+	<RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>FSG_InstallCatEars</defName>
+    <label>install Felid Anima Ears</label>
+    <description>Install a pair of Felid Anima Ears. These ears carry the instincts of a patient hunter from the planetary anima network into a ship girl, slightly improving accuracy with all weapons, but slightly slowing ranged attacks.</description>
+    
+    <jobString>Installing cat ears.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+			<thingDefs>
+				<li>FSG_PartCatEars</li>
+			</thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+		<thingDefs>
+			<li>FSG_PartCatEars</li>
+		</thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+		<li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledCatEars</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>FSG_RemoveCatEars</defName>
+    <label>uproot Felid Anima Ears</label>
+    <description>Root out the Felid Anima Ship Girl's ears, so you can give them to someone else.</description>
+    <descriptionHyperlinks>
+      <ThingDef>FSG_PartCatEars</ThingDef>
+      <HediffDef>FSG_InstalledCatEars</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>uprooting felid ears.</jobString>
+    <removesHediff>FSG_InstalledCatEars</removesHediff>
+  </RecipeDef>
+  
+	<ThingDef>
+		<defName>FSG_PartCatEars</defName>
+		<label>removed felid anima ears</label>
+		<description>These ears carry the instincts of a patient hunter from the planetary anima network into a ship girl, slightly improving accuracy with all weapons, but slightly slowing ranged attacks.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<thingCategories>
+			<li>BodyPartsArchotech</li>
+		</thingCategories>
+		<graphicData>
+			<texPath>Apparel/Hats/Fox/Cat/Cat</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<tickerType>Never</tickerType>
+		<alwaysHaulable>true</alwaysHaulable>
+		<isTechHediff>true</isTechHediff>
+		<pathCost>14</pathCost>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0.9</Flammability>
+			<Beauty>4</Beauty>
+			<DeteriorationRate>2.0</DeteriorationRate>
+			<Mass>1</Mass>
+			<MarketValue>400</MarketValue>
+		</statBases>
+		<tradeTags>
+			<li>TechHediff</li>
+		</tradeTags>
+		<techHediffsTags>
+			<li>FSG_SpiritBionic</li>
+		</techHediffsTags>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+	</ThingDef>
+   
+	<!--Tail-->
+
+	<HediffDef Parent="ImplantHediffBase">
+		<defName>FSG_InstalledKitsuneTail</defName>
+		<label>Kitsune Tail</label>
+		<labelNoun>a kitsune Tail</labelNoun>
+		<description>An installed kitsune tail. Tribal worshipers regard this as a sign of a shipgirl's connection to the global anima.</description>
+		<spawnThingOnRemoved>FSG_PartRing</spawnThingOnRemoved>
+		<stages>
+			<li>
+				<statOffsets>
+					<PsychicSensitivity>0.2</PsychicSensitivity>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>FSG_InstallKitsuneTail</defName>
+    <label>install Kitsune Tail</label>
+    <description>Install a Kitsune Tail. Tribal worshipers regard this as a sign of a shipgirl's connection to the global anima.</description>
+    
+    <jobString>Installing fox tails.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+			<thingDefs>
+				<li>FSG_PartKitsuneTail</li>
+			</thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+		<thingDefs>
+			<li>FSG_PartKitsuneTail</li>
+		</thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+		<li>Tailbone</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledKitsuneTail</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>FSG_RemoveKitsuneTail</defName>
+    <label>steal Kitsune Tail</label>
+    <description>Chop off the Kitsune Ship Girl's tail, so you can give it to someone else.</description>
+    <descriptionHyperlinks>
+      <ThingDef>FSG_PartKitsuneTail</ThingDef>
+      <HediffDef>FSG_InstalledKitsuneTail</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>stealing kitsune tail.</jobString>
+    <removesHediff>FSG_InstalledKitsuneTail</removesHediff>
+  </RecipeDef>
+  
+  <ThingDef>
+	<defName>FSG_PartKitsuneTail</defName>
+	<label>removed kitsune tail</label>
+	<description>Tribal worshipers regard this as a sign of a shipgirl's connection to the global anima.</description>
+	<thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+	<thingCategories>
+		<li>BodyPartsArchotech</li>
+	</thingCategories>
+	<graphicData>
+		<texPath>Tails/Kitsune/Kitsune</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>.8</drawSize>
+	</graphicData>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <tickerType>Never</tickerType>
+    <alwaysHaulable>true</alwaysHaulable>
+    <isTechHediff>true</isTechHediff>
+    <pathCost>14</pathCost>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>0.9</Flammability>
+      <Beauty>4</Beauty>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Mass>1</Mass>
+	  <MarketValue>500</MarketValue>
+    </statBases>
+    <tradeTags>
+      <li>TechHediff</li>
+    </tradeTags>
+	<techHediffsTags>
+		<li>FSG_SpiritBionic</li>
+	</techHediffsTags>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+  </ThingDef>
+	
+	
+
+</Defs>

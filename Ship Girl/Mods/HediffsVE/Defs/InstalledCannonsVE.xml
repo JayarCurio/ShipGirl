@@ -1,0 +1,1449 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+<!--VE Main Guns -->
+
+
+
+  <!--Cannon Organs -->
+  <!--Medieval 2 Flavors -->
+	<!--Explosive -->
+		
+	
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_VE_InstalledTurretPetard</defName>
+		<label>installed cast explosive cannon (VE)</label>
+		<labelNoun>a pig-iron cannon, with explosive rounds</labelNoun>
+		<description>An installed cannon, made of build up layers of shrink fit pig iron, loaded with explosive shells./n/n/n
+While lacking the range, speed, and blast radius of modern cannons, these archaic tools will help against slow moving, or tightly clusted foes.</description>
+    	<spawnThingOnRemoved>FSG_PartTurretPetard</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<hediffGivers>
+		</hediffGivers>
+		<stages>
+			<li>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0.90</postFactor>
+				</li>
+			</capMods>
+			</li>
+		</stages>
+	<comps>
+			
+			<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+				
+				<!-- <toggleBackgroundPath>UI/Widgets/Prosthetic/DesButBGLG</toggleBackgroundPath> -->
+				
+				
+				<verbs>
+					<li>
+						<label>Fire Explosive Cannon</label>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.50</accuracyTouch>
+						<accuracyShort>0.60</accuracyShort>
+						<accuracyMedium>0.55</accuracyMedium>
+						<accuracyLong>0.50</accuracyLong>
+						<forcedMissRadius>2.9</forcedMissRadius>
+						<defaultCooldownTime>0</defaultCooldownTime>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>FSG_Proj_Petard</defaultProjectile>
+						<warmupTime>21</warmupTime>
+						<range>27.9</range>
+						<ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+						<burstShotCount>1</burstShotCount>
+						<soundCast>Shot_IncendiaryLauncher</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+						<muzzleFlashScale>10</muzzleFlashScale>
+						
+						<commandIcon>Turrets/Smithed</commandIcon>
+					</li>
+				</verbs>	
+				<verbProps>
+					<li>
+						 <label>Fire Explosive Cannon</label>
+						 <draw>false</draw>
+						 <canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Turrets/Smithed</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+					</li>
+				</verbProps>
+	
+				
+			</li>
+		</comps>
+   </HediffDef>
+			
+ 
+  
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_VEPartTurretPetard</defName>
+    <label>install cast cannon and explosive shot(VE)</label>
+    <description>Mount a cast cannon and explosive shot in a turret.</description>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing cannon.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_PartTurretPetard</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_PartTurretPetard</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Turret</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_VE_InstalledTurretPetard</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveFSG_VE_InstalledTurretPetard</defName>
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+
+    <label>Unmount cast explosive Cannon(VE)</label>
+    <description>Remove the cast explosive cannon from this ship girl, so it can be reallocated or replaced.</description>
+
+    <jobString>unmounting cannons.</jobString>
+    <removesHediff>FSG_VE_InstalledTurretPetard</removesHediff>
+	</RecipeDef>
+	
+	<!--Cannonball Classic -->
+	
+	
+  		<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_VE_InstalledTurretCannonBall</defName>
+		<label>installed cast solid cannon(VE)</label>
+		<labelNoun>a cast cannon, with solid cannonballs</labelNoun>
+		<description>An installed cast metal cannon, loaded with solid cannonballs.</description>
+    	<spawnThingOnRemoved>FSG_PartTurretCannonBall</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<hediffGivers>
+		</hediffGivers>
+		<stages>
+			<li>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0.90</postFactor>
+				</li>
+			</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+				
+				<!-- <toggleBackgroundPath>UI/Widgets/Prosthetic/DesButBGLG</toggleBackgroundPath> -->
+				
+				
+				<verbs>
+					<li>
+						<label>Fire solid shot Cannon</label>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.50</accuracyTouch>
+						<accuracyShort>0.60</accuracyShort>
+						<accuracyMedium>0.55</accuracyMedium>
+						<accuracyLong>0.50</accuracyLong>
+						<forcedMissRadius>2.9</forcedMissRadius>
+						<defaultCooldownTime>0</defaultCooldownTime>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>FSG_Proj_Cannonball</defaultProjectile>
+						<warmupTime>21</warmupTime>
+						<range>27.9</range>
+						<ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+						<burstShotCount>1</burstShotCount>
+						<soundCast>Shot_IncendiaryLauncher</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+						<muzzleFlashScale>10</muzzleFlashScale>
+						
+						<commandIcon>Turrets/Smithed</commandIcon>
+					</li>
+				</verbs>	
+				<verbProps>
+					<li>
+						 <label>Fire solid shot Cannon</label>
+						 <draw>false</draw>
+						 <canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Turrets/Smithed</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+					</li>
+				</verbProps>
+	
+				
+			</li>
+	</comps>
+   </HediffDef>
+			
+  
+  
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_VEPartTurretCannonBall</defName>
+    <label>install cast ball cannon(VE)</label>
+    <description>Mount a cast cannon with solid shells in a turret.</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing cast metal cannon.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_PartTurretCannonBall</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_PartTurretCannonBall</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Turret</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_VE_InstalledTurretCannonBall</addsHediff>
+  </RecipeDef>
+  
+	<RecipeDef ParentName="SurgeryRemoveImplantBase">
+		<defName>FSG_VERemoveCannonBall</defName>
+		<recipeUsers>
+			<li>ShipGirlRace</li>
+		</recipeUsers>
+		<label>Unmount Cast Cannon, and solid ball shot(VE)</label>
+		<description>Remove cast cannon and solid ball shot from this ship girl, so it can be reallocated or replaced.</description>
+		<jobString>unmounting a cannon.</jobString>
+		<removesHediff>FSG_VE_InstalledTurretCannonBall</removesHediff>
+	</RecipeDef>
+  <!-- Industrial 5 flavors -->
+	<!--Industrial explosives, 2 variants -->
+
+	
+	<!-- Dual-->
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_VE_InstalledTurretDualFrag</defName>
+		<label>installed dual HE cannon(VE)</label>
+		<labelNoun>a double barreled HE cannon array</labelNoun>
+		<description>An installed array of twin linked cannons, loaded with explosive shells. 
+		/nIt lobs a pair of explosive charges in a high arc, making it a great option for long ranged support, or shelling entrenched targets.</description>
+    	<spawnThingOnRemoved>FSG_PartTurretDualFrag</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<hediffGivers>
+		</hediffGivers>
+		<stages>
+			<li>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0.92</postFactor>
+				</li>
+			</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+				
+				
+				
+				
+				<verbs>
+					<li>
+						<label>Fire Dual Explosive Cannons</label>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.50</accuracyTouch>
+						<accuracyShort>0.60</accuracyShort>
+						<accuracyMedium>0.55</accuracyMedium>
+						<accuracyLong>0.50</accuracyLong>
+						<forcedMissRadius>2.9</forcedMissRadius>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>FSG_Proj_IndustrialShell</defaultProjectile>
+						<requireLineOfSight>false</requireLineOfSight>
+						<warmupTime>18</warmupTime>
+						<defaultCooldownTime>12</defaultCooldownTime>
+						<range>39.9</range>
+						<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+						<burstShotCount>2</burstShotCount>
+						<soundCast>Shot_IncendiaryLauncher</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+						<muzzleFlashScale>10</muzzleFlashScale>
+						
+						<commandIcon>Turrets/DualFrag</commandIcon>
+					</li>
+				</verbs>	
+				<verbProps>
+					<li>
+						 <label>Fire Dual Explosive Cannons</label>
+						 <draw>false</draw>
+						 <canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Turrets/DualFrag</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+					</li>
+				</verbProps>
+	
+				
+			</li>
+	</comps>
+   </HediffDef>
+			
+ 
+  
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_VEPartTurretDualFrag</defName>
+    <label>install dual explosive artillery turret(VE)</label>
+    <description>Mount quad cannons with fragmentation shells in a turret.</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing dual explosive turret.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_PartTurretDualFrag</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_PartTurretDualFrag</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Turret</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_VE_InstalledTurretDualFrag</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+
+    <defName>RemoveFSG_VE_InstalledTurretDualFrag</defName>
+    <label>Unmount Dual Explosive Cannons(VE)</label>
+    <description>Remove the dual explosive cannons from this ship girl, so they can be reallocated or replaced.</description>
+
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <jobString>unmounting cannons.</jobString>
+    <removesHediff>FSG_VE_InstalledTurretDualFrag</removesHediff>
+  </RecipeDef>
+  
+
+  
+ <!--Quad Explosives-->
+    <HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_VE_InstalledTurretMultiFrag</defName>
+		<label>installed quad HE cannon(VE)</label>
+		<labelNoun>a quad barreled HE cannon</labelNoun>
+		<description>An installed array of four cannons, loaded with explosive shells.</description>
+    
+		<spawnThingOnRemoved>FSG_PartTurretMultiFrag</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<hediffGivers>
+		</hediffGivers>
+		<stages>
+			<li>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0.90</postFactor>
+				</li>
+			</capMods>
+			</li>
+		</stages>
+		<comps>
+		<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+				
+				
+				
+				
+				<verbs>
+					<li>
+					<label>Fire Quad Explosive Artillery</label>
+					<verbClass>Verb_Shoot</verbClass>
+					<accuracyTouch>0.40</accuracyTouch>
+					<accuracyShort>0.50</accuracyShort>
+					<accuracyMedium>0.55</accuracyMedium>
+					<accuracyLong>0.50</accuracyLong>
+					<forcedMissRadius>3.9</forcedMissRadius>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>FSG_Proj_IndustrialShell</defaultProjectile>
+					<warmupTime>25</warmupTime>
+					<defaultCooldownTime>12</defaultCooldownTime>
+					<requireLineOfSight>false</requireLineOfSight>
+					<range>37.9</range>
+					<ticksBetweenBurstShots>9</ticksBetweenBurstShots>
+					<burstShotCount>4</burstShotCount>
+					<soundCast>Shot_IncendiaryLauncher</soundCast>
+					<soundCastTail>GunTail_Heavy</soundCastTail>
+					<muzzleFlashScale>10</muzzleFlashScale>
+					<stopBurstWithoutLos>false</stopBurstWithoutLos>
+					<targetParams>
+						<canTargetLocations>true</canTargetLocations>
+					</targetParams>
+						
+						<commandIcon>Turrets/MultiFrag</commandIcon>
+					</li>
+				</verbs>	
+				<verbProps>
+					<li>
+						 <label>Fire Quad Explosive Artillery</label>
+						 <draw>false</draw>
+						 <canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Turrets/MultiFrag</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+					</li>
+				</verbProps>
+	
+				
+			</li>
+		
+	</comps>
+	     
+  </HediffDef>
+
+  
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_VEPartTurretMultiFrag</defName>
+    <label>install quad frag turret(VE)</label>
+    <description>Mount a quad cannons with fragmentation shells in a turret.</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing quad frag turret.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_PartTurretMultiFrag</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_PartTurretMultiFrag</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Turret</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_VE_InstalledTurretMultiFrag</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <defName>RemoveFSG_VE_InstalledTurretMultiFrag</defName>
+    <label>Unmount Quad HE Cannons(VE)</label>
+    <description>Remove the quad explosive cannons from this ship girl, so they can be reallocated or replaced.</description>
+
+    <jobString>unmounting cannons.</jobString>
+    <removesHediff>FSG_VE_InstalledTurretMultiFrag</removesHediff>
+  </RecipeDef>
+  
+  <!--Industrial Mass Drivers -->
+  	
+  	
+	<!--Dual Slugs-->
+	
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_VE_InstalledTurretDualSP</defName>
+		<label>installed dual slug cannon(VE)</label>
+		<labelNoun>a double barreled slug cannon array</labelNoun>
+		<description>An installed array of twin linked cannons, loaded with 16" SAP rounds, as they should be. This weapon is designed to devistate smaller classes of ships.</description>
+		<spawnThingOnRemoved>FSG_PartTurretDualSP</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<hediffGivers>
+		</hediffGivers>
+		<stages>
+			<li>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0.95</postFactor>
+				</li>
+			</capMods>
+			</li>
+		</stages>
+		<comps>
+		<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+				
+				<!-- <toggleBackgroundPath>UI/Widgets/Prosthetic/DesButBGLG</toggleBackgroundPath> -->
+				
+				
+				<verbs>
+					<li>
+						<label>Direct Fire Twin Cannons</label>
+					<verbClass>Verb_Shoot</verbClass>
+					<accuracyTouch>0.55</accuracyTouch>
+					<accuracyShort>0.65</accuracyShort>
+					<accuracyMedium>0.70</accuracyMedium>
+					<accuracyLong>0.65</accuracyLong>
+					<!--<forcedMissRadius>1.1</forcedMissRadius>-->
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>FSG_Proj_SPShell</defaultProjectile>
+					<warmupTime>14</warmupTime>
+					<defaultCooldownTime>12</defaultCooldownTime>
+					<range>42.9</range>
+					<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+					<burstShotCount>2</burstShotCount>
+					<soundCast>Shot_IncendiaryLauncher</soundCast>
+					<soundCastTail>GunTail_Medium</soundCastTail>
+					<muzzleFlashScale>12</muzzleFlashScale>
+					
+						
+						<commandIcon>Turrets/DualSP</commandIcon>
+					</li>
+				</verbs>	
+				<verbProps>
+					<li>
+						 <label>Direct Fire Twin Cannons</label>
+						 <draw>false</draw>
+						 <canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Turrets/DualSP</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+					</li>
+				</verbProps>
+	
+				
+			</li>
+	</comps>
+   </HediffDef>
+
+		
+		
+  
+  
+   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_VE_PartTurretDualSP</defName>
+    <label>install dual slug turret(VE)</label>
+    <description>Mount a dual cannon array with solid shells in a turret.</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing Dual slug turret.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_PartTurretDualSP</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_PartTurretDualSP</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Turret</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_VE_InstalledTurretDualSP</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <defName>RemoveFSG_VE_InstalledTurretDualSP</defName>
+    <label>Unmount Dual Slug Cannons(VE)</label>
+    <description>Remove the dual slug cannons from this ship girl, so they can be reallocated or replaced.</description>
+
+    <jobString>unmounting cannons.</jobString>
+    <removesHediff>FSG_VE_InstalledTurretDualSP</removesHediff>
+  </RecipeDef>
+   
+ 
+   
+
+    <!--Quad Slugs-->
+	
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_VE_PartTurretMultiSP</defName>
+    <label>install quad slug turret(VE)</label>
+    <description>Mount a quad cannon array with solid shells in a turret.</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing quad slug turret.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_PartTurretMultiSP</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_PartTurretMultiSP</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Turret</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_VE_InstalledTurretMultiSP</addsHediff>
+  </RecipeDef>
+  
+  
+  
+	<RecipeDef ParentName="SurgeryRemoveImplantBase">
+
+		<recipeUsers>
+			<li>ShipGirlRace</li>
+		</recipeUsers>
+		<defName>RemoveFSG_VE_InstalledTurretMultiSP</defName>
+		<label>Unmount Quad Slug Cannons(VE)</label>
+		<description>Remove the quad slug cannons from this ship girl, so they can be reallocated or replaced.</description>
+		<jobString>unmounting cannons.</jobString>
+		<removesHediff>FSG_VE_InstalledTurretMultiSP</removesHediff>
+	</RecipeDef>
+  
+    <HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_VE_InstalledTurretMultiSP</defName>
+		<label>installed quad slug cannon(VE)</label>
+		<labelNoun>an array of four slug cannons</labelNoun>
+		<description>An installed array of four cannons, loaded with solid shells.</description>
+    
+		<spawnThingOnRemoved>FSG_PartTurretMultiFrag</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<hediffGivers>
+		</hediffGivers>
+		<stages>
+			<li>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0.92</postFactor>
+				</li>
+			</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+				
+				
+				
+				
+				<verbs>
+					<li>
+					<label>Direct Fire Quad Slug Cannons</label>
+					<verbClass>Verb_Shoot</verbClass>
+					<accuracyTouch>0.40</accuracyTouch>
+					<accuracyShort>0.50</accuracyShort>
+					<accuracyMedium>0.55</accuracyMedium>
+					<accuracyLong>0.50</accuracyLong>
+					<forcedMissRadius>1.9</forcedMissRadius>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>FSG_Proj_SPShell</defaultProjectile>
+					<warmupTime>20</warmupTime>
+					<defaultCooldownTime>12</defaultCooldownTime>
+					<range>42.9</range>
+					<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+					<burstShotCount>4</burstShotCount>
+					<soundCast>Shot_IncendiaryLauncher</soundCast>
+					<soundCastTail>GunTail_Medium</soundCastTail>
+					<muzzleFlashScale>10</muzzleFlashScale>
+					
+						
+						<commandIcon>Turrets/Generic</commandIcon>
+					</li>
+				</verbs>	
+				<verbProps>
+					<li>
+						 <label>Direct Fire Quad Slug Cannons</label>
+						 <draw>false</draw>
+						 <canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Turrets/Generic</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+					</li>
+				</verbProps>
+	
+				
+			</li>
+		</comps>
+	     
+  </HediffDef>
+
+  
+  
+		<!--Industrial Flame Cannon -->
+
+		
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_VE_InstalledTurretDualFlame</defName>
+		<label>installed dual flame cannon(VE)</label>
+		<labelNoun>a double barreled flame cannon array</labelNoun>
+		<description>An installed battery of twin linked cannons, loaded with 16" incendiary shells.
+		/nThese explosions leave behind flaming oil puddles, which is useful for fighting large groups, and controling the flow of the battlefield. However, it takes a bit longer to reload than other battleship artillery.</description>
+    	<spawnThingOnRemoved>FSG_PartTurretDualFlame</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<hediffGivers>
+		</hediffGivers>
+		<stages>
+			<li>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0.92</postFactor>
+				</li>
+			</capMods>
+			</li>
+		</stages>
+		<comps>
+		<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+				
+				<!-- <toggleBackgroundPath>UI/Widgets/Prosthetic/DesButBGLG</toggleBackgroundPath> -->
+				
+				
+				<verbs>
+					<li>
+					<label>Dual Flame Cannons</label>
+					<verbClass>Verb_Shoot</verbClass>
+					<accuracyTouch>0.50</accuracyTouch>
+					<accuracyShort>0.60</accuracyShort>
+					<accuracyMedium>0.55</accuracyMedium>
+					<accuracyLong>0.50</accuracyLong>
+					<forcedMissRadius>1.1</forcedMissRadius>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>FSG_IndustrialFlameProjectile</defaultProjectile>
+					<warmupTime>14</warmupTime>
+					<defaultCooldownTime>14</defaultCooldownTime>
+					<requireLineOfSight>false</requireLineOfSight>
+					<range>39.5</range>
+					<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+					<burstShotCount>2</burstShotCount>
+					<soundCast>Shot_IncendiaryLauncher</soundCast>
+					<soundCastTail>GunTail_Medium</soundCastTail>
+					<muzzleFlashScale>10</muzzleFlashScale>
+					
+					<stopBurstWithoutLos>false</stopBurstWithoutLos>
+					<targetParams>
+						<canTargetLocations>true</canTargetLocations>
+					</targetParams>
+					
+						
+						<commandIcon>Turrets/Incendiary</commandIcon>
+					</li>
+				</verbs>	
+				<verbProps>
+					<li>
+						 <label>Dual Flame Cannons</label>
+						 <draw>false</draw>
+						 <canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Turrets/Incendiary</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+					</li>
+				</verbProps>
+	
+				
+			</li>
+	</comps>
+   </HediffDef>
+			
+  
+  
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_VEPartTurretDualFlame</defName>
+    <label>install dual incendiary artillery turret(VE)</label>
+    <description>Mount dual cannons with incendiary shells in a turret.</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing dual incendiary turret.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_PartTurretDualFlame</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_PartTurretDualFlame</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Turret</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_VE_InstalledTurretDualFlame</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <defName>RemoveFSG_VE_InstalledTurretDualFlame</defName>
+    <label>Unmount Dual Flame Cannons(VE)</label>
+    <description>Remove the dual incendiary cannons from this ship girl, so they can be reallocated or replaced.</description>
+
+    <jobString>unmounting cannons.</jobString>
+    <removesHediff>FSG_VE_InstalledTurretDualFlame</removesHediff>
+  </RecipeDef>
+  
+ 
+
+<!--Spacer -->
+
+	
+	<!-- Guns -->
+	
+		<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_VE_InstalledTurretRailHeavy</defName>
+		<label>installed heavy rail cannon(VE)</label>
+		<labelNoun>a heavy rail cannon</labelNoun>
+		<description>A massive railgun for puncturing ships. It is more accurate at long range than it's smaller cousins.</description>
+    
+		<spawnThingOnRemoved>FSG_PartTurretRailHeavy</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.1</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<hediffGivers>
+		</hediffGivers>
+		<stages>
+			<li>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0.92</postFactor>
+				</li>
+			</capMods>
+			</li>
+		</stages>
+		<comps>
+		<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+
+				
+				<verbs>
+					<li>
+					<label>Direct Fire Heavy Rail Cannon</label>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.20</accuracyTouch>
+						<accuracyShort>0.30</accuracyShort>
+						<accuracyMedium>0.40</accuracyMedium>
+						<accuracyLong>0.90</accuracyLong>
+						
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>FSG_Proj_HeavyRailgunShell</defaultProjectile>
+						<warmupTime>12</warmupTime>
+						<range>39.9</range>
+						<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+						<burstShotCount>1</burstShotCount>
+						<soundCast>Shot_IncendiaryLauncher</soundCast>
+						<soundCastTail>GunTail_Medium</soundCastTail>
+						<muzzleFlashScale>20</muzzleFlashScale>
+					
+						
+						<commandIcon>Turrets/Single</commandIcon>
+					</li>
+				</verbs>	
+				<verbProps>
+					<li>
+						 <label>Direct Fire Heavy Rail Cannon</label>
+						 <draw>false</draw>
+						 <canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Turrets/Single</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+					</li>
+				</verbProps>
+	
+				
+			</li>
+	</comps>
+   </HediffDef>
+   
+  
+   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_VEPartTurretRailHeavy</defName>
+    <label>install Heavy Railgun turret(VE)</label>
+    <description>Mount a Heavy Railgun in a turret.</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing Dual slug turret.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_PartTurretRailHeavy</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_PartTurretRailHeavy</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Turret</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_VE_InstalledTurretRailHeavy</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <defName>RemoveFSG_VE_InstalledTurretRailHeavy</defName>
+    <label>Unmount Heavy Rail Cannon(VE)</label>
+    <description>Remove the heavy railgun from this ship girl, so it can be reallocated or replaced.</description>
+
+    <jobString>unmounting cannons.</jobString>
+    <removesHediff>FSG_VE_InstalledTurretDualSP</removesHediff>
+  </RecipeDef>
+   
+ 
+   
+
+    <!--dual railguns-->
+	
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_VEPartTurretRailMulti</defName>
+    <label>install twin railgun turret(VE)</label>
+    <description>Mount a dual railgun array in a turret. Stuffing two heavy railguns into a single turret meant making some compromises in reload time, target tracking and range, but you do get a little less than twice the raw firepower.</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing twin railguns turret.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_PartTurretRailMulti</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_PartTurretRailMulti</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Turret</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_VE_InstalledTurretRailMulti</addsHediff>
+  </RecipeDef>
+  
+  
+  
+	<RecipeDef ParentName="SurgeryRemoveImplantBase">
+
+		<recipeUsers>
+			<li>ShipGirlRace</li>
+		</recipeUsers>
+		<defName>RemoveFSG_VE_InstalledTurretRailMulti</defName>
+		<label>Unmount Twin Rail Cannons(VE)</label>
+		<description>Remove the twin rail cannons from this ship girl, so they can be reallocated or replaced.</description>
+		<jobString>unmounting cannons.</jobString>
+		<removesHediff>FSG_VE_InstalledTurretRailMulti</removesHediff>
+	</RecipeDef>
+  
+    <HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_VE_InstalledTurretRailMulti</defName>
+		<label>installed twin rail cannon(VE)</label>
+		<labelNoun>an array of two rail cannons</labelNoun>
+		<description>An installed array of two rail cannons. Stuffing two heavy railguns into a single turret meant making some compromises in reload time, target tracking and range, but you do get a little less than twice the raw firepower.</description>
+    
+		<spawnThingOnRemoved>FSG_PartTurretRailMulti</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<hediffGivers>
+		</hediffGivers>
+		<stages>
+			<li>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0.90</postFactor>
+				</li>
+			</capMods>
+			</li>
+		</stages>
+		<comps>
+		<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+
+				
+				<verbs>
+					<li>
+					<label>Direct Fire Twin-linked Railgun</label>
+					<verbClass>Verb_Shoot</verbClass>
+					<accuracyTouch>0.15</accuracyTouch>
+					<accuracyShort>0.20</accuracyShort>
+					<accuracyMedium>0.25</accuracyMedium>
+					<accuracyLong>0.85</accuracyLong>
+					
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>FSG_Proj_HeavyRailgunShell</defaultProjectile>
+					<warmupTime>16</warmupTime>
+					<range>35.9</range>
+					<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+					<burstShotCount>2</burstShotCount>
+					<soundCast>Shot_IncendiaryLauncher</soundCast>
+					<soundCastTail>GunTail_Medium</soundCastTail>
+					<muzzleFlashScale>12</muzzleFlashScale>
+					
+						
+						<commandIcon>Turrets/Generic</commandIcon>
+					</li>
+				</verbs>	
+				<verbProps>
+					<li>
+						 <label>Direct Fire Twin-linked Railgun</label>
+						 <draw>false</draw>
+						 <canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Turrets/Generic</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+					</li>
+				</verbProps>
+	
+				
+			</li>
+	</comps>
+	     
+  </HediffDef>
+
+  
+  
+		<!--Spacer Explosive Cannon -->
+		
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_VE_InstalledTurretSpaceBomb</defName>
+		<label>installed Proton Bomb Cannon(VE)</label>
+		<labelNoun>a double barreled proton bomb launcher</labelNoun>
+		<description>An installed array of twin linked cannons, loaded with Proton Bombs.
+		/nThese spacer tech battleship artillery pieces feature greater greater accuracy, blast area, and projectile speed, compared to their Industrial counterparts.</description>
+    	<spawnThingOnRemoved>FSG_PartTurretSpaceBomb</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.2</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<hediffGivers>
+		</hediffGivers>
+		<stages>
+			<li>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0.90</postFactor>
+				</li>
+			</capMods>
+			</li>
+		</stages>
+		<comps>
+		<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+				
+				
+				
+				
+				<verbs>
+					<li>
+						<label>Fire Proton Bombs</label>
+					<verbClass>Verb_Shoot</verbClass>
+					<accuracyTouch>0.50</accuracyTouch>
+					<accuracyShort>0.60</accuracyShort>
+					<accuracyMedium>0.60</accuracyMedium>
+					<accuracyLong>0.65</accuracyLong>
+					<forcedMissRadius>1.9</forcedMissRadius>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>FSG_Proj_SpacerShell</defaultProjectile>
+					<warmupTime>13</warmupTime>
+					<defaultCooldownTime>12</defaultCooldownTime>
+					<requireLineOfSight>false</requireLineOfSight>
+					<range>39.9</range>
+					<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+					<burstShotCount>2</burstShotCount>
+					<soundCast>Shot_IncendiaryLauncher</soundCast>
+					<soundCastTail>GunTail_Medium</soundCastTail>
+					<muzzleFlashScale>10</muzzleFlashScale>
+					
+					<stopBurstWithoutLos>false</stopBurstWithoutLos>
+					<targetParams>
+						<canTargetLocations>true</canTargetLocations>
+					</targetParams>
+					</li>
+				</verbs>	
+				<verbProps>
+					<li>
+							<label>Fire Proton Bombs</label>
+						 <draw>false</draw>
+						 <canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Turrets/DualFrag</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+					</li>
+				</verbProps>
+	
+				
+			</li>
+	</comps>
+   </HediffDef>
+			
+ 
+  
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_VEPartTurretSpaceBomb</defName>
+    <label>install dual proton bomb turret(VE)</label>
+    <description>Mount dual cannons with proton bombs in a turret.</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing dual proton bomb turret.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_PartTurretSpaceBomb</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_PartTurretSpaceBomb</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+		<li>Turret</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_VE_InstalledTurretSpaceBomb</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <defName>RemoveFSG_VE_InstalledTurretSpaceBomb</defName>
+    <label>Unmount dual proton bomb Cannons(VE)</label>
+    <description>Remove the proton cannons from this ship girl, so they can be reallocated or replaced.</description>
+
+    <jobString>unmounting cannons.</jobString>
+    <removesHediff>FSG_VE_InstalledTurretSpaceBomb</removesHediff>
+  </RecipeDef>
+
+
+<!--Archeotech/Sinister/Ultra-->
+	
+
+  
+  		<!--Sinister dual Flame Cannon -->
+		
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_VE_InstalledTurretDualPlasma</defName>
+		
+		<label>installed dual plasma cannon(VE)</label>
+		<labelNoun>a double barreled plasma cannon array</labelNoun>
+		<description>An installed array of twin linked plasma cannons.</description>
+    	<spawnThingOnRemoved>FSG_PartTurretDualPlasma</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.2</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<hediffGivers>
+		</hediffGivers>
+		<stages>
+			<li>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0.90</postFactor>
+				</li>
+			</capMods>
+			</li>
+		</stages>
+		<comps>
+		<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+				
+				
+				
+				
+				<verbs>
+					<li>
+						<label>Fire Dual Plasma</label>
+					<verbClass>Verb_Shoot</verbClass>
+					<accuracyTouch>0.50</accuracyTouch>
+					<accuracyShort>0.60</accuracyShort>
+					<accuracyMedium>0.60</accuracyMedium>
+					<accuracyLong>0.65</accuracyLong>
+					<forcedMissRadius>1.9</forcedMissRadius>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>FSG_Proj_SpacerShell</defaultProjectile>
+					<warmupTime>13</warmupTime>
+					<defaultCooldownTime>12</defaultCooldownTime>
+					<requireLineOfSight>false</requireLineOfSight>
+					<range>39.9</range>
+					<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+					<burstShotCount>2</burstShotCount>
+					<soundCast>Shot_IncendiaryLauncher</soundCast>
+					<soundCastTail>GunTail_Medium</soundCastTail>
+					<muzzleFlashScale>10</muzzleFlashScale>
+					
+					<stopBurstWithoutLos>false</stopBurstWithoutLos>
+					<targetParams>
+						<canTargetLocations>true</canTargetLocations>
+					</targetParams>
+					</li>
+				</verbs>	
+				<verbProps>
+					<li>
+							<label>Fire Dual Plasma</label>
+						 <draw>false</draw>
+						 <canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Turrets/DualFrag</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+					</li>
+				</verbProps>
+	
+				
+			</li>
+	</comps>
+   </HediffDef>
+			
+ 
+  
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_VEPartTurretDualPlasma</defName>
+    <label>install dual plasma artillery turret(VE)</label>
+    <description>Mount dual plasma cannons.</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing dual plasma turret.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_PartTurretDualPlasma</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_PartTurretDualPlasma</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Turret</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_VE_InstalledTurretDualPlasma</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <defName>RemoveFSG_VE_InstalledTurretDualPlasma</defName>
+    <label>Unmount Dual Plasma Cannons(VE)</label>
+    <description>Remove the dual plasma cannons from this ship girl, so they can be reallocated or replaced.</description>
+
+    <jobString>unmounting plasma cannons.</jobString>
+    <removesHediff>FSG_VE_InstalledTurretDualPlasma</removesHediff>
+  </RecipeDef>
+
+  		<!--Sinister Quad Flame Cannon -->
+		
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_VE_InstalledTurretQuadPlasma</defName>
+		<label>installed quad plasma cannon(VE)</label>
+		<labelNoun>a quad barreled plasma cannon array</labelNoun>
+		<description>This turret is inscribed with, "All who oppose us will be nought but ember and ash."</description>
+    	<spawnThingOnRemoved>FSG_PartTurretQuadPlasma</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.25</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<hediffGivers>
+		</hediffGivers>
+		<stages>
+			<li>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0.88</postFactor>
+				</li>
+			</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+				
+				
+				
+				
+				<verbs>
+					<li>
+						<label>Quad Plasma Turret</label>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.40</accuracyTouch>
+						<accuracyShort>0.55</accuracyShort>
+						<accuracyMedium>0.55</accuracyMedium>
+						<accuracyLong>0.50</accuracyLong>
+						<forcedMissRadius>5.1</forcedMissRadius>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>FSG_BasePlasmaProjectile</defaultProjectile>
+						<warmupTime>8</warmupTime>
+						<defaultCooldownTime>12</defaultCooldownTime>
+						<requireLineOfSight>false</requireLineOfSight>
+						<range>37.9</range>
+						<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+						<burstShotCount>8</burstShotCount>
+						<soundCast>Shot_IncendiaryLauncher</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+						<muzzleFlashScale>40</muzzleFlashScale>
+					
+						<stopBurstWithoutLos>false</stopBurstWithoutLos>
+						<targetParams>
+							<canTargetLocations>true</canTargetLocations>
+						</targetParams>
+					</li>
+				</verbs>	
+				<verbProps>
+					<li>
+							<label>Quad Plasma Turret</label>
+						 <draw>false</draw>
+						 <canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Turrets/MultiFlame</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+					</li>
+				</verbProps>
+	
+				
+			</li>
+		</comps>
+	
+	</HediffDef>
+			
+
+  
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_VEPartTurretQuadPlasma</defName>
+    <label>install quad plasma artillery turret(VE)</label>
+    <description>Mount quad plasma cannons.(VE)</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing quad plasma turret.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_PartTurretQuadPlasma</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_PartTurretQuadPlasma</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Turret</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_VE_InstalledTurretQuadPlasma</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <defName>RemoveFSG_VE_InstalledTurretQuadPlasma</defName>
+    <label>Unmount Quad Plasma Cannons(VE)</label>
+    <description>Remove the quad plasma cannons from this ship girl, so they can be reallocated or replaced.</description>
+
+    <jobString>unmounting plasma cannons.</jobString>
+    <removesHediff>FSG_VE_InstalledTurretQuadPlasma</removesHediff>
+  </RecipeDef>
+
+</Defs>

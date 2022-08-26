@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Ship Girl Race</name>
+	<author>Twoscythe</author>
+	<packageId>Twoscythe.ShipGirl.race</packageId>
+	<url></url>
+	<supportedVersions>
+        <li>1.2</li>
+		<li>1.3</li>
+    </supportedVersions>
+	
+	
+	<description> Beta v 0.2.2021.8.19a
+	
+
+My most requested feature of all time has arrived for VE users! You can now turn off the eye and head addons.
+
+Fixes and balance tweaks.
+Some big visual upgrades.
+
+!!!
+You will need **EITHER** Vanilla Expanded Framework (https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013), or Prosthetic Combat Framework (https://steamcommunity.com/sharedfiles/filedetails/?id=2011169338) to make this mod work properly. If you are using version 1.3/Ideology, VE is strongly preferred.
+!!!
+	
+	This mod adds a race of sentient, biomechanical, miniaturized warships. They're mostly lore-friendly, in the sense that they are advanced personas, given personalities by arcane archeotechnology, which psionically draws from the human collective unconscious. For some reason, this means they all take the form of young women.
+	
+Also, there is a faction, of mysterious ghost ships from the future of a parallel universe, or something like that. Whatever they are, they have some really impressive weapons that you can only get by capturing and dismantling their elite troops, so that's an extra little challenge if you feel like having soldiers with artillery growing out of their backs makes the game too easy.
+	
+There are references to a lot of other science fiction in here, but if you're reading this, I assume you can already name two of them.
+	
+New ship girls can be created using archeotech cubes, salvaged by butchering dead ship girls, but their personalities can be abnormally intense and their traits are very random, and you'll need to build or salvage weapon systems to upgrade them to their full potential.
+	
+	
+	They do have significantly less firepower than a warship really should have, but that's just for balance.
+	
+	
+Credit to rpowell13, for the headlight lighting system.
+	
+Currently requires HAR, and Mohar Frameworks.
+	
+Changes:
+
+(x) VEF version has Toggle option to disable rendering of comedically oversized anime eyes, and head addons, to support taller body textures.
+(x) Adjusted background opacity on spacer tier hulls to 1/255, to prevent rounding errors, resulting in transparent squares, over pawns with certain hulls.
+(x) Designated specific shaders for all bodyaddons, to ensure consistent behavior.
+(x) Brawlers are no longer upset by wearing the VE versions of gunfists, AA guns or destroyer caliber guns. (VE added BrawlerCaresAbout negation tags. Thanks, LegoDude!)
+(x) Update Spacer AA Weapons to match the previous ROF buff to industrial AA Weapons. Keeping Sisterhood vanguards away from you is significantly more important.
+(x) Buff armor scaling on advanced Hull armors, from +50% per tech tier to +100% per, so Sisterhood are not made of paper. Keeping Sisterhood vanguards away should be harder than swatting flies.
+(x) Buff Hull base armors, to compensate for the fact that ships can't layer armor on their rigging.
+
+(x)New ship girls should pick subrace appropriate tattoo colors
+(x)Sinister Girls have more diverse, but still alien skin tones	
+(x)Ultra-Tech Hulls have their own textures.
+(x)Added tattoo masks for existing hulls.
+(x)Added tattoo masks for existing keels.
+	
+	
+**  TODO  **
+
+ To Fix:
+() Adjust bodypart coverage, so torso no longer takes 17% of hits.
+() Rebalance HP multipliers.
+() Stray light emitters, possibly due to excess bodysize causing pathing issues.
+() Nuclear Cola displays research requirements inconsistently. May be a Royalty vs. Vanilla thing.
+() Update gun implants with even more info on their ranged attacks.
+
+() Surely something else is broken.
+
+
+  Royalty Compatability 
+
+()Imperial Navy Faction
+()Anima Spirit ship faction.
+()Carriers as psycasters/summoners
+
+  1.3 Compatability
+
+(?) Fix messed up addon layering, more.
+
+
+
+  Future Features:
+
+
+	
+()Flesh out cruiser caliber ammo types and use them appropriately.
+()Add destroyer Main Turrets. Heavy Flak Cannon, etc.
+()Add Industrial Cruiser Gunfist with bullet punch.
+()Unique textures for Spacer Keels
+()Ultra Tech weapons and keels
+()Archeotech weapons and keels
+()More faction specific melee keels.
+()Override racial alchohol chem handling, to give alchohol+octaine
+
+()Shipgirl Outlanders need more flavor.
+()enemy shipgirl cultures need colors
+()make sinister faction icons differentiable
+()Blood Shark ideology is insufficiently offensive/violent.
+
+()More replacement parts to cover damaged sensory equipment.
+()More upgrade parts for specialized organs (Radar, sonar, tower, funnel, utility room etc).
+()Rework loyalty implants to improve will/resistance.
+(partial)Chance of random Industrial tier eyes on Gatcha ships.
+()Update backstories with R/SR gear kit variants
+()Convert Anima, Pirate and Outlander pawn kinds to basic/elite/boss format.(Storytellers better understand the relative danger of ship pawns. Raid danger is less random.)
+()Give folded kit hediffs costs(Storytellers better understand the relative danger of ship pawns. Raid danger is less random.)
+() Make easier to disable eye graphics.
+
+(partial)Higher cost gatchas with more specific drop tables.
+
+()UR tier gatcha drops better synergize traits with gear (e.g. undergrounders with night vision)
+()Gatcha ships should know who their parents/creators are. How?
+()New meme/precept for AI servitude/freedom/supremacy/extermination (Wait for HAR for 1.3 to stabilize.)
+()Sinister god namer?
+()Sinsiter Faction Bases defended by Orochi Super Carrier/Abyssal Island Princess bosses.
+()More interesting boss mechanics.
+()custom aging/disease giver
+()Hull type to affect body size/ranged evasion? That's a tough nut to crack.
+()Submarine subrace focused on stealth ambushes with torpedoes, and limited to DD caliber guns.
+
+
+() More hats! With 1.3, do we actually have too many hats? Less hats? The same number of hats, in different categories?
+
+
+  MOD COMPAT
+
+()Spec Carriers into Summoner if RoM is enabled.
+()Spec Veteran Carriers into Hunter if EAC for RoM is enabled.(-becasue archer/summoner hybrids? c'mon.)
+
+
+() Support Vanilla Expanded's Extreme Xenophobia.
+
+()Revia Ship Girls, because blood is blood.
+
+()Make spacer and ultra hulls grant radiation immune (wait on SOS for 1.3)
+()Make Spacer, Submarine and Ultra Hulls grant vaccuum immunity (wait on SOS for 1.3)
+()Rocketman *may* behave more consistently toward timer kits if I replace all instances of 601~602 ticks with 605, and 751~751 with 755.
+()Worldgen failures with Faction Control enabled.
+
+()Jorgamund (Grosse/Empress) as mounts?
+
+
+X - If you want to make a CE, or Yayo Combat patch, please do.
+
+	</description>
+	<modDependencies>
+        <li>
+            <packageId>erdelf.HumanoidAlienRaces</packageId>
+            <displayName>Humanoid Alien Races 2.0</displayName>
+            <downloadUrl>https://github.com/erdelf/AlienRaces/wiki</downloadUrl>
+            <steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=839005762</steamWorkshopUrl>
+        </li>
+
+		<li>
+			<packageId>goudaquiche.MoharFramework</packageId>
+			<displayName>Mohar Framework</displayName>
+			<downloadUrl>https://github.com/goudaQuiche/MoharHediffs</downloadUrl>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2057001924</steamWorkshopUrl>
+		</li>
+    </modDependencies>
+</ModMetaData>
+		

@@ -1,0 +1,31 @@
+<Patch>
+  <Operation Class="VFECore.PatchOperationToggable">
+    <enabled>False</enabled>
+    <mods>
+      <li>Ship Girl Race</li>
+    </mods>
+    <label>Disable graphics for Ship Girl headlights and other head addons:</label>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ShipGirlSinRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[6]</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ShipGirlSinRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[5]</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ShipGirlSinRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ShipGirlRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[6]</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ShipGirlRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[5]</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="ShipGirlRace"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[4]</xpath>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

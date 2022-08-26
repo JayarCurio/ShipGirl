@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="VFECore.PatchOperationToggable">
+    <enabled>True</enabled>
+    <mods>
+      <li>Ship Girl Race</li>
+    </mods>
+    <label>Disable graphics for headlights and other head addons:</label>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace[defName=ShipGirlSinRace]/generalSettings/bodyAddons/li[4]</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace[defName=ShipGirlSinRace]/generalSettings/bodyAddons/li[5]</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace[defName=ShipGirlSinRace]/generalSettings/bodyAddons/li[6]</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace[defName=ShipGirlRace]/generalSettings/bodyAddons/li[4]</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace[defName=ShipGirlRace]/generalSettings/bodyAddons/li[5]</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace[defName=ShipGirlRace]/generalSettings/bodyAddons/li[6]</xpath>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

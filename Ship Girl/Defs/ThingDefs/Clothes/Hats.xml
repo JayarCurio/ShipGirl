@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+<ThingDef ParentName="HatBase">
+    <defName>FSG_HatSharkRibbon</defName>
+    <label>Campaign Ribbon</label>
+    <description>A participation ribbon awarded to improve the morale of Blood Shark soldiers. Some believe this functions as a talisman of courage.</description>
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Apparel/Hats/Shark/Ribbons/A</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>2</drawSize>
+    </graphicData>
+    <uiIconScale>1.15</uiIconScale>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <costStuffCount>20</costStuffCount>
+    <statBases>
+		<Mass>1</Mass>
+		<MarketValue>10</MarketValue>
+		<StuffEffectMultiplierArmor>0.05</StuffEffectMultiplierArmor>
+        <StuffEffectMultiplierInsulation_Cold>0.05</StuffEffectMultiplierInsulation_Cold>
+		<StuffEffectMultiplierInsulation_Heat>0.05</StuffEffectMultiplierInsulation_Heat>
+		<EquipDelay>0.5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <PainShockThreshold>0.05</PainShockThreshold>
+    </equippedStatOffsets>
+    <apparel>
+		<tags>
+			<li>SharkCombatGear</li>
+		</tags>
+		<scoreOffset>1</scoreOffset>
+		<defaultOutfitTags>
+			<li>Soldier</li>
+		</defaultOutfitTags>
+		<bodyPartGroups>
+			<li>UpperHead</li>
+		</bodyPartGroups>
+		<wornGraphicPath>Apparel/Hats/Shark/Ribbons/A</wornGraphicPath>
+		<hatRenderedFrontOfFace>true</hatRenderedFrontOfFace>
+		<layers>
+			<li>Overhead</li>
+		</layers>
+      
+    </apparel>
+    
+  </ThingDef>
+
+<ThingDef ParentName="HatBase">
+    <defName>FSG_HatSharkRibbonB</defName>
+    <label>Victory Ribbon</label>
+    <description>A ribbon awarded to Blood Shark veterans. It is often coveted as a battle trophy.</description>
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Apparel/Hats/Shark/Ribbons/B</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>2</drawSize>
+    </graphicData>
+    <uiIconScale>1.15</uiIconScale>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <costStuffCount>25</costStuffCount>
+    <statBases>
+		<MarketValue>100</MarketValue>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Mass>1.4</Mass>
+      <StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.06</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.06</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <PainShockThreshold>0.10</PainShockThreshold>
+    </equippedStatOffsets>
+    <apparel>
+		<tags>
+			<li>SharkCombatGear</li>
+		</tags>
+		<scoreOffset>2</scoreOffset>
+		<wornGraphicPath>Apparel/Hats/Shark/Ribbons/B</wornGraphicPath>
+		<hatRenderedFrontOfFace>true</hatRenderedFrontOfFace>
+		<layers>
+			<li>Overhead</li>
+		</layers>
+		<bodyPartGroups>
+			<li>UpperHead</li>
+		</bodyPartGroups>
+		<defaultOutfitTags>
+			<li>Soldier</li>
+		</defaultOutfitTags>
+    </apparel>
+   
+  </ThingDef>
+  
+	<ThingDef ParentName="HatBase">
+		<defName>FSG_HatSharkRibbonC</defName>
+		<label>Iron Skull Ribbon</label>
+		<description>A medal and ribbon awarded to Blood Shark warriors who have shown exceptional courage. Are they the baddies?</description>
+		<techLevel>Industrial</techLevel>
+		<graphicData>
+			<texPath>Apparel/Hats/Shark/Ribbons/C</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>2</drawSize>
+		</graphicData>
+		<uiIconScale>1.15</uiIconScale>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>15</costStuffCount>
+		<statBases>
+			<MarketValue>200</MarketValue>
+			<MaxHitPoints>80</MaxHitPoints>
+			<Mass>2</Mass>
+			<StuffEffectMultiplierArmor>0.15</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.10</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.06</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>1.5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<PainShockThreshold>0.15</PainShockThreshold>
+		</equippedStatOffsets>
+		<apparel>
+			<tags>
+				<li>SharkPrestigeCombatGear</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+				<scoreOffset>3</scoreOffset>
+			<bodyPartGroups>
+				<li>UpperHead</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Apparel/Hats/Shark/Ribbons/C</wornGraphicPath>
+			<hatRenderedFrontOfFace>true</hatRenderedFrontOfFace>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+		  
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+	   
+	</ThingDef>
+
+</Defs>

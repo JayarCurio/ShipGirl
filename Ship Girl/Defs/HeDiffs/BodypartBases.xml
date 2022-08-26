@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+<!--Bodypart Bases -->
+<ThingDef Name="FSG_MachinableBodypartBase" Abstract="True" ParentName="BodyPartBase">
+	<defName>FSG_MachinableBodypartBase</defName>
+	<label>Machinable bodypart</label>
+	<drawGUIOverlay>true</drawGUIOverlay>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>true</alwaysHaulable>
+    <tickerType>Never</tickerType>
+	<techHediffsTags>
+		<li>FSG_Advanced</li>
+	</techHediffsTags>
+	<recipeMaker>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<recipeUsers>
+			<li>TableMachining</li>
+        </recipeUsers>
+		<unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+	<thingCategories>
+		<li>BodyPartsProsthetic</li>
+	</thingCategories>
+	<statBases>
+      <MarketValue>1000</MarketValue>
+	  <Mass>20</Mass>
+    </statBases>
+</ThingDef>
+
+<ThingDef Name="FSG_SmithableBodypartBase" abstract="True" ParentName="BodyPartBase">
+	<defName>FSG_SmithableBodypartBase</defName>
+	<label>Smithable Body Part</label>
+		<drawGUIOverlay>true</drawGUIOverlay>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>true</alwaysHaulable>
+    <tickerType>Never</tickerType>
+	<techHediffsTags>
+		<li>FSG_Simple</li>
+    </techHediffsTags>
+	<costList>
+		<Steel>50</Steel>
+	</costList>
+	<recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+		<li>ElectricSmithy</li>
+		<li>FueledSmithy</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+	<thingCategories>
+		<li>BodyPartsProsthetic</li>
+	</thingCategories>
+	<statBases>
+      <MarketValue>500</MarketValue>
+	  <Mass>20</Mass>
+    </statBases>
+</ThingDef>
+
+<ThingDef Name="FSG_FabricatedBodypartBase" Abstract="True" ParentName="BodyPartBase">
+	<defName>FSG_FabricatedBodypartBase</defName>
+	<label>Fabricated Body Part</label>
+	<drawGUIOverlay>true</drawGUIOverlay>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>true</alwaysHaulable>
+    <tickerType>Never</tickerType>
+	<techHediffsTags>
+		<li>FSG_Spacer</li>
+		
+    </techHediffsTags>
+	
+	<thingCategories>
+		<li>BodyPartsBionic</li>
+	</thingCategories>
+	
+	<recipeMaker>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<recipeUsers>
+		<li>FabricationBench</li>
+		</recipeUsers>
+		<unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+	<statBases>
+      <MarketValue>2000</MarketValue>
+    </statBases>
+</ThingDef>
+
+<ThingDef Name="FSG_UltraBodypartBase" Abstract="True" ParentName="BodyPartBase">
+	<defName>FSG_UltraBodypartBase</defName>
+	<label>Ultra Body Part</label>
+	<drawGUIOverlay>true</drawGUIOverlay>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>true</alwaysHaulable>
+    <tickerType>Never</tickerType>
+	<thingCategories>
+		<li>BodyPartsArchotech</li>
+	</thingCategories>
+	<techHediffsTags>
+		
+    </techHediffsTags>
+	<statBases>
+      <MarketValue>5000</MarketValue>
+    </statBases>
+</ThingDef>
+
+<ThingDef Name="FSG_SmithableNaturalBodyPartBase" Abstract="True" ParentName="BodyPartNaturalBase">
+	<defName>FSG_SmithableBodypartNaturalBase</defName>
+	<label>Smithable Natural Part Base</label>
+	<statBases>
+		<MarketValue>250</MarketValue>
+		<Mass>20</Mass>
+	</statBases>
+	<costList>
+		<Steel>50</Steel>
+	</costList>
+	
+	<thingCategories>
+		<li>BodyPartsArchotech</li>
+	</thingCategories>	
+	
+	<drawGUIOverlay>true</drawGUIOverlay>
+	<altitudeLayer>Item</altitudeLayer>
+	<alwaysHaulable>true</alwaysHaulable>
+	<tickerType>Never</tickerType>
+	<recipeMaker>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<recipeUsers>
+			<li>ElectricSmithy</li>
+			<li>FueledSmithy</li>
+		</recipeUsers>
+		<unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+	</recipeMaker>
+</ThingDef>
+		
+	
+	<ThingDef Name="FSG_MachinableNaturalBodypartBase" Abstract="True" ParentName="BodyPartNaturalBase">
+		<defName>FSG_MachinableNaturalBodypartBase</defName>
+		<label>Machinable natural bodypart base</label>
+		<isTechHediff>false</isTechHediff>
+		<statBases>
+			<MarketValue>250</MarketValue>
+			<Mass>20</Mass>
+		</statBases>
+		<costList>
+			<Steel>50</Steel>
+			<Chemfuel>50</Chemfuel>
+		</costList>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>true</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+			<li>TableMachining</li>
+        
+		</recipeUsers>
+		
+			<unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+		</recipeMaker>
+		<thingCategories>
+			<li>BodyPartsSimple</li>
+		</thingCategories>
+	</ThingDef>
+
+</Defs>

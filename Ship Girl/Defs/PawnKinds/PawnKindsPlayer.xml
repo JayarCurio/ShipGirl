@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--Define Pawn Kinds-->
+	
+	<PawnKindDef ParentName="BasePlayerPawnKind">
+		<defName>ShipGirl_DefaultKind</defName>
+		<label>Ship Girl Survivor</label>
+		<race>ShipGirlRace</race>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+        <backstoryCategories>
+			
+		</backstoryCategories>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>DefaultShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+        <chemicalAddictionChance>0.02</chemicalAddictionChance>
+        <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<gearHealthRange>1.0~1.0</gearHealthRange>
+        <apparelTags>
+            <li>IndustrialBasic</li>
+        </apparelTags>
+        <apparelMoney>600~800</apparelMoney>
+		<techHediffsMoney>0~0</techHediffsMoney>
+		<techHediffsTags>
+			<li>FSG_Simple</li>
+			<li>FSG_Advanced</li>
+		</techHediffsTags>
+		<techHediffsChance>1</techHediffsChance>
+        <backstoryCryptosleepCommonality>100</backstoryCryptosleepCommonality>
+
+	</PawnKindDef>
+	
+
+	
+	<PawnKindDef Name="ShipGirl_Hatched" ParentName="BasePlayerPawnKind">
+		<defName>ShipGirl_Hatched</defName>
+		<label>Hatched Ship Girl</label>
+		<race>ShipGirlRace</race>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+        <backstoryCategories>
+			
+		</backstoryCategories>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>HatchedShipGirlBackstories</li>
+					<li>PawnsWithoutAdulthoods</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		
+        <chemicalAddictionChance>0.00</chemicalAddictionChance>
+        <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<gearHealthRange>1.0~1.0</gearHealthRange>
+        <apparelTags>
+            
+        </apparelTags>
+        <apparelMoney>0~0</apparelMoney>
+		<techHediffsMoney>0~6000</techHediffsMoney>
+		<techHediffsTags>
+			<li>FSG_Simple</li>
+			<li>FSG_Advanced</li>
+		</techHediffsTags>
+		<techHediffsChance>1</techHediffsChance>
+        <backstoryCryptosleepCommonality>00</backstoryCryptosleepCommonality>
+
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="ShipGirl_Hatched">
+		<defName>ShipGirl_Hatched_Industrial</defName>
+		
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>HatchedIndustrialShipGirlBackstories</li>
+					<li>PawnsWithoutAdulthoods</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		
+        
+
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="ShipGirl_Hatched">
+		<defName>ShipGirl_Hatched_Spacer</defName>
+		<label>ShipGirl_Hatched_Spacer</label>
+		
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>HatchedSpacerShipGirlBackstories</li>
+					<li>PawnsWithoutAdulthoods</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		
+        
+
+	</PawnKindDef>
+
+
+	
+	
+<!-- Now use Pawn Kinds in Race Settings-->
+	<AlienRace.RaceSettings>
+		<defName>ShipGirlRaceSettings</defName>
+		<pawnKindSettings>
+		
+			<startingColonists>
+				<li>
+					<pawnKindEntries>
+					<li>
+						<kindDefs>
+							<li>ShipGirl_DefaultKind</li>
+						</kindDefs>
+						<chance>60</chance>
+					</li>
+					</pawnKindEntries>
+					<factionDefs>
+						<li>PlayerColony</li>
+						<li>PlayerTribe</li>
+					</factionDefs>
+				</li>
+			</startingColonists>
+			<alienslavekinds>
+				<li>
+					<kindDefs>
+						<li>ShipGirl_DefaultKind</li>
+					</kindDefs>
+					<chance>10</chance>
+				</li>
+			</alienslavekinds>
+
+			
+		</pawnKindSettings>
+	</AlienRace.RaceSettings>
+
+	
+</Defs>
+

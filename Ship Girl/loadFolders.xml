@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<loadFolders>
+
+		<v1.2>
+			<li>/</li>
+			<li>1.2</li>
+			<li IfModActive="Ludeon.RimWorld.Royalty">Mods/Royalty</li>
+			
+			<li IfModActive="OskarPotocki.VanillaFactionsExpanded.Core">Mods/HediffsVE/</li> <!--always load both parts of VE, if VE is present-->
+			<li IfModActive="OskarPotocki.VanillaFactionsExpanded.Core">Mods/1.2VERaces/</li>
+
+			
+			
+			<li IfModActive="Jon.Revivals.ProstheticCombatFramework">Mods/HediffsPCF/</li>
+			<li IfModActive="Jon.Revivals.ProstheticCombatFramework" IfModNotActive="OskarPotocki.VanillaFactionsExpanded.Core">Mods/PCFsolo/</li>
+			<li IfModActive="Jon.Revivals.ProstheticCombatFramework" IfModNotActive="OskarPotocki.VanillaFactionsExpanded.Core">Mods/1.2PCFRaces/</li>
+		
+		</v1.2>
+		<v1.3>
+			<li>/</li>
+			<li>1.3</li>
+			<li IfModActive="Ludeon.RimWorld.Royalty">Mods/Royalty/</li>    
+			<li IfModActive="Ludeon.RimWorld.Ideology">Mods/Ideology/</li>    
+			
+			<li IfModActive="OskarPotocki.VanillaFactionsExpanded.Core">Mods/HediffsVE/</li> <!--always load both parts of VE, if VE is present-->
+			<li IfModActive="OskarPotocki.VanillaFactionsExpanded.Core">Mods/1.3VERaces/</li>
+			
+			<li IfModActive="Jon.Revivals.ProstheticCombatFramework">Mods/HediffsPCF/</li>
+			<li IfModActive="Jon.Revivals.ProstheticCombatFramework" IfModNotActive="OskarPotocki.VanillaFactionsExpanded.Core">Mods/PCFsolo/</li>
+		
+			<li IfModActive="Jon.Revivals.ProstheticCombatFramework" IfModNotActive="OskarPotocki.VanillaFactionsExpanded.Core">Mods/1.3PCFRaces/</li>
+
+		</v1.3>
+	</loadFolders>

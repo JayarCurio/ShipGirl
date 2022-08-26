@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<MVCF.ModDef>
+	<defName>FSG_VEVE_Edition</defName>
+	<label>FSG VE Edition</label>
+	<description>Adding VE versions of some gun turrets.</description>
+	<Features>
+		<HediffVerbs>true</HediffVerbs>
+		<RangedAnimals>true</RangedAnimals>
+		<IntegratedToggle>true</IntegratedToggle>
+		<ExtraEquipmentVerbs>true</ExtraEquipmentVerbs>
+		<IndependentFire>true</IndependentFire>
+	</Features>
+</MVCF.ModDef>
+</Defs>

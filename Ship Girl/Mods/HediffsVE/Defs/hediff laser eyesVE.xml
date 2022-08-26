@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+<!--VE Laser Eyes-->
+
+	<HediffDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" ParentName="AddedBodyPartBase">
+		<defName>FSG_VE_InstalledHeadlightBA</defName>
+
+		<label>Red laser eye</label>
+		<labelNoun>a red laser eye.</labelNoun>
+		<description>A glowing red eye for ship girls, which provides an additional laser attack.</description>
+    
+		<spawnThingOnRemoved>FSG_HeadlightBA</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>false</solid>
+			
+			
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>			
+		</addedPartProps>
+		<comps>
+			<!--<li Class="HediffCompProperties_VerbGiver">
+				
+			</li>-->
+			<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+				
+				
+				
+				<verbs>
+					<li>
+						<label>Laser Eye (VE)</label>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.85</accuracyTouch>
+						<accuracyShort>0.70</accuracyShort>
+						<accuracyMedium>0.10</accuracyMedium>
+						<accuracyLong>0.10</accuracyLong>
+						<!--</CommandIcon>-->
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>FSG_Proj_AALaserA</defaultProjectile>
+						<warmupTime>3</warmupTime>
+						<range>8.9</range>
+						<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+						<!--<cooldownTicks>60</cooldownTicks>-->
+						<burstShotCount>4</burstShotCount>
+						<soundCast>Shot_ChargeRifle</soundCast>
+						<soundCastTail>GunTail_Light</soundCastTail>
+						<muzzleFlashScale>5</muzzleFlashScale>
+						
+						<commandIcon>Headlights/Colors/A/Left</commandIcon>
+					</li>
+				</verbs>	
+				<verbProps>
+					<li>
+						 <label>Laser Eye (VE)</label>
+						 <draw>false</draw>
+						 <canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Headlights/Colors/A/Left</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+					</li>
+				</verbProps>
+	
+				
+			</li>
+		</comps>
+		
+		<stages>
+			<li>
+				<hungerRateFactor>1.05</hungerRateFactor>
+				
+				
+			</li>
+		</stages>
+		
+	</HediffDef>
+
+
+
+	<RecipeDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallFSG_VE_HeadlightBA</defName>
+		<label>install red headlight (VE)</label>
+		<description>Install a red headlight.</description>
+
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing red headlight.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSG_HeadlightBA</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>FSG_HeadlightBA</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Eye</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>FSG_VE_InstalledHeadlightBA</addsHediff>
+		
+	</RecipeDef>
+	<RecipeDef ParentName="SurgeryRemoveImplantBase">
+		<defName>RemoveFSG_VE_HeadlightBA</defName>
+		<recipeUsers>
+		  <li>ShipGirlRace</li>
+		</recipeUsers>
+
+		<label>Remove Laser Eye</label>
+		<description>(PCF)Remove a laser eye from this ship girl, so it can be reallocated or replaced.</description>
+
+		<jobString>enucleating red laser</jobString>
+		<removesHediff>FSG_VE_InstalledHeadlightBA</removesHediff>
+	</RecipeDef>
+	
+		<!--G-->
+	<HediffDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" ParentName="AddedBodyPartBase">
+		<defName>FSG_VE_InstalledHeadlightBG</defName>
+		<label>Demon Eye Headlight (VE)</label>
+		<labelNoun>a demonic headlight.</labelNoun>
+		<description>This eye provides a very potent burstfire attack with a protracted cooldown. There is no way to control it, it just attacks Probably archeotech. Hopefully.</description>
+    
+		<spawnThingOnRemoved>FSG_HeadlightBG</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>false</solid>
+			
+			
+			<partEfficiency>1.1</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>			
+		</addedPartProps>
+		<comps>
+			<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+				
+				
+				
+				<verbs>
+					<li>
+						<label>Demon Eye (VE)</label>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.90</accuracyTouch>
+						<accuracyShort>0.50</accuracyShort>
+						<accuracyMedium>0.15</accuracyMedium>
+						<accuracyLong>0.15</accuracyLong>
+						
+						<hasStandardCommand>false</hasStandardCommand>
+						<defaultProjectile>FSG_Proj_AALaserA</defaultProjectile>
+						<warmupTime>3</warmupTime>
+						<!--<cooldownTicks>200</cooldownTicks>-->
+						<!--<RangedWeapon_Cooldown>200</RangedWeapon_Cooldown>-->
+						<defaultCooldownTime>200</defaultCooldownTime>
+						<range>14.9</range>
+						<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+						<burstShotCount>8</burstShotCount>
+						<soundCast>ChargeLance_Fire</soundCast>
+						<soundCastTail>GunTail_Light</soundCastTail>
+						<muzzleFlashScale>5</muzzleFlashScale>
+						
+						<commandIcon>Headlights/Colors/G/Left</commandIcon>
+					</li>
+				</verbs>	
+				<verbProps>
+					<li>
+						 <label>Demon Eye (VE)</label>
+						 <draw>false</draw>
+						 <canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Headlights/Colors/G/Left</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+					</li>
+				</verbProps>
+	
+				
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<hungerRateFactor>1.02</hungerRateFactor>
+				
+				
+			</li>
+		</stages>
+		
+	</HediffDef>
+
+	
+
+	<RecipeDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallFSG_VE_HeadlightBG</defName>
+		<label>install demon eye (VE)</label>
+		<description>Install a demon eye headlight.</description>
+
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing demon eye.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSG_HeadlightBG</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>FSG_HeadlightBG</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Eye</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>FSG_VE_InstalledHeadlightBG</addsHediff>
+		
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryRemoveImplantBase">
+		<defName>RemoveFSG_VE_HeadlightBG</defName>
+		<recipeUsers>
+		  <li>ShipGirlRace</li>
+		</recipeUsers>
+
+		<label>Remove Demonic Eye</label>
+		<description>(PCF)Remove the cursed demon eye from this ship girl, so it can be reallocated or replaced.</description>
+
+		<jobString>exorcizing demon eye</jobString>
+		<removesHediff>FSG_VE_InstalledHeadlightBG</removesHediff>
+	</RecipeDef>
+	
+	<!--Sinister laser eye-->
+	
+		<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FSG_VE_InstalledHeadlightCA</defName>
+		<label>Sinister laser eye</label>
+		<labelNoun>a sinister, red laser eye.</labelNoun>
+		<description>A glowing red eye from a member of the Sinister Sisterhood, which provides an additional laser attack, with a slightly better targeting range than a normal laser eye.</description>
+		
+		<spawnThingOnRemoved>FSG_HeadlightBA</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>false</solid>
+			
+			
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>			
+		</addedPartProps>
+		<comps>
+			<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+				
+				
+				
+				<verbs>
+					<li>
+						<label>Sinister Laser Eye (VE)</label>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.58</accuracyTouch>
+						<accuracyShort>0.35</accuracyShort>
+						<accuracyMedium>0.10</accuracyMedium>
+						<accuracyLong>0.05</accuracyLong>
+					
+						<hasStandardCommand>true</hasStandardCommand> 
+						<defaultProjectile>FSG_Proj_AALaserA</defaultProjectile>
+						<warmupTime>3</warmupTime>
+						
+						<range>7</range>
+						<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+						<burstShotCount>4</burstShotCount>
+						<soundCast>Shot_ChargeRifle</soundCast>
+						<soundCastTail>GunTail_Light</soundCastTail>
+						<muzzleFlashScale>5</muzzleFlashScale>
+						
+						<commandIcon>Turrets/MicroPulseB</commandIcon>
+					</li>
+				</verbs>	
+				<verbProps>
+					<li>
+						 <label>Sinister Laser Eye (VE)</label>
+						 <draw>false</draw>
+						 <canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Turrets/MicroPulseB</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+					</li>
+				</verbProps>
+	
+				
+			</li>
+			
+
+			
+		</comps>
+		
+		<stages>
+			<li>
+				<hungerRateFactor>1.07</hungerRateFactor>
+				
+		
+				
+				<statOffsets>
+					<AimingDelayFactor>-0.02</AimingDelayFactor>
+					<ConstructionSpeedFactor>0.05</ConstructionSpeedFactor>
+					<MiningSpeed>0.10</MiningSpeed>
+					<MiningYield>0.15</MiningYield>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.05</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+			
+	</HediffDef>
+	
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallFSG_VE_HeadlightCA</defName>
+		<label>install sinister laser headlight</label>
+		<description>Install a sinister laser headlight.</description>
+
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing sinister laser headlight.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSG_HeadlightCA</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>FSG_HeadlightCA</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Eye</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>FSG_VE_InstalledHeadlightCA</addsHediff>
+		
+	</RecipeDef>
+	
+	<RecipeDef ParentName="SurgeryRemoveImplantBase">
+		<defName>RemoveFSG_VE_HeadlightCA</defName>
+		<recipeUsers>
+		  <li>ShipGirlRace</li>
+		</recipeUsers>
+
+		<label>Remove Sinister Laser Eye (VE)</label>
+		<description>(VE)Remove a sinister laser eye from this ship girl, so it can be reallocated or replaced.</description>
+
+		<jobString>enucleating red laser</jobString>
+		<removesHediff>FSG_VE_InstalledHeadlightCA</removesHediff>
+	</RecipeDef>
+	
+	
+</Defs>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  
+  <!--Pirates-->
+	<PawnKindDef Name="FSG_ShipGirlPirateBase" ParentName="PirateScavTierBase">
+		<defName>ShipgirlPirateGun</defName>
+		<race>ShipGirlRace</race>
+		<label>pirate gunship</label>
+		<combatPower>250</combatPower>
+		<apparelMoney>300~500</apparelMoney>
+		<weaponMoney>200~300</weaponMoney>
+		<weaponTags>
+			<li>Gun</li>
+		</weaponTags>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>RangedPirateShipGirlBackstories</li>
+					<li>PirateShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<minGenerationAge>1</minGenerationAge>
+		<maxGenerationAge>40</maxGenerationAge>
+		<backstoryCryptosleepCommonality>0.5</backstoryCryptosleepCommonality>
+		<invNutrition>2.55</invNutrition>
+		<biocodeWeaponChance>0.1</biocodeWeaponChance>
+	</PawnKindDef>
+	
+	<PawnKindDef Name="FSG_IndustrialShipGirlPirateBase" ParentName="PirateScavTierBase">
+		<defName>IndustrialShipgirlPirate</defName>
+		<race>ShipGirlRace</race>
+		<label>local pirate ship girl</label>
+		<combatPower>175</combatPower>
+		<apparelMoney>300~500</apparelMoney>
+		<weaponMoney>200~300</weaponMoney>
+		<weaponTags>
+			<li>Gun</li>
+			<li>Melee</li>
+		</weaponTags>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>IndustrialPirateShipGirlBackstories</li>
+					<li>PirateShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<minGenerationAge>1</minGenerationAge>
+		<maxGenerationAge>40</maxGenerationAge>
+		<backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
+		<invNutrition>2.55</invNutrition>
+		<biocodeWeaponChance>0.0</biocodeWeaponChance>
+	</PawnKindDef>
+	
+	<PawnKindDef Name="FSG_ShipGirlPirateMeleeBase" ParentName="PirateScavTierBase">
+		<defName>ShipgirlPirateMelee</defName>
+		<race>ShipGirlRace</race>
+		<label>pirate raiding ship</label>
+		<combatPower>250</combatPower>
+		<apparelMoney>300~500</apparelMoney>
+		<weaponMoney>200~300</weaponMoney>
+		<weaponTags>
+			<li>Melee</li>
+		</weaponTags>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>MeleePirateShipGirlBackstories</li>
+					<li>IndustrialPirateShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<minGenerationAge>1</minGenerationAge>
+		<maxGenerationAge>40</maxGenerationAge>
+		<backstoryCryptosleepCommonality>0.95</backstoryCryptosleepCommonality>
+		<invNutrition>2.55</invNutrition>
+		<biocodeWeaponChance>0.0</biocodeWeaponChance>
+	</PawnKindDef>
+	
+	<PawnKindDef Name="FSG_SpaceShipGirlPirateBase" ParentName="PirateScavTierBase">
+		<defName>SpaceShipgirlPirate</defName>
+		<race>ShipGirlRace</race>
+		<label>space pirate ship</label>
+		<combatPower>350</combatPower>
+		<apparelMoney>300~4000</apparelMoney>
+		<weaponMoney>200~3000</weaponMoney>
+		<weaponTags>
+			<li>Gun</li>
+			<li>Melee</li>
+		</weaponTags>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>SpacePirateShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<minGenerationAge>1</minGenerationAge>
+		<maxGenerationAge>40</maxGenerationAge>
+		<backstoryCryptosleepCommonality>0.5</backstoryCryptosleepCommonality>
+		<invNutrition>2.55</invNutrition>
+		<biocodeWeaponChance>0.3</biocodeWeaponChance>
+	</PawnKindDef>
+	
+	
+  
+  <!--Outlander-->
+
+	<PawnKindDef Name="FSG_ShipGirlOutlanderBase" Abstract="True">
+		<race>ShipGirlRace</race>
+		<defaultFactionType>OutlanderCivil</defaultFactionType>
+		<chemicalAddictionChance>0.06</chemicalAddictionChance>
+		<backstoryCryptosleepCommonality>0.7</backstoryCryptosleepCommonality>
+		<invNutrition>2.55</invNutrition>
+		<minGenerationAge>1</minGenerationAge>
+		<biocodeWeaponChance>0.2</biocodeWeaponChance>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>OutlanderShipGirlBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+	</PawnKindDef>
+	
+	<!-- Mid tier - Outlander Ship -->
+
+	<PawnKindDef ParentName="FSG_ShipGirlOutlanderBase">
+		<defName>ShipgirlOutlander</defName>
+		<label>humanoid warship</label>
+		<race>ShipGirlRace</race>
+		<combatPower>150</combatPower>
+		<maxGenerationAge>40</maxGenerationAge>
+		<gearHealthRange>0.7~2.3</gearHealthRange>
+		<apparelMoney>400~1000</apparelMoney>
+		<apparelTags>
+			<li>IndustrialBasic</li>
+			<li>IndustrialAdvanced</li>
+			<li>IndustrialMilitaryBasic</li>
+			<li>IndustrialMilitaryAdvanced</li>
+		</apparelTags>
+		<apparelAllowHeadgearChance>0.7</apparelAllowHeadgearChance>
+		<weaponMoney>250~345</weaponMoney>
+		<weaponTags>
+			<li>Gun</li>
+		</weaponTags>
+		<techHediffsChance>0</techHediffsChance>
+		<techHediffsMoney>50~20000</techHediffsMoney>
+		<techHediffsTags>
+		  
+			<li>Simple</li>
+			<li>ImplantEmpireCommon</li>
+		</techHediffsTags>
+		<backstoryFiltersOverride>
+				<li>
+					<categories>
+						<li>OutlanderShipGirlBackstories</li>
+					</categories>
+				</li>
+		</backstoryFiltersOverride>
+		<inventoryOptions>
+			<skipChance>0.9</skipChance>
+			<subOptionsChooseOne>
+				<li>
+				<thingDef>MedicineIndustrial</thingDef>
+				<countRange>1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<biocodeWeaponChance>0.3</biocodeWeaponChance>
+	</PawnKindDef>
+	
+
+
+</Defs>
+

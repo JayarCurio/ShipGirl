@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--bodyParts.xml Where we keep all the unique bits that we attatch to our girls-->
+<Defs>
+	<BodyPartDef>
+		<defName>Frame</defName>
+		<label>frame</label>
+		<hitPoints>40</hitPoints>
+		<skinCovered>false</skinCovered>
+		<solid>false</solid>
+		<destroyableByDamage>false</destroyableByDamage>
+		<bleedRate>1.0</bleedRate>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<canSuggestAmputation>false</canSuggestAmputation>
+	</BodyPartDef>
+	<BodyPartDef>
+		<defName>Hull</defName>
+		<label>hull</label>
+		<hitPoints>40</hitPoints>
+		<skinCovered>false</skinCovered>
+		<solid>false</solid>
+		<destroyableByDamage>true</destroyableByDamage>
+		<bleedRate>0.2</bleedRate>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<canSuggestAmputation>true</canSuggestAmputation>
+	</BodyPartDef>
+	<BodyPartDef>
+		<defName>EngineRoom</defName>
+		<label>engine room</label>
+		<hitPoints>40</hitPoints>
+		<skinCovered>false</skinCovered>
+		<solid>false</solid>
+		<bleedRate>1.0</bleedRate>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<destroyableByDamage>false</destroyableByDamage>
+		<canSuggestAmputation>false</canSuggestAmputation>
+	</BodyPartDef>
+	
+	<BodyPartDef>
+		<defName>SystemsRoom</defName>
+		<label>utility systems room</label>
+		<hitPoints>20</hitPoints>
+		<skinCovered>false</skinCovered>
+		<solid>false</solid>
+		<bleedRate>1.0</bleedRate>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<destroyableByDamage>false</destroyableByDamage>
+		<canSuggestAmputation>true</canSuggestAmputation>
+	</BodyPartDef>
+	
+	<BodyPartDef>
+		<defName>Rudder</defName>
+		<label>rudder</label>
+		<hitPoints>20</hitPoints>
+		<solid>false</solid>
+		<bleedRate>0</bleedRate>
+		<skinCovered>false</skinCovered>
+		<canSuggestAmputation>true</canSuggestAmputation>
+		<tags>
+			<li>MovingLimbSegment</li>
+		</tags>
+	</BodyPartDef>
+	
+	
+	<BodyPartDef>
+		<defName>Tailbone</defName>
+		<label>tailbone</label>
+		<hitPoints>10</hitPoints>
+		<skinCovered>false</skinCovered>
+		<solid>false</solid>
+		<destroyableByDamage>false</destroyableByDamage>
+		<bleedRate>0.0</bleedRate>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<canSuggestAmputation>false</canSuggestAmputation>
+	</BodyPartDef>
+	
+	
+	
+	<BodyPartDef>
+		<defName>Funnel</defName>
+		<label>Exhaust Funnel</label>
+		<hitPoints>20</hitPoints>
+		<permanentInjuryChanceFactor>.5</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>false</solid>
+		<bleedRate>0</bleedRate>
+		<canSuggestAmputation>true</canSuggestAmputation>
+		<tags>
+			<li>BreathingSourceCage</li>
+		</tags>
+	</BodyPartDef>
+	<BodyPartDef>
+		<defName>Outrigger</defName>
+		<label>rigging</label>
+		<hitPoints>30</hitPoints>
+		<skinCovered>false</skinCovered>
+		<solid>false</solid>
+		<bleedRate>.5</bleedRate>
+		<canSuggestAmputation>true</canSuggestAmputation>
+	</BodyPartDef>
+	<!--<BodyPartDef>
+		<defName>RammingProwAttackTool</defName>
+		<label>ramming prow</label>
+		<hitPoints>30</hitPoints>
+		<skinCovered>false</skinCovered>
+		<solid>false</solid>
+		<bleedRate>.25</bleedRate>
+		<canSuggestAmputation>true</canSuggestAmputation>
+	</BodyPartDef>-->
+	<BodyPartDef>
+		<defName>Keel</defName>
+		<label>keel</label>
+		<hitPoints>30</hitPoints>
+		<skinCovered>true</skinCovered>
+		<solid>true</solid>
+		<bleedRate>0</bleedRate>
+		<canSuggestAmputation>true</canSuggestAmputation>
+	</BodyPartDef>
+	<BodyPartDef>
+		<defName>Turret</defName>
+		<label>turret mount</label>
+		<hitPoints>30</hitPoints>
+		<skinCovered>false</skinCovered>
+		<solid>false</solid>
+		<bleedRate>0</bleedRate>
+		<canSuggestAmputation>true</canSuggestAmputation>
+	</BodyPartDef>
+	<BodyPartDef>
+		<defName>AATurret</defName>
+		<label>Anti Aircraft Turret</label>
+		<hitPoints>20</hitPoints>
+		<skinCovered>false</skinCovered>
+		<solid>false</solid>
+		<bleedRate>0</bleedRate>
+		<canSuggestAmputation>true</canSuggestAmputation>
+	</BodyPartDef>
+
+	
+	<BodyPartDef>
+
+		<defName>ConTower</defName>
+		<label>Conning Tower</label>
+		<solid>false</solid>
+		<bleedRate>.25</bleedRate>
+
+		<hitPoints>20</hitPoints>
+		<skinCovered>false</skinCovered>
+		<canSuggestAmputation>true</canSuggestAmputation>
+		<tags>
+			<li>SightSource</li>
+		</tags>
+		
+	</BodyPartDef>
+	
+	
+	<!-- Organs -->
+	
+	<BodyPartDef>
+
+		<defName>Engine</defName>
+		<label>Engine</label>
+
+		<hitPoints>20</hitPoints>
+		<solid>true</solid>
+		<bleedRate>0</bleedRate>
+		<skinCovered>false</skinCovered>
+		<tags>
+			<li>MetabolismSource</li>
+			<li>BreathingSource</li>
+		</tags>
+
+	</BodyPartDef>
+	<BodyPartDef>
+
+		<defName>FuelFilter</defName>
+		<label>Fuel Filter</label>
+
+		<hitPoints>20</hitPoints>
+		<skinCovered>false</skinCovered>
+		<solid>false</solid>
+		<bleedRate>2</bleedRate>
+		<tags>
+			<li>BloodFiltrationKidney</li>
+		</tags>
+
+	</BodyPartDef>
+	<BodyPartDef>
+
+		<defName>FuelPump</defName>
+		<label>Fuel Pump</label>
+		<hitPoints>20</hitPoints>
+		<solid>false</solid>
+		<bleedRate>2</bleedRate>
+		<skinCovered>false</skinCovered>
+		<tags>
+			<li>BloodPumpingSource</li>
+		</tags>
+
+	</BodyPartDef>
+	
+	<BodyPartDef>
+
+		<defName>Sonar</defName>
+		<label>Sonar</label>
+		<solid>true</solid>
+		<bleedRate>0</bleedRate>
+		<hitPoints>20</hitPoints>
+		<skinCovered>false</skinCovered>
+		<tags>
+			<li>HearingSource</li>
+		</tags>
+		
+	</BodyPartDef>
+	
+	<BodyPartDef>
+
+		<defName>Radar</defName>
+		<label>Radar Array</label>
+		<solid>true</solid>
+		<bleedRate>0</bleedRate>
+		<hitPoints>20</hitPoints>
+		<skinCovered>false</skinCovered>
+		<tags>
+			<li>SightSource</li>
+		</tags>
+		
+	</BodyPartDef>
+</Defs>

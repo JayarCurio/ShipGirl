@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+<!--<HediffDef>
+		<defName>FSG_Timer_BlandLightKitA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A pair of eye headlights, which activate when exposed to the concept of time.</description>
+		<label>Eyes Activating</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>1~2</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_BlandLightPicker</li>    
+					<li>FSG_Timer_BlandLightKitAT</li>
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>--><!-- Doesn't work on Drop pod arrivals-->
+	
+	<HediffDef>
+		<defName>FSG_Timer_BlandLightKitAT</defName> 
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>This ship comes with headlights preinstalled. They probably even match.</description>
+		<label>Eye Picker</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>752~753</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_BlandLightPicker</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Hediff_BlandLightPicker</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>Generic Light Picker</description>
+		<label>Selects eyes appropriate for most factions</label>
+		<!-- <labelNoun>Hediff_Wraper_FondlingVestigialShell.labelNoun</labelNoun> -->
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_HediffRandom">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffPool>
+					<li MayRequire="Jon.Revivals.ProstheticCombatFramework">FSG_EyePairAA</li>	
+					<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">FSG_VE_EyePairAA</li>	
+					<li>FSG_EyePairBB</li>
+					<li>FSG_EyePairCC</li>
+					<li>FSG_EyePairDD</li>	
+					<li>FSG_EyePairEE</li>
+					<li>FSG_EyePairFF</li>
+					<li>FSG_EyePairCE</li>	
+					<li>FSG_EyePairBD</li>
+					<li>FSG_EyePairAC</li>						
+				
+				</hediffPool>
+				<bodyPartDef>
+					<li MayRequire="Jon.Revivals.ProstheticCombatFramework">Head</li>
+					<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">Head</li>
+					<li>Head</li>
+					<li>Head</li>
+					<li>Head</li>
+					<li>Head</li>
+					<li>Head</li>
+					<li>Head</li>
+					<li>Head</li>
+					<li>Head</li>
+				</bodyPartDef>
+				<weights>
+					<li MayRequire="Jon.Revivals.ProstheticCombatFramework">10</li>
+					<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">10</li>
+					<li>15</li>
+					<li>15</li>
+					<li>15</li>
+					<li>15</li>
+					<li>15</li>
+					<li>4</li>
+					<li>4</li>
+					<li>1</li>
+				</weights>
+			</li>
+		</comps>
+	</HediffDef>
+
+
+<!--<HediffDef>
+		<defName>FSG_Timer_SharkLightKitA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A pair of eye headlights, which activate when exposed to the concept of time.</description>
+		<label>Eyes Activating</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>1~2</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_SharkLightPicker</li>    
+					<li>FSG_Timer_SharkLightKitAT</li>
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>-->
+	
+	<HediffDef>
+		<defName>FSG_Timer_SharkLightKitAT</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>This ship comes with headlights preinstalled. They might even be cursed.</description>
+		<label>Shark Eye Picker</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>752~753</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_SharkLightPicker</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_Hediff_SharkLightPicker</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>Shark Light Picker</description>
+		<label>Selects eyes appropriate for the shark faction</label>
+		<!-- <labelNoun>Hediff_Wraper_FondlingVestigialShell.labelNoun</labelNoun> -->
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_HediffRandom">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffPool>
+					<li>FSG_EyePairAA</li>	
+					<li>FSG_EyePairBB</li>
+					<li MayRequire="Jon.Revivals.ProstheticCombatFramework">FSG_EyePairDemon</li>
+					<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">FSG_VE_EyePairDemon</li>
+					<li>FSG_EyePairDD</li>	
+					<li>FSG_EyePairEE</li>
+					<li>FSG_EyePairFF</li>
+					
+				
+				</hediffPool>
+				<bodyPartDef>
+					<li>Head</li>
+					<li>Head</li>
+					<li MayRequire="Jon.Revivals.ProstheticCombatFramework">Head</li>
+					<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">Head</li>
+					<li>Head</li>
+					<li>Head</li>
+					<li>Head</li>
+				</bodyPartDef>
+				<weights>
+					<li>5</li>
+					<li>20</li>
+					<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">1</li>
+					<li MayRequire="Jon.Revivals.ProstheticCombatFramework">1</li>
+					<li>15</li>
+					<li>15</li>
+					<li>4</li>
+				</weights>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef MayRequire="Jon.Revivals.ProstheticCombatFramework">
+		<defName>FSG_EyePairAA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>Two Red Eyes</description>
+		<label>Red Eyes</label>
+		<!-- <labelNoun>Hediff_Wraper_FondlingVestigialShell.labelNoun</labelNoun> -->
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledHeadlightBA</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledHeadlightBA</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+				
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+		<defName>FSG_VE_EyePairAA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>Two Red Eyes</description>
+		<label>Red Eyes</label>
+		<!-- <labelNoun>Hediff_Wraper_FondlingVestigialShell.labelNoun</labelNoun> -->
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_VE_InstalledHeadlightBA</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_VE_InstalledHeadlightBA</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+				
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_EyePairBB</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>Two brown Eyes</description>
+		<label>brown Eyes</label>
+		<!-- <labelNoun>Hediff_Wraper_FondlingVestigialShell.labelNoun</labelNoun> -->
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledHeadlightBB</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledHeadlightBB</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_EyePairCC</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>Two green Eyes</description>
+		<label>green Eyes</label>
+		<!-- <labelNoun>Hediff_Wraper_FondlingVestigialShell.labelNoun</labelNoun> -->
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledHeadlightBC</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledHeadlightBC</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_EyePairDD</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>Two cyan Eyes</description>
+		<label>cyan Eyes</label>
+		<!-- <labelNoun>Hediff_Wraper_FondlingVestigialShell.labelNoun</labelNoun> -->
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledHeadlightBD</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledHeadlightBD</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_EyePairEE</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>Two blue Eyes</description>
+		<label>blue Eyes</label>
+		<!-- <labelNoun>Hediff_Wraper_FondlingVestigialShell.labelNoun</labelNoun> -->
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledHeadlightBE</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledHeadlightBE</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_EyePairFF</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>Two purple Eyes</description>
+		<label>purple Eyes</label>
+		<!-- <labelNoun>Hediff_Wraper_FondlingVestigialShell.labelNoun</labelNoun> -->
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledHeadlightBF</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledHeadlightBF</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef MayRequire="Jon.Revivals.ProstheticCombatFramework">
+		<defName>FSG_EyePairDemon</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>One Demonic Eye</description>
+		<label>Demon Eyes</label>
+		<!-- <labelNoun>Hediff_Wraper_FondlingVestigialShell.labelNoun</labelNoun> -->
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledHeadlightBF</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledHeadlightBG</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+		<defName>FSG_VE_EyePairDemon</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>One Demonic Eye</description>
+		<label>Demon Eyes</label>
+		<!-- <labelNoun>Hediff_Wraper_FondlingVestigialShell.labelNoun</labelNoun> -->
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledHeadlightBF</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_VE_InstalledHeadlightBG</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_EyePairAC</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>Boat lights</description>
+		<label>Boat Lights</label>
+		<!-- <labelNoun>Hediff_Wraper_FondlingVestigialShell.labelNoun</labelNoun> -->
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledHeadlightBA</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledHeadlightBC</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_EyePairBD</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>harbor lights</description>
+		<label>harbor Lights</label>
+		<!-- <labelNoun>Hediff_Wraper_FondlingVestigialShell.labelNoun</labelNoun> -->
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledHeadlightBB</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledHeadlightBD</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>FSG_EyePairCE</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>In humans this type of heterochromia usually indicates a family history of incest. Thankfully, this girl is a boat.</description>
+		<label>implication Lights</label>
+		<!-- <labelNoun>Hediff_Wraper_FondlingVestigialShell.labelNoun</labelNoun> -->
+		<!-- WTF was this for, past me?? -->
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledHeadlightBC</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledHeadlightBE</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+			</li>
+		</comps>
+	</HediffDef>
+	
+</Defs>

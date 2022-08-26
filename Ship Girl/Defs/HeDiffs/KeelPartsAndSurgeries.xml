@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--Contains Projectiles, Part Things, keel mounted, non-weapon hediffs, and the install/uninstall surgeries for those hediffs -->
+
+
+<Defs>
+<!--"Natural"-->
+	<ThingDef ParentName="FSG_SmithableNaturalBodyPartBase">
+		<defName>Keel</defName>
+		<label>Steel Keel</label>
+		<description>A standard steel keel, suitable for replacing a lost one, or running over small animals.</description>
+		<descriptionHyperlinks><RecipeDef>InstallBasicKeel</RecipeDef></descriptionHyperlinks>
+		<statBases>
+			<MarketValue>200</MarketValue>
+			<Mass>20</Mass>
+		</statBases>
+		<costList>
+			<Steel>50</Steel>
+		</costList>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartNaturalBase">
+		<defName>InstallBasicKeel</defName>
+		<label>install basic keel</label>
+		<description>Install a standard keel.</description>
+		<descriptionHyperlinks><ThingDef>Keel</ThingDef></descriptionHyperlinks>
+		<jobString>Installing keel.</jobString>
+		<deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Crafting>2</Crafting>
+		</skillRequirements>
+		<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>Keel</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Keel</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Triple Torpedo -->
+
+ <ThingDef ParentName="FSG_MachinableBodypartBase">
+    <defName>FSG_TorpedoSingle</defName>
+    <label>Uninstalled triple Torpedo Launcher</label>
+    <description>A torpedo Launcher, ready to be installed, designed to be mounted in a ship girl's outrigger keels. It's loaded with percussion torpedoes designed to penetrate heavy armor.</description>
+    <graphicData>
+		<texPath>Turrets/Generic</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+      <Steel>100</Steel>
+	 
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Electricity</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  
+
+  
+  <!-- 5x Pentuple Torpedo-->
+
+
+
+ <ThingDef ParentName="FSG_MachinableBodypartBase">
+    <defName>FSG_PartTorpedoSpread</defName>
+    <label>Uninstalled Torpedo Spread</label>
+    <description>A five tube torpedo launcher, ready to be installed in one of a ship girl's outriggers. It's loaded with percussion torpedoes designed to shatter armor.</description>
+    <graphicData>
+		<texPath>Turrets/Generic</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+      <Steel>100</Steel>
+	 
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  
+
+  
+    <!-- Improved armored Keel-->
+
+<HediffDef ParentName="AddedAuxMountBase">
+	<defName>FSG_InstalledProtectiveKeel</defName>
+	<label>installed Anti-Torpedo Keel</label>
+	<labelNoun>anti-torpedo keel</labelNoun>
+	<description>A girdle of composite armor to protect your underside from sneak attacks and torpedoes. It only slightly improves your ramming damage, while lowering move speed by 5%.</description>
+    <spawnThingOnRemoved>FSG_ProtectiveKeel</spawnThingOnRemoved>
+<stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.95</postFactor>
+          </li>
+        </capMods>
+        <statOffsets>
+          <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.15</ArmorRating_Heat>
+          
+        </statOffsets>
+      </li>
+    </stages>
+	<comps>
+		<li Class="HediffCompProperties_VerbGiver">
+			<tools>
+				<li>
+					<label>Improved Keel Ram</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>24</power>
+					<cooldownTime>2</cooldownTime>
+					<soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+					<soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+				</li>
+			</tools>
+		</li>
+	</comps>
+
+</HediffDef>
+
+ <ThingDef ParentName="FSG_MachinableBodypartBase">
+    <defName>FSG_ProtectiveKeel</defName>
+    <label>Uninstalled anti-torpedo keel</label>
+    <description>a girdle of protective composetes, to guard against torpedoes and sneak attacks.</description>
+    <graphicData>
+		<texPath>Turrets/Generic</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+      <Steel>50</Steel>
+	  <Plasteel>25</Plasteel>
+	 
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>FlakArmor</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  
+<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_Keel</defName>
+    <label>install keel armor</label>
+    <description>Mount an anti-torpedo keel on a shipgirl.</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>replacing keel.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_ProtectiveKeel</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_ProtectiveKeel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Keel</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledProtectiveKeel</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <defName>RemoveFSG_ProtectiveKeel</defName>
+    <label>Amputate anti-torpedo Keel</label>
+    <description>Remove the keel armor from one of the outriggers of this ship girl.</description>
+
+    <jobString>unmounting keel armor.</jobString>
+    <removesHediff>FSG_InstalledProtectiveKeel</removesHediff>
+  </RecipeDef>
+  
+      <!-- Shark Keel-->
+
+
+
+ <ThingDef ParentName="FSG_MachinableBodypartBase">
+    <defName>FSG_SharkMouth</defName>
+    <label>Uninstalled Shark Mouth</label>
+    <description>A melee shark mouth, ready to be installed, designed to be mounted in a ship girl's keel.</description>
+    <graphicData>
+		<texPath>Turrets/Generic</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+	<techHediffsTags>
+		<li>FSG_SharkIndustrial</li>
+    </techHediffsTags>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+      <Steel>60</Steel>
+	 
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Prosthetics</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  
+	<!--Outlander Melee goes here-->
+  
+<!-- Spacer -->
+
+
+
+	
+	<!-- Single Space Torpedo -->
+
+
+
+ <ThingDef ParentName="FSG_MachinableBodypartBase">
+    <defName>FSG_SpaceTorpedoSingle</defName>
+    <label>Uninstalled Implosion Torpedo Launcher</label>
+    <description>A spacer age torpedo Launcher, ready to be installed, designed to be mounted in a ship girl's outrigger keels. It's loaded with percussion torpedoes designed to penetrate heavy armor.</description>
+    <graphicData>
+		<texPath>Turrets/Torpedo</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+		<Uranium>25</Uranium>
+		<Plasteel>75</Plasteel>
+		<ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>ShipBasics</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  
+
+  
+  <!-- TorpedoSpread-->
+
+
+
+ <ThingDef ParentName="FSG_MachinableBodypartBase">
+    <defName>FSG_PartSpaceTorpedoSpread</defName>
+    <label>Uninstalled Torpedo Spread</label>
+    <description>A spreadfire torpedo launcher, ready to be installed in one of a ship girl's outrigger keels. It's loaded with percussion torpedoes designed to penetrate armor.</description>
+    <graphicData>
+		<texPath>Turrets/Torpedo</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+      <Uranium>150</Uranium>
+	 
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>ShipEngine</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  
+  <HediffDef ParentName="AddedAuxMountBase">
+	<defName>FSG_InstalledSharkMouth</defName>
+	<label>installed shark mouth</label>
+	<labelNoun>Shark Mouth</labelNoun>
+	<description>a weapon for close combat that replaces the keel of an outrigger. It also helps you eat faster.</description>
+    <spawnThingOnRemoved>FSG_SharkMouth</spawnThingOnRemoved>
+	<stages>
+		<li>
+			<capMods>
+					<li>
+						<capacity>Eating</capacity>
+						<postFactor>1.15</postFactor>
+					</li>
+			</capMods>
+		</li>
+	</stages>
+	<comps>
+		<li Class="HediffCompProperties_VerbGiver">
+			<tools>
+				<li>
+					<label>Shark Mouth</label>
+					<capacities>
+						<li>Blunt</li>
+						<li>Bite</li>						
+					</capacities>
+					<power>28</power>
+					<cooldownTime>1.5</cooldownTime>
+					<soundMeleeHit>Shot_IncendiaryLauncher</soundMeleeHit>
+					<soundMeleeMiss>Shot_IncendiaryLauncher</soundMeleeMiss>
+				</li>
+			</tools>
+		</li>
+	</comps>
+
+</HediffDef>
+
+<!--Dedicated Melee -->
+	<!--Sharks-->
+
+
+<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_SharkMouth</defName>
+    <label>install a shark mouth</label>
+    <description>Mount a shark mouth on the outrigger keel of a shipgirl.</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing shark mouth.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_SharkMouth</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_SharkMouth</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Keel</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledSharkMouth</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <defName>RemoveFSG_SharkMouth</defName>
+    <label>Unmount Shark Mouth Keel</label>
+    <description>Remove the shark mouth keel from this ship girl, so it can be reallocated or replaced.</description>
+
+    <jobString>unmounting shark mouth.</jobString>
+    <removesHediff>FSG_InstalledSharkMouth</removesHediff>
+  </RecipeDef>
+  
+  <!--Outlander Melee goes here-->
+  
+
+  
+    <!-- Spacer armored Keel-->
+
+<HediffDef ParentName="AddedAuxMountBase">
+	<defName>FSG_InstalledProtectiveDish</defName>
+	<label>installed Deflector Dish</label>
+	<labelNoun>Deflector Dish</labelNoun>
+	<description>A deflector dish to parry incoming asteroids and solar flares. It also improves your ramming damage a little without reducing speed.</description>
+    <spawnThingOnRemoved>FSG_ProtectiveDish</spawnThingOnRemoved>
+<stages>
+    <li>
+        
+        <statOffsets>
+			<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.20</ArmorRating_Heat>
+        </statOffsets>
+    </li>
+    </stages>
+	<comps>
+		<li Class="HediffCompProperties_VerbGiver">
+			<tools>
+				<li>
+					<label>Improved Keel Ram</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>26</power>
+					<cooldownTime>2</cooldownTime>
+					<soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+					<soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+				</li>
+			</tools>
+		</li>
+	</comps>
+
+</HediffDef>
+
+ <ThingDef ParentName="FSG_MachinableBodypartBase">
+    <defName>FSG_ProtectiveDish</defName>
+    <label>Uninstalled Deflector Dish</label>
+    <description>A deflector dish to parry incoming asteroids and projectiles. It also improves your ramming damage a little without reducing speed.</description>
+    <graphicData>
+		<texPath>Turrets/Generic</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+      <Steel>50</Steel>
+	  <Plasteel>25</Plasteel>
+	 
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>ShipSensorCluster</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  
+<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_Dish</defName>
+    <label>install delector dish</label>
+    <description>Mount a deflector dish on a shipgirl.</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>replacing keel.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_ProtectiveDish</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_ProtectiveDish</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Keel</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledProtectiveDish</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <defName>RemoveFSG_DefensiveDish</defName>
+    <label>Remove deflector dish</label>
+    <description>Remove the dish from one of the outriggers of this ship girl.</description>
+
+    <jobString>unmounting deflector dish.</jobString>
+    <removesHediff>FSG_InstalledProtectiveDish</removesHediff>
+  </RecipeDef>
+  
+      
+<!--Spacer Melee-->
+	<!--Shark keel space melee--> <!-- Space Shark Keel-->
+	<HediffDef ParentName="AddedAuxMountBase">
+	<defName>FSG_InstalledSpaceSharkMouth</defName>
+	<label>installed laser shark mouth</label>
+	<labelNoun>Laser Shark Mouth</labelNoun>
+	<description>A shark mouth with lasers for teeth, for close combat. It replaces the keel of a ship girl's outrigger.
+	/n One day, a Blood Shark was pondering the eternal question, "How can I make myself even more terrifying?" The obvious answer was to replace her teeth with plasma swords.</description>
+    <spawnThingOnRemoved>FSG_SpaceSharkMouth</spawnThingOnRemoved>
+	<stages>
+		<li>
+			<capMods>
+					<li>
+						<capacity>Eating</capacity>
+						<postFactor>1.30</postFactor>
+					</li>
+			</capMods>
+		</li>
+	</stages>
+	
+	<comps>
+		<li Class="HediffCompProperties_VerbGiver">
+			<tools>
+				<li>
+					<label>Laser Shark Mouth</label>
+					<capacities>
+						<li>Bite</li>						
+					</capacities>
+					<extraMeleeDamages>
+						<li>
+							<def>Flame</def>
+							<amount>10</amount>
+							<chance>0.75</chance>
+						</li>
+					</extraMeleeDamages>
+					<power>35</power>
+					<cooldownTime>1.2</cooldownTime>
+					<soundMeleeHit>Shot_IncendiaryLauncher</soundMeleeHit>
+					<soundMeleeMiss>Shot_IncendiaryLauncher</soundMeleeMiss>
+				</li>
+			</tools>
+		</li>
+	</comps>
+
+</HediffDef>
+
+<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_SpaceSharkMouth</defName>
+    <label>install a laser shark mouth</label>
+    <description>Mount a laser shark mouth on the outrigger keel of a shipgirl.</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing shark mouth.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_SpaceSharkMouth</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_SpaceSharkMouth</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Keel</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledSpaceSharkMouth</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <defName>RemoveFSG_SpaceSharkMouth</defName>
+    <label>Unmount Laser Shark Mouth Keel</label>
+    <description>Remove the laser shark mouth keel from this ship girl, so it can be reallocated or replaced.</description>
+
+    <jobString>unmounting laser shark mouth.</jobString>
+    <removesHediff>FSG_InstalledSpaceSharkMouth</removesHediff>
+  </RecipeDef>
+
+
+ <ThingDef ParentName="FSG_MachinableBodypartBase">
+    <defName>FSG_SpaceSharkMouth</defName>
+    <label>Uninstalled Laser Shark Mouth</label>
+    <description>A laser toothed shark mouth, ready to be installed, designed to be mounted in a ship girl's keels. It sets people on fire.</description>
+    <graphicData>
+		<texPath>Rigging/Shark/Starboard_east</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+	<techHediffsTags>
+		<li>FSG_SharkSpacer</li>
+	</techHediffsTags>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+		<Plasteel>60</Plasteel>
+		<Uranium>60</Uranium>
+	    <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Bionics</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  
+
+
+
+</Defs>

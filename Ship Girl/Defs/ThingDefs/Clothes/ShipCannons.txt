@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+
+
+<!--Aux Gun Base-->
+
+
+
+
+<!--Anti Aircraft Mounts -->
+
+
+  
+<!--Shoulder gun bases-->
+	
+  
+		<!--Cannon Bases-->
+
+<ThingDef Name="FSGCannonBase" Abstract="True">
+		<thingClass>Apparel</thingClass>
+		<category>Item</category>
+		<selectable>True</selectable>
+		<pathCost>15</pathCost>
+		<useHitPoints>True</useHitPoints>
+		
+		<graphicData>
+			<onGroundRandomRotateAngle>45</onGroundRandomRotateAngle>
+		</graphicData>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<statBases>
+			<StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>.15</Flammability>
+			<DeteriorationRate>.5</DeteriorationRate>
+			<Beauty>-4</Beauty>
+			<SellPriceFactor>0.50</SellPriceFactor>
+			<Mass>15</Mass>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<apparel>
+			<bodyPartGroups>
+				<li>Turrets</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+		</apparel>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li>
+				<compClass>CompColorable</compClass>
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	
+	<ThingDef Name="FSGCannonSmithableBase" ParentName="FSGCannonBase" Abstract="True">
+		<burnableByRecipe>false</burnableByRecipe>
+		<smeltable>true</smeltable>
+		<techLevel>Medieval</techLevel>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>FueledSmithy</li>
+				<li>ElectricSmithy</li>
+			</recipeUsers>
+			<unfinishedThingDef>UnfinishedArmor</unfinishedThingDef>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>Gold</li>
+					<li>Silver</li>
+					<li>Plasteel</li>
+					<li>Jade</li>
+					<li>Uranium</li>
+				</disallowedThingDefs>
+			</defaultIngredientFilter>
+		</recipeMaker>
+	</ThingDef>
+  
+
+
+  <ThingDef Name="FSGCannonMachineableBase" ParentName="FSGCannonBase" Abstract="True">
+		<burnableByRecipe>false</burnableByRecipe>
+		<smeltable>true</smeltable>
+		<techLevel>Industrial</techLevel>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+				<unfinishedThingDef>UnfinishedArmor</unfinishedThingDef>
+				<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>Gold</li>
+					<li>Silver</li>
+					<li>Plasteel</li>
+					<li>Jade</li>
+					<li>Uranium</li>
+				</disallowedThingDefs>
+			</defaultIngredientFilter>
+		</recipeMaker>
+	</ThingDef>
+	
+	<!-- Medieval Cannon -->
+	<ThingDef ParentName="FSGCannonSmithableBase">
+			<defName>FSGTurret_MedievalFrag</defName>
+			<label>cast iron cannon</label>
+			<description>A simple cannon, designed to fit in the shoulder turrets of a ship girl. This equipment is protected by hull armor, but provides no protection of it's own. The launcher can only hold a single shot, and must be reloaded after use.\n\nThis cannon is loaded with anti-personel shells, designed to soften up enemy troops before an assault.</description>
+			<costList>
+				<Steel>75</Steel>
+			</costList>
+		
+			<graphicData>
+				<texPath>Turrets/Smithed</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+			</graphicData>
+			<apparel>
+				<scoreOffset>4</scoreOffset>
+		 	</apparel>
+		<comps>
+		  <li Class="CompProperties_Reloadable">
+			<maxCharges>1</maxCharges>
+			<ammoDef>Steel</ammoDef>
+			<ammoCountPerCharge>25</ammoCountPerCharge>
+			<baseReloadTicks>80</baseReloadTicks>
+			<soundReload>Standard_Reload</soundReload>
+			<hotKey>Misc4</hotKey>
+			<chargeNoun>grenade</chargeNoun>
+			<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+		  </li>
+		</comps>
+		<verbs>
+		  <li>
+			<label>launch frag grenade</label>
+			<verbClass>Verb_LaunchProjectileStatic</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<onlyManualCast>True</onlyManualCast>
+			<range>11</range>
+			<forcedMissRadius>3.9</forcedMissRadius>
+			<warmupTime>1.7</warmupTime>
+			<noiseRadius>5</noiseRadius>
+			<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+			<soundCast>Shot_IncendiaryLauncher</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+			<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+			<targetParams>
+			  <canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<defaultProjectile>Fel_Proj_PrimitiveShell</defaultProjectile>
+			<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+		  </li>
+		</verbs>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseFragGrenadeProjectile">
+		<defName>Fel_Proj_PrimitiveShell</defName>
+		<label>explosive petard</label>
+			<graphicData>
+				<texPath>Turrets/PetardSmall</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+			</graphicData>
+		<projectile>
+			<speed>14</speed>
+		</projectile>
+	</ThingDef>
+	
+	
+	
+	
+	
+	<ThingDef ParentName="FSGCannonSmithableBase">
+			<defName>FSGTurret_MedievalSP</defName>
+			<label>cast iron cannon</label>
+			<description>A simple cannon, designed to fit in the shoulder turrets of a ship girl. This equipment is protected by hull armor, but provides not protection of it's own. The launcher can only hold a single shot, and must be reloaded after use.\n\nThis cannon is loaded heavy cannonballs, designed to smash armored troops and fortifications.</description>
+			<costList>
+				<Steel>75</Steel>
+			</costList>
+		
+			<graphicData>
+				<texPath>Turrets/Smithed</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+			</graphicData>
+			<apparel>
+				<scoreOffset>4</scoreOffset>
+		 	</apparel>
+		<comps>
+		  <li Class="CompProperties_Reloadable">
+			<maxCharges>1</maxCharges>
+			<ammoDef>Steel</ammoDef>
+			<ammoCountPerCharge>10</ammoCountPerCharge>
+			<baseReloadTicks>80</baseReloadTicks>
+			<soundReload>Standard_Reload</soundReload>
+			<hotKey>Misc4</hotKey>
+			<chargeNoun>cannonball</chargeNoun>
+			<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+		  </li>
+		</comps>
+		<verbs>
+		  <li>
+			<label>Fire Cannon</label>
+			<verbClass>Verb_LaunchProjectileStatic</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<onlyManualCast>True</onlyManualCast>
+			<range>12</range>
+			<warmupTime>1.7</warmupTime>
+			<noiseRadius>5</noiseRadius>
+			<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+			<soundCast>Shot_IncendiaryLauncher</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+			<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+			<targetParams>
+			  <canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<defaultProjectile>Fel_Proj_Cannonball</defaultProjectile>
+			<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+		  </li>
+		</verbs>
+	</ThingDef>
+
+	
+	
+
+	
+	<!--Industrial Cannons. On par with spacer infantry shoulder guns or industrial mortars -->
+		<!--Explosive- 2 models, 1 projectile-->
+	<ThingDef ParentName="FSGCannonMachineableBase">
+			<defName>FSGTurret_IndustrialFrag</defName>
+			<label>Fragmentation turret</label>
+			<description>A mounted turret array, designed to fit in the shoulder turrets of a ship girl. This equipment is protected by hull armor, but provides not protection of it's own. The launcher can only hold a limited amount of ammo and must be reloaded after use.\n\nThis turret is loaded with anti-personel shells, designed to soften up enemy troops before an assault.</description>
+			<costList>
+				<Steel>75</Steel>
+				<ComponentIndustrial>4</ComponentIndustrial>
+			</costList>
+		
+			<graphicData>
+				<texPath>Turrets/Generic</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+			</graphicData>
+			<apparel>
+				<scoreOffset>4</scoreOffset>
+		 	</apparel>
+		<comps>
+		  <li Class="CompProperties_Reloadable">
+			<maxCharges>4</maxCharges>
+			<ammoDef>Steel</ammoDef>
+			<ammoCountPerCharge>25</ammoCountPerCharge>
+			<baseReloadTicks>60</baseReloadTicks>
+			<soundReload>Standard_Reload</soundReload>
+			<hotKey>Misc4</hotKey>
+			<chargeNoun>grenade</chargeNoun>
+			<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+		  </li>
+		</comps>
+		<verbs>
+		  <li>
+			<label>fire fragmentation shells</label>
+			<verbClass>Verb_LaunchProjectileStatic</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<onlyManualCast>True</onlyManualCast>
+			<range>12.9</range>
+			<forcedMissRadius>1.9</forcedMissRadius>
+			<burstShotCount>2</burstShotCount>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<stopBurstWithoutLos>false</stopBurstWithoutLos>
+			<warmupTime>1.7</warmupTime>
+			<noiseRadius>5</noiseRadius>
+			<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+			<soundCast>Shot_IncendiaryLauncher</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+			<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+			<targetParams>
+			  <canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<defaultProjectile>Fel_Proj_IndustrialShell</defaultProjectile>
+			<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+		  </li>
+		</verbs>
+	</ThingDef>
+	<ThingDef ParentName="FSGCannonMachineableBase">
+			<defName>FSGTurret_IndustrialMultiFrag</defName>
+			<label>quad barreled fragmentation turret</label>
+			<description>An extra large mounted turret array, designed to fit in the shoulder turrets of a ship girl with the maximum number of cannons. This equipment is protected by hull armor, but provides not protection of it's own. The launcher can only hold a limited amount of ammo and must be reloaded after use.\n\nThis turret is loaded with anti-personel shells, with the intention to bury enemy infantry in a storm of lead and fire.</description>
+			<costList>
+				<Steel>150</Steel>
+				<ComponentIndustrial>8</ComponentIndustrial>
+			</costList>
+		
+			<graphicData>
+				<texPath>Turrets/Multi</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+			</graphicData>
+			<apparel>
+				<scoreOffset>8</scoreOffset>
+		 	</apparel>
+		<comps>
+		  <li Class="CompProperties_Reloadable">
+			<maxCharges>3</maxCharges>
+			<ammoDef>Steel</ammoDef>
+			<ammoCountPerCharge>50</ammoCountPerCharge>
+			<baseReloadTicks>80</baseReloadTicks>
+			<soundReload>Standard_Reload</soundReload>
+			<hotKey>Misc4</hotKey>
+			<chargeNoun>salvo</chargeNoun>
+			<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+		  </li>
+		</comps>
+		<verbs>
+		  <li>
+			<label>fire many fragmentation shells</label>
+			<verbClass>Verb_LaunchProjectileStatic</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<onlyManualCast>True</onlyManualCast>
+			<range>12.9</range>
+			<forcedMissRadius>1.9</forcedMissRadius>
+			<burstShotCount>4</burstShotCount>
+			<stopBurstWithoutLos>false</stopBurstWithoutLos>
+			<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+			<warmupTime>1.7</warmupTime>
+			<noiseRadius>5</noiseRadius>
+			<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+			<soundCast>Shot_IncendiaryLauncher</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+			<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+			<targetParams>
+			  <canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<defaultProjectile>Fel_Proj_IndustrialShell</defaultProjectile>
+			<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+		  </li>
+		</verbs>
+	</ThingDef>
+	
+	
+	
+
+		<!--Incendiary - 1 model-->
+	  <ThingDef ParentName="FSGCannonMachineableBase">
+		<defName>FelTurret_Incendiary</defName>
+		<label>Incendiary Turret</label>
+		<description>A shoulder-mounted flamebolt launcher, for ship girls. This equipment is protected by hull armor, but provides no protection of it's own. The flamebolt launcher has very limited ammo and must be reloaded after use.\n\n This weapon tends to be most effective when your vanguard have taken some precautions against fire.</description>
+		<!--
+		<equippedStatOffsets>
+			<Flammability>-0.68</Flammability>
+		</equippedStatOffsets>
+		-->
+		<costList>
+			<Steel>75</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<Chemfuel>120</Chemfuel>
+		</costList>
+		<graphicData>
+			<texPath>Turrets/Incendiary</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<apparel>
+			<scoreOffset>4</scoreOffset>
+			
+		</apparel>
+		<comps>
+			<li Class="CompProperties_Reloadable">
+				<maxCharges>2</maxCharges>
+				<ammoDef>Chemfuel</ammoDef>
+				<ammoCountPerCharge>60</ammoCountPerCharge>
+				<baseReloadTicks>60</baseReloadTicks>
+				<soundReload>Standard_Reload</soundReload>
+				<hotKey>Misc4</hotKey>
+				<chargeNoun>incendiary</chargeNoun>
+				<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+			</li>
+		</comps>
+		<verbs>
+			<li>
+				<label>launch incendiary</label>
+				<verbClass>Verb_LaunchProjectileStatic</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<onlyManualCast>True</onlyManualCast>
+				<range>14.9</range>
+				<forcedMissRadius>1.9</forcedMissRadius>
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<stopBurstWithoutLos>false</stopBurstWithoutLos>
+				<warmupTime>1.5</warmupTime>
+				<noiseRadius>4</noiseRadius>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<soundCast>Shot_IncendiaryLauncher</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>14</muzzleFlashScale>
+				<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>Fel_Proj_GrenadePhoenixFire</defaultProjectile>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+	  </ThingDef>
+
+	<ThingDef ParentName="BaseIncendiaryProjectile">
+		<defName>Fel_Proj_GrenadePhoenixFire</defName>
+		<label>incendiary grenade</label>
+		<graphicData>
+			<texPath>Turrets/ShellSmall</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<color>(254,189,58)</color>
+		</graphicData>
+		<projectile>
+			<speed>18</speed>
+			<explosionRadius>2.9</explosionRadius>
+			<arcHeightFactor>0.5</arcHeightFactor>
+		</projectile>
+	</ThingDef>
+	
+		<!--Solid Projectile Cannons - 2 models -->
+		
+		<ThingDef ParentName="FSGCannonMachineableBase">
+			<defName>FSGTurret_IndustrialSP</defName>
+			<label>Ship Hunter Cannons</label>
+			<description>An array of cannons, designed to fit in the shoulder turrets of a ship girl.
+			This equipment is protected by hull armor, but provides not protection of it's own.
+			The launcher has limited ammunition, and must be reloaded after use.
+			\n\nThis cannon is loaded with heavy slugs, designed to tear armor.</description>
+			<costList>
+				<Steel>75</Steel>
+			</costList>
+		
+			<graphicData>
+				<texPath>Turrets/DualSP</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+			</graphicData>
+			<apparel>
+				<scoreOffset>4</scoreOffset>
+		 	</apparel>
+		<comps>
+		  <li Class="CompProperties_Reloadable">
+			<maxCharges>4</maxCharges>
+			<ammoDef>Steel</ammoDef>
+			<ammoCountPerCharge>10</ammoCountPerCharge>
+			<baseReloadTicks>60</baseReloadTicks>
+			<soundReload>Standard_Reload</soundReload>
+			<hotKey>Misc4</hotKey>
+			<chargeNoun>cannonball</chargeNoun>
+			<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+		  </li>
+		</comps>
+		<verbs>
+		  <li>
+			<label>Fire Cannon</label>
+			<verbClass>Verb_LaunchProjectileStatic</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<onlyManualCast>True</onlyManualCast>
+			<range>12</range>
+			<burstShotCount>2</burstShotCount>
+			<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+			<stopBurstWithoutLos>false</stopBurstWithoutLos>
+			<warmupTime>.9</warmupTime>
+			<noiseRadius>5</noiseRadius>
+			<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+			<soundCast>Shot_IncendiaryLauncher</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+			<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+			<targetParams>
+			  <canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<defaultProjectile>Fel_Proj_SPShell</defaultProjectile>
+			<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+		  </li>
+		</verbs>
+	</ThingDef>
+	<ThingDef ParentName="FSGCannonMachineableBase">
+			<defName>FSGTurret_IndustrialMultiSP</defName>
+			<label>Quad Barreled Ship Hunter Cannon</label>
+			<description>A heavy array of cannons, designed to fill in the shoulder turrets of a ship girl with the maximum amount of firepower.
+			This equipment is protected by hull armor, but provides not protection of it's own.
+			The launcher has limited ammunition, and must be reloaded after use.
+			\n\nThis cannon is loaded with heavy slugs, designed to tear armor.</description>
+			<costList>
+				<Steel>150</Steel>
+			</costList>
+		
+			<graphicData>
+				<texPath>Turrets/DualSP</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+			</graphicData>
+			<apparel>
+				<scoreOffset>8</scoreOffset>
+		 	</apparel>
+		<comps>
+		  <li Class="CompProperties_Reloadable">
+			<maxCharges>3</maxCharges>
+			<ammoDef>Steel</ammoDef>
+			<ammoCountPerCharge>10</ammoCountPerCharge>
+			<baseReloadTicks>80</baseReloadTicks>
+			<soundReload>Standard_Reload</soundReload>
+			<hotKey>Misc4</hotKey>
+			<chargeNoun>cannonball</chargeNoun>
+			<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+		  </li>
+		</comps>
+		<verbs>
+		  <li>
+			<label>Fire Cannon</label>
+			<verbClass>Verb_LaunchProjectileStatic</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<onlyManualCast>True</onlyManualCast>
+			<range>12</range>
+			<burstShotCount>4</burstShotCount>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<stopBurstWithoutLos>false</stopBurstWithoutLos>
+			<warmupTime>1.2</warmupTime>
+			<noiseRadius>5</noiseRadius>
+			<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+			<soundCast>Shot_IncendiaryLauncher</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+			<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+			<targetParams>
+			  <canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<defaultProjectile>Fel_Proj_SPShell</defaultProjectile>
+			<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+		  </li>
+		</verbs>
+	</ThingDef>
+	
+
+	  
+	<!--Spacer Turrets: Designed to kill shipgirls, especially those with industrial hulls,
+		on par with uranium torrets-->
+		
+	<!-- Ultra/Archeo/Sinister Tech- Unchained ultimate firepower. Orbital bombardment. The works.-->
+
+	
+</Defs>

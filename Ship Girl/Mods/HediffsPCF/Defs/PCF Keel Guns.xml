@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs><!-- This file only contains hediffs with ranged attacks. Melee only hulls go in the main mod.-->
+
+<!--Contains hediffs and install/remove surgeries for the PCF versions of hull mounted weapon hediffs.-->
+<!--Keel Mods use the same bases as Aux Mods, since we always specified the body part in the final Part ThingDef anyway.-->
+<!-- Triple Torpedo -->
+
+<HediffDef ParentName="AddedAuxMountBase">
+	<defName>FSG_InstalledTorpedoSingle</defName>
+	<label>Triple Torpedo Launcher</label>
+	<labelNoun>a triple torpedo launcher</labelNoun>
+	<description>A torpedo launcher mounted on the keel of an outrigger. It fires three standard 533mm torpedoes./n/n Torpedoes are lightweight, and have a good mix of usefulness in both long range and close combat encounters. However, they have a long reload time, and should usually be combined with other armaments, or pack hunting tactics./n/n They are a weapon of choice when hunting battleships that are too well protected against traditional armor piercing or SAP attacks, however many craft are equipped with specialized armored keels, that protect against the backbreaking impact of a torpedo.</description>
+    <spawnThingOnRemoved>FSG_TorpedoSingle</spawnThingOnRemoved>
+	<comps>
+		<li Class="HediffCompProperties_VerbGiver">
+			<tools>
+				<li>
+					<label>Torpedo Contact Detonation</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>22</power>
+					<cooldownTime>12</cooldownTime>
+					<soundMeleeHit>Shot_IncendiaryLauncher</soundMeleeHit>
+					<soundMeleeMiss>Shot_IncendiaryLauncher</soundMeleeMiss>
+				</li>
+			</tools>
+		</li>
+		
+		<li Class="OrenoPCF.HediffCompProperties_VerbGiverExtended">
+			<toggleLabel>Triple Torpedo</toggleLabel>
+			<toggleDescription>Toggle Torpedo launcher on/off</toggleDescription>
+			<!-- <toggleBackgroundPath>UI/Widgets/Prosthetic/DesButBGLG</toggleBackgroundPath> -->
+			<toggleIconPath>Turrets/Torpedo</toggleIconPath>
+			<toggleIconAngle>-32.0</toggleIconAngle>
+			<verbs>
+				<li>
+					<label>Direct Fire Torpedo</label>
+					<verbClass>Verb_Shoot</verbClass>
+					<accuracyTouch>0.75</accuracyTouch>
+					<accuracyShort>0.55</accuracyShort>
+					<accuracyMedium>0.40</accuracyMedium>
+					<accuracyLong>0.35</accuracyLong>
+					<defaultCooldownTime>30</defaultCooldownTime>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>FSG_Proj_IndustrialTorpedo</defaultProjectile>
+					<warmupTime>3.5</warmupTime>
+					<range>21.9</range>
+					<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+					<burstShotCount>3</burstShotCount>
+					<soundCast>Shot_IncendiaryLauncher</soundCast>
+					<soundCastTail>GunTail_Medium</soundCastTail>
+					<muzzleFlashScale>5</muzzleFlashScale>
+				</li>
+
+			</verbs>
+			<verbsProperties>
+				<li>
+					<label>Direct Fire Torpedo</label>
+					<description>Fire a salvo of three torpedoes, which may each strike a single target.</description>
+					<uiIconPath>Turrets/Torpedo</uiIconPath>
+				</li>
+			</verbsProperties>
+		</li>
+
+	</comps>
+</HediffDef>
+
+<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_TorpedoSingle</defName>
+    <label>install Triple Torpedo Launcher</label>
+    <description>Mount a triple torpedo launcher on a ship's keel.</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing triple torpedo launcher.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_TorpedoSingle</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_TorpedoSingle</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Keel</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledTorpedoSingle</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <defName>RemoveFSG_TorpeoSingle</defName>
+    <label>Unmount Triple Torpedo Launcher</label>
+    <description>Remove the triple torpedo Launcher from this ship girl, so it can be reallocated or replaced.</description>
+
+    <jobString>unmounting torpedoes.</jobString>
+    <removesHediff>FSG_InstalledTorpedoSingle</removesHediff>
+  </RecipeDef>
+
+  <!-- 5x Pentuple Torpedo-->
+  
+  <HediffDef ParentName="AddedAuxMountBase">
+	<defName>FSG_InstalledTorpedoSpread</defName>
+	<label>installed pentuple torpedo</label>
+	<labelNoun>a pentuple torpedo launcher</labelNoun>
+	<description>A torpedo launcher mounted on the keel of an outrigger. It fires five standard 533mm torpedoes, with somewhat reduced accuracy and increaced reload time./n/n Torpedoes are lightweight, and have a good mix of usefulness in both long range and close combat encounters, so many fleets make them standard equipment, even for support craft. However, they have a long reload time, and should usually be combined with other armaments, or pack hunting tactics./n/n They are a weapon of choice when hunting battleships that are too well protected against traditional armor piercing or SAP attacks, however many craft are equipped with specialized armored keels, that can protect against the backbreaking impact of a torpedo.</description>
+    <spawnThingOnRemoved>FSG_PartTorpedoSpread</spawnThingOnRemoved>
+	<comps>
+		<li Class="HediffCompProperties_VerbGiver">
+			<tools>
+				<li>
+					<label>Multiple Contact Detonation</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>30</power>
+					<cooldownTime>10</cooldownTime>
+					<soundMeleeHit>Shot_IncendiaryLauncher</soundMeleeHit>
+					<soundMeleeMiss>Shot_IncendiaryLauncher</soundMeleeMiss>
+				</li>
+			</tools>
+		</li>
+		<li Class="OrenoPCF.HediffCompProperties_VerbGiverExtended">
+			<toggleLabel>Torpedo Spread</toggleLabel>
+			<toggleDescription>Toggle torpedo spread launcher.</toggleDescription>
+			<!-- <toggleBackgroundPath>UI/Widgets/Prosthetic/DesButBGLG</toggleBackgroundPath> -->
+			<toggleIconPath>Turrets/Generic</toggleIconPath>
+			<toggleIconAngle>-32.0</toggleIconAngle>
+			<verbs>
+				<li>
+					<label>Fire Torpedo Spread</label>
+					<verbClass>Verb_Shoot</verbClass>
+					<accuracyTouch>0.65</accuracyTouch>
+					<accuracyShort>0.52</accuracyShort>
+					<accuracyMedium>0.30</accuracyMedium>
+					<accuracyLong>0.20</accuracyLong>
+					<defaultCooldownTime>35</defaultCooldownTime>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>FSG_Proj_IndustrialTorpedo</defaultProjectile>
+					<warmupTime>3.5</warmupTime>
+					<range>21.9</range>
+					<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+					<burstShotCount>5</burstShotCount>
+					<soundCast>Shot_IncendiaryLauncher</soundCast>
+					<soundCastTail>GunTail_Medium</soundCastTail>
+					<muzzleFlashScale>4</muzzleFlashScale>
+				</li>
+
+			</verbs>
+			<verbsProperties>
+				<li>
+					<label>Fire Torpedo Spread</label>
+					<description>Release a salvo of 5 torpedoes. Surely one of them will hit something.</description>
+					<uiIconPath>Turrets/Generic</uiIconPath>
+				</li>
+			</verbsProperties>
+		</li>
+	</comps>
+
+</HediffDef>
+
+<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_PartTorpedoSpread</defName>
+    <label>install pentuple torpedo</label>
+    <description>Mount a pentuple torpedo launcher on a shipgirl's keel.</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing torpedo spread.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_PartTorpedoSpread</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_PartTorpedoSpread</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Keel</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledTorpedoSpread</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <defName>RemoveFSG_PartTorpedoSpread</defName>
+    <label>Unmount pentuple torpedo</label>
+    <description>Remove the torpedo spread from this ship girl, so it can can be reallocated or replaced.</description>
+
+    <jobString>unmounting torpedoes.</jobString>
+    <removesHediff>FSG_InstalledTorpedoSpread</removesHediff>
+  </RecipeDef>
+<!--Industrial Melee-->
+	<!--Shark Mouth-->
+
+
+  
+<!-- Spacer -->
+	<!-- Single Space Torpedo, probably needs a buff. -->
+<HediffDef ParentName="AddedAuxMountBase">
+	<defName>FSG_InstalledSpaceTorpedoSingle</defName>
+	<label>installed Implosion Torpedo Launcher</label>
+	<labelNoun>an advanced torpedo launcher</labelNoun>
+	<description>An spacer tech torpedo launcher mounted on the outrigger./n/n Torpedoes are lightweight, and have a good mix of usefulness in both long range and close combat encounters, so many fleets make them standard equipment, even for support craft. However, they have a long reload time, and should usually be combined with other armaments, or pack hunting tactics./n/n They are a weapon of choice when hunting battleships that are too well protected against traditional armor piercing or SAP attacks, however many craft are equipped with specialized armored keels, that can protect against the backbreaking impact of a torpedo.</description>
+    
+    <spawnThingOnRemoved>FSG_SpaceTorpedoSingle</spawnThingOnRemoved>
+	<comps>
+		<li Class="HediffCompProperties_VerbGiver">
+			<tools>
+				<li>
+					<label>Attack Pattern Too Close</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>32</power>
+					<cooldownTime>6</cooldownTime>
+					<soundMeleeHit>Shot_IncendiaryLauncher</soundMeleeHit>
+					<soundMeleeMiss>Shot_IncendiaryLauncher</soundMeleeMiss>
+				</li>
+			</tools>
+		</li>
+		
+		<li Class="OrenoPCF.HediffCompProperties_VerbGiverExtended">
+			<toggleLabel>Implosion Torpedo</toggleLabel>
+			<toggleDescription>Weapons that strike a single target.</toggleDescription>
+			<!-- <toggleBackgroundPath>UI/Widgets/Prosthetic/DesButBGLG</toggleBackgroundPath> -->
+			<toggleIconPath>Turrets/SinisterTorpedo</toggleIconPath>
+			<toggleIconAngle>-32.0</toggleIconAngle>
+			<verbs>
+				<li>
+					<label>Fire Implosion Torpedo</label>
+					<verbClass>Verb_Shoot</verbClass>
+					<accuracyTouch>0.60</accuracyTouch>
+					<accuracyShort>0.55</accuracyShort>
+					<accuracyMedium>0.45</accuracyMedium>
+					<accuracyLong>0.45</accuracyLong>
+				
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>FSG_Proj_SpaceTorpedo</defaultProjectile>
+					<warmupTime>3.5</warmupTime>
+					<defaultCooldownTime>20</defaultCooldownTime>
+					<range>26.9</range>
+					<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+					<burstShotCount>3</burstShotCount>
+					<soundCast>Shot_IncendiaryLauncher</soundCast>
+					<soundCastTail>GunTail_Medium</soundCastTail>
+					<muzzleFlashScale>6</muzzleFlashScale>
+				</li>
+
+			</verbs>
+			<verbsProperties>
+				<li>
+					<label>Fire Implosion Torpedo</label>
+					<description>Direct Fire weapons fire projectiles that strike a single target.</description>
+					<uiIconPath>Turrets/SinisterTorpedo</uiIconPath>
+				</li>
+			</verbsProperties>
+		</li>
+
+	</comps>
+
+</HediffDef>
+<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_SpaceTorpedoSingle</defName>
+    <label>install Implosion Torpedo Launcher</label>
+    <description>Mount an implosion torpedo launcher on a ship's keel.</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing torpedo launcher.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_SpaceTorpedoSingle</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_SpaceTorpedoSingle</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Keel</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledSpaceTorpedoSingle</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <defName>RemoveFSG_SpaceTorpeoSingle</defName>
+    <label>Unmount Implosion Torpedo</label>
+    <description>Remove the implosion torpedo Launcher from this ship girl, so it can be reallocated or replaced.</description>
+
+    <jobString>unmounting torpedoes.</jobString>
+    <removesHediff>FSG_InstalledSpaceTorpedoSingle</removesHediff>
+  </RecipeDef>
+  
+  <!--Space Torpedo Spread -->
+ <HediffDef ParentName="AddedAuxMountBase">
+	<defName>FSG_InstalledSpaceTorpedoSpread</defName>
+	<label>installed implosion torpedo spread</label>
+	<labelNoun>an implosion torpedo spread launcher</labelNoun>
+	<description>A spacer tech, burst fire, implosion torpedo launcher. /n/n Torpedoes are lightweight, and have a good mix of usefulness in both long range and close combat encounters. However, they have a long reload time, and should usually be combined with other armaments, or pack hunting tactics./n/n They are a weapon of choice when hunting battleship that are too well protected against traditional armor piercing or SAP attacks, however many craft are equipped with specialized armored keels, that protect against the backbreaking impact of a torpedo.</description>
+    <spawnThingOnRemoved>FSG_PartSpaceTorpedoSpread</spawnThingOnRemoved>
+	<comps>
+		<li Class="HediffCompProperties_VerbGiver">
+			<tools>
+				<li>
+					<label>Point Blank Implosion Torpedo Spread</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>60</power>
+					<cooldownTime>6</cooldownTime>
+					<soundMeleeHit>Shot_IncendiaryLauncher</soundMeleeHit>
+					<soundMeleeMiss>Shot_IncendiaryLauncher</soundMeleeMiss>
+				</li>
+			</tools>
+		</li>
+		<li Class="OrenoPCF.HediffCompProperties_VerbGiverExtended">
+			<toggleLabel>Implosion Torpedo Spread</toggleLabel>
+			<toggleDescription>A volley of 6 implosion missiles</toggleDescription>
+			<!-- <toggleBackgroundPath>UI/Widgets/Prosthetic/DesButBGLG</toggleBackgroundPath> -->
+			<toggleIconPath>Turrets/SinisterTorpedo</toggleIconPath>
+			<toggleIconAngle>-32.0</toggleIconAngle>
+			<verbs>
+				<li>
+					<label>Fire Implosion Torpedo Spread</label>
+					<verbClass>Verb_Shoot</verbClass>
+					<accuracyTouch>0.65</accuracyTouch>
+					<accuracyShort>0.55</accuracyShort>
+					<accuracyMedium>0.45</accuracyMedium>
+					<accuracyLong>0.35</accuracyLong>
+				
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>FSG_Proj_SpaceTorpedo</defaultProjectile>
+					<warmupTime>6</warmupTime>
+					<defaultCooldownTime>20</defaultCooldownTime>
+					<range>26.9</range>
+					<ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+					<burstShotCount>6</burstShotCount>
+					<soundCast>Shot_IncendiaryLauncher</soundCast>
+					<soundCastTail>GunTail_Medium</soundCastTail>
+					<muzzleFlashScale>5</muzzleFlashScale>
+				</li>
+
+			</verbs>
+			<verbsProperties>
+				<li>
+					<label>Fire Implosion Torpedo Spread</label>
+					<description>Releases a complement of implosion missiles.</description>
+					<uiIconPath>Turrets/SinisterTorpedo</uiIconPath>
+				</li>
+			</verbsProperties>
+		</li>
+	</comps>
+
+</HediffDef>
+
+<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFSG_PartSpaceTorpedoSpread</defName>
+    <label>install implosion torpedo spread</label>
+    <description>Mount a spreadfire implosion torpedo launcher on a shipgirl's keel.</description>
+
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing torpedo spread.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSG_PartSpaceTorpedoSpread</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSG_PartSpaceTorpedoSpread</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Keel</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FSG_InstalledSpaceTorpedoSpread</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+
+	<recipeUsers>
+      <li>ShipGirlRace</li>
+    </recipeUsers>
+    <defName>RemoveFSG_PartSpaceTorpedoSpread</defName>
+    <label>Unmount implosion torpedo spread</label>
+    <description>Remove the implosion torpedo spread from this ship girl, so it can can be reallocated or replaced.</description>
+
+    <jobString>unmounting torpedoes.</jobString>
+    <removesHediff>FSG_InstalledSpaceTorpedoSpread</removesHediff>
+  </RecipeDef>
+  
+ 
+
+</Defs>

@@ -1,0 +1,899 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Misc equipment that will need seperate files eventually.-->
+
+
+<Defs>
+
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>FSGApparel_BasicTent</defName>
+    <label>Deck Tent</label>
+    <description>A simple tent. At least it'll keep some rain off your hull.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/ShirtBasic/ShirtBasic</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>40</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <statBases>
+		
+		<MaxHitPoints>100</MaxHitPoints>
+		<WorkToMake>1600</WorkToMake>
+		<Mass>0.25</Mass>
+		
+		<StuffEffectMultiplierInsulation_Cold>0.22</StuffEffectMultiplierInsulation_Cold>
+		<StuffEffectMultiplierInsulation_Heat>0.10</StuffEffectMultiplierInsulation_Heat>
+		<EquipDelay>1.5</EquipDelay>
+    </statBases>
+    <apparel>
+      <bodyPartGroups>
+        <li>HullGroup</li>
+        <li>Shoulders</li>
+      </bodyPartGroups>
+      
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>IndustrialBasic</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef>
+
+	<!--Pre-spacer Abstracts-->
+	<ThingDef Name="FSGApparelBase" Abstract="True">
+		<thingClass>Apparel</thingClass>
+		<category>Item</category>
+		<selectable>True</selectable>
+		<pathCost>10</pathCost>
+		<useHitPoints>True</useHitPoints>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+		</graphicData>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<statBases>
+			<StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>.15</Flammability>
+			<DeteriorationRate>.5</DeteriorationRate>
+			<Beauty>-4</Beauty>
+			<SellPriceFactor>0.50</SellPriceFactor>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<tickerType>Never</tickerType>
+
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li>
+				<compClass>CompColorable</compClass>
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	
+	<ThingDef Name="FSGArmorSmithableBase" ParentName="FSGApparelBase" Abstract="True">
+		<burnableByRecipe>false</burnableByRecipe>
+		<smeltable>true</smeltable>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<unfinishedThingDef>UnfinishedArmor</unfinishedThingDef>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>Gold</li>
+					<li>Silver</li>
+					<li>Plasteel</li>
+					<li>Jade</li>
+					<li>Uranium</li>
+				</disallowedThingDefs>
+			</defaultIngredientFilter>
+		</recipeMaker>
+	</ThingDef>
+   <ThingDef Name="FSGArmorMachineableBase" ParentName="FSGApparelBase" Abstract="True">
+		<burnableByRecipe>false</burnableByRecipe>
+		<smeltable>true</smeltable>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+				<unfinishedThingDef>UnfinishedArmor</unfinishedThingDef>
+				<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>Gold</li>
+					<li>Silver</li>
+					<li>Plasteel</li>
+					<li>Jade</li>
+					<li>Uranium</li>
+				</disallowedThingDefs>
+			</defaultIngredientFilter>
+		</recipeMaker>
+	</ThingDef>
+
+  
+  <!--Plate Armor-->
+  
+	<ThingDef ParentName="FSGArmorSmithableBase">
+		<defName>FSGApparel_PlateArmor</defName>
+		<label>cladding</label>
+		<description>Thick, interlocking plates of armor,attatched all over the hull, turrets and outriggers. It's simple, heavy armor, whose main benefit is that it protects most of the ship parts of a ship girl equally well.</description>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+			<researchPrerequisite>PlateArmor</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Armor/Misc/Ironclad/IroncladItem</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+		</stuffCategories>
+		<costStuffCount>300</costStuffCount>
+		<statBases>
+			<WorkToMake>380000</WorkToMake>
+			<MaxHitPoints>290</MaxHitPoints>
+			<Mass>15</Mass>
+			<StuffEffectMultiplierArmor>0.73</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>1.0</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>20</EquipDelay>
+		</statBases>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.40</MoveSpeed>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<apparel>
+			<bodyPartGroups>
+				<li>HullGroup</li>
+				<li>Outrigging</li>
+				<li>Turrets</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>MedievalShipGirl</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<!--Waybe using armor graphics for these was a mistake
+			<wornGraphicPath>Armor/Misc/Ironclad/Ironclad</wornGraphicPath>
+			<wornGraphicData>
+				<renderUtilityAsPack>true</renderUtilityAsPack>
+				<north>
+				<offset>(0,0)</offset>
+				</north>
+				<south>
+				<offset>(0,0)</offset>
+				</south>
+				<east>
+				<offset>(0,0)</offset>
+				<thin><offset>(0,0)</offset></thin>
+			
+				</east>
+				<west>
+				  <offset>(0.35,-0.1))</offset>
+				  <thin><offset>(-0.05,0)</offset></thin>
+			   
+				</west>
+
+				<male>  <scale>(0.4,0.4)</scale></male>
+				<female><scale>(1, 1)</scale></female>
+				<thin>  <scale>(.8,.8)</scale></thin>
+				<hulk>  <scale>(1.1,1.1)</scale></hulk>
+				<fat>   <scale>(1.1,1)</scale></fat>
+			</wornGraphicData>-->
+			</apparel>
+			<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+		
+		
+	</ThingDef>
+  
+  <!--Industrial Armors-->
+	 <ThingDef ParentName="FSGArmorMachineableBase">
+		<defName>FSGApparel_FlakDeck</defName>
+		<label>composite armored deck</label>
+		<description>Reinforced composite armor, concentrated above the ship's vital systems. This armor is a favorite of support ships becasue of it's light weight, but it still protects their vital engine room.</description>
+		<techLevel>Industrial</techLevel>
+		<recipeMaker>
+			<researchPrerequisite>FlakArmor</researchPrerequisite>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+			<graphicData>
+			<texPath>Rigging/RiggingCA/HullCruiser_north</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			
+			<WorkToMake>20000</WorkToMake>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Mass>4</Mass>
+			<Flammability>0.3</Flammability>
+			<ArmorRating_Sharp>1.00</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.2</ArmorRating_Heat>
+			<Insulation_Cold>1</Insulation_Cold>
+			<EquipDelay>5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.06</MoveSpeed>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<costList>
+			<Cloth>30</Cloth>
+			<Steel>60</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<apparel>
+			<bodyPartGroups>
+				<li>HullGroup</li>
+			</bodyPartGroups>
+
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<tags>
+				<li>IndustrialShipGirl</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>0.5</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+ 
+<ThingDef ParentName="FSGArmorMachineableBase">
+    <defName>FSGApparel_FlakJacket</defName>
+    <label>extended composite armor</label>
+    <description>Reinforced composete armor that covers the sides of the hull, the turrets and towers, as well as the deck.</description>
+    <recipeMaker>
+      <researchPrerequisite>FlakArmor</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+	<graphicData>
+      <texPath>Rigging/RiggingCA/HullCruiser_north</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <Cloth>100</Cloth>
+      <Steel>150</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <statBases>
+	
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>14000</WorkToMake>
+      <Mass>7</Mass>
+      <Flammability>0.3</Flammability>
+      <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.10</ArmorRating_Heat>
+      <Insulation_Cold>14.4</Insulation_Cold> <!-- like a cloth jacket -->
+      <Insulation_Heat>3</Insulation_Heat>
+      <EquipDelay>3</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+		<MoveSpeed>-0.12</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+		<bodyPartGroups>
+			<li>HullGroup</li>
+			<li>Outrigging</li>
+			<li>Turrets</li>
+			<li>Greebles</li>
+		</bodyPartGroups>
+		<layers>
+			<li>Shell</li>
+		</layers>
+		<tags>
+			<li>IndustrialShipGirl</li>
+		</tags>
+		<defaultOutfitTags>
+			<li>Soldier</li>
+		</defaultOutfitTags>
+	</apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <only>(0.44,0.44,0.44)</only>
+        </li>
+        <li>
+          <only>(0.62,0.62,0.62)</only>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+
+	<ThingDef ParentName="FSGArmorMachineableBase">
+		<defName>FSGApparel_FlakKeel</defName>
+		<label>Anti Torpedo belt</label>
+		<description>A girdle of shock absorbing composites, to protect a ship's underside from sneak attacks and torpedo explosions.</description>
+		<recipeMaker>
+			<researchPrerequisite>FlakArmor</researchPrerequisite>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Rigging/RiggingCA/HullCruiser_north</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+		
+			<WorkToMake>18000</WorkToMake>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Mass>8</Mass>
+			<Flammability>0.3</Flammability>
+			<ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.18</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.18</ArmorRating_Heat>
+			<Insulation_Cold>3.5</Insulation_Cold>
+			<Insulation_Heat>1</Insulation_Heat>
+			<EquipDelay>5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.12</MoveSpeed>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<costList>
+			<Cloth>30</Cloth>
+			<Steel>60</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<apparel>
+			<bodyPartGroups>
+				<li>Keel</li>
+			</bodyPartGroups>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+			</layers>
+			<tags>
+				<li>IndustrialShipGirl</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<only>(0.44,0.44,0.44)</only>
+				</li>
+				<li>
+					<only>(0.62,0.62,0.62)</only>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+
+<!-- Spacer tech ship armors-->
+
+<!--Power Armor Abstract and variants-->
+
+<ThingDef ParentName="FSGApparelArmorPowerBase">
+    <defName>FSGApparel_PowerArmor</defName>
+    <label>marine armor</label>
+    <description>A shell of powered armor. Layered plasteel-weave plates are very effective at stopping attacks, with few vulnerable joint sections. Neuro-memetic assistors allow a ship to wear the armor and still move easily.\n\nArmor like this is often used by imperial battleships and rapid-incursion strike craft.</description>
+    <apparel>
+		<tags>
+			<li>SpacerMilitary</li>
+		</tags>
+    </apparel>
+  </ThingDef>
+    	<ThingDef Name="FSGApparelArmorPowerBase" ParentName="FSGArmorMachineableBase" Abstract="True">
+		<techLevel>Spacer</techLevel>
+			<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisite>PoweredArmor</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+		<recipeUsers Inherit="False">
+			<li>FabricationBench</li>
+		</recipeUsers>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Rigging/RiggingCA/HullCruiser_north</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<generateCommonality>2</generateCommonality>
+		<statBases>
+			<WorkToMake>60000</WorkToMake>
+			<MaxHitPoints>340</MaxHitPoints>
+			<Mass>12</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>1.06</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.54</ArmorRating_Heat>
+			<Insulation_Cold>34</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+			<EquipDelay>14</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.4</MoveSpeed>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<tradeTags>
+			<li>HiTechArmor</li>
+		</tradeTags>
+		<costList>
+			<ComponentSpacer>4</ComponentSpacer>
+			<Plasteel>200</Plasteel>
+			<Uranium>40</Uranium>
+		</costList>
+			<apparel>
+				<bodyPartGroups>
+					<li>HullGroup</li>
+					<li>Turrets</li>
+					<li>Greebles</li>
+					<li>Keel</li>
+				</bodyPartGroups>
+				<layers>
+					<li>Middle</li>
+				</layers>
+				<defaultOutfitTags>
+					<li>Soldier</li>
+				</defaultOutfitTags>
+				<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			</apparel>
+			<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+		<thingSetMakerTags>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+		<comps>
+			<li Class="CompProperties_BiocodableApparel"/>
+		</comps>
+	</ThingDef>
+  
+  
+	<!--Royalty Armors and abstracts-->
+	
+	<ThingDef Name="FSGApparelArmorReconBase" ParentName="FSGArmorMachineableBase" Abstract="True">
+		<techLevel>Spacer</techLevel>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisite>ReconArmor</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<graphicData>
+		<texPath>Rigging/RiggingCA/HullCruiser_north</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<generateCommonality>2</generateCommonality>
+		<tradeTags>
+			<li>HiTechArmor</li>
+		</tradeTags>
+		<statBases>
+			<WorkToMake>45000</WorkToMake>
+			<MaxHitPoints>280</MaxHitPoints>
+			<Mass>9</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>0.92</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.46</ArmorRating_Heat>
+			<Insulation_Cold>32</Insulation_Cold>
+			<Insulation_Heat>9</Insulation_Heat>
+			<EquipDelay>11</EquipDelay>
+		
+		</statBases>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<costList>
+			<ComponentSpacer>6</ComponentSpacer>
+			<Plasteel>150</Plasteel>
+			<Uranium>20</Uranium>
+		</costList>
+		<apparel>
+			<bodyPartGroups>
+				<li>HullGroup</li>
+				<li>Outrigging</li>
+				<li>Greebles</li>
+				<li>Keel</li>
+			</bodyPartGroups>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+			</layers>
+
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+				<weight>10</weight>
+				<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+				<weight>10</weight>
+				<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+				<weight>10</weight>
+				<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+				<weight>6</weight>
+				<min>(0.3,0.3,0.3)</min>
+				<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+		<thingSetMakerTags>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+		<comps>
+			<li Class="CompProperties_BiocodableApparel"/>
+		</comps>
+	</ThingDef>
+  
+  
+  
+
+	<ThingDef ParentName="FSGApparelArmorReconBase">
+		<defName>FSGApparel_ArmorRecon</defName>
+		<label>starship recon armor</label>
+		<description>A shell of light starship armor, designed to permit quick movement. Lightweight plasteel-weave plates block attacks without compromising mobility, and persona-linked thrusters allow a ship to wear the armor and still move easily.\n\nArmor like this is often used by imperial scout ships and glitterworld police cruisers.</description>
+		<apparel>
+			<tags>
+				<li>SpacerShipGirlMilitary</li>
+			</tags>
+		</apparel>
+	</ThingDef>
+
+
+
+
+
+
+
+
+  <!-- Prestige marine armor -->
+
+	<ThingDef ParentName="FSGApparelArmorPowerBase">
+		<defName>FSGApparel_ArmorMarinePrestige</defName>
+		<label>flagship spacecraft armor</label>
+		<description>A shell of spacecraft armor. Layered plasteel-weave plates are very effective at stopping attacks, with few vulnerable joint sections. Neuro-memetic assistors allow a ship to wear the armor and still move easily.\n\nExpensive and beautiful, prestige armor like this is usually made for those of high status. Embedded eltex threads also enhance the wearer's psychic sensitivity.</description>
+		<graphicData>
+			<texPath>Rigging/RiggingCA/HullCruiser_north</texPath>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<WorkToMake>360000</WorkToMake>
+			
+		</statBases>
+		<equippedStatOffsets>
+			<PsychicSensitivity>0.025</PsychicSensitivity>
+			<PsychicEntropyRecoveryRate>0.016</PsychicEntropyRecoveryRate>
+		</equippedStatOffsets>
+		<costList>
+			<Gold>20</Gold>
+			<Plasteel>240</Plasteel>
+		</costList>
+		<apparel>
+			<tags>
+				<li>PrestigeShipGirlGear</li>
+			</tags>
+			<!--<wornGraphicPath>Things/Pawn/Humanlike/Apparel/PrestigeMarineArmor/PrestigeMarineArmor</wornGraphicPath>-->
+			<!--<useWornGraphicMask>true</useWornGraphicMask>-->
+		</apparel>
+	</ThingDef>
+
+ 
+  
+  
+  <!-- Cataphract armor base -->
+  
+	<ThingDef Name="FSGApparelArmorCataphractBase" ParentName="FSGArmorMachineableBase" Abstract="True">
+		<techLevel>Spacer</techLevel>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisite>CataphractArmor</researchPrerequisite>
+			<skillRequirements>
+			<Crafting>8</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/CataphractArmor/CataphractArmor</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.25</uiIconScale>
+		<generateCommonality>2</generateCommonality>
+		<statBases>
+			
+			<WorkToMake>75000</WorkToMake>
+			<MaxHitPoints>400</MaxHitPoints>
+			<Mass>15</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.6</ArmorRating_Heat>
+			<Insulation_Cold>36</Insulation_Cold>
+			<Insulation_Heat>12</Insulation_Heat>
+			<EquipDelay>17</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.8</MoveSpeed>
+		</equippedStatOffsets>
+		<tradeTags>
+			<li>HiTechArmor</li>
+		</tradeTags>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<costList>
+			<ComponentSpacer>12</ComponentSpacer>
+			<Plasteel>300</Plasteel>
+			<Uranium>100</Uranium>
+		</costList>
+		<apparel>
+			<bodyPartGroups>
+				<li>HullGroup</li>
+				<li>Turrets</li>
+				<li>Outrigging</li>
+				<li>Greebles</li>
+				<li>Keel</li>
+			</bodyPartGroups>
+			
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+		<thingSetMakerTags>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+		<comps>
+			<li Class="CompProperties_BiocodableApparel"/>
+		</comps>
+	</ThingDef>
+	
+	  <!-- Cataphract armor -->
+  
+  <ThingDef ParentName="FSGApparelArmorCataphractBase">
+    <defName>FSGApparel_ArmorCataphract</defName>
+    <label>Dread-Not(tm) starship armor</label>
+    <description>A suit of heavy spacecraft armor, built for maximum protection at the cost of mobility. Heavy layered plasteel-weave plates with solid ablative coatings stop all but the most well-aimed or powerful attacks. Neuro-memetic thrusters prevent the suit's massive weight from immobilizing the wearer entirely, but the suit is still quite cumbersome.\n\nArmor like this is used by imperial super-heavy battleships.</description>
+  </ThingDef>
+  
+  
+<!-- Prestige cataphract armor -->
+  
+  <ThingDef ParentName="FSGApparelArmorCataphractBase">
+		<defName>FSGApparel_ArmorCataphractPrestige</defName>
+		<label>Dread-Not flagship armor</label>
+		<description>A suit of heavy starship armor, built for maximum protection at the cost of mobility. Heavy layered plasteel-weave plates with solid ablative coatings stop all but the most well-aimed or powerful attacks. Persona-linked propulsion systems prevent the armor's massive weight from immobilizing the wearer entirely, but the suit is still quite cumbersome.\n\nExpensive and beautiful, prestige armor like this is usually made for those of high status. Embedded eltex threads also enhance the wearer's psychic sensitivity.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/PrestigeCataphractArmor/PrestigeCataphractArmor</texPath>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<WorkToMake>90000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+			<PsychicSensitivity>0.025</PsychicSensitivity>
+			<PsychicEntropyRecoveryRate>0.016</PsychicEntropyRecoveryRate>
+		</equippedStatOffsets>
+		<costList>
+			<Gold>40</Gold>
+			<Plasteel>400</Plasteel>
+		</costList>
+		<apparel>
+			<tags>
+				<li>PrestigeShipGirlGear</li>
+			</tags>
+		<!--<wornGraphicPath>Things/Pawn/Humanlike/Apparel/PrestigeCataphractArmor/PrestigeCataphractArmor</wornGraphicPath>
+		<useWornGraphicMask>true</useWornGraphicMask>-->
+		</apparel>
+	</ThingDef>
+
+  
+
+		<!-- variant armors -->
+
+	<ThingDef ParentName="FSGApparelArmorReconBase">
+		<defName>FSGApparel_ArmorLocust</defName>
+		<label>pirate spaceship armor</label>
+		<description>A variant of starship armor with large booster rockets, which allows for short-ranged flight, even as a humanoid. Pirate armor is slightly less protective than military light armor. Each jump consumes a burst of fuel, so the armor must be reloaded after several uses.\n\nUnlike most ultratech military units, pirates often train primarily with close combat weapons. They usually avoid static shootouts, preferring to jump straight into enemy fortifications and fight up close. They do poorly in static defense or confined quarters, but excel in mixed cover or shipcracking operations.</description>
+		<statBases>
+			
+			<ArmorRating_Sharp>0.87</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.41</ArmorRating_Heat>
+			<JumpRange>23.9</JumpRange>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>JumpPack</li>
+				<li>ReconArmor</li>
+			</researchPrerequisites>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/LocustArmor/LocustArmor</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<apparel>
+			<scoreOffset>4</scoreOffset>
+		</apparel>
+		<costList>
+			<Plasteel>120</Plasteel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<Chemfuel>100</Chemfuel>
+		</costList>
+		<comps>
+				<li Class="CompProperties_Reloadable">
+				<maxCharges>5</maxCharges>
+				<ammoDef>Chemfuel</ammoDef>
+				<ammoCountPerCharge>20</ammoCountPerCharge>
+				<baseReloadTicks>60</baseReloadTicks>
+				<soundReload>Standard_Reload</soundReload>
+				<hotKey>Misc4</hotKey>
+				<chargeNoun>jump</chargeNoun>
+				<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+			</li>
+		</comps>
+		<verbs>
+			<li>
+				<verbClass>Verb_Jump</verbClass>
+				<label>jump</label>
+				<commandIcon>Things/Pawn/Humanlike/Apparel/JumpPack/JumpPack</commandIcon>
+				<violent>false</violent>
+				<hasStandardCommand>true</hasStandardCommand>
+				<onlyManualCast>True</onlyManualCast>
+				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+				<warmupTime>0.5</warmupTime>
+				<warmupEffecter>JumpWarmupEffect</warmupEffecter>
+				<requireLineOfSight>true</requireLineOfSight>
+				<targetParams>
+					  <canTargetLocations>true</canTargetLocations>
+					  <canTargetPawns>false</canTargetPawns>
+					  <canTargetBuildings>false</canTargetBuildings>
+				</targetParams>
+			</li>
+		</verbs>
+	</ThingDef>
+<!--
+-->
+ </Defs>

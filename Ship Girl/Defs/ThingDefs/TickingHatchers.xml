@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- MOHAR C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\2057001924-->
+
+
+	<!--This base doesn't work, so we use EggFertBase instead -->
+	<ThingDef Name="GatchaEggBase" ParentName="EggFertBase" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<stackLimit>1</stackLimit>
+		<tickerType>Normal</tickerType>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		
+		<statBases>
+			<Beauty>-1</Beauty>
+			<MaxHitPoints>60</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>6</DeteriorationRate>
+			<Mass>0.15</Mass>
+			<FoodPoisonChanceFixedHuman>1</FoodPoisonChanceFixedHuman>
+			
+		</statBases>
+		<tradeability>None</tradeability>
+		<thingCategories>
+			<li>EggsFertilized</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_TemperatureRuinable">
+				<minSafeTemperature>-40</minSafeTemperature>
+				<maxSafeTemperature>70</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
+			</li>
+		</comps>
+		
+      
+      
+   
+	</ThingDef>
+	
+	<ThingDef ParentName="EggFertBase">
+		<defName>FSG_OHFPHatcher</defName>
+		<label>Random Gacha Hatcher Egg</label>
+		<description>An egg forged of metal, computers and mankind's hopes and dreams, which opens to reveal a new ship girl. Hope you get a really high quality one. /n/n This egg usually produces ship girls with Industrial weapons and armor, but you can often create spacer warships as well.</description>
+		<graphicData>
+			<texPath>Food/Cubes/Wisdom/Wisdom</texPath>
+			<color>(125,200,97)</color>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<tradeability>None</tradeability>
+		<statBases>
+			<MarketValue>45.0</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="OHFP.CompProperties_OHFP_Hatcher">
+				<hatcherDaystoHatch>.05</hatcherDaystoHatch>
+				<hatcherPawnList>
+					<li>ShipGirl_Hatched</li>
+					
+				</hatcherPawnList>
+				
+				<randomAdoption>
+					<li>
+						<factionType>player</factionType>
+						<weight>5</weight>
+					</li>
+				</randomAdoption>
+				<manhunterChance>0</manhunterChance>
+				<newBornChance>1</newBornChance>
+				
+				 <!--<debug>true</debug> -->
+			</li>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>2.9</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+				<startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+				<wickTicks>30~60</wickTicks>
+			</li>
+		</comps>
+		
+		<costList>
+			<blueCube>8</blueCube>
+			<ComponentIndustrial>10</ComponentIndustrial>
+			<Gold>200</Gold>
+		</costList>
+		<recipeMaker>
+			<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+			<workSkill>Intellectual</workSkill>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<researchPrerequisite>Machining</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+				<Intellectual>7</Intellectual>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+	
+	<ThingDef ParentName="EggFertBase">
+		<defName>FSG_OHFPHatcher_Industrial</defName>
+		<label>Industrial Gacha Hatcher Egg</label>
+		<description>An egg forged of Steel, Silicon and the will to survive, which opens to reveal a new Industrial age ship girl. Hope you get decent quality one./n/n This egg always produces a ship girl equipped with Industrial grade implants. It's a great value if you mainly want the pawn herself, and can equip her with an arsenal yourself./n/n Plus, it's less of a loss if you draw a psychotic prima-donna and decide you're better off butchering her to get some cubes back.</description>
+		<graphicData>
+			<texPath>Food/Cubes/Wisdom/Wisdom</texPath>
+			<color>(125,200,97)</color>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<tradeability>None</tradeability>
+		<statBases>
+			<MarketValue>45.0</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="OHFP.CompProperties_OHFP_Hatcher">
+				<hatcherDaystoHatch>.05</hatcherDaystoHatch>
+				<hatcherPawnList>
+					<li>ShipGirl_Hatched_Industrial</li>
+					
+				</hatcherPawnList>
+				
+				<randomAdoption>
+					<li>
+						<factionType>player</factionType>
+						<weight>5</weight>
+					</li>
+				</randomAdoption>
+				<manhunterChance>0</manhunterChance>
+				<newBornChance>1</newBornChance>
+				
+				 <!--<debug>true</debug> -->
+			</li>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>2.9</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+				<startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+				<wickTicks>30~60</wickTicks>
+			</li>
+		</comps>
+		<costList>
+			<blueCube>6</blueCube>
+			<ComponentIndustrial>10</ComponentIndustrial>
+			<Gold>100</Gold>
+		</costList>
+		<recipeMaker>
+			<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+			<workSkill>Intellectual</workSkill>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<researchPrerequisite>Machining</researchPrerequisite>
+		<skillRequirements>
+			<Crafting>6</Crafting>
+			<Intellectual>5</Intellectual>
+		</skillRequirements>
+    </recipeMaker>
+	</ThingDef>
+	
+	<ThingDef ParentName="EggFertBase">
+		<defName>FSG_OHFPHatcher_Spacer</defName>
+		<label>Spacer Gacha Hatcher Egg</label>
+		<description>An egg forged of plasteel, sentient crystal and mankind's hopes and dreams, which opens to reveal a new star ship girl. Hope you get a really high quality one. /n/n Building one of these eggs always results in a Ship Girl with Spacer equipment. This can be a big boost if you have the gold, but are behind on technology.</description>
+		<graphicData>
+			<texPath>Food/Cubes/Wisdom/Wisdom</texPath>
+			<color>(125,200,97)</color>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<tradeability>None</tradeability>
+		<statBases>
+			<MarketValue>45.0</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="OHFP.CompProperties_OHFP_Hatcher">
+				<hatcherDaystoHatch>.05</hatcherDaystoHatch>
+				<hatcherPawnList>
+					<li>ShipGirl_Hatched_Spacer</li>
+					
+				</hatcherPawnList>
+				
+				<randomAdoption>
+					<li>
+						<factionType>player</factionType>
+						<weight>5</weight>
+					</li>
+				</randomAdoption>
+				<manhunterChance>0</manhunterChance>
+				<newBornChance>1</newBornChance>
+				
+				 <!--<debug>true</debug> -->
+			</li>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>2.9</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+				<startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+				<wickTicks>30~60</wickTicks>
+			</li>
+		</comps>
+		<costList>
+			<blueCube>8</blueCube>
+			<ComponentSpacer>10</ComponentSpacer>
+			<Gold>400</Gold>
+		</costList>
+		<recipeMaker>
+			<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+			<workSkill>Intellectual</workSkill>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<researchPrerequisite>Fabrication</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+				<Intellectual>8</Intellectual>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+	
+	<ThingDef ParentName="EggFertBase">
+		<defName>FSG_OHFPHatcher_Evil</defName>
+		<label>Gotcha Hatcher Egg</label>
+		<description>An egg forged of steel, silicon and mankind's darkest fears, which opens to reveal an insane ship girl. Hope whatever comes out of here doesn't eat you.</description>
+		<graphicData>
+			<texPath>Food/Cubes/Black/Black</texPath>
+			<color>(125,200,97)</color>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<statBases>
+			<MarketValue>15.0</MarketValue>
+		</statBases>
+		<tradeability>None</tradeability>
+		<comps>
+			<li Class="OHFP.CompProperties_OHFP_Hatcher">
+				<hatcherDaystoHatch>.05</hatcherDaystoHatch>
+				<hatcherPawnList>
+					<li>ShipGirl_Hatched</li>
+					
+				</hatcherPawnList>
+				
+				<randomAdoption>
+					<li>
+						<factionType>player</factionType>
+						<weight>5</weight>
+					</li>
+					<li>
+						<factionType>neutral</factionType>
+						<weight>3</weight>
+					</li>
+					<li>
+						<factionType>enemy</factionType>
+						<weight>2</weight>
+					</li>
+				</randomAdoption>
+				
+				<manhunterChance>.75</manhunterChance>
+				<newBornChance>1</newBornChance>
+				
+				<!-- <debug>true</debug> -->
+			</li>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>4.9</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+				<startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+				<wickTicks>10~120</wickTicks>
+			</li>
+		</comps>
+		<costList>
+			<blackCube>4</blackCube>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<Gold>50</Gold>
+		</costList>
+		<recipeMaker>
+			<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+			<workSkill>Intellectual</workSkill>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<researchPrerequisite>Machining</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+				<Intellectual>6</Intellectual>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+
+</Defs>

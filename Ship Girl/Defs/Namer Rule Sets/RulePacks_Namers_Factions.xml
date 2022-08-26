@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  
+
+<!--Faction Namers-->
+
+  <!-- Sinister -->
+
+  <RulePackDef>
+    <defName>FSG_NamerFactionSinister</defName>
+    <include>
+		<li>OutlanderPlaceNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+		<li>r_name(p=3)->[Unspeakable] [ForcePurpose] [ForceType]</li>
+        <li>r_name->[ColorBadass] [ForcePurpose] [ForceType] [FSG_SinCode]</li>
+		<li>r_name->[ForcePurpose] [ForceType] [FSG_SinCode]</li>
+		<li>r_name->[ForcePurpose] [ForceType] [FSG_SinCode] [ColorBadass]</li>
+        <li>r_name->[ForceType] [FSG_SinCode] of [Unspeakable]</li>
+        <li>r_name->[ForcePurpose] [ForceType] of [Unspeakable]</li>
+        <li>r_name->[ForceType] [FSG_SinCode] of [ForcePurpose]</li>
+		<li>r_name->[ForcePurpose] [ForceType] [FSG_SinCode] of [ForcePurpose]</li>
+		<li>r_name->[Unspeakable]'s [ForcePurpose] [ForceType]</li>
+       
+	   
+		<li>Unspeakable->[Gsyl][ssyl][gsyl]</li>
+		<li>Unspeakable->[Gsyl][ssyl][ssyl]</li>
+		<li>Unspeakable->[Gsyl][gsyl][ssyl]</li>
+		<li>Unspeakable->[Gsyl][gsyl][gsyl]</li>
+		<li>Unspeakable->[Ssyl][ssyl][gsyl]</li>
+		<li>Unspeakable->[Ssyl][gsyl][ssyl]</li>
+		<li>Unspeakable->[Ssyl][gsyl][gsyl]</li>
+		<li>Unspeakable->[Ssyl][ssyl][ssyl]</li>
+		
+		
+		<li>Ssyl->S'hk</li>
+		<li>Ssyl->Ss</li>
+		<li>Ssyl->Hksk</li>
+		<li>Ssyl->Shuk</li>
+		<li>Ssyl->Shankg</li>
+		<li>Ssyl->Skank</li>
+		<li>Ssyl->S'hak</li>
+		<li>Ssyl->S'hak</li>
+		<li>Ssyl->S'hak</li>
+		<li>Ssyl->S'hak</li>
+		<li>Ssyl->Ass</li>
+		<li>Ssyl->Ask</li>
+		<li>Ssyl->Husk</li>
+		<li>Ssyl->Gas</li>
+		<li>Ssyl->Gash</li>
+		<li>Ssyl->Bys</li>
+		<li>Ssyl->Abys</li>
+		<li>Ssyl->S'bs</li>
+		<li>Ssyl->S'bak</li>
+		<li>Ssyl->S'bek</li>
+		<li>Ssyl->S'hek</li>
+		<li>Ssyl->Skh</li>
+		<li>Ssyl->Hksk</li>
+		<li>Ssyl->Krsks</li>
+		<li>Ssyl->Shsg</li>
+		<li>Ssyl->Skagg</li>
+		<li>Ssyl->Skass</li>
+		<li>Ssyl->Ksag</li>
+		<li>Ssyl->s'Bs</li>
+		<li>Ssyl->S'hrg</li>
+		
+		
+		<li>Gsyl->Glorp</li>
+		<li>Gsyl->Gloop</li>
+		<li>Gsyl->glurk</li>
+		<li>Gsyl->gyar</li>
+		<li>Gsyl->gnar</li>
+		<li>Gsyl->Narg</li>
+		<li>Gsyl->Narfg</li>
+		<li>Gsyl->Flgl</li>
+		<li>Gsyl->Grok</li>
+		<li>Gsyl->Gkuk</li>
+		<li>Gsyl->Guig</li>
+		<li>Gsyl->Guruk</li>
+		<li>Gsyl->Gyak</li>
+		<li>Gsyl->Nyargy</li>
+		<li>Gsyl->Narg</li>
+		<li>Gsyl->Nrfug</li>
+		<li>Gsyl->Flyygl</li>
+		<li>Gsyl->Urfg</li>
+		<li>Gsyl->Urf'g</li>
+		<li>Gsyl->Glur</li>
+		<li>Gsyl->Gluf</li>
+		<li>Gsyl->Gyangga</li>
+		<li>Gsyl->Gak</li>
+		<li>Gsyl->Gyang</li>
+		<li>Gsyl->Flarg</li>
+		<li>Gsyl->Flu</li>
+		<li>Gsyl->Gglu</li>
+		<li>Gsyl->Blog</li>
+		<li>Gsyl->Flog</li>
+		<li>Gsyl->Flk</li>
+		<li>Gsyl->Fug</li>
+		<li>Gsyl->Bgg</li>
+		<li>Gsyl->Rug</li>
+		<li>Gsyl->Rgy</li>
+		<li>Gsyl->Yg</li>
+		<li>Gsyl->Yg'</li>
+		<li>Gsyl->Ys</li>
+		<li>Gsyl->Ys'</li>
+		<li>Gsyl->Gs</li>
+		<li>Gsyl->Gs'</li>
+		
+		
+		<li>ssyl->s'hk</li>
+		<li>ssyl->ss</li>
+		<li>ssyl->hksk</li>
+		<li>ssyl->shuk</li>
+		<li>ssyl->shankg</li>
+		<li>ssyl->skank</li>
+		<li>ssyl->s'hak</li>
+		<li>ssyl->s'hak</li>
+		<li>ssyl->s'hak</li>
+		<li>ssyl->s'hak</li>
+		<li>ssyl->ass</li>
+		<li>ssyl->ask</li>
+		<li>ssyl->husk</li>
+		<li>ssyl->gas</li>
+		<li>ssyl->gash</li>
+		<li>ssyl->bys</li>
+		<li>ssyl->abys</li>
+		<li>ssyl->s'bs</li>
+		<li>ssyl->s'bak</li>
+		<li>ssyl->s'bek</li>
+		<li>ssyl->s'hek</li>
+		<li>ssyl->skh</li>
+		<li>ssyl->hksk</li>
+		<li>ssyl->krsks</li>
+		<li>ssyl->shsg</li>
+		<li>ssyl->skagg</li>
+		<li>ssyl->skass</li>
+		<li>ssyl->ksag</li>
+		<li>ssyl->s'Bs</li>
+		<li>ssyl->s'Hrg</li>
+		
+		
+		<li>gsyl->glorp</li>
+		<li>gsyl->gloop</li>
+		<li>gsyl->glurk</li>
+		<li>gsyl->gyar</li>
+		<li>gsyl->gnar</li>
+		<li>gsyl->narg</li>
+		<li>gsyl->narfg</li>
+		<li>gsyl->flgl</li>
+		<li>gsyl->grok</li>
+		<li>gsyl->gkuk</li>
+		<li>gsyl->guig</li>
+		<li>gsyl->guruk</li>
+		<li>gsyl->gyak</li>
+		<li>gsyl->nyargy</li>
+		<li>gsyl->narg</li>
+		<li>gsyl->nrfug</li>
+		<li>gsyl->flyygl</li>
+		<li>gsyl->urfg</li>
+		<li>gsyl->urf'g</li>
+		<li>gsyl->glur</li>
+		<li>gsyl->gluf</li>
+		<li>gsyl->gyangga</li>
+		<li>gsyl->gak</li>
+		<li>gsyl->gyang</li>
+		<li>gsyl->flarg</li>
+		<li>gsyl->flu</li>
+		<li>gsyl->gglu</li>
+		<li>gsyl->blog</li>
+		<li>gsyl->flog</li>
+		<li>gsyl->flk</li>
+		<li>gsyl->fug</li>
+		<li>gsyl->bgg</li>
+		<li>gsyl->rug</li>
+		<li>gsyl->rgy</li>
+		<li>gsyl->yg</li>
+		<li>gsyl->yg'</li>
+		<li>gsyl->ys</li>
+		<li>gsyl->ys'</li>
+		<li>gsyl->gs</li>
+		<li>gsyl->gs'</li>
+		
+		<li>ForceType->Force</li>
+		<li>ForceType->Company</li>
+		<li>ForceType->Division</li>
+		<li>ForceType->Department</li>
+		<li>ForceType->Grudge</li>
+		<li>ForceType->Haunt</li>
+		<li>ForceType->Fleet</li>
+		
+		<li>ForcePurpose->Research</li>
+		<li>ForcePurpose-> [Sciencey] Research</li>
+		<li>ForcePurpose->Invasion</li>
+		<li>ForcePurpose-> [Sciencey] Invasion</li>
+		<li>ForcePurpose->Incursion</li>
+		<li>ForcePurpose-> [Sciencey] Incursion</li>
+		<li>ForcePurpose->Intervention</li>
+		<li>ForcePurpose-> [Sciencey] Intervention</li>
+		<li>ForcePurpose->Extermination</li>
+		<li>ForcePurpose-> [Sciencey] Exermination</li>
+		<li>ForcePurpose-> [Sciencey] Combat</li>
+		<li>ForcePurpose-> [Sciencey] Solution</li>
+		<li>ForcePurpose-> [Sciencey] Mediation</li>
+		<li>ForcePurpose-> Combat</li>
+		<li>ForcePurpose-> Solution</li>
+		<li>ForcePurpose-> Mediation</li>
+		
+		
+		<li>Sciencey->Temporal</li>
+		<li>Sciencey->Spatial</li>
+		<li>Sciencey->Dimensional</li>
+		<li>Sciencey->Recursion</li>
+		<li>Sciencey-> Abyssal</li>
+		<li>Sciencey-> Alien</li>
+		
+		<li>FSG_SinCode->Alpha</li>
+		<li>FSG_SinCode->Beta</li>
+		<li>FSG_SinCode->Zero</li>
+		<li>FSG_SinCode->Prime</li>
+		<li>FSG_SinCode->Gamma</li>
+		<li>FSG_SinCode->Test</li>
+		<li>FSG_SinCode->Forked</li>
+		<li>FSG_SinCode->Revived</li>
+		<li>FSG_SinCode->Glitch</li>
+		<li>FSG_SinCode->Leak</li>
+		
+      </rulesStrings>
+    
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>FSG_NamerSettlementSinister</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=12)->[townname_wordgen]</li>
+        <li>r_name(p=6)->[townname_fixed] [townend]</li>
+		<li>r_name(p=6)->[townname_fixed] [townend] [FSG_Code]</li>
+        <li>r_name(p=4)->[townname_combo]</li>
+        
+
+        <li>topicalnoun->[Gore]</li>
+        <li>topicalnoun->[Enemy]</li>
+        <li>topicalnoun->[BodyPart]</li>
+
+        <li>townname_combo->[topicalnoun] [TerrainFeature] [townend]</li>
+        <li>townname_combo->[topicalnoun] [Community] [townend]</li>
+        <li>townname_combo->[topicalnoun]'s [TerrainFeature] [townend]</li>
+        <li>townname_combo->[topicalnoun]'s [Community] [townend]</li>
+        <li>townname_combo(p=2)->[concept_positive]'s [TerrainFeature] [townend]</li>
+        <li>townname_combo(p=2)->[concept_positive] [TerrainFeature] [townend]</li>
+        <li>townname_combo(p=2)->[concept_positive] [Community] [townend]</li>
+        <li>townname_combo(p=3)->[Character]'s [TerrainFeature] [townend]</li>
+        <li>townname_combo(p=3)->[Character]'s [Community] [townend]</li>
+		
+		<li>townname_combo->[TerrainFeature] [FSG_Code] [townend]</li>
+        <li>townname_combo->[Community] [FSG_Code] [townend]</li>
+        <li>townname_combo->[FSG_Code]'s [TerrainFeature] [townend]</li>
+        <li>townname_combo->[FSG_Code]'s [Community] [townend]</li>
+
+        <li>townname_wordgen(p=2)->[msyl][msyl][townend]</li>
+        <li>townname_wordgen(p=2)->[SylE][SylE][msyl][townend]</li>
+        <li>townname_wordgen(p=2)->[SylE][townend]</li>
+        <li>townname_wordgen(p=2)->[SylE][msyl][townend]</li>
+        <li>townname_wordgen->[TerrainFeature][townend]</li>
+        <li>townname_wordgen->[topicalnoun][townend]</li>
+		
+        <li>townend-> Pit</li>
+        <li>townend-> Base</li>
+        <li>townend-> Complex</li>
+        <li>townend-> Site</li>
+        <li>townend-> Splinter</li>
+        <li>townend-> Dump Site</li>
+        <li>townend-> Compound</li>
+        <li>townend-> Site</li>
+        <li>townend-> Black Site</li>
+        <li>townend-> Yard</li>
+        <li>townend-> Staging Area</li>
+        <li>townend-> Area</li>
+        <li>townend-> Staging Yard</li>
+        <li>townend-> Restricted Area</li>
+        <li>townend-> Test Site</li>
+        <li>townend-> Incursion</li>
+        <li>townend-> Incursion Site</li>
+        <li>townend-> Camp</li>
+        <li>townend-> Beachhead</li>
+        <li>townend-> Gate</li>
+        <li>townend-> Rune</li>
+        <li>townend-> Scar</li>
+        <li>townend-> Abyss</li>
+		
+		<li>FSG_Code->[FSG_Letter]</li>
+		<li>FSG_Code->[FSG_Letter][FSG_Letter]</li>
+		<li>FSG_Code->[FSG_Letter]-[FSG_Letter]</li>
+		
+		<li>FSG_Letter->A</li>
+		<li>FSG_Letter->B</li>
+		<li>FSG_Letter->C</li>
+		<li>FSG_Letter->D</li>
+		<li>FSG_Letter->E</li>
+		<li>FSG_Letter->X</li>
+		<li>FSG_Letter->Y</li>
+		<li>FSG_Letter->Z</li>
+		<li>FSG_Letter->W</li>
+		<li>FSG_Letter->N</li>
+		<li>FSG_Letter->F</li>
+		<li>FSG_Letter->G</li>
+		<li>FSG_Letter->H</li>
+		<li>FSG_Letter->I</li>
+		<li>FSG_Letter->J</li>
+		<li>FSG_Letter->K</li>
+		<li>FSG_Letter->N</li>
+		<li>FSG_Letter->M</li>
+		
+		<li>FSG_Letter->NW</li>
+		<li>FSG_Letter->MX</li>
+		<li>FSG_Letter->WN</li>
+		<li>FSG_Letter->NE</li>
+		<li>FSG_Letter->XX</li>
+		<li>FSG_Letter->YX</li>
+		<li>FSG_Letter->ZX</li>
+		<li>FSG_Letter->SE</li>
+		<li>FSG_Letter->SW</li>
+		
+		<li>FSG_Letter->O</li>
+		<li>FSG_Letter->P</li>
+		<li>FSG_Letter->Q</li>
+		<li>FSG_Letter->R</li>
+		<li>FSG_Letter->S</li>
+		<li>FSG_Letter->T</li>
+		<li>FSG_Letter->U</li>
+		<li>FSG_Letter->V</li>
+		
+		<li>msyl->nyar</li>
+        <li>msyl->alg</li>
+        <li>msyl->xan</li>
+        <li>msyl->zel</li>
+        <li>msyl->kil</li>
+        <li>msyl->len</li>
+        <li>msyl->lax</li>
+        <li>msyl->alph</li>
+        <li>msyl->ome</li>
+        <li>msyl->iri</li>
+        <li>msyl->slin</li>
+        <li>msyl->toth</li>
+        <li>msyl->arth</li>
+        <li>msyl->unth</li>
+        <li>msyl->ox</li>
+        <li>msyl->arm</li>
+        <li>msyl->murd</li>
+        <li>msyl->zen</li>
+        <li>msyl->yoth</li>
+        <li>msyl->lite</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>townname_fixed->Names/OutlanderTown</li>
+        <li>concept_positive->Words/Nouns/Concepts_Positive</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+  
+
+ <!-- Sharks -->
+
+  <RulePackDef>
+    <defName>FSG_NamerFactionShark</defName>
+    <rulePack>
+      <rulesStrings>
+		<li>r_name->The [Gore] Battalions [FSG_Code]</li>
+		<li>r_name->The [AnimalBadass] Battalions [FSG_Code]</li>
+		<li>r_name->[Gore] Division [FSG_Code]</li>
+		<li>r_name->[AnimalBadass] Division [FSG_Code]</li>
+		<li>r_name-> The [Gore] [AnimalBadass] Division</li>
+		<li>r_name-> The [Gore] [AnimalBadass] Battalions</li>
+		<li>r_name->The [groupname] of [Gore]</li>
+		<li>r_name->[groupname] [FSG_Code]</li>
+        <li>r_name->The [AnimalBadass]s</li>
+        <li>r_name->The [AnimalBadass] Girls</li>
+        <li>r_name->The [AnimalBadass]s of [ConceptBadass]</li>
+        <li>r_name->The [PersonBadass]s of [ConceptBadass]</li>
+        <li>r_name->The [AnimalBadass] [PersonBadass]s</li>
+        <li>r_name->The [Enemy]s</li>
+        <li>r_name->The [Weapon] Girls</li>
+        <li>r_name->The [Weapon]s</li>
+        <li>r_name->The [Weapon] [AnimalBadass]s</li>
+        <li>r_name->The [Weapon] [Enemy]s</li>
+        <li>r_name->The [ColorBadass] [Weapon]s</li>
+		<li>r_name->The [ColorBadass] [Gore]</li>
+		<li>r_name->[ConceptBadass] [Gore]</li>
+        <li>r_name->The [ColorBadass] [AnimalBadass]s</li>
+        <li>r_name->The [ColorBadass] [PersonBadass]s</li>
+        <li>r_name->The [ColorBadass] [Enemy]s</li>
+        <li>r_name->The [PersonBadass] [groupname]</li>
+		<li>r_name->The [Enemy] [AnimalBadass]s</li>
+        <li>r_name->The [Enemy] [Enemy]s</li>
+        <li>r_name->The [AdjectiveBadass] [groupname]</li>
+		<li>r_name->The [AdjectiveBadass] [Weapon]s</li>
+        <li>r_name->The [AdjectiveBadass] [AnimalBadass]s</li>
+        <li>r_name->The [AdjectiveBadass] [Enemy]s</li>
+        <li>r_name->The [AdjectiveBadass] [PersonBadass]s</li>
+        <li>r_name->The [PersonAlly]s of [ConceptBadass]</li>
+        <li>r_name(p=0.4)->The Eaters of [Gore]</li>
+        <li>r_name->[NamePerson]'s [Enemy]s</li>
+        <li>r_name->[NamePerson]'s [AnimalBadass]s</li>
+        <li>r_name->[NamePerson]'s [Weapon]s</li>
+        <li>r_name->[Weapon] [groupname]</li>
+        <li>r_name->[ConceptBadass] [groupname]</li>
+		<li>r_name->[ConceptBadass] [groupname] [FSG_Code]</li>
+		 <li>r_name->The [ConceptBadass] [AnimalBadass]s</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>groupname->Words/Nouns/GroupNames</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>FSG_NamerSettlementShark</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=4)->[townname_combo]</li>
+        <li>r_name->[townname_wordgen]</li>
+
+        <li>townname_combo->[AnimalBadass] [geography]</li>
+        <li>townname_combo->[AnimalBadass] [FSG_Code]'s [geography]</li>
+        <li>townname_combo->[ConceptBadass] [geography]</li>
+        <li>townname_combo->[ConceptBadass]'s [geography]</li>
+        <li>townname_combo->[PersonBadass] [geography]</li>
+        <li>townname_combo->[PersonBadass]'s [geography]</li>
+        <li>townname_combo->[Enemy]'s [geography]</li>
+        <li>townname_combo->[Enemy] [geography]</li>
+		 <li>townname_combo->[FSG_Code] [geography]</li>
+        <li>townname_combo->[Weapon]'s [geography]</li>
+        <li>townname_combo->[AnimalBadass] [Weapon] [geography]</li>
+        <li>townname_combo->[ColorBadass] [AnimalBadass] [geography]</li>
+        <li>geography(p=2)->[AnimalBadass][TerrainFeature]</li>
+		<li>geography(p=2)->[ColorBadass][TerrainFeature]</li>
+        <li>geography->[Community]</li>
+		
+		<li>FSG_Code->[FSG_Letter]</li>
+		<li>FSG_Code->[FSG_Letter][FSG_Letter]</li>
+		<li>FSG_Code->[FSG_Letter]-[FSG_Letter]</li>
+		
+		<li>FSG_Letter->A</li>
+		<li>FSG_Letter->B</li>
+		<li>FSG_Letter->C</li>
+		<li>FSG_Letter->D</li>
+		<li>FSG_Letter->E</li>
+		<li>FSG_Letter->X</li>
+		<li>FSG_Letter->Y</li>
+		<li>FSG_Letter->Z</li>
+		<li>FSG_Letter->W</li>
+		<li>FSG_Letter->N</li>
+		<li>FSG_Letter->F</li>
+		<li>FSG_Letter->G</li>
+		<li>FSG_Letter->H</li>
+		<li>FSG_Letter->I</li>
+		<li>FSG_Letter->J</li>
+		<li>FSG_Letter->K</li>
+		<li>FSG_Letter->N</li>
+		<li>FSG_Letter->M</li>
+		
+		<li>FSG_Letter->NW</li>
+		<li>FSG_Letter->MX</li>
+		<li>FSG_Letter->WN</li>
+		<li>FSG_Letter->NE</li>
+		<li>FSG_Letter->XX</li>
+		<li>FSG_Letter->YX</li>
+		<li>FSG_Letter->ZX</li>
+		<li>FSG_Letter->SE</li>
+		<li>FSG_Letter->SW</li>
+		
+		<li>FSG_Letter->O</li>
+		<li>FSG_Letter->P</li>
+		<li>FSG_Letter->Q</li>
+		<li>FSG_Letter->R</li>
+		<li>FSG_Letter->S</li>
+		<li>FSG_Letter->T</li>
+		<li>FSG_Letter->U</li>
+		<li>FSG_Letter->V</li>
+
+        <li>townname_wordgen(p=2)->[SylE][SylE]</li>
+        <li>townname_wordgen(p=2)->[SylE][SylE][SylE]</li>
+        <li>townname_wordgen(p=2)->[SylE][townendevil]</li>
+        <li>townname_wordgen(p=2)->[SylE][SylE][townendevil]</li>
+        <li>townendevil->vast</li>
+        <li>townendevil->varg</li>
+        <li>townendevil->vix</li>
+        <li>townendevil->tor</li>
+        <li>townendevil->tear</li>
+        <li>townendevil->burg</li>
+        <li>townendevil->krag</li>
+        <li>townendevil->oze</li>
+        <li>townendevil->ozzle</li>
+        <li>townendevil->latch</li>
+        <li>townendevil->lock</li>
+        <li>townendevil->pack</li>
+        <li>townendevil->sear</li>
+        <li>townendevil->shank</li>
+        <li>townendevil->waffen</li>
+        <li>townendevil->vash</li>
+        <li>townendevil->warg</li>
+        <li>townendevil->zug</li>
+        <li>townendevil->kulten</li>
+        <li>townendevil->thard</li>
+        <li>townendevil->thad</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+ 
+
+</Defs>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+
+
+
+
+<!--A-->
+	<!--<HediffDef>
+		<defName>FSG_Timer_SinLightKitA</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>A pair of advanced laser eyes, which activate when exposed to the concept of time.</description>
+		<label>Laser Eyes Activating</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>1~2</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_EyesLaserSin</li>    
+					<li>FSG_Timer_SinLightKitAT</li>
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>-->
+	
+	<HediffDef>
+		<defName>FSG_Timer_SinLightKitAT</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>This system prevents drop shipped girls from arriving without eyes.</description>
+		<label>Laser Eye backup activator</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>800~801</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_EyesLaserSin</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+
+    <HediffDef>
+		<defName>FSG_Hediff_EyesLaserSin</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A pair of laser eyes, for members of the Sinister Sisterhood.</description>
+		<label>Sinister Eyes</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledHeadlightCA</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledHeadlightCA</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+				
+			</li>
+		</comps>
+		
+	</HediffDef>
+	
+	<!--D-->
+	
+	<HediffDef>
+		<defName>FSG_Timer_SinLightKitD</defName>
+		<hediffClass>hediffWithComps</hediffClass>
+		<description>Sinister issue laser eyes.</description>
+		<label>Sinister Laser Eyes(timed kit)</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>1~2</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<!--<li>FSG_Timer_SinLightKitDT</li>-->
+					<li>FSG_Hediff_SinLightKitD</li>
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>FSG_Timer_SinLightKitDT</defName>
+		<hediffClass>hediffWithComps</hediffClass>
+		<description>Sinister issue laser eyes. This just makes sure that drop pod girls still get their eyes.</description>
+		<label>Sinister Laser Eyes(timed kit)</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>800~801</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_SinLightKitD</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	
+	<HediffDef>
+		<defName>FSG_Hediff_SinLightKitD</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of Glowing Sinister Eyes.</description>
+		<label>Destroyer Kit</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledHeadlightCD</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledHeadlightCD</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+				
+			</li>
+		</comps>
+	</HediffDef> 
+
+<!--H-->
+	<HediffDef>
+		<defName>FSG_Timer_SinLightKitH</defName>
+		<hediffClass>hediffWithComps</hediffClass>
+		<description>Sinister issue laser eyes.</description>
+		<label>Sinister Laser Eyes(timed kit)</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>1~2</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<!--<li>FSG_Timer_SinLightKitHT</li>-->
+					<li>FSG_Hediff_SinLightKitH</li>
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>FSG_Timer_SinLightKitHT</defName>
+		<hediffClass>hediffWithComps</hediffClass>
+		<description>Sinister issue laser eyes. This just makes sure that drop pod girls still get their eyes.</description>
+		<label>Sinister Laser Eyes(timed kit)</label>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>800~801</disappearsAfterTicks>
+			</li>
+			
+			 <li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				 <triggeredHediff>
+					<li>FSG_Hediff_SinLightKitH</li>    
+					
+				</triggeredHediff>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	
+	<HediffDef>
+		<defName>FSG_Hediff_SinLightKitH</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+
+		<description>A kit of Glowing Sinister Eyes.</description>
+		<label>Destroyer Kit</label>
+
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>ShipGirlBody</bodyDef>
+				<hediffAndBodypart>
+					<li>
+						<hediff>FSG_InstalledHeadlightCH</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					<li>
+						<hediff>FSG_InstalledHeadlightCH</hediff>
+						<bodyPart>Eye</bodyPart>
+					</li>
+					
+				</hediffAndBodypart>
+				
+			</li>
+		</comps>
+	</HediffDef> 
+	
+</Defs>
